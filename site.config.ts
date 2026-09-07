@@ -35,13 +35,45 @@ export type Review = {
   location?: string;
 };
 
+/**
+ * Canonical origin, resolved at build time.
+ *
+ * Precedence:
+ *  1. NEXT_PUBLIC_SITE_URL — set this to https://sproutwellaba.com the moment
+ *     the domain is registered and pointed at the host. It wins always.
+ *  2. VERCEL_PROJECT_PRODUCTION_URL — the stable production deploy URL, so a
+ *     deploy before the domain exists still emits canonicals that resolve.
+ *  3. localhost, for local builds.
+ *
+ * While we're on a provisional host (case 2 or 3) the site emits noindex and
+ * a disallow-all robots.txt — a temporary domain that gets indexed is a
+ * migration problem you have to clean up later, so we don't let it happen.
+ */
+function resolveOrigin(): { url: string; provisional: boolean } {
+  const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (explicit) return { url: explicit.replace(/\/$/, ""), provisional: false };
+
+  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (vercel) return { url: `https://${vercel}`, provisional: true };
+
+  return { url: "http://localhost:3000", provisional: true };
+}
+
+const origin = resolveOrigin();
+
+/** True while the site is served from a temporary host — gates indexing. */
+export const isProvisionalHost = origin.provisional;
+
 export const siteConfig = {
   brand: {
     name: "Sproutwell ABA",
     /** Short form used in tight UI spots (sticky bar, chips) */
     shortName: "Sproutwell",
-    /** Production domain — canonical base for metadata, sitemap, JSON-LD (no trailing slash) */
-    domain: "https://sproutwellaba.com",
+    /**
+     * Canonical base for metadata, sitemaps and JSON-LD (no trailing slash).
+     * Resolved above — set NEXT_PUBLIC_SITE_URL to pin it to the real domain.
+     */
+    domain: origin.url,
     tagline: "ABA therapy for kids, backup for parents — in all 50 states.",
     /** Legal entity line for the footer. TODO: confirm the registered legal name */
     legalName: "Sproutwell ABA, LLC",

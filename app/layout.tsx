@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import "./globals.css";
-import { siteConfig } from "@/site.config";
+import { siteConfig, isProvisionalHost } from "@/site.config";
 import TopBar from "@/components/TopBar";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -34,6 +34,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
   },
+  // Provisional host → keep it out of the index until the real domain is live.
+  ...(isProvisionalHost
+    ? { robots: { index: false, follow: false } }
+    : {}),
 };
 
 const organizationJsonLd = {
