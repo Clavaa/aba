@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { siteConfig } from "@/site.config";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Multi-step insurance-check quiz (Shared CRO spine: quiz funnels convert
@@ -13,15 +13,89 @@ import { PhoneIcon } from "@/components/TopBar";
  * Posts PHI-light fields to /api/lead with a honeypot.
  */
 
-const INSURANCE_TYPES = [
-  "Medicaid or CHIP",
-  "Insurance through work",
-  "Plan I bought myself",
-  "TRICARE / military",
-  "I'm not sure",
-] as const;
-
-const AGE_RANGES = ["Under 3", "3–5", "6–9", "10–13", "14 or older"] as const;
+/**
+ * Copy tables. The Spanish set is a real translation of the funnel, not a
+ * machine pass over the English — the /es/ pages use it end to end so a
+ * Spanish-speaking parent never lands mid-flow in English.
+ */
+const COPY = {
+  en: {
+    insuranceTypes: [
+      "Medicaid or CHIP",
+      "Insurance through work",
+      "Plan I bought myself",
+      "TRICARE / military",
+      "I'm not sure",
+    ],
+    ageRanges: ["Under 3", "3–5", "6–9", "10–13", "14 or older"],
+    formLabel: "Insurance coverage check",
+    step: (n: number, total: number) => `Step ${n} of ${total} · about a minute total`,
+    progress: "Quiz progress",
+    q1: "Where does your family live?",
+    q1sub: "Coverage rules are set state by state — this is the question that decides everything else.",
+    stateLabel: "State",
+    statePlaceholder: "Choose your state ▾",
+    q1cta: "That’s my state →",
+    q2: "How is your child insured?",
+    q2sub: "A best guess is fine — checking is our job, not yours.",
+    q3: "How old is your child?",
+    q3sub: "ABA helps at every age — this just shapes the plan we’d build.",
+    q4: "Where should we send your answer?",
+    q4sub: "A real person checks your plan and calls you with what’s covered.",
+    name: "Your first name",
+    phone: "Phone number",
+    email: "Email",
+    optional: "(optional)",
+    back: "← Back",
+    sending: "Checking…",
+    submit: "Check my coverage",
+    error: "Something went wrong on our end. Please try again — or just call",
+    privacy:
+      "Your answers are confidential and HIPAA-protected. We use them only to check your coverage and call you back.",
+    doneTitle: "You’re on the list — nice work.",
+    doneBody:
+      "A real person from our intake team will call you to finish the coverage check. Want the answer even faster?",
+    doneCall: "Call",
+  },
+  es: {
+    insuranceTypes: [
+      "Medicaid o CHIP",
+      "Seguro por el trabajo",
+      "Un plan que compré yo",
+      "TRICARE / militar",
+      "No estoy seguro",
+    ],
+    ageRanges: ["Menor de 3", "3–5", "6–9", "10–13", "14 o más"],
+    formLabel: "Revisión de cobertura del seguro",
+    step: (n: number, total: number) => `Paso ${n} de ${total} · un minuto en total`,
+    progress: "Progreso del cuestionario",
+    q1: "¿Dónde vive su familia?",
+    q1sub: "Las reglas de cobertura las fija cada estado — esta pregunta define todo lo demás.",
+    stateLabel: "Estado",
+    statePlaceholder: "Elija su estado ▾",
+    q1cta: "Ese es mi estado →",
+    q2: "¿Qué seguro tiene su hijo?",
+    q2sub: "Con que nos dé una idea basta — averiguarlo es nuestro trabajo, no el suyo.",
+    q3: "¿Qué edad tiene su hijo?",
+    q3sub: "La terapia ABA ayuda a cualquier edad — esto solo define cómo sería el plan.",
+    q4: "¿A dónde le enviamos la respuesta?",
+    q4sub: "Una persona real revisa su plan y le llama para decirle qué cubre.",
+    name: "Su nombre",
+    phone: "Número de teléfono",
+    email: "Correo electrónico",
+    optional: "(opcional)",
+    back: "← Atrás",
+    sending: "Revisando…",
+    submit: "Revisar mi cobertura",
+    error: "Algo falló de nuestro lado. Inténtelo otra vez — o simplemente llame al",
+    privacy:
+      "Sus respuestas son confidenciales y están protegidas por HIPAA. Solo las usamos para revisar su cobertura y devolverle la llamada.",
+    doneTitle: "Listo — ya está en la lista.",
+    doneBody:
+      "Una persona real de nuestro equipo le llamará para terminar de revisar la cobertura. ¿Prefiere la respuesta ahora mismo?",
+    doneCall: "Llame al",
+  },
+} as const;
 
 type QuizData = {
   state: string;
@@ -36,10 +110,13 @@ type QuizData = {
 export default function Quiz({
   states,
   defaultState = "",
+  lang = "en",
 }: {
   states: { name: string; slug: string }[];
   defaultState?: string;
+  lang?: "en" | "es";
 }) {
+  const c = COPY[lang];
   const [step, setStep] = useState(0);
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">(
     "idle"
@@ -69,7 +146,10 @@ export default function Quiz({
       const res = await fetch("/api/lead/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, source: "coverage-quiz" }),
+        body: JSON.stringify({
+          ...data,
+          source: lang === "es" ? "coverage-quiz-es" : "coverage-quiz",
+        }),
       });
       setStatus(res.ok ? "done" : "error");
     } catch {
@@ -80,14 +160,11 @@ export default function Quiz({
   if (status === "done") {
     return (
       <div className="field-card bg-mint p-6 text-center sm:p-10">
-        <p className="display display-h3">You&rsquo;re on the list — nice work.</p>
-        <p className="mx-auto mt-3 max-w-md text-spruce-soft">
-          A real person from our intake team will call you to finish the
-          coverage check. Want the answer even faster?
-        </p>
+        <p className="display display-h3">{c.doneTitle}</p>
+        <p className="mx-auto mt-3 max-w-md text-spruce-soft">{c.doneBody}</p>
         <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-5">
           <PhoneIcon />
-          Call {siteConfig.contact.phone}
+          {c.doneCall} {siteConfig.contact.phone}
         </a>
       </div>
     );
@@ -102,12 +179,12 @@ export default function Quiz({
     <form
       onSubmit={submit}
       className="field-card bg-white p-5 shadow-lift sm:p-8"
-      aria-label="Insurance coverage check"
+      aria-label={c.formLabel}
     >
       {/* Progress */}
       <div className="mb-5">
         <p className="text-sm font-semibold text-spruce-soft">
-          Step {step + 1} of {totalSteps} · about a minute total
+          {c.step(step + 1, totalSteps)}
         </p>
         <div
           className="mt-2 h-2 overflow-hidden rounded-full bg-mint"
@@ -115,7 +192,7 @@ export default function Quiz({
           aria-valuemin={1}
           aria-valuemax={totalSteps}
           aria-valuenow={step + 1}
-          aria-label="Quiz progress"
+          aria-label={c.progress}
         >
           <div
             className="h-full rounded-full bg-garden transition-all"
@@ -126,15 +203,10 @@ export default function Quiz({
 
       {step === 0 && (
         <fieldset>
-          <legend className="display display-h3">
-            Where does your family live?
-          </legend>
-          <p className="mt-1 text-spruce-soft">
-            Coverage rules are set state by state — this is the question that
-            decides everything else.
-          </p>
+          <legend className="display display-h3">{c.q1}</legend>
+          <p className="mt-1 text-spruce-soft">{c.q1sub}</p>
           <label htmlFor="quiz-state" className="sr-only">
-            State
+            {c.stateLabel}
           </label>
           <select
             id="quiz-state"
@@ -142,7 +214,7 @@ export default function Quiz({
             onChange={(e) => set({ state: e.target.value })}
             className="mt-4 w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3 font-semibold"
           >
-            <option value="">Choose your state ▾</option>
+            <option value="">{c.statePlaceholder}</option>
             {states.map((s) => (
               <option key={s.slug} value={s.name}>
                 {s.name}
@@ -156,7 +228,7 @@ export default function Quiz({
               disabled={!data.state}
               onClick={next}
             >
-              That&rsquo;s my state →
+              {c.q1cta}
             </button>
           </div>
         </fieldset>
@@ -164,14 +236,10 @@ export default function Quiz({
 
       {step === 1 && (
         <fieldset>
-          <legend className="display display-h3">
-            How is your child insured?
-          </legend>
-          <p className="mt-1 text-spruce-soft">
-            A best guess is fine — checking is our job, not yours.
-          </p>
+          <legend className="display display-h3">{c.q2}</legend>
+          <p className="mt-1 text-spruce-soft">{c.q2sub}</p>
           <div className="mt-4 flex flex-wrap gap-2">
-            {INSURANCE_TYPES.map((t) => (
+            {c.insuranceTypes.map((t) => (
               <button
                 key={t}
                 type="button"
@@ -188,7 +256,7 @@ export default function Quiz({
           </div>
           <div className="mt-5 flex justify-between">
             <button type="button" className="btn btn-outline" onClick={back}>
-              ← Back
+              {c.back}
             </button>
           </div>
         </fieldset>
@@ -196,12 +264,10 @@ export default function Quiz({
 
       {step === 2 && (
         <fieldset>
-          <legend className="display display-h3">How old is your child?</legend>
-          <p className="mt-1 text-spruce-soft">
-            ABA helps at every age — this just shapes the plan we&rsquo;d build.
-          </p>
+          <legend className="display display-h3">{c.q3}</legend>
+          <p className="mt-1 text-spruce-soft">{c.q3sub}</p>
           <div className="mt-4 flex flex-wrap gap-2">
-            {AGE_RANGES.map((a) => (
+            {c.ageRanges.map((a) => (
               <button
                 key={a}
                 type="button"
@@ -218,7 +284,7 @@ export default function Quiz({
           </div>
           <div className="mt-5 flex justify-between">
             <button type="button" className="btn btn-outline" onClick={back}>
-              ← Back
+              {c.back}
             </button>
           </div>
         </fieldset>
@@ -226,18 +292,13 @@ export default function Quiz({
 
       {step === 3 && (
         <fieldset>
-          <legend className="display display-h3">
-            Where should we send your answer?
-          </legend>
-          <p className="mt-1 text-spruce-soft">
-            A real person checks your plan and calls you with what&rsquo;s
-            covered.
-          </p>
+          <legend className="display display-h3">{c.q4}</legend>
+          <p className="mt-1 text-spruce-soft">{c.q4sub}</p>
 
           <div className="mt-4 space-y-3">
             <div>
               <label htmlFor="quiz-name" className="mb-1 block font-semibold">
-                Your first name
+                {c.name}
               </label>
               <input
                 id="quiz-name"
@@ -251,7 +312,7 @@ export default function Quiz({
             </div>
             <div>
               <label htmlFor="quiz-phone" className="mb-1 block font-semibold">
-                Phone number
+                {c.phone}
               </label>
               <input
                 id="quiz-phone"
@@ -265,7 +326,8 @@ export default function Quiz({
             </div>
             <div>
               <label htmlFor="quiz-email" className="mb-1 block font-semibold">
-                Email <span className="font-normal text-spruce-soft">(optional)</span>
+                {c.email}{" "}
+                <span className="font-normal text-spruce-soft">{c.optional}</span>
               </label>
               <input
                 id="quiz-email"
@@ -292,26 +354,24 @@ export default function Quiz({
 
           {status === "error" && (
             <p role="alert" className="mt-3 font-semibold text-err">
-              Something went wrong on our end. Please try again — or just call{" "}
-              {siteConfig.contact.phone}.
+              {c.error} {siteConfig.contact.phone}.
             </p>
           )}
 
           <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
             <button type="button" className="btn btn-outline" onClick={back}>
-              ← Back
+              {c.back}
             </button>
             <button
               type="submit"
               className="btn btn-primary"
               disabled={status === "sending"}
             >
-              {status === "sending" ? "Checking…" : siteConfig.cta.checkCoverage}
+              {status === "sending" ? c.sending : c.submit}
             </button>
           </div>
           <p className="mt-3 text-sm text-spruce-soft">
-            Your answers are confidential and HIPAA-protected. We use them only
-            to check your coverage and call you back.
+            {c.privacy}
           </p>
         </fieldset>
       )}

@@ -10,7 +10,7 @@ import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
 import { getCitiesForState } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 

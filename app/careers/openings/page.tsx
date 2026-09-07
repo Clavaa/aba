@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { openings } from "@/lib/careers";
 import JsonLd from "@/components/JsonLd";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Open roles.

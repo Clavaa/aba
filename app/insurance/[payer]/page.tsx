@@ -7,7 +7,7 @@ import { getStateLinks } from "@/lib/states";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import StateSelect from "@/components/StateSelect";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export function generateStaticParams() {
   return payers.map((p) => ({ payer: p.slug }));

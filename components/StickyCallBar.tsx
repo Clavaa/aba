@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { strings } from "@/lib/i18n";
 import { siteConfig } from "@/site.config";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Mobile-only sticky bottom bar (Shared CRO spine: phone-first category —
@@ -8,11 +12,13 @@ import { PhoneIcon } from "@/components/TopBar";
  * Two thumbs-reach actions: call, or start the coverage check.
  */
 export default function StickyCallBar() {
+  const t = strings(usePathname());
+  const isEs = t.langSwitchHref === "/";
   return (
     <div
       className="fixed inset-x-0 bottom-0 z-50 border-t border-spruce/15 bg-ivory/95 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden"
       role="region"
-      aria-label="Quick contact"
+      aria-label={t.quickContact}
     >
       <div className="mx-auto flex max-w-md gap-2">
         <a
@@ -20,13 +26,13 @@ export default function StickyCallBar() {
           className="btn btn-primary flex-1 !px-3 !py-3 text-base"
         >
           <PhoneIcon />
-          Call now
+          {t.callNow}
         </a>
         <Link
-          href="/getting-started/#quiz"
+          href={isEs ? "/es/como-empezar/#quiz" : "/getting-started/#quiz"}
           className="btn btn-marigold flex-1 !px-3 !py-3 text-base"
         >
-          {siteConfig.cta.checkCoverage}
+          {t.checkCoverage}
         </Link>
       </div>
     </div>

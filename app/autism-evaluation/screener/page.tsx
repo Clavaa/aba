@@ -4,7 +4,7 @@ import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
 import JsonLd from "@/components/JsonLd";
 import ScreenerQuiz from "@/components/ScreenerQuiz";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Autism Signs Checklist for Parents (Free, 2 Minutes)",

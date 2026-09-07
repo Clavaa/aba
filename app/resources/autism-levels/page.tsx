@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Head terms: "level 2 autism", "level 3 autism", "levels of autism".

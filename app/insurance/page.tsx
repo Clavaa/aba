@@ -6,13 +6,16 @@ import { getStateLinks } from "@/lib/states";
 import StateSelect from "@/components/StateSelect";
 import TriageTrio from "@/components/TriageTrio";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "ABA Therapy Insurance — Medicaid & Private",
   description:
     "Medicaid covers ABA in every state, and every state's autism law binds private plans. How the three coverage lanes work — and how we verify yours free.",
-  alternates: { canonical: "/insurance/" },
+  alternates: {
+    canonical: "/insurance/",
+    languages: { en: "/insurance/", es: "/es/seguro-y-medicaid/" },
+  },
 };
 
 export default function InsurancePage() {

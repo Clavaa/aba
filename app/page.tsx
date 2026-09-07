@@ -10,12 +10,12 @@ import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
 import ModalityChips from "@/components/ModalityChips";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   // Title + description come from the root layout defaults; the homepage
   // just pins its canonical.
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { en: "/", es: "/es/" } },
 };
 
 /* ------------------------------------------------------------------ */

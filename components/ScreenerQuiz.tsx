@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Parent developmental checklist — OUR OWN plain-language items.

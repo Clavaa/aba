@@ -12,7 +12,7 @@ import {
 } from "@/data/leadership";
 import InitialsAvatar from "@/components/InitialsAvatar";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Our Leadership Team",

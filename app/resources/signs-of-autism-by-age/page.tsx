@@ -3,7 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Signs by age. Two things here that most versions of this page lack:

@@ -5,13 +5,16 @@ import Quiz from "@/components/Quiz";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Getting Started — Check My Coverage",
   description:
     "Start ABA therapy the easy way: a one-minute coverage check, one 15-minute call, and we handle the insurance paperwork. Confidential and HIPAA-protected.",
-  alternates: { canonical: "/getting-started/" },
+  alternates: {
+    canonical: "/getting-started/",
+    languages: { en: "/getting-started/", es: "/es/como-empezar/" },
+  },
 };
 
 const worried: AccordionItem[] = [

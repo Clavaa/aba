@@ -12,6 +12,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/services/`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/locations/`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/es/`, changeFrequency: "monthly", priority: 0.8 },
+    {
+      url: `${base}/es/como-empezar/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/es/seguro-y-medicaid/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/es/terapia-aba/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { url: `${base}/resources/`, changeFrequency: "weekly", priority: 0.8 },
     {
       url: `${base}/resources/what-is-aba/`,

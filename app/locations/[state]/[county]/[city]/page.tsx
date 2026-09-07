@@ -23,7 +23,7 @@ import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ModalityChips from "@/components/ModalityChips";
 import Quiz from "@/components/Quiz";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 

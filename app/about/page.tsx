@@ -4,7 +4,7 @@ import { siteConfig } from "@/site.config";
 import CareStructure from "@/components/CareStructure";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "About Us — Who We Are & How We're Built",

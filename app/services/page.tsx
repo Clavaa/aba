@@ -5,7 +5,7 @@ import { services } from "@/lib/services";
 import JsonLd from "@/components/JsonLd";
 import TriageTrio from "@/components/TriageTrio";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "ABA Therapy Services — At Home, In Center, At School, Online",

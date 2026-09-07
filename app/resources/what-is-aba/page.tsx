@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   title: "What Is ABA Therapy? A Straight Answer for Parents",
   description:
     "What applied behavior analysis actually is, what a session looks like, what the evidence says, how modern ABA differs from its history, and the criticism — answered honestly.",
-  alternates: { canonical: "/resources/what-is-aba/" },
+  alternates: {
+    canonical: "/resources/what-is-aba/",
+    languages: { en: "/resources/what-is-aba/", es: "/es/terapia-aba/" },
+  },
 };
 
 const url = `${siteConfig.brand.domain}/resources/what-is-aba/`;

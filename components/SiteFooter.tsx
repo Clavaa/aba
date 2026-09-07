@@ -1,52 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/site.config";
+import { strings } from "@/lib/i18n";
 import Logo from "@/components/Logo";
 
-const columns: { heading: string; links: { href: string; label: string }[] }[] =
-  [
+export default function SiteFooter() {
+  const t = strings(usePathname());
+  const year = new Date().getFullYear();
+
+  const columns = [
+    ...t.footerColumns,
     {
-      heading: "Families",
-      links: [
-        { href: "/getting-started/", label: "Check my coverage" },
-        { href: "/services/", label: "How therapy happens" },
-        { href: "/autism-evaluation/", label: "Getting an evaluation" },
-        { href: "/resources/what-is-aba/", label: "What is ABA?" },
-        { href: "/resources/", label: "Parent guides" },
-        { href: "/insurance/", label: "Insurance we accept" },
-        { href: "/cost-of-aba-therapy/", label: "What ABA costs" },
-        { href: "/locations/", label: "All 50 states + DC" },
-      ],
-    },
-    {
-      heading: "Company",
-      links: [
-        { href: "/about/", label: "About us" },
-        { href: "/about/leadership/", label: "Our leadership" },
-        { href: "/careers/", label: "Work with us" },
-        { href: "/careers/openings/", label: "Open roles" },
-        { href: "/careers/rbt/", label: "RBT jobs & guide" },
-        { href: "/careers/rbt/certification/", label: "RBT certification" },
-        { href: "/careers/bcba/", label: "BCBA jobs & guide" },
-        { href: "/careers/pay/", label: "How ABA pay works" },
-      ],
-    },
-    {
-      heading: "Talk to us",
+      heading: t.footerTalk,
       links: [
         {
           href: siteConfig.contact.phoneHref,
-          label: `Call ${siteConfig.contact.phone}`,
+          label: t.call(siteConfig.contact.phone),
         },
         {
           href: `mailto:${siteConfig.contact.email}`,
           label: siteConfig.contact.email,
         },
+        { href: t.langSwitchHref, label: t.langSwitchLabel },
       ],
     },
   ];
 
-export default function SiteFooter() {
-  const year = new Date().getFullYear();
   return (
     <footer className="bg-spruce text-ivory">
       <div className="mx-auto max-w-6xl px-4 pb-10 pt-14">
@@ -77,15 +58,11 @@ export default function SiteFooter() {
         </div>
 
         <p className="mt-12 max-w-3xl text-sm leading-relaxed text-ivory/60">
-          Coverage details on this site describe public state Medicaid and
-          insurance-law programs and can change. They are general information,
-          not legal, medical, or benefits advice — your health plan&apos;s
-          written determination is what counts. Call us and we&apos;ll check
-          your exact plan for you.
+          {t.disclaimer}
         </p>
 
         <p className="mt-4 text-sm text-ivory/60">
-          © {year} {siteConfig.brand.legalName}. All rights reserved.
+          © {year} {siteConfig.brand.legalName}. {t.rights}
         </p>
       </div>
 

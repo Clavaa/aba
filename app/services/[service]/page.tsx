@@ -9,7 +9,7 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ImageSlot from "@/components/ImageSlot";
 import StateSelect from "@/components/StateSelect";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Next-step triage trio (Style Bible signature #5): diagnose / learn /

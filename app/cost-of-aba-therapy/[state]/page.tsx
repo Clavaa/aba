@@ -6,7 +6,7 @@ import { getAllStates, getState, usd } from "@/lib/states";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import JsonLd from "@/components/JsonLd";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 

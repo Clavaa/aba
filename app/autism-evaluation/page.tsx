@@ -5,7 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
-import { PhoneIcon } from "@/components/TopBar";
+import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Autism Evaluation: How to Get One, and What Happens",
