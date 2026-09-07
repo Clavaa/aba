@@ -6,9 +6,8 @@ import { services, getService } from "@/lib/services";
 import { getStateLinks } from "@/lib/states";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import ImageSlot from "@/components/ImageSlot";
 import StateSelect from "@/components/StateSelect";
-import Sprout from "@/components/Sprout";
+import HeroIntakeForm from "@/components/HeroIntakeForm";
 import PhoneIcon from "@/components/PhoneIcon";
 
 export function generateStaticParams() {
@@ -92,7 +91,7 @@ export default async function ServicePage(props: {
       {/* ───────────────────────── HERO ───────────────────────── */}
       <section className="mx-auto max-w-6xl px-4 pt-6">
         <div className={`field-card ${service.tint} p-6 sm:p-10 lg:p-14`}>
-          <div className="grid items-center gap-8 lg:grid-cols-[3fr_2fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]">
             <div>
               <nav
                 aria-label="Breadcrumb"
@@ -135,13 +134,11 @@ export default async function ServicePage(props: {
                 ))}
               </ul>
             </div>
-            <div className="relative hidden lg:block">
-              <ImageSlot
-                intent={service.photoIntent}
-                tint="bg-white/70"
-                className="aspect-[4/5]"
+            <div className="lg:pl-6">
+              <HeroIntakeForm
+                heading={`Get ${service.navLabel.toLowerCase()} help today`}
+                states={states}
               />
-              <Sprout className="absolute -bottom-4 -left-4 h-16 w-16 rotate-[-8deg] text-garden" />
             </div>
           </div>
         </div>

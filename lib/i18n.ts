@@ -67,6 +67,7 @@ export const STRINGS: Record<Lang, Strings> = {
           { href: "/about/", label: "About us", note: "Who we are and how we work" },
           { href: "/about/leadership/", label: "Our leadership", note: "The people accountable for care" },
           { href: "/faq/", label: "FAQ", note: "The questions we get most" },
+          { href: "/contact/", label: "Contact us", note: "A real person, first call" },
         ],
       },
       {

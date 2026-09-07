@@ -132,9 +132,17 @@ export default function SiteFooter() {
           <p>
             © {year} {siteConfig.brand.legalName}. {t.rights}
           </p>
-          <Link href="/getting-started/" className="underline-offset-4 hover:underline">
-            {siteConfig.cta.checkCoverage}
-          </Link>
+          <nav aria-label="Legal" className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/contact/" className="underline-offset-4 hover:underline">
+              Contact
+            </Link>
+            <Link href="/privacy-policy/" className="underline-offset-4 hover:underline">
+              Privacy policy
+            </Link>
+            <Link href="/terms/" className="underline-offset-4 hover:underline">
+              Terms of service
+            </Link>
+          </nav>
         </div>
       </div>
 
