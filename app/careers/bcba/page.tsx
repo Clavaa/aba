@@ -138,7 +138,14 @@ export default function BcbaPage() {
               This section will publish verified state-by-state salary data —
               we don&rsquo;t print numbers we can&rsquo;t stand behind. Want a
               real quote for your market today? Ask us and we&rsquo;ll give you
-              the band in the first conversation.
+              the band in the first conversation, and read{" "}
+              <Link
+                href="/careers/pay/"
+                className="font-semibold text-garden underline underline-offset-4"
+              >
+                how ABA pay actually works
+              </Link>{" "}
+              before you compare two offers.
             </p>
           </div>
           <div className="field-card bg-peach p-6 sm:p-8">

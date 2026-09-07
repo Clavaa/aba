@@ -40,8 +40,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     { url: `${base}/careers/`, changeFrequency: "weekly", priority: 0.7 },
+    {
+      url: `${base}/careers/openings/`,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
     { url: `${base}/careers/rbt/`, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${base}/careers/rbt/certification/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/careers/rbt/competency-assessment/`,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     { url: `${base}/careers/bcba/`, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${base}/careers/bcba/supervision/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    { url: `${base}/careers/pay/`, changeFrequency: "monthly", priority: 0.7 },
   ];
 
   // State + county location pages live in the per-state sharded sitemaps

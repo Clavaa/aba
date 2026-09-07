@@ -93,6 +93,61 @@ export default function CareersPage() {
         </div>
       </section>
 
+      {/* ─────────────── THE GUIDES ─────────────── */}
+      <section
+        className="mx-auto max-w-6xl px-4 pb-14 sm:pb-20"
+        aria-labelledby="guides-heading"
+      >
+        <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
+          <h2 id="guides-heading" className="display display-h2">
+            The guides we&rsquo;d want if we were you
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg text-spruce-soft">
+            Written to be useful whether or not you ever work here.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              {
+                href: "/careers/rbt/certification/",
+                t: "RBT certification, step by step",
+                d: "All six requirements in order, the windows that trip people up, what it costs, and the annual renewal nobody warns you about.",
+              },
+              {
+                href: "/careers/rbt/competency-assessment/",
+                t: "The competency assessment",
+                d: "What you'll be asked to demonstrate, who's allowed to assess you, and how to walk in ready.",
+              },
+              {
+                href: "/careers/bcba/supervision/",
+                t: "Supervised fieldwork hours",
+                d: "Restricted vs unrestricted hours, monthly supervision rules, and seven questions to ask an employer before you sign.",
+              },
+              {
+                href: "/careers/pay/",
+                t: "How ABA pay actually works",
+                d: "Why two jobs with the same hourly rate pay thousands apart, and the math to do before you accept either.",
+              },
+            ].map((g, i) => {
+              const tints = ["bg-mint", "bg-butter", "bg-peach", "bg-mint"];
+              return (
+                <Link
+                  key={g.href}
+                  href={g.href}
+                  className={`field-card ${tints[i]} p-6 transition-transform hover:-translate-y-0.5`}
+                >
+                  <h3 className="display display-h3">{g.t}</h3>
+                  <p className="mt-2 text-spruce-soft">{g.d}</p>
+                  <p className="mt-3 font-bold text-garden">Read it →</p>
+                </Link>
+              );
+            })}
+          </div>
+          <Link href="/careers/openings/" className="btn btn-primary mt-8">
+            See open roles
+          </Link>
+        </div>
+      </section>
+
       {/* ─────────────── WHY HERE ─────────────── */}
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="why-heading">
         <div className="field-card bg-mint p-6 sm:p-10">

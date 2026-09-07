@@ -104,6 +104,9 @@ export default function RbtPage() {
             >
               Apply in 5 minutes
             </a>
+            <Link href="/careers/rbt/certification/" className="btn btn-outline">
+              The full certification path
+            </Link>
             <Link href="/careers/bcba/" className="btn btn-outline">
               Already past RBT? The BCBA path
             </Link>
@@ -177,9 +180,15 @@ export default function RbtPage() {
                     (BLS / verified market data) per state before launch —
                     no invented figures ship on this page. */}
                 We&rsquo;re assembling verified, state-by-state pay data for
-                this section — no made-up numbers, ever. Until it&rsquo;s
-                published, ask us directly and we&rsquo;ll quote real ranges
-                for your market on the spot.
+                this section — no made-up numbers, ever. In the meantime,{" "}
+                <Link
+                  href="/careers/pay/"
+                  className="font-semibold text-garden underline underline-offset-4"
+                >
+                  read how ABA pay actually works
+                </Link>{" "}
+                — the hourly rate matters far less than how many hours you get
+                paid for.
               </p>
             </div>
             <div className="rounded-3xl bg-white/80 p-6">

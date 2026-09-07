@@ -21,8 +21,11 @@ const columns: { heading: string; links: { href: string; label: string }[] }[] =
         { href: "/about/", label: "About us" },
         { href: "/about/leadership/", label: "Our leadership" },
         { href: "/careers/", label: "Work with us" },
+        { href: "/careers/openings/", label: "Open roles" },
         { href: "/careers/rbt/", label: "RBT jobs & guide" },
+        { href: "/careers/rbt/certification/", label: "RBT certification" },
         { href: "/careers/bcba/", label: "BCBA jobs & guide" },
+        { href: "/careers/pay/", label: "How ABA pay works" },
       ],
     },
     {
