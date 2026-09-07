@@ -8,6 +8,7 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
+import { getCitiesForState } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
 import { PhoneIcon } from "@/components/TopBar";
 
@@ -139,6 +140,7 @@ export default async function StatePage({
 
   const otherStates = getAllStates().filter((s) => s.slug !== state.slug);
   const counties = getCountiesForState(state.slug);
+  const cities = getCitiesForState(state.slug);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -353,6 +355,36 @@ export default async function StatePage({
       <section className="mx-auto max-w-6xl px-4 py-14 sm:py-20">
         <TriageTrio heading={`READY WHEN YOU ARE, ${state.name.toUpperCase()}.`} />
       </section>
+
+      {cities.length > 0 && (
+        <section
+          className="mx-auto max-w-6xl px-4 pb-14 sm:pb-16"
+          aria-labelledby="cities-heading"
+        >
+          <div className="field-card bg-butter p-6 sm:p-10">
+            <h2 id="cities-heading" className="display display-h2">
+              Biggest cities in {state.name}
+            </h2>
+            <p className="mt-3 max-w-2xl text-spruce-soft">
+              Local pages for {state.name}&rsquo;s largest communities — what
+              settings are realistic in each, and which county&rsquo;s rules
+              apply to you.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {cities.map((c) => (
+                <li key={`${c.county.slug}-${c.slug}`}>
+                  <Link
+                    href={`/locations/${state.slug}/${c.county.slug}/${c.slug}/`}
+                    className="chip bg-white/80"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {counties.length > 0 && (
         <section

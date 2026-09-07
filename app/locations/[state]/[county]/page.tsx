@@ -17,6 +17,7 @@ import {
 import Quiz from "@/components/Quiz";
 import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
+import { getCitiesForCounty } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
 import { PhoneIcon } from "@/components/TopBar";
 
@@ -154,6 +155,7 @@ export default async function CountyPage({
   const program = medicaidProgramName(state);
   const setting = settingCopy(county, size);
   const neighbors = getNeighborCounties(county);
+  const cities = getCitiesForCounty(stateSlug, countySlug);
   const pageUrl = `${siteConfig.brand.domain}/locations/${state.slug}/${county.slug}/`;
   const statePageUrl = `${siteConfig.brand.domain}/locations/${state.slug}/`;
 
@@ -403,6 +405,36 @@ export default async function CountyPage({
           </div>
         </div>
       </section>
+
+      {/* ────────────────── CITIES IN THIS COUNTY ────────────────── */}
+      {cities.length > 0 && (
+        <section
+          className="mx-auto max-w-6xl px-4 py-14 sm:py-20"
+          aria-labelledby="cities-heading"
+        >
+          <div className="field-card bg-mint p-6 sm:p-10">
+            <h2 id="cities-heading" className="display display-h2">
+              Cities in {county.name}
+            </h2>
+            <p className="mt-3 max-w-2xl text-spruce-soft">
+              Local pages for the biggest communities here — what&rsquo;s
+              realistically available in each, and who pays for it.
+            </p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {cities.map((c) => (
+                <li key={c.slug}>
+                  <Link
+                    href={`/locations/${state.slug}/${county.slug}/${c.slug}/`}
+                    className="chip bg-white/80"
+                  >
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* ────────────────── NEIGHBORING COUNTIES + STATE ────────────────── */}
       <section

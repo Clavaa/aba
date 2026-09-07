@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/site.config";
 import { getAllStates, getState } from "@/lib/states";
 import { getCountiesForState } from "@/lib/counties";
+import { getCitiesForCounty } from "@/lib/cities";
 
 /**
  * Sharded location sitemaps — one per state (Next 16 `generateSitemaps`),
@@ -37,6 +38,13 @@ export default async function sitemap(props: {
       changeFrequency: "monthly",
       priority: 0.6,
     });
+    for (const city of getCitiesForCounty(state.slug, county.slug)) {
+      entries.push({
+        url: `${base}/locations/${state.slug}/${county.slug}/${city.slug}/`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+      });
+    }
   }
 
   return entries;

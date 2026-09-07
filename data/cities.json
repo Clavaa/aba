@@ -1,0 +1,2111 @@
+{
+"Alabama": [
+{
+"city": "Huntsville",
+"county": "Madison County",
+"countyFips": "01089",
+"pop": 230402,
+"spansCounties": 3
+},
+{
+"city": "Mobile",
+"county": "Mobile County",
+"countyFips": "01097",
+"pop": 201367,
+"spansCounties": 1
+},
+{
+"city": "Birmingham",
+"county": "Jefferson County",
+"countyFips": "01073",
+"pop": 196357,
+"spansCounties": 2
+},
+{
+"city": "Montgomery",
+"county": "Montgomery County",
+"countyFips": "01101",
+"pop": 195818,
+"spansCounties": 1
+},
+{
+"city": "Tuscaloosa",
+"county": "Tuscaloosa County",
+"countyFips": "01125",
+"pop": 114288,
+"spansCounties": 1
+},
+{
+"city": "Hoover",
+"county": "Jefferson County",
+"countyFips": "01073",
+"pop": 93013,
+"spansCounties": 2
+}
+],
+"Alaska": [
+{
+"city": "Anchorage",
+"county": "Anchorage Municipality",
+"countyFips": "02020",
+"pop": 289600,
+"spansCounties": 1
+},
+{
+"city": "Fairbanks",
+"county": "Fairbanks North Star Borough",
+"countyFips": "02090",
+"pop": 31732,
+"spansCounties": 1
+},
+{
+"city": "Juneau city and",
+"county": "Juneau City and Borough",
+"countyFips": "02110",
+"pop": 31572,
+"spansCounties": 1
+}
+],
+"Arizona": [
+{
+"city": "Phoenix",
+"county": "Maricopa County",
+"countyFips": "04013",
+"pop": 1673164,
+"spansCounties": 1
+},
+{
+"city": "Tucson",
+"county": "Pima County",
+"countyFips": "04019",
+"pop": 554013,
+"spansCounties": 1
+},
+{
+"city": "Mesa",
+"county": "Maricopa County",
+"countyFips": "04013",
+"pop": 517151,
+"spansCounties": 1
+},
+{
+"city": "Gilbert",
+"county": "Maricopa County",
+"countyFips": "04013",
+"pop": 288790,
+"spansCounties": 1
+},
+{
+"city": "Chandler",
+"county": "Maricopa County",
+"countyFips": "04013",
+"pop": 281231,
+"spansCounties": 1
+},
+{
+"city": "Glendale",
+"county": "Maricopa County",
+"countyFips": "04013",
+"pop": 258143,
+"spansCounties": 1
+}
+],
+"Arkansas": [
+{
+"city": "Little Rock",
+"county": "Pulaski County",
+"countyFips": "05119",
+"pop": 204774,
+"spansCounties": 1
+},
+{
+"city": "Fayetteville",
+"county": "Washington County",
+"countyFips": "05143",
+"pop": 103134,
+"spansCounties": 1
+},
+{
+"city": "Fort Smith",
+"county": "Sebastian County",
+"countyFips": "05131",
+"pop": 90507,
+"spansCounties": 1
+},
+{
+"city": "Springdale",
+"county": "Washington County",
+"countyFips": "05143",
+"pop": 89368,
+"spansCounties": 2
+},
+{
+"city": "Jonesboro",
+"county": "Craighead County",
+"countyFips": "05031",
+"pop": 82384,
+"spansCounties": 1
+},
+{
+"city": "Rogers",
+"county": "Benton County",
+"countyFips": "05007",
+"pop": 75639,
+"spansCounties": 1
+}
+],
+"California": [
+{
+"city": "Los Angeles",
+"county": "Los Angeles County",
+"countyFips": "06037",
+"pop": 3878704,
+"spansCounties": 1
+},
+{
+"city": "San Diego",
+"county": "San Diego County",
+"countyFips": "06073",
+"pop": 1404452,
+"spansCounties": 1
+},
+{
+"city": "San Jose",
+"county": "Santa Clara County",
+"countyFips": "06085",
+"pop": 997368,
+"spansCounties": 1
+},
+{
+"city": "San Francisco",
+"county": "San Francisco County",
+"countyFips": "06075",
+"pop": 827526,
+"spansCounties": 1
+},
+{
+"city": "Fresno",
+"county": "Fresno County",
+"countyFips": "06019",
+"pop": 550105,
+"spansCounties": 1
+},
+{
+"city": "Sacramento",
+"county": "Sacramento County",
+"countyFips": "06067",
+"pop": 535798,
+"spansCounties": 1
+}
+],
+"Colorado": [
+{
+"city": "Denver",
+"county": "Denver County",
+"countyFips": "08031",
+"pop": 729019,
+"spansCounties": 1
+},
+{
+"city": "Colorado Springs",
+"county": "El Paso County",
+"countyFips": "08041",
+"pop": 493554,
+"spansCounties": 1
+},
+{
+"city": "Aurora",
+"county": "Arapahoe County",
+"countyFips": "08005",
+"pop": 403130,
+"spansCounties": 3
+},
+{
+"city": "Fort Collins",
+"county": "Larimer County",
+"countyFips": "08069",
+"pop": 170924,
+"spansCounties": 1
+},
+{
+"city": "Lakewood",
+"county": "Jefferson County",
+"countyFips": "08059",
+"pop": 156868,
+"spansCounties": 1
+},
+{
+"city": "Thornton",
+"county": "Adams County",
+"countyFips": "08001",
+"pop": 146689,
+"spansCounties": 2
+}
+],
+"Connecticut": [
+{
+"city": "Bridgeport",
+"county": "Greater Bridgeport Planning Region",
+"countyFips": "09120",
+"pop": 151599,
+"spansCounties": 1
+},
+{
+"city": "Stamford",
+"county": "Western Connecticut Planning Region",
+"countyFips": "09190",
+"pop": 139134,
+"spansCounties": 1
+},
+{
+"city": "New Haven",
+"county": "South Central Connecticut Planning Region",
+"countyFips": "09170",
+"pop": 137562,
+"spansCounties": 1
+},
+{
+"city": "Hartford",
+"county": "Capitol Planning Region",
+"countyFips": "09110",
+"pop": 122129,
+"spansCounties": 1
+},
+{
+"city": "Waterbury",
+"county": "Naugatuck Valley Planning Region",
+"countyFips": "09140",
+"pop": 115908,
+"spansCounties": 1
+},
+{
+"city": "Norwalk",
+"county": "Western Connecticut Planning Region",
+"countyFips": "09190",
+"pop": 93661,
+"spansCounties": 1
+}
+],
+"Delaware": [
+{
+"city": "Wilmington",
+"county": "New Castle County",
+"countyFips": "10003",
+"pop": 73176,
+"spansCounties": 1
+},
+{
+"city": "Dover",
+"county": "Kent County",
+"countyFips": "10001",
+"pop": 40191,
+"spansCounties": 1
+},
+{
+"city": "Newark",
+"county": "New Castle County",
+"countyFips": "10003",
+"pop": 30506,
+"spansCounties": 1
+},
+{
+"city": "Middletown",
+"county": "New Castle County",
+"countyFips": "10003",
+"pop": 25686,
+"spansCounties": 1
+}
+],
+"Florida": [
+{
+"city": "Jacksonville",
+"county": "Duval County",
+"countyFips": "12031",
+"pop": 1009833,
+"spansCounties": 1
+},
+{
+"city": "Miami",
+"county": "Miami-Dade County",
+"countyFips": "12086",
+"pop": 487014,
+"spansCounties": 1
+},
+{
+"city": "Tampa",
+"county": "Hillsborough County",
+"countyFips": "12057",
+"pop": 414547,
+"spansCounties": 1
+},
+{
+"city": "Orlando",
+"county": "Orange County",
+"countyFips": "12095",
+"pop": 334854,
+"spansCounties": 1
+},
+{
+"city": "St. Petersburg",
+"county": "Pinellas County",
+"countyFips": "12103",
+"pop": 267102,
+"spansCounties": 1
+},
+{
+"city": "Port St. Lucie",
+"county": "St. Lucie County",
+"countyFips": "12111",
+"pop": 258575,
+"spansCounties": 1
+}
+],
+"Georgia": [
+{
+"city": "Atlanta",
+"county": "Fulton County",
+"countyFips": "13121",
+"pop": 520070,
+"spansCounties": 2
+},
+{
+"city": "Columbus",
+"county": "Muscogee County",
+"countyFips": "13215",
+"pop": 201830,
+"spansCounties": 1
+},
+{
+"city": "Augusta-Richmond County",
+"county": "Richmond County",
+"countyFips": "13245",
+"pop": 201737,
+"spansCounties": 1
+},
+{
+"city": "Macon-Bibb County",
+"county": "Bibb County",
+"countyFips": "13021",
+"pop": 157056,
+"spansCounties": 1
+},
+{
+"city": "Savannah",
+"county": "Chatham County",
+"countyFips": "13051",
+"pop": 148808,
+"spansCounties": 1
+},
+{
+"city": "Athens-Clarke County",
+"county": "Clarke County",
+"countyFips": "13059",
+"pop": 128691,
+"spansCounties": 1
+}
+],
+"Hawaii": [
+{
+"city": "Urban Honolulu",
+"county": "Honolulu County",
+"countyFips": "15003",
+"pop": 344967,
+"spansCounties": 1
+}
+],
+"Idaho": [
+{
+"city": "Boise",
+"county": "Ada County",
+"countyFips": "16001",
+"pop": 237963,
+"spansCounties": 1
+},
+{
+"city": "Meridian",
+"county": "Ada County",
+"countyFips": "16001",
+"pop": 139740,
+"spansCounties": 1
+},
+{
+"city": "Nampa",
+"county": "Canyon County",
+"countyFips": "16027",
+"pop": 117350,
+"spansCounties": 1
+},
+{
+"city": "Caldwell",
+"county": "Canyon County",
+"countyFips": "16027",
+"pop": 73088,
+"spansCounties": 1
+},
+{
+"city": "Idaho Falls",
+"county": "Bonneville County",
+"countyFips": "16019",
+"pop": 69523,
+"spansCounties": 1
+},
+{
+"city": "Pocatello",
+"county": "Bannock County",
+"countyFips": "16005",
+"pop": 58231,
+"spansCounties": 2
+}
+],
+"Illinois": [
+{
+"city": "Chicago",
+"county": "Cook County",
+"countyFips": "17031",
+"pop": 2721308,
+"spansCounties": 2
+},
+{
+"city": "Aurora",
+"county": "Kane County",
+"countyFips": "17089",
+"pop": 180710,
+"spansCounties": 4
+},
+{
+"city": "Naperville",
+"county": "DuPage County",
+"countyFips": "17043",
+"pop": 153124,
+"spansCounties": 2
+},
+{
+"city": "Joliet",
+"county": "Will County",
+"countyFips": "17197",
+"pop": 151837,
+"spansCounties": 2
+},
+{
+"city": "Rockford",
+"county": "Winnebago County",
+"countyFips": "17201",
+"pop": 147486,
+"spansCounties": 2
+},
+{
+"city": "Elgin",
+"county": "Kane County",
+"countyFips": "17089",
+"pop": 114701,
+"spansCounties": 2
+}
+],
+"Indiana": [
+{
+"city": "Indianapolis",
+"county": "Marion County",
+"countyFips": "18097",
+"pop": 891484,
+"spansCounties": 1
+},
+{
+"city": "Fort Wayne",
+"county": "Allen County",
+"countyFips": "18003",
+"pop": 273203,
+"spansCounties": 1
+},
+{
+"city": "Evansville",
+"county": "Vanderburgh County",
+"countyFips": "18163",
+"pop": 115395,
+"spansCounties": 1
+},
+{
+"city": "Fishers",
+"county": "Hamilton County",
+"countyFips": "18057",
+"pop": 103986,
+"spansCounties": 1
+},
+{
+"city": "South Bend",
+"county": "St. Joseph County",
+"countyFips": "18141",
+"pop": 103713,
+"spansCounties": 1
+},
+{
+"city": "Carmel",
+"county": "Hamilton County",
+"countyFips": "18057",
+"pop": 103606,
+"spansCounties": 1
+}
+],
+"Iowa": [
+{
+"city": "Des Moines",
+"county": "Polk County",
+"countyFips": "19153",
+"pop": 213096,
+"spansCounties": 2
+},
+{
+"city": "Cedar Rapids",
+"county": "Linn County",
+"countyFips": "19113",
+"pop": 137904,
+"spansCounties": 1
+},
+{
+"city": "Davenport",
+"county": "Scott County",
+"countyFips": "19163",
+"pop": 100938,
+"spansCounties": 1
+},
+{
+"city": "Sioux",
+"county": "Woodbury County",
+"countyFips": "19193",
+"pop": 86875,
+"spansCounties": 2
+},
+{
+"city": "Ankeny",
+"county": "Polk County",
+"countyFips": "19153",
+"pop": 76727,
+"spansCounties": 1
+},
+{
+"city": "Iowa",
+"county": "Johnson County",
+"countyFips": "19103",
+"pop": 76710,
+"spansCounties": 1
+}
+],
+"Kansas": [
+{
+"city": "Wichita",
+"county": "Sedgwick County",
+"countyFips": "20173",
+"pop": 400991,
+"spansCounties": 1
+},
+{
+"city": "Overland Park",
+"county": "Johnson County",
+"countyFips": "20091",
+"pop": 202893,
+"spansCounties": 1
+},
+{
+"city": "Kansas",
+"county": "Wyandotte County",
+"countyFips": "20209",
+"pop": 156752,
+"spansCounties": 1
+},
+{
+"city": "Olathe",
+"county": "Johnson County",
+"countyFips": "20091",
+"pop": 149035,
+"spansCounties": 1
+},
+{
+"city": "Topeka",
+"county": "Shawnee County",
+"countyFips": "20177",
+"pop": 125467,
+"spansCounties": 1
+},
+{
+"city": "Lawrence",
+"county": "Douglas County",
+"countyFips": "20045",
+"pop": 97271,
+"spansCounties": 1
+}
+],
+"Kentucky": [
+{
+"city": "Louisville/Jefferson County",
+"county": "Jefferson County",
+"countyFips": "21111",
+"pop": 640796,
+"spansCounties": 1
+},
+{
+"city": "Lexington-Fayette",
+"county": "Fayette County",
+"countyFips": "21067",
+"pop": 329437,
+"spansCounties": 1
+},
+{
+"city": "Bowling Green",
+"county": "Warren County",
+"countyFips": "21227",
+"pop": 79076,
+"spansCounties": 1
+},
+{
+"city": "Owensboro",
+"county": "Daviess County",
+"countyFips": "21059",
+"pop": 60675,
+"spansCounties": 1
+},
+{
+"city": "Covington",
+"county": "Kenton County",
+"countyFips": "21117",
+"pop": 41611,
+"spansCounties": 1
+},
+{
+"city": "Georgetown",
+"county": "Scott County",
+"countyFips": "21209",
+"pop": 40518,
+"spansCounties": 1
+}
+],
+"Louisiana": [
+{
+"city": "New Orleans",
+"county": "Orleans Parish",
+"countyFips": "22071",
+"pop": 362701,
+"spansCounties": 1
+},
+{
+"city": "Baton Rouge",
+"county": "East Baton Rouge Parish",
+"countyFips": "22033",
+"pop": 220907,
+"spansCounties": 1
+},
+{
+"city": "Shreveport",
+"county": "Caddo Parish",
+"countyFips": "22017",
+"pop": 176578,
+"spansCounties": 2
+},
+{
+"city": "Lafayette",
+"county": "Lafayette Parish",
+"countyFips": "22055",
+"pop": 122280,
+"spansCounties": 1
+},
+{
+"city": "Lake Charles",
+"county": "Calcasieu Parish",
+"countyFips": "22019",
+"pop": 81157,
+"spansCounties": 1
+},
+{
+"city": "Kenner",
+"county": "Jefferson Parish",
+"countyFips": "22051",
+"pop": 64650,
+"spansCounties": 1
+}
+],
+"Maine": [
+{
+"city": "Portland",
+"county": "Cumberland County",
+"countyFips": "23005",
+"pop": 69568,
+"spansCounties": 1
+},
+{
+"city": "Lewiston",
+"county": "Androscoggin County",
+"countyFips": "23001",
+"pop": 38772,
+"spansCounties": 1
+},
+{
+"city": "Bangor",
+"county": "Penobscot County",
+"countyFips": "23019",
+"pop": 32446,
+"spansCounties": 1
+},
+{
+"city": "South Portland",
+"county": "Cumberland County",
+"countyFips": "23005",
+"pop": 26994,
+"spansCounties": 1
+},
+{
+"city": "Auburn",
+"county": "Androscoggin County",
+"countyFips": "23001",
+"pop": 25200,
+"spansCounties": 1
+},
+{
+"city": "Sanford",
+"county": "York County",
+"countyFips": "23031",
+"pop": 22497,
+"spansCounties": 1
+}
+],
+"Maryland": [
+{
+"city": "Baltimore",
+"county": "Baltimore city",
+"countyFips": "24510",
+"pop": 568271,
+"spansCounties": 1
+},
+{
+"city": "Frederick",
+"county": "Frederick County",
+"countyFips": "24021",
+"pop": 89537,
+"spansCounties": 1
+},
+{
+"city": "Gaithersburg",
+"county": "Montgomery County",
+"countyFips": "24031",
+"pop": 70686,
+"spansCounties": 1
+},
+{
+"city": "Rockville",
+"county": "Montgomery County",
+"countyFips": "24031",
+"pop": 68417,
+"spansCounties": 1
+},
+{
+"city": "Bowie",
+"county": "Prince George's County",
+"countyFips": "24033",
+"pop": 58421,
+"spansCounties": 1
+},
+{
+"city": "Hagerstown",
+"county": "Washington County",
+"countyFips": "24043",
+"pop": 43909,
+"spansCounties": 1
+}
+],
+"Massachusetts": [
+{
+"city": "Boston",
+"county": "Suffolk County",
+"countyFips": "25025",
+"pop": 673458,
+"spansCounties": 1
+},
+{
+"city": "Worcester",
+"county": "Worcester County",
+"countyFips": "25027",
+"pop": 211286,
+"spansCounties": 1
+},
+{
+"city": "Springfield",
+"county": "Hampden County",
+"countyFips": "25013",
+"pop": 154888,
+"spansCounties": 1
+},
+{
+"city": "Cambridge",
+"county": "Middlesex County",
+"countyFips": "25017",
+"pop": 121186,
+"spansCounties": 1
+},
+{
+"city": "Lowell",
+"county": "Middlesex County",
+"countyFips": "25017",
+"pop": 120418,
+"spansCounties": 1
+},
+{
+"city": "Brockton",
+"county": "Plymouth County",
+"countyFips": "25023",
+"pop": 105788,
+"spansCounties": 1
+}
+],
+"Michigan": [
+{
+"city": "Detroit",
+"county": "Wayne County",
+"countyFips": "26163",
+"pop": 645705,
+"spansCounties": 1
+},
+{
+"city": "Grand Rapids",
+"county": "Kent County",
+"countyFips": "26081",
+"pop": 200117,
+"spansCounties": 1
+},
+{
+"city": "Warren",
+"county": "Macomb County",
+"countyFips": "26099",
+"pop": 137686,
+"spansCounties": 1
+},
+{
+"city": "Sterling Heights",
+"county": "Macomb County",
+"countyFips": "26099",
+"pop": 134342,
+"spansCounties": 1
+},
+{
+"city": "Ann Arbor",
+"county": "Washtenaw County",
+"countyFips": "26161",
+"pop": 122925,
+"spansCounties": 1
+},
+{
+"city": "Lansing",
+"county": "Ingham County",
+"countyFips": "26065",
+"pop": 114336,
+"spansCounties": 3
+}
+],
+"Minnesota": [
+{
+"city": "Minneapolis",
+"county": "Hennepin County",
+"countyFips": "27053",
+"pop": 428579,
+"spansCounties": 1
+},
+{
+"city": "St. Paul",
+"county": "Ramsey County",
+"countyFips": "27123",
+"pop": 307465,
+"spansCounties": 1
+},
+{
+"city": "Rochester",
+"county": "Olmsted County",
+"countyFips": "27109",
+"pop": 123624,
+"spansCounties": 1
+},
+{
+"city": "Bloomington",
+"county": "Hennepin County",
+"countyFips": "27053",
+"pop": 88344,
+"spansCounties": 1
+},
+{
+"city": "Duluth",
+"county": "St. Louis County",
+"countyFips": "27137",
+"pop": 87986,
+"spansCounties": 1
+},
+{
+"city": "Brooklyn Park",
+"county": "Hennepin County",
+"countyFips": "27053",
+"pop": 82893,
+"spansCounties": 1
+}
+],
+"Mississippi": [
+{
+"city": "Jackson",
+"county": "Hinds County",
+"countyFips": "28049",
+"pop": 141449,
+"spansCounties": 3
+},
+{
+"city": "Gulfport",
+"county": "Harrison County",
+"countyFips": "28047",
+"pop": 74621,
+"spansCounties": 1
+},
+{
+"city": "Southaven",
+"county": "DeSoto County",
+"countyFips": "28033",
+"pop": 57493,
+"spansCounties": 1
+},
+{
+"city": "Hattiesburg",
+"county": "Forrest County",
+"countyFips": "28035",
+"pop": 48522,
+"spansCounties": 2
+},
+{
+"city": "Biloxi",
+"county": "Harrison County",
+"countyFips": "28047",
+"pop": 48144,
+"spansCounties": 1
+},
+{
+"city": "Olive Branch",
+"county": "DeSoto County",
+"countyFips": "28033",
+"pop": 47365,
+"spansCounties": 1
+}
+],
+"Missouri": [
+{
+"city": "Kansas",
+"county": "Jackson County",
+"countyFips": "29095",
+"pop": 516032,
+"spansCounties": 4
+},
+{
+"city": "St. Louis",
+"county": "St. Louis city",
+"countyFips": "29510",
+"pop": 279695,
+"spansCounties": 1
+},
+{
+"city": "Springfield",
+"county": "Greene County",
+"countyFips": "29077",
+"pop": 170596,
+"spansCounties": 2
+},
+{
+"city": "Columbia",
+"county": "Boone County",
+"countyFips": "29019",
+"pop": 130900,
+"spansCounties": 1
+},
+{
+"city": "Independence",
+"county": "Jackson County",
+"countyFips": "29095",
+"pop": 121629,
+"spansCounties": 2
+},
+{
+"city": "Lee's Summit",
+"county": "Jackson County",
+"countyFips": "29095",
+"pop": 106419,
+"spansCounties": 2
+}
+],
+"Montana": [
+{
+"city": "Billings",
+"county": "Yellowstone County",
+"countyFips": "30111",
+"pop": 121483,
+"spansCounties": 1
+},
+{
+"city": "Missoula",
+"county": "Missoula County",
+"countyFips": "30063",
+"pop": 78204,
+"spansCounties": 1
+},
+{
+"city": "Great Falls",
+"county": "Cascade County",
+"countyFips": "30013",
+"pop": 60013,
+"spansCounties": 1
+},
+{
+"city": "Bozeman",
+"county": "Gallatin County",
+"countyFips": "30031",
+"pop": 57894,
+"spansCounties": 1
+},
+{
+"city": "Butte-Silver Bow",
+"county": "Silver Bow County",
+"countyFips": "30093",
+"pop": 35480,
+"spansCounties": 1
+},
+{
+"city": "Helena",
+"county": "Lewis and Clark County",
+"countyFips": "30049",
+"pop": 34729,
+"spansCounties": 1
+}
+],
+"Nebraska": [
+{
+"city": "Omaha",
+"county": "Douglas County",
+"countyFips": "31055",
+"pop": 489265,
+"spansCounties": 1
+},
+{
+"city": "Lincoln",
+"county": "Lancaster County",
+"countyFips": "31109",
+"pop": 300619,
+"spansCounties": 1
+},
+{
+"city": "Bellevue",
+"county": "Sarpy County",
+"countyFips": "31153",
+"pop": 64777,
+"spansCounties": 1
+},
+{
+"city": "Grand Island",
+"county": "Hall County",
+"countyFips": "31079",
+"pop": 53250,
+"spansCounties": 1
+},
+{
+"city": "Kearney",
+"county": "Buffalo County",
+"countyFips": "31019",
+"pop": 34741,
+"spansCounties": 1
+},
+{
+"city": "Fremont",
+"county": "Dodge County",
+"countyFips": "31053",
+"pop": 28190,
+"spansCounties": 1
+}
+],
+"Nevada": [
+{
+"city": "Las Vegas",
+"county": "Clark County",
+"countyFips": "32003",
+"pop": 678922,
+"spansCounties": 1
+},
+{
+"city": "Henderson",
+"county": "Clark County",
+"countyFips": "32003",
+"pop": 350039,
+"spansCounties": 1
+},
+{
+"city": "North Las Vegas",
+"county": "Clark County",
+"countyFips": "32003",
+"pop": 294034,
+"spansCounties": 1
+},
+{
+"city": "Reno",
+"county": "Washoe County",
+"countyFips": "32031",
+"pop": 281714,
+"spansCounties": 1
+},
+{
+"city": "Sparks",
+"county": "Washoe County",
+"countyFips": "32031",
+"pop": 111520,
+"spansCounties": 1
+},
+{
+"city": "Carson",
+"county": "Carson City",
+"countyFips": "32510",
+"pop": 58148,
+"spansCounties": 1
+}
+],
+"New Hampshire": [
+{
+"city": "Manchester",
+"county": "Hillsborough County",
+"countyFips": "33011",
+"pop": 116386,
+"spansCounties": 1
+},
+{
+"city": "Nashua",
+"county": "Hillsborough County",
+"countyFips": "33011",
+"pop": 91851,
+"spansCounties": 1
+},
+{
+"city": "Concord",
+"county": "Merrimack County",
+"countyFips": "33013",
+"pop": 44674,
+"spansCounties": 1
+},
+{
+"city": "Dover",
+"county": "Strafford County",
+"countyFips": "33017",
+"pop": 33909,
+"spansCounties": 1
+},
+{
+"city": "Rochester",
+"county": "Strafford County",
+"countyFips": "33017",
+"pop": 33598,
+"spansCounties": 1
+},
+{
+"city": "Keene",
+"county": "Cheshire County",
+"countyFips": "33005",
+"pop": 23036,
+"spansCounties": 1
+}
+],
+"New Jersey": [
+{
+"city": "Newark",
+"county": "Essex County",
+"countyFips": "34013",
+"pop": 317303,
+"spansCounties": 1
+},
+{
+"city": "Jersey",
+"county": "Hudson County",
+"countyFips": "34017",
+"pop": 302824,
+"spansCounties": 1
+},
+{
+"city": "Paterson",
+"county": "Passaic County",
+"countyFips": "34031",
+"pop": 160463,
+"spansCounties": 1
+},
+{
+"city": "Elizabeth",
+"county": "Union County",
+"countyFips": "34039",
+"pop": 140413,
+"spansCounties": 1
+},
+{
+"city": "Trenton",
+"county": "Mercer County",
+"countyFips": "34021",
+"pop": 91193,
+"spansCounties": 1
+},
+{
+"city": "Clifton",
+"county": "Passaic County",
+"countyFips": "34031",
+"pop": 90322,
+"spansCounties": 1
+}
+],
+"New Mexico": [
+{
+"city": "Albuquerque",
+"county": "Bernalillo County",
+"countyFips": "35001",
+"pop": 560326,
+"spansCounties": 1
+},
+{
+"city": "Las Cruces",
+"county": "Do\u00f1a Ana County",
+"countyFips": "35013",
+"pop": 116998,
+"spansCounties": 1
+},
+{
+"city": "Rio Rancho",
+"county": "Sandoval County",
+"countyFips": "35043",
+"pop": 112524,
+"spansCounties": 2
+},
+{
+"city": "Santa Fe",
+"county": "Santa Fe County",
+"countyFips": "35049",
+"pop": 90551,
+"spansCounties": 1
+},
+{
+"city": "Roswell",
+"county": "Chaves County",
+"countyFips": "35005",
+"pop": 47176,
+"spansCounties": 1
+},
+{
+"city": "Farmington",
+"county": "San Juan County",
+"countyFips": "35045",
+"pop": 46262,
+"spansCounties": 1
+}
+],
+"New York": [
+{
+"city": "New York",
+"county": "Kings County",
+"countyFips": "36047",
+"pop": 8478072,
+"spansCounties": 5
+},
+{
+"city": "Buffalo",
+"county": "Erie County",
+"countyFips": "36029",
+"pop": 276617,
+"spansCounties": 1
+},
+{
+"city": "Yonkers",
+"county": "Westchester County",
+"countyFips": "36119",
+"pop": 211040,
+"spansCounties": 1
+},
+{
+"city": "Rochester",
+"county": "Monroe County",
+"countyFips": "36055",
+"pop": 207282,
+"spansCounties": 1
+},
+{
+"city": "Syracuse",
+"county": "Onondaga County",
+"countyFips": "36067",
+"pop": 146097,
+"spansCounties": 1
+},
+{
+"city": "Albany",
+"county": "Albany County",
+"countyFips": "36001",
+"pop": 101317,
+"spansCounties": 1
+}
+],
+"North Carolina": [
+{
+"city": "Charlotte",
+"county": "Mecklenburg County",
+"countyFips": "37119",
+"pop": 943476,
+"spansCounties": 1
+},
+{
+"city": "Raleigh",
+"county": "Wake County",
+"countyFips": "37183",
+"pop": 499825,
+"spansCounties": 2
+},
+{
+"city": "Greensboro",
+"county": "Guilford County",
+"countyFips": "37081",
+"pop": 307381,
+"spansCounties": 1
+},
+{
+"city": "Durham",
+"county": "Durham County",
+"countyFips": "37063",
+"pop": 301870,
+"spansCounties": 3
+},
+{
+"city": "Winston-Salem",
+"county": "Forsyth County",
+"countyFips": "37067",
+"pop": 255769,
+"spansCounties": 1
+},
+{
+"city": "Fayetteville",
+"county": "Cumberland County",
+"countyFips": "37051",
+"pop": 209496,
+"spansCounties": 1
+}
+],
+"North Dakota": [
+{
+"city": "Fargo",
+"county": "Cass County",
+"countyFips": "38017",
+"pop": 136285,
+"spansCounties": 1
+},
+{
+"city": "Bismarck",
+"county": "Burleigh County",
+"countyFips": "38015",
+"pop": 77772,
+"spansCounties": 1
+},
+{
+"city": "Grand Forks",
+"county": "Grand Forks County",
+"countyFips": "38035",
+"pop": 59845,
+"spansCounties": 1
+},
+{
+"city": "Minot",
+"county": "Ward County",
+"countyFips": "38101",
+"pop": 47440,
+"spansCounties": 1
+},
+{
+"city": "West Fargo",
+"county": "Cass County",
+"countyFips": "38017",
+"pop": 41027,
+"spansCounties": 1
+},
+{
+"city": "Williston",
+"county": "Williams County",
+"countyFips": "38105",
+"pop": 28821,
+"spansCounties": 1
+}
+],
+"Ohio": [
+{
+"city": "Columbus",
+"county": "Franklin County",
+"countyFips": "39049",
+"pop": 933263,
+"spansCounties": 3
+},
+{
+"city": "Cleveland",
+"county": "Cuyahoga County",
+"countyFips": "39035",
+"pop": 365379,
+"spansCounties": 1
+},
+{
+"city": "Cincinnati",
+"county": "Hamilton County",
+"countyFips": "39061",
+"pop": 314915,
+"spansCounties": 1
+},
+{
+"city": "Toledo",
+"county": "Lucas County",
+"countyFips": "39095",
+"pop": 265638,
+"spansCounties": 1
+},
+{
+"city": "Akron",
+"county": "Summit County",
+"countyFips": "39153",
+"pop": 189664,
+"spansCounties": 1
+},
+{
+"city": "Dayton",
+"county": "Montgomery County",
+"countyFips": "39113",
+"pop": 136346,
+"spansCounties": 2
+}
+],
+"Oklahoma": [
+{
+"city": "Oklahoma",
+"county": "Oklahoma County",
+"countyFips": "40109",
+"pop": 712919,
+"spansCounties": 4
+},
+{
+"city": "Tulsa",
+"county": "Tulsa County",
+"countyFips": "40143",
+"pop": 415154,
+"spansCounties": 4
+},
+{
+"city": "Norman",
+"county": "Cleveland County",
+"countyFips": "40027",
+"pop": 131010,
+"spansCounties": 1
+},
+{
+"city": "Broken Arrow",
+"county": "Tulsa County",
+"countyFips": "40143",
+"pop": 122756,
+"spansCounties": 2
+},
+{
+"city": "Edmond",
+"county": "Oklahoma County",
+"countyFips": "40109",
+"pop": 99040,
+"spansCounties": 1
+},
+{
+"city": "Lawton",
+"county": "Comanche County",
+"countyFips": "40031",
+"pop": 90027,
+"spansCounties": 1
+}
+],
+"Oregon": [
+{
+"city": "Portland",
+"county": "Multnomah County",
+"countyFips": "41051",
+"pop": 635749,
+"spansCounties": 3
+},
+{
+"city": "Salem",
+"county": "Marion County",
+"countyFips": "41047",
+"pop": 180406,
+"spansCounties": 2
+},
+{
+"city": "Eugene",
+"county": "Lane County",
+"countyFips": "41039",
+"pop": 178786,
+"spansCounties": 1
+},
+{
+"city": "Gresham",
+"county": "Multnomah County",
+"countyFips": "41051",
+"pop": 111507,
+"spansCounties": 1
+},
+{
+"city": "Hillsboro",
+"county": "Washington County",
+"countyFips": "41067",
+"pop": 110337,
+"spansCounties": 1
+},
+{
+"city": "Bend",
+"county": "Deschutes County",
+"countyFips": "41017",
+"pop": 106926,
+"spansCounties": 1
+}
+],
+"Pennsylvania": [
+{
+"city": "Philadelphia",
+"county": "Philadelphia County",
+"countyFips": "42101",
+"pop": 1573916,
+"spansCounties": 1
+},
+{
+"city": "Pittsburgh",
+"county": "Allegheny County",
+"countyFips": "42003",
+"pop": 307668,
+"spansCounties": 1
+},
+{
+"city": "Allentown",
+"county": "Lehigh County",
+"countyFips": "42077",
+"pop": 127138,
+"spansCounties": 1
+},
+{
+"city": "Reading",
+"county": "Berks County",
+"countyFips": "42011",
+"pop": 96000,
+"spansCounties": 1
+},
+{
+"city": "Erie",
+"county": "Erie County",
+"countyFips": "42049",
+"pop": 92940,
+"spansCounties": 1
+},
+{
+"city": "Bethlehem",
+"county": "Northampton County",
+"countyFips": "42095",
+"pop": 79453,
+"spansCounties": 2
+}
+],
+"Rhode Island": [
+{
+"city": "Providence",
+"county": "Providence County",
+"countyFips": "44007",
+"pop": 194706,
+"spansCounties": 1
+},
+{
+"city": "Cranston",
+"county": "Providence County",
+"countyFips": "44007",
+"pop": 84448,
+"spansCounties": 1
+},
+{
+"city": "Warwick",
+"county": "Kent County",
+"countyFips": "44003",
+"pop": 83554,
+"spansCounties": 1
+},
+{
+"city": "Pawtucket",
+"county": "Providence County",
+"countyFips": "44007",
+"pop": 76996,
+"spansCounties": 1
+},
+{
+"city": "East Providence",
+"county": "Providence County",
+"countyFips": "44007",
+"pop": 47961,
+"spansCounties": 1
+},
+{
+"city": "Woonsocket",
+"county": "Providence County",
+"countyFips": "44007",
+"pop": 44508,
+"spansCounties": 1
+}
+],
+"South Carolina": [
+{
+"city": "Charleston",
+"county": "Charleston County",
+"countyFips": "45019",
+"pop": 157665,
+"spansCounties": 2
+},
+{
+"city": "Columbia",
+"county": "Richland County",
+"countyFips": "45079",
+"pop": 144788,
+"spansCounties": 2
+},
+{
+"city": "North Charleston",
+"county": "Charleston County",
+"countyFips": "45019",
+"pop": 126005,
+"spansCounties": 3
+},
+{
+"city": "Mount Pleasant",
+"county": "Charleston County",
+"countyFips": "45019",
+"pop": 95604,
+"spansCounties": 1
+},
+{
+"city": "Rock Hill",
+"county": "York County",
+"countyFips": "45091",
+"pop": 75798,
+"spansCounties": 1
+},
+{
+"city": "Greenville",
+"county": "Greenville County",
+"countyFips": "45045",
+"pop": 74371,
+"spansCounties": 1
+}
+],
+"South Dakota": [
+{
+"city": "Sioux Falls",
+"county": "Minnehaha County",
+"countyFips": "46099",
+"pop": 209289,
+"spansCounties": 2
+},
+{
+"city": "Rapid",
+"county": "Pennington County",
+"countyFips": "46103",
+"pop": 79894,
+"spansCounties": 1
+},
+{
+"city": "Aberdeen",
+"county": "Brown County",
+"countyFips": "46013",
+"pop": 27919,
+"spansCounties": 1
+},
+{
+"city": "Brookings",
+"county": "Brookings County",
+"countyFips": "46011",
+"pop": 24555,
+"spansCounties": 1
+},
+{
+"city": "Watertown",
+"county": "Codington County",
+"countyFips": "46029",
+"pop": 23492,
+"spansCounties": 1
+},
+{
+"city": "Yankton",
+"county": "Yankton County",
+"countyFips": "46135",
+"pop": 15670,
+"spansCounties": 1
+}
+],
+"Tennessee": [
+{
+"city": "Nashville-Davidson",
+"county": "Davidson County",
+"countyFips": "47037",
+"pop": 704963,
+"spansCounties": 1
+},
+{
+"city": "Memphis",
+"county": "Shelby County",
+"countyFips": "47157",
+"pop": 610919,
+"spansCounties": 1
+},
+{
+"city": "Knoxville",
+"county": "Knox County",
+"countyFips": "47093",
+"pop": 198722,
+"spansCounties": 1
+},
+{
+"city": "Chattanooga",
+"county": "Hamilton County",
+"countyFips": "47065",
+"pop": 191496,
+"spansCounties": 1
+},
+{
+"city": "Clarksville",
+"county": "Montgomery County",
+"countyFips": "47125",
+"pop": 185690,
+"spansCounties": 1
+},
+{
+"city": "Murfreesboro",
+"county": "Rutherford County",
+"countyFips": "47149",
+"pop": 168387,
+"spansCounties": 1
+}
+],
+"Texas": [
+{
+"city": "Houston",
+"county": "Harris County",
+"countyFips": "48201",
+"pop": 2390125,
+"spansCounties": 4
+},
+{
+"city": "San Antonio",
+"county": "Bexar County",
+"countyFips": "48029",
+"pop": 1526656,
+"spansCounties": 3
+},
+{
+"city": "Dallas",
+"county": "Dallas County",
+"countyFips": "48113",
+"pop": 1326087,
+"spansCounties": 5
+},
+{
+"city": "Fort Worth",
+"county": "Tarrant County",
+"countyFips": "48439",
+"pop": 1008106,
+"spansCounties": 5
+},
+{
+"city": "Austin",
+"county": "Travis County",
+"countyFips": "48453",
+"pop": 993588,
+"spansCounties": 4
+},
+{
+"city": "El Paso",
+"county": "El Paso County",
+"countyFips": "48141",
+"pop": 681723,
+"spansCounties": 1
+}
+],
+"Utah": [
+{
+"city": "Salt Lake",
+"county": "Salt Lake County",
+"countyFips": "49035",
+"pop": 217783,
+"spansCounties": 1
+},
+{
+"city": "West Valley",
+"county": "Salt Lake County",
+"countyFips": "49035",
+"pop": 138144,
+"spansCounties": 1
+},
+{
+"city": "West Jordan",
+"county": "Salt Lake County",
+"countyFips": "49035",
+"pop": 116688,
+"spansCounties": 1
+},
+{
+"city": "Provo",
+"county": "Utah County",
+"countyFips": "49049",
+"pop": 115479,
+"spansCounties": 1
+},
+{
+"city": "St. George",
+"county": "Washington County",
+"countyFips": "49053",
+"pop": 106288,
+"spansCounties": 1
+},
+{
+"city": "Orem",
+"county": "Utah County",
+"countyFips": "49049",
+"pop": 96646,
+"spansCounties": 1
+}
+],
+"Vermont": [
+{
+"city": "Burlington",
+"county": "Chittenden County",
+"countyFips": "50007",
+"pop": 44432,
+"spansCounties": 1
+},
+{
+"city": "South Burlington",
+"county": "Chittenden County",
+"countyFips": "50007",
+"pop": 21713,
+"spansCounties": 1
+},
+{
+"city": "Rutland",
+"county": "Rutland County",
+"countyFips": "50021",
+"pop": 15565,
+"spansCounties": 1
+}
+],
+"Virginia": [
+{
+"city": "Virginia Beach",
+"county": "Virginia Beach city",
+"countyFips": "51810",
+"pop": 454808,
+"spansCounties": 1
+},
+{
+"city": "Chesapeake",
+"county": "Chesapeake city",
+"countyFips": "51550",
+"pop": 254997,
+"spansCounties": 1
+},
+{
+"city": "Richmond",
+"county": "Richmond city",
+"countyFips": "51760",
+"pop": 233655,
+"spansCounties": 1
+},
+{
+"city": "Norfolk",
+"county": "Norfolk city",
+"countyFips": "51710",
+"pop": 231105,
+"spansCounties": 1
+},
+{
+"city": "Newport News",
+"county": "Newport News city",
+"countyFips": "51700",
+"pop": 183056,
+"spansCounties": 1
+},
+{
+"city": "Alexandria",
+"county": "Alexandria city",
+"countyFips": "51510",
+"pop": 159102,
+"spansCounties": 1
+}
+],
+"Washington": [
+{
+"city": "Seattle",
+"county": "King County",
+"countyFips": "53033",
+"pop": 780995,
+"spansCounties": 1
+},
+{
+"city": "Spokane",
+"county": "Spokane County",
+"countyFips": "53063",
+"pop": 230609,
+"spansCounties": 1
+},
+{
+"city": "Tacoma",
+"county": "Pierce County",
+"countyFips": "53053",
+"pop": 228202,
+"spansCounties": 1
+},
+{
+"city": "Vancouver",
+"county": "Clark County",
+"countyFips": "53011",
+"pop": 198992,
+"spansCounties": 1
+},
+{
+"city": "Bellevue",
+"county": "King County",
+"countyFips": "53033",
+"pop": 154377,
+"spansCounties": 1
+},
+{
+"city": "Kent",
+"county": "King County",
+"countyFips": "53033",
+"pop": 136588,
+"spansCounties": 1
+}
+],
+"West Virginia": [
+{
+"city": "Charleston",
+"county": "Kanawha County",
+"countyFips": "54039",
+"pop": 46482,
+"spansCounties": 1
+},
+{
+"city": "Huntington",
+"county": "Cabell County",
+"countyFips": "54011",
+"pop": 44942,
+"spansCounties": 2
+},
+{
+"city": "Morgantown",
+"county": "Monongalia County",
+"countyFips": "54061",
+"pop": 30490,
+"spansCounties": 1
+},
+{
+"city": "Parkersburg",
+"county": "Wood County",
+"countyFips": "54107",
+"pop": 28834,
+"spansCounties": 1
+},
+{
+"city": "Wheeling",
+"county": "Ohio County",
+"countyFips": "54069",
+"pop": 26060,
+"spansCounties": 2
+},
+{
+"city": "Martinsburg",
+"county": "Berkeley County",
+"countyFips": "54003",
+"pop": 19047,
+"spansCounties": 1
+}
+],
+"Wisconsin": [
+{
+"city": "Milwaukee",
+"county": "Milwaukee County",
+"countyFips": "55079",
+"pop": 563531,
+"spansCounties": 3
+},
+{
+"city": "Madison",
+"county": "Dane County",
+"countyFips": "55025",
+"pop": 285300,
+"spansCounties": 1
+},
+{
+"city": "Green Bay",
+"county": "Brown County",
+"countyFips": "55009",
+"pop": 106311,
+"spansCounties": 1
+},
+{
+"city": "Kenosha",
+"county": "Kenosha County",
+"countyFips": "55059",
+"pop": 99578,
+"spansCounties": 1
+},
+{
+"city": "Racine",
+"county": "Racine County",
+"countyFips": "55101",
+"pop": 78057,
+"spansCounties": 1
+},
+{
+"city": "Appleton",
+"county": "Outagamie County",
+"countyFips": "55087",
+"pop": 75344,
+"spansCounties": 3
+}
+],
+"Wyoming": [
+{
+"city": "Cheyenne",
+"county": "Laramie County",
+"countyFips": "56021",
+"pop": 65704,
+"spansCounties": 1
+},
+{
+"city": "Casper",
+"county": "Natrona County",
+"countyFips": "56025",
+"pop": 58823,
+"spansCounties": 1
+},
+{
+"city": "Gillette",
+"county": "Campbell County",
+"countyFips": "56005",
+"pop": 33846,
+"spansCounties": 1
+},
+{
+"city": "Laramie",
+"county": "Albany County",
+"countyFips": "56001",
+"pop": 32957,
+"spansCounties": 1
+},
+{
+"city": "Rock Springs",
+"county": "Sweetwater County",
+"countyFips": "56037",
+"pop": 22967,
+"spansCounties": 1
+},
+{
+"city": "Sheridan",
+"county": "Sheridan County",
+"countyFips": "56033",
+"pop": 19813,
+"spansCounties": 1
+}
+]
+}
