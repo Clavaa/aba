@@ -31,6 +31,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/faq/`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/contact/`, changeFrequency: "monthly", priority: 0.8 },
     {
+      url: `${base}/find-a-diagnostician/`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/support-services/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    { url: `${base}/events/`, changeFrequency: "weekly", priority: 0.5 },
+    {
       url: `${base}/privacy-policy/`,
       changeFrequency: "yearly",
       priority: 0.3,

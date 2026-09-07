@@ -330,6 +330,79 @@ export const services: ServiceRecord[] = [
     ],
   },
 
+  /* ──────────────────────────── DAYCARE ──────────────────────────── */
+  {
+    slug: "daycare",
+    name: "ABA in daycare",
+    navLabel: "In daycare",
+    title: "ABA Therapy in Daycare & Preschool",
+    metaDescription:
+      "ABA delivered inside your child's daycare or preschool day: who has to agree, what it's good at, the honest trade-offs, and how coverage treats it.",
+    h1: "Therapy that fits the day your child already has.",
+    lede:
+      "If your child is already in daycare four days a week, that is where their hardest social moments happen — and where the skills have to work. Daycare-based ABA puts the plan into that room instead of asking your family to find a fifth day.",
+    tint: "bg-peach",
+    photoIntent:
+      "Daycare classroom mid-morning: toddlers at a low table, clinician kneeling beside one, teacher nearby",
+    bestFor: [
+      "Your child is already enrolled somewhere and pulling them out isn't realistic",
+      "Both parents work and a separate therapy schedule would mean cutting hours",
+      "The hard moments are with other children — sharing, waiting, joining in",
+      "Drop-off, transitions, or nap time are the flashpoints of the day",
+      "You want the daycare staff running the same strategies you are",
+    ],
+    whatItLooksLike: [
+      {
+        t: "A technician works inside the real day",
+        d: "Sessions happen during circle time, snack, free play and transitions — the moments that are actually hard — rather than in a separate room away from everyone.",
+      },
+      {
+        t: "The staff get coached too",
+        d: "Teachers spend more hours with your child than we will. A good daycare program trains the adults who are there all week, so the strategies don't leave when we do.",
+      },
+      {
+        t: "Peers are already there",
+        d: "Social goals don't have to be manufactured. The turn-taking practice is happening anyway; we just make it deliberate and support it.",
+      },
+      {
+        t: "You get one plan, not two",
+        d: "The same targets run at daycare and at home, so your child isn't being asked to do something different in each place.",
+      },
+    ],
+    strengths: [
+      "No extra day to find and no second commute",
+      "Peer practice is built into the setting rather than staged",
+      "The people with your child all week learn the plan",
+      "Skills get taught in the environment that demands them",
+    ],
+    tradeoffs: [
+      "The daycare has to agree, and many won't — an outside clinician in the room is a real ask, with licensing and liability questions behind it",
+      "Some health plans exclude services delivered in an educational or childcare setting, the same way they can exclude school hours",
+      "A busy, loud room is harder for some children than a quiet one, and for those kids this is the wrong setting",
+      "Coordination takes time: permissions, scheduling, and a relationship with staff who didn't ask for a new person in their room",
+    ],
+    coverage:
+      "Daycare is a place of service, and how a plan treats it varies more than home or center does. Some plans cover it outright, some exclude childcare and educational settings by name, and some require the same documentation as a school placement. This has to be checked in your plan language before anything is arranged with the daycare — it is not a question anyone should answer from a general rule.",
+    faqs: [
+      {
+        q: "Will my daycare allow this?",
+        a: "Maybe. It is entirely their decision, and it varies enormously between centers — some welcome it because it helps them support a child they're struggling with, and others decline for licensing or liability reasons. It's worth asking directly and early, and we can talk to them with you.",
+      },
+      {
+        q: "Does this replace in-home therapy?",
+        a: "Not usually. Daycare-based sessions are strong on peer and routine goals and weak on the household routines that happen at 6am and 7pm. Many families run both, or start in daycare and add home hours when bedtime becomes the priority.",
+      },
+      {
+        q: "Will the other children notice?",
+        a: "Some will, and that's generally fine — young children accept an extra adult in the room quickly. Good programs work inside the group rather than pulling your child out of it, which draws less attention, not more.",
+      },
+      {
+        q: "What if the daycare says no?",
+        a: "Then in-home or center-based becomes the path, with the daycare supported by consultation from outside where they're willing. A refusal closes one setting, not the whole plan.",
+      },
+    ],
+  },
+
   /* ────────────────────── EARLY INTERVENTION ────────────────────── */
   {
     slug: "early-intervention",
