@@ -27,8 +27,6 @@ export default function SiteHeader() {
   const [suppressed, setSuppressed] = useState<string | null>(null);
   const [openMobile, setOpenMobile] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
-  const openMenuRef = useRef<string | null>(null);
-  openMenuRef.current = openMenu;
 
   // Route change closes everything. Adjusted during render rather than in an
   // effect — this is the "reset state when a value changes" pattern, and it
@@ -41,25 +39,28 @@ export default function SiteHeader() {
     setOpenMobile(null);
   }
 
+  // Escape closes the open panel. Depends on `openMenu` so the handler always
+  // closes over the current value — no ref-during-render needed.
   useEffect(() => {
+    if (!openMenu) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "Escape") return;
-      const cur = openMenuRef.current;
-      if (!cur) return;
-      setSuppressed(cur);
+      setSuppressed(openMenu);
       setOpenMenu(null);
     };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [openMenu]);
+
+  // A click anywhere outside the nav closes whatever is open.
+  useEffect(() => {
     const onClick = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenMenu(null);
       }
     };
-    document.addEventListener("keydown", onKey);
     document.addEventListener("click", onClick);
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.removeEventListener("click", onClick);
-    };
+    return () => document.removeEventListener("click", onClick);
   }, []);
 
   const isEs = t.langSwitchHref === "/";
