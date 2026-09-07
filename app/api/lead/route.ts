@@ -50,9 +50,12 @@ export async function POST(request: Request) {
   const lead = {} as Record<LeadField, string>;
   for (const field of ALLOWED_FIELDS) lead[field] = sanitize(body[field]);
 
-  if (!lead.parentName || !lead.phone) {
+  // A lead needs a name and at least one way to reach them back. The intake
+  // quiz collects a phone; the footer signup collects an email only — both
+  // are reachable, so both are valid.
+  if (!lead.parentName || (!lead.phone && !lead.email)) {
     return NextResponse.json(
-      { ok: false, error: "Name and phone are required" },
+      { ok: false, error: "Name and either a phone number or an email are required" },
       { status: 400 }
     );
   }

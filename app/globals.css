@@ -133,6 +133,125 @@ body {
     text-align: center;
   }
 
+  /*
+   * The SECOND display voice. The target runs two faces side by side: a
+   * condensed uppercase one for statements ("HOW CAN WE HELP YOU?") and a
+   * rounded, heavy, sentence-case one for warmer headings ("Hear from other
+   * parents and caregivers."). Missing the second one is why a copy of this
+   * design usually reads too shouty.
+   */
+  .display-round {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    text-transform: none;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+
+  .display-round-xl {
+    font-size: clamp(2.1rem, 1.2rem + 3.6vw, 4.5rem);
+  }
+
+  .display-round-lg {
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
+  }
+
+  .display-round-md {
+    font-size: clamp(1.35rem, 1.1rem + 1.1vw, 1.85rem);
+  }
+
+  /* Horizontal scroll rail — services, testimonials, events carousels */
+  .scroll-rail {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .scroll-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scroll-rail > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+
+  /* Circular prev/next controls under every rail */
+  .rail-btn {
+    display: grid;
+    place-items: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--color-ink);
+    color: var(--color-ink);
+    background: transparent;
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: background-color 150ms ease, color 150ms ease, opacity 150ms ease;
+  }
+
+  .rail-btn:hover:not(:disabled) {
+    background: var(--color-ink);
+    color: var(--color-cream);
+  }
+
+  .rail-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  /* Edge-faded logo marquee */
+  .marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 6rem,
+      #000 calc(100% - 6rem),
+      transparent
+    );
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: marquee-scroll 48s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+/* People who ask for less motion get a static, still-legible rail. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .scroll-rail {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+
   /* 14px/600 uppercase black kicker that sits above every headline */
   .eyebrow {
     font-family: var(--font-sans);

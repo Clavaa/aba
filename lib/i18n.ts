@@ -21,7 +21,19 @@ export function langFromPath(pathname: string): Lang {
 
 type NavItem = { href: string; label: string };
 
+/**
+ * Header menu. Top-level entries may carry `children`, which render as a
+ * dropdown panel — the target runs six top-level items, five of them with
+ * a menu underneath, and one flat link.
+ */
+export type MenuItem = {
+  href: string;
+  label: string;
+  children?: { href: string; label: string; note?: string }[];
+};
+
 type Strings = {
+  mainMenu: MenuItem[];
   nav: NavItem[];
   mobileNav: NavItem[];
   call: (phone: string) => string;
@@ -47,6 +59,66 @@ type Strings = {
 
 export const STRINGS: Record<Lang, Strings> = {
   en: {
+    mainMenu: [
+      {
+        href: "/about/",
+        label: "About Sproutwell",
+        children: [
+          { href: "/about/", label: "About us", note: "Who we are and how we work" },
+          { href: "/about/leadership/", label: "Our leadership", note: "The people accountable for care" },
+          { href: "/faq/", label: "FAQ", note: "The questions we get most" },
+        ],
+      },
+      {
+        href: "/services/",
+        label: "Our services",
+        children: [
+          { href: "/services/in-home/", label: "In-home ABA", note: "Therapy where life happens" },
+          { href: "/services/center-based/", label: "Center-based ABA", note: "A room built for the work" },
+          { href: "/services/school/", label: "School-based support", note: "The hardest six hours" },
+          { href: "/services/telehealth/", label: "Telehealth & parent coaching", note: "No drive required" },
+          { href: "/services/early-intervention/", label: "Early intervention", note: "Toddlers and preschoolers" },
+          { href: "/services/", label: "All services", note: "Compare every setting" },
+        ],
+      },
+      {
+        href: "/resources/",
+        label: "Resources for parents",
+        children: [
+          { href: "/resources/what-is-aba/", label: "What is ABA?", note: "Including the criticism" },
+          { href: "/resources/autism-levels/", label: "Autism levels 1, 2, 3", note: "What the report means" },
+          { href: "/resources/signs-of-autism-by-age/", label: "Signs by age", note: "12 months to teens" },
+          { href: "/autism-evaluation/", label: "Getting an evaluation", note: "Three doors, two of them free" },
+          { href: "/autism-evaluation/screener/", label: "Parent checklist", note: "Two minutes, no signup" },
+          { href: "/autism-evaluation/m-chat/", label: "The M-CHAT explained", note: "What the score means" },
+        ],
+      },
+      {
+        href: "/careers/",
+        label: "Careers",
+        children: [
+          { href: "/careers/", label: "Careers at Sproutwell", note: "Why work here" },
+          { href: "/careers/openings/", label: "All positions", note: "Current open roles" },
+          { href: "/careers/rbt/", label: "RBT jobs & guide", note: "No degree required" },
+          { href: "/careers/rbt/certification/", label: "RBT certification", note: "All six requirements" },
+          { href: "/careers/bcba/", label: "BCBA jobs & guide", note: "Clinical leadership" },
+          { href: "/careers/pay/", label: "How ABA pay works", note: "The honest version" },
+        ],
+      },
+      {
+        href: "/locations/",
+        label: "Locations",
+        children: [
+          { href: "/locations/", label: "All 50 states + DC", note: "Every state has a page" },
+          { href: "/locations/texas/", label: "Texas", note: "Coverage and counties" },
+          { href: "/locations/florida/", label: "Florida", note: "Coverage and counties" },
+          { href: "/locations/new-york/", label: "New York", note: "Coverage and counties" },
+          { href: "/locations/california/", label: "California", note: "Coverage and counties" },
+          { href: "/cost-of-aba-therapy/", label: "What ABA costs", note: "By state" },
+        ],
+      },
+      { href: "/insurance/", label: "Insurance" },
+    ],
     nav: [
       { href: "/services/", label: "Services" },
       { href: "/locations/", label: "Where we work" },
@@ -106,6 +178,12 @@ export const STRINGS: Record<Lang, Strings> = {
   },
 
   es: {
+    mainMenu: [
+      { href: "/es/", label: "Inicio" },
+      { href: "/es/terapia-aba/", label: "Qué es ABA" },
+      { href: "/es/seguro-y-medicaid/", label: "Seguro y Medicaid" },
+      { href: "/es/como-empezar/", label: "Cómo empezar" },
+    ],
     nav: [
       { href: "/es/", label: "Inicio" },
       { href: "/es/terapia-aba/", label: "Qué es ABA" },

@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    { url: `${base}/faq/`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/resources/`, changeFrequency: "weekly", priority: 0.8 },
     {
       url: `${base}/resources/what-is-aba/`,

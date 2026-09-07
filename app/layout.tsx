@@ -5,6 +5,7 @@ import { siteConfig, isProvisionalHost } from "@/site.config";
 import TopBar from "@/components/TopBar";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import FooterSignup from "@/components/FooterSignup";
 import StickyCallBar from "@/components/StickyCallBar";
 import JsonLd from "@/components/JsonLd";
 
@@ -70,6 +71,7 @@ export default function RootLayout({
         <TopBar />
         <SiteHeader />
         <main id="main">{children}</main>
+        <FooterSignup />
         <SiteFooter />
         <StickyCallBar />
       </body>

@@ -3,15 +3,21 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import ReviewCarousel from "@/components/ReviewCarousel";
+import ImageTextSection from "@/components/ImageTextSection";
+import CtaImageBackground from "@/components/CtaImageBackground";
+import ServiceRail from "@/components/ServiceRail";
+import TestimonialRail from "@/components/TestimonialRail";
+import ImageTextAccordion from "@/components/ImageTextAccordion";
+import FindYourCenter from "@/components/FindYourCenter";
+import WhatsHappening from "@/components/WhatsHappening";
+import StickyAccordion from "@/components/StickyAccordion";
+import InsuranceMarquee from "@/components/InsuranceMarquee";
 import StateSelect from "@/components/StateSelect";
-import CoverageGrid from "@/components/CoverageGrid";
 import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
 import ModalityChips from "@/components/ModalityChips";
 import FeatureStrip from "@/components/FeatureStrip";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/", languages: { en: "/", es: "/es/" } },
@@ -37,7 +43,7 @@ const painRelief: AccordionItem[] = [
       body: (
         <p>
           You call once. A real person answers, checks your coverage, and tells
-          you the honest timeline for your state.{" "}
+          you the honest timeline for your state —{" "}
           {siteConfig.intake.startTimeframe.toLowerCase()}.
         </p>
       ),
@@ -182,7 +188,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ══════════════════ HERO — inset teal field card ══════════════════ */}
+      {/* 2 · hero-home — inset teal field card */}
       <section className="px-3 pt-3">
         <div className="field-card mx-auto max-w-[1400px] bg-teal-80 px-4 pb-0 pt-16 text-center sm:px-10 sm:pt-20">
           <p className="eyebrow">ABA therapy and backup for your whole family</p>
@@ -223,14 +229,17 @@ export default function HomePage() {
             <ImageSlot
               intent="Golden-hour photo: parent and child laughing together on the porch of a real home"
               tint="bg-white/60"
-              className="aspect-[16/8] rounded-t-[40px]"
+              className="aspect-[16/6] rounded-t-[40px]"
             />
             <Sprout className="absolute -top-8 right-6 h-20 w-20 rotate-[8deg] text-coral" />
           </div>
         </div>
       </section>
 
-      {/* ══════════════════ REASSURANCE STRIP ══════════════════ */}
+      {/* 3 · insurance-logos-section */}
+      <InsuranceMarquee states={states} />
+
+      {/* Reassurance strip */}
       <FeatureStrip
         features={[
           { icon: "map", text: "All 50 states and DC" },
@@ -239,82 +248,96 @@ export default function HomePage() {
         ]}
       />
 
-      {/* ══════════ TEXT + IMAGE PAIR — "you've done enough alone" ══════════ */}
-      <section className="mx-auto mt-20 max-w-[1400px] px-3">
-        <div className="grid overflow-hidden lg:grid-cols-2">
-          <div className="pair-left bg-peach-100 px-6 py-14 sm:px-12 lg:py-20">
-            <p className="eyebrow">Why am I doing this all alone?</p>
-            <p className="display display-h2 mt-7 max-w-lg text-coral">
-              You&rsquo;ve done enough alone. Let&rsquo;s do the next part
-              together.
-            </p>
-          </div>
-          <ImageSlot
-            intent="Close, warm detail: a parent's hand and a child's hand on a knitted blanket, afternoon light"
-            tint="bg-beige-80"
-            className="pair-right min-h-[22rem]"
-          />
-        </div>
-        <div className="mt-10 text-center">
-          <Link href="/getting-started/" className="btn btn-primary">
-            Get help today
-          </Link>
-        </div>
-      </section>
-
-      {/* ══════════════ GIANT CENTERED STATEMENT ══════════════ */}
-      <section className="mx-auto max-w-[1400px] px-4 py-20 sm:py-28">
-        <h2 className="display display-hero display-mega mx-auto max-w-5xl">
-          Hi, we&rsquo;re here to help your child. Your family. You.
-        </h2>
-        <p className="mx-auto mt-8 max-w-2xl text-center text-lg text-ink-muted">
-          Your child needs ABA therapy,{" "}
-          <strong className="text-ink">but what do you need?</strong> We build
-          the plan around the whole household — because when the people around
-          a child are steadier, the child is steadier too.
-        </p>
-      </section>
-
-      {/* ═══════ OVERLAP MODULE — photo with a floating panel on top ═══════ */}
-      <section className="mx-auto max-w-[1400px] px-3">
-        <div className="relative">
-          <ImageSlot
-            intent="Clinician and child on a playroom floor, child handing over a toy, natural window light"
-            tint="bg-teal-90"
-            className="min-h-[26rem] field-card lg:min-h-[34rem]"
-          />
-          <div className="overlap-panel mx-4 -mt-16 bg-teal-80 p-7 sm:p-10 lg:absolute lg:right-10 lg:top-1/2 lg:mx-0 lg:mt-0 lg:w-[30rem] lg:-translate-y-1/2">
-            <p className="eyebrow">ABA therapy</p>
-            <h2 className="display display-h2 mt-4">Our core service.</h2>
-            <p className="mt-5 text-ink-muted">
-              ABA teaches your child the skills they need to thrive — right now
-              and for the rest of their life.{" "}
+      {/* 4 · image-text-section */}
+      <ImageTextSection
+        eyebrow="Why am I doing this all alone?"
+        heading="You're showing up for your child. Who's showing up for you?"
+        body={
+          <>
+            <p>
               <strong className="text-ink">
-                We take a real-life-focused approach
-              </strong>
-              , with daily support for the child and the caregivers both.
+                Dealing with an autism diagnosis is hard.
+              </strong>{" "}
+              Not hard like &ldquo;my kid won&rsquo;t eat vegetables.&rdquo;
+              Hard like the 4pm meltdown every single day, the sibling who has
+              learned to stay quiet, the teeth that haven&rsquo;t been brushed
+              properly in months.
             </p>
-            <Link href="/services/" className="btn btn-primary mt-7">
-              Learn all about ABA
-            </Link>
-            <p className="chip chip-check mt-6">
-              <span aria-hidden="true" className="text-coral">
-                ✓
-              </span>
-              Care at home, in center, at school, or online
+            <p className="mt-4">
+              You have been the therapist, the advocate, the researcher and the
+              parent, all at once, for a long time. That is the part nobody
+              builds a plan around. We do.
             </p>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+        cta={{ href: "/getting-started/", label: "Get help today" }}
+        photoIntent="Golden hour: parent leaning in to kiss their child on the temple, both mid-laugh, outdoors"
+      />
 
-      {/* ══════════════ PAIN / RELIEF — cream band ══════════════ */}
+      {/* 5 · cta-image-background-section */}
+      <CtaImageBackground
+        eyebrow="You are not the only one anymore"
+        heading="Hi, we're here to help your child. Your family. You."
+        body="Your child needs ABA therapy, but what do you need? We build the plan around the whole household — because when the people around a child are steadier, the child is steadier too."
+        primary={{ href: "/getting-started/", label: "Start the 15-minute intake" }}
+      />
+
+      {/* 6 · services-horizontal-scroll */}
+      <ServiceRail
+        eyebrow="All the ways we help you"
+        cards={[
+          {
+            href: "/services/in-home/",
+            title: "In-home ABA",
+            body: "Bedtime, meals, the shoes, the doorway meltdown — taught in the rooms where they actually happen.",
+            photoIntent: "RBT and child playing on a living-room rug, parent nearby, real clutter",
+          },
+          {
+            href: "/services/center-based/",
+            title: "Center-based ABA",
+            body: "A day with a shape, and other children to practice with on purpose.",
+            photoIntent: "Two children at a low table in a bright center room, clinician between them",
+          },
+          {
+            href: "/services/school/",
+            title: "School-based support",
+            body: "One plan the whole building runs, plus classroom data you can take to an IEP meeting.",
+            photoIntent: "Clinician crouched beside a student at a classroom desk, teacher in background",
+          },
+          {
+            href: "/services/telehealth/",
+            title: "Telehealth & parent coaching",
+            body: "A BCBA in your kitchen at 5:45pm, coaching the routine while it's happening.",
+            photoIntent: "Parent with a propped phone at the kitchen table while a toddler eats",
+          },
+          {
+            href: "/services/early-intervention/",
+            title: "Early intervention",
+            body: "Play-based teaching for toddlers, aimed at communication first.",
+            photoIntent: "Toddler and parent on the floor with blocks, clinician sitting back on her heels",
+          },
+          {
+            href: "/autism-evaluation/",
+            title: "Help getting evaluated",
+            body: "Three referral doors, two of them free and open to you today.",
+            photoIntent: "Parent on the phone at a kitchen counter, toddler playing behind",
+          },
+        ]}
+        primary={{ href: "/getting-started/", label: "Get in touch" }}
+        secondary={{ href: "/services/", label: "View all services" }}
+      />
+
+      {/* 7 · stocking-cards → the pain/relief accordion */}
       <section
-        className="mx-auto mt-24 max-w-[1400px] px-4 sm:mt-32"
+        className="mx-auto max-w-[1400px] px-4 py-16 sm:py-20"
         aria-labelledby="pain-heading"
       >
         <p className="eyebrow text-center">What you&rsquo;re carrying</p>
-        <h2 id="pain-heading" className="display display-h2 display-mega mt-5">
-          What you&rsquo;re doing / how we help
+        <h2
+          id="pain-heading"
+          className="display-round display-round-xl mx-auto mt-5 max-w-4xl text-center text-coral"
+        >
+          What you&rsquo;re doing, and how we help.
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-ink-muted">
           You&rsquo;ve been carrying this by yourself. Here&rsquo;s what changes
@@ -325,115 +348,132 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════════ FIND YOUR STATE — photo + giant headline ══════════════ */}
-      <section className="mt-24 bg-peach-100 py-20 sm:mt-32 sm:py-28">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-10 px-4 lg:grid-cols-2">
-          <ImageSlot
-            intent="Wide shot of a bright therapy room: low tables, swing, climbing wall, soft daylight"
-            tint="bg-beige-80"
-            className="field-card min-h-[24rem]"
-          />
-          <div>
-            <p className="eyebrow">Discover how coverage works near you</p>
-            <h2 className="display display-h2 mt-6 text-left text-coral">
-              Find your state.
-            </h2>
-            <p className="mt-6 max-w-lg text-lg text-ink-muted">
-              All 50 states plus DC — each with its own page explaining exactly
-              how ABA coverage works where you live, who runs the program, and
-              what the paperwork actually asks for.
-            </p>
-            <div className="mt-8 rounded-[30px] bg-white/70 p-4 sm:p-5">
-              <StateSelect
-                states={states}
-                label="How coverage works in"
-                cta={siteConfig.cta.checkState}
-                id="insurance-state-select"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto mt-14 max-w-[1400px] px-4">
-          <CoverageGrid states={states} />
-        </div>
-      </section>
+      {/* 8 · testimonials-horizontal-scroll */}
+      <TestimonialRail />
 
-      {/* ══════════════ INSURANCE WALL ══════════════ */}
-      <section
-        className="mx-auto max-w-[1400px] px-3 py-20 sm:py-28"
-        aria-labelledby="insurance-heading"
-      >
-        <div className="field-card bg-teal-80 px-6 py-14 text-center sm:px-12">
-          <p className="eyebrow">Insurance and Medicaid</p>
-          <h2 id="insurance-heading" className="display display-h2 display-mega mt-5">
-            Yes, it&rsquo;s probably covered.
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-ink-muted">
-            Every state Medicaid program covers ABA for eligible kids, and every
-            state has an autism insurance law for private plans. The rules just
-            look different in each one — and we know them all.
-          </p>
-          <ul className="mt-8 flex flex-wrap justify-center gap-2" aria-label="Plans we work with">
-            {siteConfig.acceptedPlans.map((plan) => (
-              <li
-                key={plan}
-                className={`chip ${plan.startsWith("TODO") ? "border-dashed text-ink/40" : ""}`}
-              >
-                {/* TODO(config): payer chips fill in from acceptedPlans */}
-                {plan.startsWith("TODO") ? "Your plan here" : plan}
-              </li>
-            ))}
-          </ul>
-          <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <Link href="/insurance/" className="btn btn-primary">
-              How coverage works
-            </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.cta.talk} · {siteConfig.contact.phone}
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* 9 · image-text-accordion */}
+      <ImageTextAccordion
+        eyebrow="ABA therapy"
+        heading="Our core service."
+        points={[
+          {
+            title: "It starts with what a behavior is for",
+            body: (
+              <p>
+                A child throws the plate and dinner ends. That&rsquo;s not
+                defiance — it&rsquo;s the only reliable way they&rsquo;ve found
+                to say &ldquo;I&rsquo;m done.&rdquo; Finding that reason is most
+                of the job; the plan writes itself afterwards.
+              </p>
+            ),
+            photoIntent: "Clinician and child at a low table mid-play, natural window light",
+          },
+          {
+            title: "Communication comes before almost everything",
+            body: (
+              <p>
+                Words, signs, pictures, a device — whatever gets your child
+                heard fastest. Behaviour usually softens as communication grows,
+                which is why it&rsquo;s the first target and not the last.
+              </p>
+            ),
+            photoIntent: "Toddler pointing at a picture card while a parent responds, warm light",
+          },
+          {
+            title: "A BCBA owns the plan, and you can see it",
+            body: (
+              <p>
+                A Board Certified Behavior Analyst assesses, sets goals with
+                you, trains the technicians, reads the data and changes what
+                isn&rsquo;t working. You see the goals and the progress — no
+                black box.
+              </p>
+            ),
+            photoIntent: "BCBA reviewing a printed progress graph with a parent at a kitchen table",
+          },
+          {
+            title: "Parent coaching is part of it, not an upsell",
+            body: (
+              <p>
+                Your child spends far more hours with you than with any
+                therapist. The skills that stick are the ones that keep getting
+                practised after everyone leaves.
+              </p>
+            ),
+            photoIntent: "Clinician showing a parent a strategy in a doorway, child playing beyond",
+          },
+        ]}
+        cta={{ href: "/services/", label: "Learn all about ABA" }}
+      />
 
-      {/* ══════════════ 4 STEPS ══════════════ */}
-      <section className="mx-auto max-w-[1400px] px-4" aria-labelledby="steps-heading">
-        <p className="eyebrow text-center">From first call to first session</p>
-        <h2 id="steps-heading" className="display display-h2 display-mega mt-5">
-          Four steps. We carry all four.
-        </h2>
-        <div className="mx-auto mt-12 max-w-4xl">
-          <Accordion items={steps} tinted={false} />
-        </div>
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Link href="/getting-started/" className="btn btn-primary">
-            {siteConfig.cta.startIntake}
-          </Link>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
-        </div>
-      </section>
+      {/* 10 · find-your-center */}
+      <FindYourCenter
+        states={states}
+        slides={[
+          { intent: "Wide shot of a bright therapy room: low tables, swing, climbing wall", caption: "A center room" },
+          { intent: "Sunlit living room set up for an in-home session, toys on a rug", caption: "A family's living room" },
+          { intent: "Quiet classroom corner with a small table and two chairs", caption: "A school setting" },
+        ]}
+        bullets={[
+          "Every state Medicaid program covers ABA for eligible children — we explain exactly how yours works",
+          "In-home, center, school and telehealth, with the honest trade-offs of each",
+          "County and city pages for the local picture, not a swap-the-name template",
+          "One call tells you what's actually open near your address right now",
+        ]}
+      />
 
-      {/* ══════════════ REVIEWS ══════════════ */}
-      <section
-        className="mx-auto max-w-[1400px] px-4 py-20 sm:py-28"
-        aria-labelledby="reviews-heading"
-      >
-        <p className="eyebrow text-center">In their own words</p>
-        <h2 id="reviews-heading" className="display display-h2 display-mega mt-5">
-          Families, in their own words
-        </h2>
-        <div className="mt-12">
-          <ReviewCarousel />
-        </div>
-      </section>
-
-      {/* ══════════════ TRIAGE ══════════════ */}
-      <section className="mx-auto max-w-[1400px] px-4 pb-24">
+      {/* 11 · three-columns-card-section */}
+      <section className="mx-auto max-w-[1400px] px-4 py-16 sm:py-24">
         <TriageTrio />
       </section>
+
+      {/* 12 · whats-happening-carousel */}
+      <WhatsHappening
+        eyebrow="What's new"
+        heading="Guides worth your time."
+        cards={[
+          {
+            href: "/resources/what-is-aba/",
+            kicker: "Guide",
+            title: "What is ABA therapy?",
+            body: "The core idea in one example — and the criticism of ABA, answered without defensiveness.",
+            photoIntent: "Parent and child reading together on a sunlit couch",
+          },
+          {
+            href: "/resources/autism-levels/",
+            kicker: "Guide",
+            title: "Autism levels 1, 2 and 3",
+            body: "Why there are really two levels, not one, and the four things the number doesn't tell you.",
+            photoIntent: "Close-up of a parent's hands holding an evaluation report",
+          },
+          {
+            href: "/resources/signs-of-autism-by-age/",
+            kicker: "Guide",
+            title: "Signs of autism by age",
+            body: "12 months to the teen years — plus the children this kind of list usually misses.",
+            photoIntent: "Toddler pointing at something off-frame while a parent watches",
+          },
+          {
+            href: "/careers/pay/",
+            kicker: "Careers",
+            title: "How ABA pay actually works",
+            body: "Why two jobs at the same hourly rate pay thousands apart over a year.",
+            photoIntent: "RBT walking to a car with a session bag, early morning light",
+          },
+        ]}
+        cta={{ href: "/resources/", label: "All parent guides" }}
+      />
+
+      {/* 13 · sticky-accordion-section */}
+      <StickyAccordion
+        eyebrow="From first call to first session"
+        heading="Four steps. We carry all four."
+        items={steps.map((s) => ({
+          q: s.title,
+          a: s.body,
+        }))}
+        cta={{ href: "/getting-started/", label: siteConfig.cta.startIntake }}
+      />
     </>
   );
 }

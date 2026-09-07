@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { strings } from "@/lib/i18n";
 import Logo from "@/components/Logo";
+import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Teal footer band: coral tagline headline left, link columns right,
@@ -64,6 +65,42 @@ export default function SiteFooter() {
                 </ul>
               </nav>
             ))}
+          </div>
+        </div>
+
+        {/* card-contact — the tinted contact block pinned in the footer grid */}
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_auto]">
+          <div className="rounded-[30px] bg-teal-100 p-7 lg:max-w-sm">
+            <p className="display-round display-round-md">Contact us</p>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a
+                  href={siteConfig.contact.phoneHref}
+                  className="flex items-center gap-3 font-semibold underline-offset-4 hover:text-coral hover:underline"
+                >
+                  <PhoneIcon className="h-4 w-4 shrink-0" />
+                  {siteConfig.contact.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="flex items-center gap-3 break-all underline-offset-4 hover:text-coral hover:underline"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="none" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                  </svg>
+                  {siteConfig.contact.email}
+                </a>
+              </li>
+            </ul>
+            <Link
+              href="/getting-started/"
+              className="mt-5 inline-block font-bold underline underline-offset-4 hover:text-coral"
+            >
+              Get help
+            </Link>
           </div>
         </div>
 
