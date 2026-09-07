@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
 import Quiz from "@/components/Quiz";
+import FeatureStrip from "@/components/FeatureStrip";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
@@ -120,6 +121,14 @@ export default function GettingStartedPage() {
           </div>
         </div>
       </section>
+
+      <FeatureStrip
+        features={[
+          { icon: "clock", text: "About a minute to check" },
+          { icon: "shield", text: "Confidential and HIPAA-protected" },
+          { icon: "ages", text: "A real person calls you back" },
+        ]}
+      />
 
       {/* ───────────────── WHAT HAPPENS NEXT ───────────────── */}
       <section

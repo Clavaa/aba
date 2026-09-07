@@ -28,7 +28,7 @@ export default function Accordion({
 }) {
   const [open, setOpen] = useState<number>(defaultOpen);
   const baseId = useId();
-  const tints = ["bg-mint", "bg-butter", "bg-peach"];
+  const tints = ["bg-teal-80", "bg-peach-100", "bg-beige-80"];
 
   return (
     <div className="space-y-3">
@@ -39,8 +39,8 @@ export default function Accordion({
         return (
           <div
             key={item.title}
-            className={`field-card overflow-hidden ${
-              tinted ? tints[i % tints.length] : "border-2 border-spruce/15 bg-white"
+            className={`overflow-hidden rounded-[30px] ${
+              tinted ? tints[i % tints.length] : "border border-ink/12 bg-white"
             }`}
           >
             <h3>
@@ -54,17 +54,17 @@ export default function Accordion({
               >
                 <span>
                   {item.kicker && (
-                    <span className="display block text-xs tracking-wide text-garden">
+                    <span className="eyebrow block text-coral">
                       {item.kicker}
                     </span>
                   )}
-                  <span className="display text-lg sm:text-xl">
+                  <span className="display display-h3 mt-1 block">
                     {item.title}
                   </span>
                 </span>
                 <span
                   aria-hidden="true"
-                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 border-spruce/30 text-xl font-bold transition-transform ${
+                  className={`grid h-10 w-10 shrink-0 place-items-center rounded-full border-2 border-ink/25 text-2xl font-medium leading-none transition-transform ${
                     isOpen ? "rotate-45" : ""
                   }`}
                 >
@@ -81,8 +81,8 @@ export default function Accordion({
               >
                 <div className="max-w-2xl text-spruce-soft">{item.body}</div>
                 {item.relief && (
-                  <div className="mt-4 rounded-2xl bg-white/70 p-4 sm:p-5">
-                    <p className="display text-xs tracking-wide text-garden">
+                  <div className="mt-5 rounded-[20px] bg-white/75 p-5">
+                    <p className="eyebrow text-coral">
                       {item.relief.kicker}
                     </p>
                     <div className="mt-1 max-w-2xl text-spruce">

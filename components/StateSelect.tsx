@@ -40,7 +40,7 @@ export default function StateSelect({
           id={id}
           value={slug}
           onChange={(e) => setSlug(e.target.value)}
-          className="w-full min-w-44 rounded-full border-2 border-spruce/30 bg-white px-4 py-2.5 font-semibold text-spruce sm:w-auto"
+          className="w-full min-w-44 rounded-full border border-ink/20 bg-white px-4 py-2.5 font-semibold text-spruce sm:w-auto"
         >
           <option value="">Your state ▾</option>
           {states.map((s) => (

@@ -16,21 +16,21 @@ export default function StickyCallBar() {
   const isEs = t.langSwitchHref === "/";
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-spruce/15 bg-ivory/95 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-ink/10 bg-white/95 p-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] backdrop-blur md:hidden"
       role="region"
       aria-label={t.quickContact}
     >
       <div className="mx-auto flex max-w-md gap-2">
         <a
           href={siteConfig.contact.phoneHref}
-          className="btn btn-primary flex-1 !px-3 !py-3 text-base"
+          className="btn btn-primary flex-1 !px-3 !py-3.5"
         >
           <PhoneIcon />
           {t.callNow}
         </a>
         <Link
           href={isEs ? "/es/como-empezar/#quiz" : "/getting-started/#quiz"}
-          className="btn btn-marigold flex-1 !px-3 !py-3 text-base"
+          className="btn btn-outline flex-1 !px-3 !py-3.5"
         >
           {t.checkCoverage}
         </Link>

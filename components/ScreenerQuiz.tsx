@@ -258,7 +258,7 @@ const BAND_COPY: Record<
     kicker: "WHAT YOU TOLD US",
     title: "Not much here is raising a flag today.",
     body: "Most of what you described is in the range people expect at this age. That is genuinely good news — and it does not cancel out your own gut. Parents notice things checklists miss, and nothing on this page has met your child.",
-    tint: "bg-mint",
+    tint: "bg-teal-80",
   },
   some: {
     kicker: "WHAT YOU TOLD US",
@@ -420,7 +420,7 @@ export default function ScreenerQuiz({
 
         {/* Contact capture — AFTER the answer, never before */}
         {status === "done" ? (
-          <div className="field-card bg-mint p-6 text-center sm:p-10">
+          <div className="rounded-[30px] bg-teal-80 p-8 text-center sm:p-12">
             <p className="display display-h3">Got it — someone will call you.</p>
             <p className="mx-auto mt-3 max-w-md text-spruce-soft">
               A real person from our intake team will walk you through the next
@@ -462,7 +462,7 @@ export default function ScreenerQuiz({
                   onChange={(e) =>
                     setLead((l) => ({ ...l, parentName: e.target.value }))
                   }
-                  className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                  className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
                 />
               </div>
               <div>
@@ -478,7 +478,7 @@ export default function ScreenerQuiz({
                   onChange={(e) =>
                     setLead((l) => ({ ...l, phone: e.target.value }))
                   }
-                  className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                  className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
                 />
               </div>
               <div>
@@ -494,7 +494,7 @@ export default function ScreenerQuiz({
                   onChange={(e) =>
                     setLead((l) => ({ ...l, email: e.target.value }))
                   }
-                  className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                  className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
                 />
               </div>
               <div>
@@ -507,7 +507,7 @@ export default function ScreenerQuiz({
                   onChange={(e) =>
                     setLead((l) => ({ ...l, state: e.target.value }))
                   }
-                  className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3 font-semibold"
+                  className="w-full rounded-full border border-ink/20 bg-white px-4 py-3 font-semibold"
                 >
                   <option value="">Choose your state ▾</option>
                   {states.map((s) => (
@@ -582,13 +582,13 @@ export default function ScreenerQuiz({
 
   /* ─────────────────────────── QUESTIONS ─────────────────────────── */
   return (
-    <div className="field-card bg-white p-5 shadow-lift ring-2 ring-spruce/10 sm:p-8">
+    <div className="rounded-[30px] border border-ink/10 bg-white p-6 sm:p-8">
       <div className="mb-5">
         <p className="text-sm font-semibold text-spruce-soft">
           Step {page + 1} of {totalSteps} · about two minutes
         </p>
         <div
-          className="mt-2 h-2 overflow-hidden rounded-full bg-mint"
+          className="mt-2 h-2 overflow-hidden rounded-full bg-teal-80"
           role="progressbar"
           aria-valuemin={1}
           aria-valuemax={totalSteps}
@@ -596,7 +596,7 @@ export default function ScreenerQuiz({
           aria-label="Checklist progress"
         >
           <div
-            className="h-full rounded-full bg-garden transition-all"
+            className="h-full rounded-full bg-coral transition-all"
             style={{ width: `${((page + 1) / totalSteps) * 100}%` }}
           />
         </div>
@@ -616,8 +616,8 @@ export default function ScreenerQuiz({
                 type="button"
                 className={`field-card border-2 p-5 text-left transition-colors ${
                   age === b.id
-                    ? "border-garden bg-mint"
-                    : "border-spruce/20 bg-white hover:bg-mint"
+                    ? "border-garden bg-teal-80"
+                    : "border-spruce/20 bg-white hover:bg-teal-80"
                 }`}
                 aria-pressed={age === b.id}
                 onClick={() => {

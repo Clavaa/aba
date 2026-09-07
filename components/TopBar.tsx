@@ -7,61 +7,65 @@ import { strings } from "@/lib/i18n";
 import PhoneIcon from "@/components/PhoneIcon";
 
 /**
- * The always-visible spruce ratings top bar (Style Bible signature #1):
- * rating pills + "Does my child have autism?" link + call-tracked phone,
- * plus the EN|ES switch. Placeholder ratings render as "★ —" so nothing
- * fabricated ever displays.
+ * Dark utility bar: rating pills left, the autism question centered and
+ * underlined, phone in a pill on the right. Modelled on the target's
+ * top-banner module (measured: dark ink ground, translucent white pills at
+ * 999px radius, 13px type).
  */
 export default function TopBar() {
   const t = strings(usePathname());
 
   return (
-    <div className="bg-spruce text-ivory text-sm">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2">
+    <div className="bg-ink text-cream">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-3 px-4 py-2.5 text-[13px]">
         <div className="flex items-center gap-2">
           {siteConfig.ratings.map((r) => (
             <span
               key={r.source}
-              className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 font-semibold"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 leading-tight"
               title={
                 ratingIsReal(r)
                   ? `${r.value} on ${r.source} (${r.count} reviews)`
                   : t.ratingSoon(r.source)
               }
             >
-              <span aria-hidden="true" className="text-marigold">
+              <span aria-hidden="true" className="text-amber">
                 ★
               </span>
-              <span>
-                {/* TODO(config): real ratings replace the em-dash automatically */}
-                {ratingIsReal(r) ? r.value : "—"}{" "}
-                <span className="hidden sm:inline text-ivory/70">{r.source}</span>
+              {/* TODO(config): real ratings replace the em-dash automatically */}
+              <span className="font-semibold">
+                {ratingIsReal(r) ? `Rated ${r.value}/5.0` : "—"}
               </span>
+              <span className="hidden text-cream/60 sm:inline">{r.source}</span>
             </span>
           ))}
         </div>
 
         <Link
           href={t.autismQuestionHref}
-          className="hidden md:inline font-semibold underline decoration-marigold decoration-2 underline-offset-4 hover:text-marigold"
+          className="hidden items-center gap-1 font-bold underline decoration-2 underline-offset-4 hover:text-coral-soft md:inline-flex"
         >
           {t.autismQuestion}
+          <span aria-hidden="true">›</span>
         </Link>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Link
             href={t.langSwitchHref}
             hrefLang={t.langSwitchHref === "/es/" ? "es" : "en"}
-            className="hidden font-semibold underline-offset-4 hover:text-marigold hover:underline sm:inline"
+            className="hidden font-semibold underline-offset-4 hover:text-coral-soft hover:underline sm:inline"
           >
             {t.langSwitchLabel}
           </Link>
           <a
             href={siteConfig.contact.phoneHref}
-            className="inline-flex items-center gap-1.5 rounded-full bg-marigold px-3.5 py-1 font-bold text-spruce hover:bg-[#f0a713]"
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 hover:bg-white/20"
           >
-            <PhoneIcon />
-            {siteConfig.contact.phone}
+            <PhoneIcon className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Call us anytime!</span>
+            <span className="font-bold underline underline-offset-2">
+              {siteConfig.contact.phone}
+            </span>
           </a>
         </div>
       </div>

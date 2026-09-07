@@ -4,6 +4,7 @@ import { siteConfig } from "@/site.config";
 import { services } from "@/lib/services";
 import JsonLd from "@/components/JsonLd";
 import TriageTrio from "@/components/TriageTrio";
+import FeatureStrip from "@/components/FeatureStrip";
 import Sprout from "@/components/Sprout";
 import PhoneIcon from "@/components/PhoneIcon";
 
@@ -92,6 +93,14 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <FeatureStrip
+        features={[
+          { icon: "map", text: "At home, in center, at school, online" },
+          { icon: "clock", text: "Settings can be mixed and changed" },
+          { icon: "shield", text: "Covered by Medicaid and most plans" },
+        ]}
+      />
 
       {/* ───────────────────── THE PICKER TABLE ───────────────────── */}
       <section

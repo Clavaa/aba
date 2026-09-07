@@ -1,31 +1,75 @@
 @import "tailwindcss";
 
-/* ──────────────────────────────────────────────────────────────────────
-   SITE 1 — Direction A tokens (Style Bible)
-   Ink #173F35 · Paper #FDF8EF · tints #E4F1E6 / #FFF3D4 / #FFE9DA
-   CTA #1F7A54 (hover #155E40) · Marigold #FFB627 · Error #B53319
-   ────────────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════════
+   SPROUTWELL DESIGN SYSTEM
+   Structure modelled on circlecareservices.com (measured from computed
+   styles, not eyeballed): 90px uppercase display heroes at line-height .9,
+   50px-radius pastel field sections, 64px-radius uppercase pill buttons,
+   a dark utility bar over a white header, and alternating tinted bands.
+
+   Palette is OURS — coral + teal where they run orange + light blue, so
+   the design language matches while the colors don't.
+
+     role            ours       theirs
+     accent          #F04E23    #FF5D2B
+     ink             #16303A    #1C2531
+     field 1         #DFF0EE    #E1F1FF
+     field 2         #FFEFD9    #FFEFD9
+     paper           #FFF9F2    #FFF9F2
+
+   The legacy token names (spruce/ivory/mint/butter/peach/garden/marigold)
+   are kept as aliases so all 3,500+ existing pages re-skin from this file
+   alone, without touching their markup.
+   ══════════════════════════════════════════════════════════════════════ */
+
 @theme {
-  --color-spruce: #173f35;
-  --color-ivory: #fdf8ef;
-  --color-mint: #e4f1e6;
-  --color-butter: #fff3d4;
-  --color-peach: #ffe9da;
-  --color-garden: #1f7a54;
-  --color-garden-dark: #155e40;
-  --color-marigold: #ffb627;
+  /* ── primitives ─────────────────────────────────────────────────── */
+  --color-coral: #f04e23;
+  --color-coral-dark: #c93a14;
+  --color-coral-soft: #f57a57;
+
+  --color-ink: #16303a;
+  --color-ink-90: #1f3e49;
+  --color-ink-70: #2f515c;
+  --color-ink-muted: #4a6670;
+
+  --color-teal-80: #dff0ee;
+  --color-teal-90: #d2e9e6;
+  --color-teal-100: #c2e0dc;
+  --color-teal-120: #afd6d1;
+
+  --color-peach-100: #ffefd9;
+  --color-peach-120: #ffdfb1;
+
+  --color-cream: #fff9f2;
+  --color-beige-80: #faf3ea;
+  --color-beige-100: #e7e2db;
+
+  --color-amber: #f6a93b;
   --color-err: #b53319;
-  /* muted ink for secondary text on ivory/tints — spruce at ~72% */
-  --color-spruce-soft: #3d5f55;
+
+  /* ── legacy aliases: keep every existing page working ───────────── */
+  --color-spruce: var(--color-ink);
+  --color-spruce-soft: var(--color-ink-muted);
+  --color-ivory: var(--color-cream);
+  --color-mint: var(--color-teal-80);
+  --color-butter: var(--color-peach-100);
+  --color-peach: var(--color-beige-80);
+  --color-garden: var(--color-coral);
+  --color-garden-dark: var(--color-coral-dark);
+  --color-marigold: var(--color-amber);
 
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-figtree), ui-sans-serif,
     system-ui, sans-serif;
 
-  --radius-field: 2rem; /* the rounded-32px pastel "field" sections */
-  --radius-card: 1.25rem;
+  /* Their signature: 50px section radius, 64px pills */
+  --radius-field: 50px;
+  --radius-card: 30px;
+  --radius-soft: 16px;
 
-  --shadow-lift: 0 2px 0 0 rgba(23, 63, 53, 0.14);
+  --shadow-lift: 0 2px 0 0 rgba(22, 48, 58, 0.12);
+  --shadow-float: 0 24px 60px -24px rgba(22, 48, 58, 0.28);
 }
 
 html {
@@ -33,66 +77,102 @@ html {
 }
 
 body {
-  background: var(--color-ivory);
-  color: var(--color-spruce);
+  background: var(--color-cream);
+  color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Visible, on-brand focus for every interactive element */
 :focus-visible {
-  outline: 3px solid var(--color-marigold);
+  outline: 3px solid var(--color-coral);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 ::selection {
-  background: var(--color-marigold);
-  color: var(--color-spruce);
+  background: var(--color-coral);
+  color: #fff;
 }
 
 @layer components {
-  /* Condensed 800-weight all-caps display type (Bricolage Grotesque) */
+  /* ────────────────────────────────────────────────────────────────
+     DISPLAY TYPE
+     Measured from the target: hero h1 90px/900/lh .9 uppercase;
+     section h2 60px/900/lh .9 uppercase; card h3 36px/700/lh .9.
+     ──────────────────────────────────────────────────────────────── */
   .display {
     font-family: var(--font-display);
     font-weight: 800;
-    font-stretch: 84%;
+    font-stretch: 80%;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
-    line-height: 0.96;
+    letter-spacing: -0.005em;
+    line-height: 0.9;
     text-wrap: balance;
   }
 
+  /* 48 → 90px, matching their hero measurement */
   .display-hero {
-    font-size: clamp(3rem, 2rem + 5.2vw, 6rem); /* 48 → 96px */
+    font-size: clamp(2.9rem, 1.6rem + 5.6vw, 5.625rem);
   }
 
+  /* Their giant section heading: 60px, uppercase, accent-colored */
   .display-h2 {
-    font-size: clamp(2rem, 1.5rem + 2.6vw, 3.5rem);
+    font-size: clamp(2.1rem, 1.4rem + 3.2vw, 3.75rem);
   }
 
   .display-h3 {
-    font-size: clamp(1.35rem, 1.15rem + 1vw, 1.9rem);
+    font-size: clamp(1.4rem, 1.15rem + 1.2vw, 2.25rem);
+    letter-spacing: 0;
   }
 
-  /* Pill buttons — the only button shape on this site */
+  /* The screaming centered headline that anchors their marketing pages */
+  .display-mega {
+    color: var(--color-coral);
+    text-align: center;
+  }
+
+  /* 14px/600 uppercase black kicker that sits above every headline */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     BUTTONS — 64px radius, 14px/600 uppercase, chevron on text-only
+     ──────────────────────────────────────────────────────────────── */
   .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-radius: 9999px;
-    font-weight: 700;
+    border-radius: 999px;
     font-family: var(--font-sans);
-    padding: 0.9rem 1.75rem;
-    font-size: 1.0625rem;
-    line-height: 1.2;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1.0625rem 1.5rem;
+    line-height: 1.1;
     text-align: center;
     transition: background-color 150ms ease, color 150ms ease,
-      transform 100ms ease, border-color 150ms ease;
+      border-color 150ms ease, transform 100ms ease;
     cursor: pointer;
+  }
+
+  /* Their CTAs carry a trailing chevron — but never double up on a
+     button that already ships an icon (phone buttons, arrows). */
+  .btn:not(:has(svg))::after {
+    content: "›";
+    font-size: 1.25em;
+    line-height: 0;
+    position: relative;
+    top: -0.02em;
   }
 
   .btn:active {
@@ -100,64 +180,110 @@ body {
   }
 
   .btn-primary {
-    background: var(--color-garden);
+    background: var(--color-coral);
     color: #ffffff;
   }
 
   .btn-primary:hover {
-    background: var(--color-garden-dark);
+    background: var(--color-coral-dark);
   }
 
   .btn-outline {
-    border: 2px solid var(--color-spruce);
-    color: var(--color-spruce);
-    background: transparent;
+    border: 1.5px solid var(--color-ink);
+    color: var(--color-ink);
+    background: #ffffff;
   }
 
   .btn-outline:hover {
-    background: var(--color-spruce);
-    color: var(--color-ivory);
+    background: var(--color-ink);
+    color: var(--color-cream);
   }
 
   .btn-marigold {
-    background: var(--color-marigold);
-    color: var(--color-spruce);
+    background: var(--color-amber);
+    color: var(--color-ink);
   }
 
   .btn-marigold:hover {
-    background: #f0a713;
+    background: #e5952a;
   }
 
-  /* Chips — modality strips, coverage grid, quiz options */
+  /* ────────────────────────────────────────────────────────────────
+     CHIPS
+     ──────────────────────────────────────────────────────────────── */
   .chip {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    border-radius: 9999px;
-    border: 1.5px solid rgba(23, 63, 53, 0.25);
+    gap: 0.45rem;
+    border-radius: 999px;
+    border: 1.5px solid rgba(22, 48, 58, 0.16);
     background: #ffffff;
-    color: var(--color-spruce);
-    font-weight: 600;
+    color: var(--color-ink);
+    font-weight: 500;
     font-size: 0.9375rem;
-    padding: 0.45rem 1rem;
+    padding: 0.5rem 1.05rem;
     line-height: 1.3;
     transition: border-color 150ms ease, background-color 150ms ease;
   }
 
   a.chip:hover,
   button.chip:hover {
-    border-color: var(--color-garden);
-    background: var(--color-mint);
+    border-color: var(--color-coral);
+    background: var(--color-teal-80);
   }
 
   .chip-solid {
-    background: var(--color-spruce);
-    border-color: var(--color-spruce);
-    color: var(--color-ivory);
+    background: var(--color-ink);
+    border-color: var(--color-ink);
+    color: var(--color-cream);
   }
 
-  /* Rounded pastel "field" section card */
+  /* Their check-chip: tinted pill with a coral tick */
+  .chip-check {
+    background: var(--color-teal-90);
+    border-color: transparent;
+    font-weight: 500;
+  }
+
+  /* ────────────────────────────────────────────────────────────────
+     SECTIONS
+     ──────────────────────────────────────────────────────────────── */
   .field-card {
     border-radius: var(--radius-field);
+  }
+
+  /* Full-bleed tinted band, the alternating rhythm of the target site */
+  .band {
+    border-radius: var(--radius-field);
+    margin-inline: auto;
+    max-width: 96rem;
+  }
+
+  /* Photo/panel pair: outer corners heavily rounded, inner edge square */
+  .pair-left {
+    border-radius: var(--radius-field) 0 0 var(--radius-field);
+  }
+
+  .pair-right {
+    border-radius: 0 var(--radius-field) var(--radius-field) 0;
+  }
+
+  /* Floating panel that overlaps a full-bleed photo */
+  .overlap-panel {
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-float);
+  }
+}
+
+/* Rounded corners collapse on small screens — 50px on a 360px-wide card
+   eats the content. */
+@media (max-width: 640px) {
+  .field-card,
+  .band {
+    border-radius: 28px;
+  }
+  .pair-left,
+  .pair-right {
+    border-radius: 28px;
   }
 }

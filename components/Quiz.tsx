@@ -159,7 +159,7 @@ export default function Quiz({
 
   if (status === "done") {
     return (
-      <div className="field-card bg-mint p-6 text-center sm:p-10">
+      <div className="rounded-[30px] bg-teal-80 p-8 text-center sm:p-12">
         <p className="display display-h3">{c.doneTitle}</p>
         <p className="mx-auto mt-3 max-w-md text-spruce-soft">{c.doneBody}</p>
         <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-5">
@@ -178,7 +178,7 @@ export default function Quiz({
   return (
     <form
       onSubmit={submit}
-      className="field-card bg-white p-5 shadow-lift sm:p-8"
+      className="rounded-[30px] border border-ink/10 bg-white p-6 sm:p-8"
       aria-label={c.formLabel}
     >
       {/* Progress */}
@@ -187,7 +187,7 @@ export default function Quiz({
           {c.step(step + 1, totalSteps)}
         </p>
         <div
-          className="mt-2 h-2 overflow-hidden rounded-full bg-mint"
+          className="mt-2 h-2 overflow-hidden rounded-full bg-teal-80"
           role="progressbar"
           aria-valuemin={1}
           aria-valuemax={totalSteps}
@@ -195,7 +195,7 @@ export default function Quiz({
           aria-label={c.progress}
         >
           <div
-            className="h-full rounded-full bg-garden transition-all"
+            className="h-full rounded-full bg-coral transition-all"
             style={{ width: `${((step + 1) / totalSteps) * 100}%` }}
           />
         </div>
@@ -212,7 +212,7 @@ export default function Quiz({
             id="quiz-state"
             value={data.state}
             onChange={(e) => set({ state: e.target.value })}
-            className="mt-4 w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3 font-semibold"
+            className="mt-4 w-full rounded-full border border-ink/20 bg-white px-4 py-3 font-semibold"
           >
             <option value="">{c.statePlaceholder}</option>
             {states.map((s) => (
@@ -307,7 +307,7 @@ export default function Quiz({
                 required
                 value={data.parentName}
                 onChange={(e) => set({ parentName: e.target.value })}
-                className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
               />
             </div>
             <div>
@@ -321,7 +321,7 @@ export default function Quiz({
                 required
                 value={data.phone}
                 onChange={(e) => set({ phone: e.target.value })}
-                className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
               />
             </div>
             <div>
@@ -335,7 +335,7 @@ export default function Quiz({
                 autoComplete="email"
                 value={data.email}
                 onChange={(e) => set({ email: e.target.value })}
-                className="w-full rounded-full border-2 border-spruce/30 bg-white px-4 py-3"
+                className="w-full rounded-full border border-ink/20 bg-white px-4 py-3"
               />
             </div>
             {/* Honeypot — hidden from real users, tempting to bots */}

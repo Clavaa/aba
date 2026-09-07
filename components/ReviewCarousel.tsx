@@ -30,7 +30,7 @@ export default function ReviewCarousel() {
           return (
             <figure
               key={i}
-              className={`field-card min-w-[85%] snap-start p-6 sm:min-w-[46%] sm:p-8 lg:min-w-[31%] ${
+              className={`rounded-[30px] min-w-[85%] snap-start p-6 sm:min-w-[46%] sm:p-8 lg:min-w-[31%] ${
                 placeholder
                   ? "border-2 border-dashed border-spruce/25 bg-white/60"
                   : "bg-white shadow-lift"
@@ -76,7 +76,7 @@ export default function ReviewCarousel() {
           <button
             type="button"
             onClick={() => scrollBy(-1)}
-            className="grid h-11 w-11 place-items-center rounded-full border-2 border-spruce/30 text-lg font-bold hover:bg-mint"
+            className="grid h-11 w-11 place-items-center rounded-full border-2 border-spruce/30 text-lg font-bold hover:bg-teal-80"
             aria-label="Previous reviews"
           >
             ←
@@ -84,7 +84,7 @@ export default function ReviewCarousel() {
           <button
             type="button"
             onClick={() => scrollBy(1)}
-            className="grid h-11 w-11 place-items-center rounded-full border-2 border-spruce/30 text-lg font-bold hover:bg-mint"
+            className="grid h-11 w-11 place-items-center rounded-full border-2 border-spruce/30 text-lg font-bold hover:bg-teal-80"
             aria-label="Next reviews"
           >
             →
