@@ -36,7 +36,7 @@ export default function TopBar() {
         </div>
 
         <Link
-          href="/getting-started/"
+          href="/autism-evaluation/"
           className="hidden md:inline font-semibold underline decoration-marigold decoration-2 underline-offset-4 hover:text-marigold"
         >
           Does my child have autism?

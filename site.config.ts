@@ -124,8 +124,6 @@ export const siteConfig = {
     "TODO: Payer 4",
   ],
 
-  services: ["In center", "At home", "In school", "Telehealth"],
-
   cta: {
     primary: "Get backup today",
     checkState: "Check my state + insurance",

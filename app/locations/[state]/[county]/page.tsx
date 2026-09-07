@@ -16,6 +16,7 @@ import {
 } from "@/lib/counties";
 import Quiz from "@/components/Quiz";
 import JsonLd from "@/components/JsonLd";
+import ModalityChips from "@/components/ModalityChips";
 import Sprout from "@/components/Sprout";
 import { PhoneIcon } from "@/components/TopBar";
 
@@ -272,16 +273,7 @@ export default async function CountyPage({
               Call {siteConfig.contact.phone}
             </a>
           </div>
-          <ul className="mt-7 flex flex-wrap gap-2" aria-label="Where therapy happens">
-            {siteConfig.services.map((s) => (
-              <li key={s} className="chip bg-white/80">
-                <span aria-hidden="true" className="text-garden">
-                  ✓
-                </span>
-                {s}
-              </li>
-            ))}
-          </ul>
+          <ModalityChips />
         </div>
       </section>
 

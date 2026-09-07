@@ -11,6 +11,7 @@ import { PhoneIcon } from "@/components/TopBar";
  * (and the mobile menu) so the header never crowds at lg widths.
  */
 const nav = [
+  { href: "/services/", label: "Services" },
   { href: "/locations/", label: "Where we work" },
   { href: "/insurance/", label: "Insurance" },
   { href: "/cost-of-aba-therapy/", label: "Cost" },
@@ -20,9 +21,10 @@ const nav = [
 
 /** Mobile menu keeps the fuller set — space isn't the constraint there. */
 const mobileNav = [
-  ...nav.slice(0, 4),
+  ...nav.slice(0, 5),
+  { href: "/autism-evaluation/", label: "Autism evaluation" },
   { href: "/about/", label: "About" },
-  nav[4],
+  nav[5],
 ];
 
 export default function SiteHeader() {

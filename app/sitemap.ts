@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/site.config";
 import { getAllStates } from "@/lib/states";
+import { services } from "@/lib/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.brand.domain;
@@ -8,7 +9,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${base}/`, changeFrequency: "weekly", priority: 1 },
+    { url: `${base}/services/`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/locations/`, changeFrequency: "weekly", priority: 0.9 },
+    {
+      url: `${base}/autism-evaluation/`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/autism-evaluation/screener/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/autism-evaluation/m-chat/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     { url: `${base}/insurance/`, changeFrequency: "monthly", priority: 0.9 },
     {
       url: `${base}/cost-of-aba-therapy/`,
@@ -36,5 +53,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...costPages];
+  const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `${base}/services/${s.slug}/`,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...servicePages, ...costPages];
 }

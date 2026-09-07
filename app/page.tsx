@@ -8,6 +8,7 @@ import StateSelect from "@/components/StateSelect";
 import CoverageGrid from "@/components/CoverageGrid";
 import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
+import ModalityChips from "@/components/ModalityChips";
 import Sprout from "@/components/Sprout";
 import { PhoneIcon } from "@/components/TopBar";
 
@@ -211,17 +212,8 @@ export default function HomePage() {
                 </a>
               </div>
 
-              {/* Modality chip strip */}
-              <ul className="mt-7 flex flex-wrap gap-2" aria-label="Where therapy happens">
-                {siteConfig.services.map((s) => (
-                  <li key={s} className="chip bg-white/80">
-                    <span aria-hidden="true" className="text-garden">
-                      ✓
-                    </span>
-                    {s}
-                  </li>
-                ))}
-              </ul>
+              {/* Modality chip strip — each chip links to its service page */}
+              <ModalityChips />
 
               {/* State-selector insurance dropdown — the 50-state differentiator */}
               <div className="mt-7 rounded-3xl bg-white/70 p-4 sm:p-5">

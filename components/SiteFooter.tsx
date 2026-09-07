@@ -8,6 +8,8 @@ const columns: { heading: string; links: { href: string; label: string }[] }[] =
       heading: "Families",
       links: [
         { href: "/getting-started/", label: "Check my coverage" },
+        { href: "/services/", label: "How therapy happens" },
+        { href: "/autism-evaluation/", label: "Getting an evaluation" },
         { href: "/insurance/", label: "Insurance we accept" },
         { href: "/cost-of-aba-therapy/", label: "What ABA costs" },
         { href: "/locations/", label: "All 50 states + DC" },

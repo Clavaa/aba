@@ -22,7 +22,7 @@ export default function TriageTrio({ heading = "NOT SURE WHERE TO START?" }: { h
             seeing and we&rsquo;ll help you figure out the next step — even if
             it isn&rsquo;t us.
           </p>
-          <Link href="/getting-started/" className="btn btn-outline mt-5 self-start">
+          <Link href="/autism-evaluation/" className="btn btn-outline mt-5 self-start">
             Help me figure it out
           </Link>
         </div>
