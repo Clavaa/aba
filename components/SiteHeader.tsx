@@ -23,6 +23,7 @@ const nav = [
 const mobileNav = [
   ...nav.slice(0, 5),
   { href: "/autism-evaluation/", label: "Autism evaluation" },
+  { href: "/resources/", label: "Parent guides" },
   { href: "/about/", label: "About" },
   nav[5],
 ];

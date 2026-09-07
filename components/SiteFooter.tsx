@@ -10,6 +10,8 @@ const columns: { heading: string; links: { href: string; label: string }[] }[] =
         { href: "/getting-started/", label: "Check my coverage" },
         { href: "/services/", label: "How therapy happens" },
         { href: "/autism-evaluation/", label: "Getting an evaluation" },
+        { href: "/resources/what-is-aba/", label: "What is ABA?" },
+        { href: "/resources/", label: "Parent guides" },
         { href: "/insurance/", label: "Insurance we accept" },
         { href: "/cost-of-aba-therapy/", label: "What ABA costs" },
         { href: "/locations/", label: "All 50 states + DC" },

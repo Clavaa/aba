@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import { payers, SELF_FUNDED_NOTE } from "@/lib/payers";
 import { getStateLinks } from "@/lib/states";
 import StateSelect from "@/components/StateSelect";
 import TriageTrio from "@/components/TriageTrio";
@@ -137,6 +138,54 @@ export default function InsurancePage() {
             Don&rsquo;t see your plan? Networks change monthly and we add
             payers all the time. The fastest way to know is to ask — checking
             takes us one phone call.
+          </p>
+        </div>
+      </section>
+
+      {/* ─────────────── PER-PAYER GUIDES ─────────────── */}
+      <section
+        className="mx-auto max-w-6xl px-4 py-14 sm:py-20"
+        aria-labelledby="payers-heading"
+      >
+        <h2 id="payers-heading" className="display display-h2">
+          How each big plan handles ABA
+        </h2>
+        <p className="mt-3 max-w-2xl text-lg text-spruce-soft">
+          What the process looks like, where families get stuck, and the exact
+          questions to ask when you call them.
+        </p>
+        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {payers.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/insurance/${p.slug}/`}
+              className={`field-card ${p.tint} p-6 transition-transform hover:-translate-y-0.5`}
+            >
+              <h3 className="display display-h3">{p.name}</h3>
+              <p className="mt-2 text-spruce-soft">{p.lede}</p>
+              <p className="mt-3 font-bold text-garden">Read the guide →</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ─────────────── THE SELF-FUNDED POINT ─────────────── */}
+      <section
+        className="mx-auto max-w-6xl px-4"
+        aria-labelledby="hub-self-funded-heading"
+      >
+        <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
+          <p className="display text-xs tracking-wide text-garden">
+            THE THING NOBODY TELLS YOU
+          </p>
+          <h2
+            id="hub-self-funded-heading"
+            className="display display-h2 mt-1"
+          >
+            Ask HR one question before you fight anyone
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-spruce-soft">
+            {SELF_FUNDED_NOTE}
           </p>
         </div>
       </section>
