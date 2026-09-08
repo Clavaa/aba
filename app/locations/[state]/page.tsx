@@ -4,13 +4,13 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { getAllStates, getState, usd, type StateRecord } from "@/lib/states";
 import { getCountiesForState } from "@/lib/counties";
+import CallCta from "@/components/CallCta";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
 import { getCitiesForState } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 
@@ -116,7 +116,7 @@ export default async function StatePage({
     "@id": `${pageUrl}#clinic`,
     name: `${siteConfig.brand.name} — ${state.name}`,
     url: pageUrl,
-    telephone: siteConfig.contact.phone,
+    ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
     medicalSpecialty: "Psychiatric",
     parentOrganization: {
       "@id": `${siteConfig.brand.domain}/#organization`,
@@ -190,10 +190,7 @@ export default async function StatePage({
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
           <ModalityChips />
         </div>
@@ -350,7 +347,7 @@ export default async function StatePage({
         <p className="mt-4 text-sm text-spruce-soft">
           Program rules change; this page describes {state.name}&rsquo;s public
           coverage rules in plain English and isn&rsquo;t legal or benefits
-          advice. Call us and we&rsquo;ll check your exact plan.
+          advice. Send us your details and we&rsquo;ll check your exact plan.
         </p>
       </section>
 

@@ -37,6 +37,7 @@ type Strings = {
   nav: NavItem[];
   mobileNav: NavItem[];
   call: (phone: string) => string;
+  talkCta: string;
   callNow: string;
   checkCoverage: string;
   autismQuestion: string;
@@ -134,6 +135,7 @@ export const STRINGS: Record<Lang, Strings> = {
     ],
     mobileNav: [],
     call: (phone) => `Call ${phone}`,
+    talkCta: "Talk to a person",
     callNow: "Call now",
     checkCoverage: "Check my coverage",
     autismQuestion: "Does my child have autism?",
@@ -200,6 +202,7 @@ export const STRINGS: Record<Lang, Strings> = {
     ],
     mobileNav: [],
     call: (phone) => `Llame al ${phone}`,
+    talkCta: "Hable con una persona",
     callNow: "Llamar ahora",
     checkCoverage: "Revisar mi cobertura",
     autismQuestion: "¿Mi hijo tiene autismo?",

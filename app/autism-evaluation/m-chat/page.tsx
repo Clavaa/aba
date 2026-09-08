@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Explainer for the M-CHAT-R/F™ (Robins, Fein & Barton).
@@ -357,17 +357,11 @@ export default function MChatPage() {
               Got a result and no plan?
             </h2>
             <p className="mt-2 max-w-xl text-ivory/80">
-              Call us and we&rsquo;ll tell you what the next step looks like
+              Send us your details and we&rsquo;ll tell you what the next step looks like
               where you live. No cost, no obligation, no pressure.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

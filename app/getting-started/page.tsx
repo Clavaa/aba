@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import Quiz from "@/components/Quiz";
 import FeatureStrip from "@/components/FeatureStrip";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import ImageSlot from "@/components/ImageSlot";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Getting Started — Check My Coverage",
@@ -99,12 +99,7 @@ export default function GettingStartedPage() {
                   ✓
                 </span>
                 Rather talk? Call{" "}
-                <a
-                  href={siteConfig.contact.phoneHref}
-                  className="underline decoration-marigold decoration-2 underline-offset-4 hover:text-garden"
-                >
-                  {siteConfig.contact.phone}
-                </a>
+                <CallCta className="underline decoration-marigold decoration-2 underline-offset-4 hover:text-garden" fallbackLabel="Talk to a person" icon={false} />
               </p>
               <div className="mt-8 hidden lg:block">
                 <ImageSlot
@@ -142,10 +137,7 @@ export default function GettingStartedPage() {
           <Accordion items={worried} defaultOpen={0} />
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
-          <a href={siteConfig.contact.phoneHref} className="btn btn-primary">
-            <PhoneIcon />
-            {siteConfig.cta.startIntake} · {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-primary" fallbackLabel="Start the 15-minute intake" />
         </div>
       </section>
 

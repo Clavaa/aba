@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig, ratingIsReal } from "@/site.config";
 import { strings } from "@/lib/i18n";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * Dark utility bar: rating pills left, the autism question centered and
@@ -57,16 +57,11 @@ export default function TopBar() {
           >
             {t.langSwitchLabel}
           </Link>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 hover:bg-white/20"
-          >
-            <PhoneIcon className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Call us anytime!</span>
-            <span className="font-bold underline underline-offset-2">
-              {siteConfig.contact.phone}
-            </span>
-          </a>
+          <CallCta
+            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 font-semibold hover:bg-white/20"
+            fallbackLabel={t.talkCta}
+            href={t.langSwitchHref === "/" ? "/es/como-empezar/" : "/contact/"}
+          />
         </div>
       </div>
     </div>

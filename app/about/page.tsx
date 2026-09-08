@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import CareStructure from "@/components/CareStructure";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "About Us — Who We Are & How We're Built",
@@ -65,10 +65,7 @@ export default function AboutPage() {
                 <Link href="/about/leadership/" className="btn btn-primary">
                   Meet our leadership
                 </Link>
-                <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-                  <PhoneIcon />
-                  {siteConfig.cta.talk} · {siteConfig.contact.phone}
-                </a>
+                <CallCta className="btn btn-outline" />
               </div>
             </div>
             <div className="relative hidden lg:block">
@@ -293,7 +290,7 @@ export default function AboutPage() {
               Enough about us. Let&rsquo;s talk about your child.
             </h2>
             <p className="mt-2 max-w-xl text-ivory/80">
-              One {siteConfig.intake.callLength} call with a real person.
+              One {siteConfig.intake.callLength} conversation with a real person.
               We&rsquo;ll check your coverage for free and tell you the honest
               next step — even if it isn&rsquo;t us.
             </p>
@@ -302,12 +299,7 @@ export default function AboutPage() {
             <Link href="/getting-started/" className="btn btn-marigold">
               {siteConfig.cta.primary}
             </Link>
-            <a
-              href={siteConfig.contact.phoneHref}
-              className="font-semibold text-ivory underline decoration-marigold decoration-2 underline-offset-4 hover:text-marigold"
-            >
-              or call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="font-semibold text-ivory underline decoration-marigold decoration-2 underline-offset-4 hover:text-marigold" fallbackLabel="Talk to a person" icon={false} />
           </div>
         </div>
       </section>

@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { strings } from "@/lib/i18n";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import Logo from "@/components/Logo";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * White header with mega-menu dropdowns — the target's header-logo /
@@ -250,10 +250,11 @@ export default function SiteHeader() {
               );
             })}
             <li className="pt-2">
-              <a href={siteConfig.contact.phoneHref} className="btn btn-primary w-full">
-                <PhoneIcon />
-                {t.call(siteConfig.contact.phone)}
-              </a>
+              <CallCta
+                className="btn btn-primary w-full"
+                fallbackLabel={t.talkCta}
+                href={isEs ? "/es/como-empezar/" : "/contact/"}
+              />
             </li>
           </ul>
         </nav>

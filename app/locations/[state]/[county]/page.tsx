@@ -14,12 +14,12 @@ import {
   type CountyRecord,
   type CountySize,
 } from "@/lib/counties";
+import CallCta from "@/components/CallCta";
 import Quiz from "@/components/Quiz";
 import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
 import { getCitiesForCounty } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 
@@ -178,7 +178,7 @@ export default async function CountyPage({
     },
     {
       q: `How do we start ABA therapy in ${county.name}?`,
-      a: `Two ways: take the one-minute coverage check on this page, or call ${siteConfig.contact.phone}. A real person confirms your ${state.name} coverage, answers your questions, and maps the next step. ${siteConfig.intake.startTimeframe}.`,
+      a: `Take the one-minute coverage check on this page, or send us your details. A real person confirms your ${state.name} coverage, answers your questions, and maps the next step. ${siteConfig.intake.startTimeframe}.`,
     },
   ];
 
@@ -210,7 +210,7 @@ export default async function CountyPage({
     "@id": `${pageUrl}#clinic`,
     name: `${siteConfig.brand.name} — ${county.name}, ${state.name}`,
     url: pageUrl,
-    telephone: siteConfig.contact.phone,
+    ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
     medicalSpecialty: "Psychiatric",
     parentOrganization: { "@id": `${siteConfig.brand.domain}/#organization` },
     areaServed: {
@@ -270,10 +270,7 @@ export default async function CountyPage({
             <Link href="#county-quiz" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
           <ModalityChips />
         </div>
@@ -366,7 +363,7 @@ export default async function CountyPage({
         </div>
         <p className="mt-4 text-sm text-spruce-soft">
           Coverage rules are set statewide by {state.name} and can change; this
-          page is general information, not legal or benefits advice. Call us
+          page is general information, not legal or benefits advice. Message us
           and we&rsquo;ll check your exact plan.
         </p>
       </section>
@@ -390,12 +387,7 @@ export default async function CountyPage({
               </p>
               <p className="mt-4 max-w-lg text-ivory/80">
                 Rather just talk?{" "}
-                <a
-                  href={siteConfig.contact.phoneHref}
-                  className="font-bold text-marigold underline underline-offset-4"
-                >
-                  Call {siteConfig.contact.phone}
-                </a>{" "}
+                <CallCta className="font-bold text-marigold underline underline-offset-4" fallbackLabel="Talk to a person" icon={false} />{" "}
                 — a real person, {siteConfig.intake.callLength} of your time.
               </p>
             </div>

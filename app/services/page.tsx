@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { services } from "@/lib/services";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import TriageTrio from "@/components/TriageTrio";
 import FeatureStrip from "@/components/FeatureStrip";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "ABA Therapy Services — At Home, In Center, At School, Online",
@@ -86,10 +86,7 @@ export default function ServicesPage() {
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.cta.talk} · {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" />
           </div>
         </div>
       </section>

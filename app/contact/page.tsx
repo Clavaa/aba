@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import HeroIntakeForm from "@/components/HeroIntakeForm";
 import FeatureStrip from "@/components/FeatureStrip";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -46,14 +46,9 @@ export default function ContactPage() {
 
               <dl className="mt-9 grid gap-5 sm:grid-cols-2">
                 <div className="rounded-[24px] bg-white/70 p-6">
-                  <dt className="eyebrow">Call us</dt>
+                  <dt className="eyebrow">Message us</dt>
                   <dd className="mt-2">
-                    <a
-                      href={siteConfig.contact.phoneHref}
-                      className="display-round display-round-md underline-offset-4 hover:text-coral hover:underline"
-                    >
-                      {siteConfig.contact.phone}
-                    </a>
+                    <CallCta className="display-round display-round-md underline-offset-4 hover:text-coral hover:underline" fallbackLabel="Talk to a person" icon={false} />
                     {/* TODO(config): real call-tracked number before launch */}
                   </dd>
                 </div>
@@ -93,10 +88,7 @@ export default function ContactPage() {
             One {siteConfig.intake.callLength} conversation usually settles
             more than an hour of reading.
           </p>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-8">
-            <PhoneIcon />
-            {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-primary mt-8" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

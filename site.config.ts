@@ -80,14 +80,24 @@ export const siteConfig = {
   },
 
   contact: {
-    /** TODO: real call-tracked phone number */
-    phone: "(800) 555-0134",
-    /** tel: href form of the number above — keep in sync */
-    phoneHref: "tel:+18005550134",
-    /** TODO: placeholder — set up the real intake inbox on this domain */
+    /**
+     * Call-tracked phone number. NULL until a real one exists — the whole site
+     * hides every phone CTA while this is null rather than publishing a number
+     * that rings nowhere. Set it (with phoneHref) and the buttons come back
+     * everywhere at once; nothing else needs touching.
+     */
+    phone: null as string | null,
+    /** tel: href form of the number above — keep the two in sync */
+    phoneHref: null as string | null,
+    /**
+     * Public-facing email, shown on the site.
+     * TODO(mail): sproutwellaba.com is registered but has no mailbox yet, so
+     * this address currently bounces. Either create it or the contact form is
+     * the only working channel.
+     */
     email: "hello@sproutwellaba.com",
-    /** Where /api/lead sends new leads. TODO: placeholder — set up real inbox */
-    leadInbox: "intake@sproutwellaba.com",
+    /** Where /api/lead delivers. Real, monitored inbox — leads arrive here. */
+    leadInbox: "support@offendersearch.app",
     /** Verified sender for SendGrid. TODO: verify this sender on the domain */
     leadFrom: "website@sproutwellaba.com",
   },
@@ -166,6 +176,15 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
+
+/**
+ * True only when a real, call-tracked number is configured. Every phone CTA
+ * on the site is behind this, so the site never shows a number that doesn't
+ * ring — it offers the contact form instead.
+ */
+export const hasPhone: boolean =
+  typeof siteConfig.contact.phone === "string" &&
+  siteConfig.contact.phone.length > 0;
 
 /** True when a rating has a real value worth displaying */
 export function ratingIsReal(r: Rating): boolean {

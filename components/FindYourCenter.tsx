@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import CallCta from "@/components/CallCta";
 import ImageSlot from "@/components/ImageSlot";
-import { siteConfig } from "@/site.config";
 
 /**
  * `find-your-center` — a photo carousel with an overlaid control strip and a
@@ -89,12 +89,7 @@ export default function FindYourCenter({
         <p className="text-lg">
           <strong>We work in every state.</strong> Pick yours for the local
           coverage rules, or{" "}
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="underline decoration-ink/30 underline-offset-4 hover:text-coral"
-          >
-            call and we&rsquo;ll tell you
-          </a>
+          <CallCta className="underline decoration-ink/30 underline-offset-4 hover:text-coral" fallbackLabel="Talk to a person" icon={false} />
           .
         </p>
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

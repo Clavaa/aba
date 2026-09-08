@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { strings } from "@/lib/i18n";
+import CallCta from "@/components/CallCta";
 import Logo from "@/components/Logo";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Teal footer band: coral tagline headline left, link columns right,
@@ -29,7 +29,10 @@ export default function SiteFooter() {
     {
       heading: t.footerTalk,
       links: [
-        { href: siteConfig.contact.phoneHref, label: t.call(siteConfig.contact.phone) },
+        // Phone link only appears once a real number is configured.
+        ...(siteConfig.contact.phoneHref && siteConfig.contact.phone
+          ? [{ href: siteConfig.contact.phoneHref, label: t.call(siteConfig.contact.phone) }]
+          : [{ href: "/contact/", label: t.talkCta }]),
         { href: `mailto:${siteConfig.contact.email}`, label: siteConfig.contact.email },
         { href: t.langSwitchHref, label: t.langSwitchLabel },
       ],
@@ -74,13 +77,11 @@ export default function SiteFooter() {
             <p className="display-round display-round-md">Contact us</p>
             <ul className="mt-4 space-y-3">
               <li>
-                <a
-                  href={siteConfig.contact.phoneHref}
+                <CallCta
                   className="flex items-center gap-3 font-semibold underline-offset-4 hover:text-coral hover:underline"
-                >
-                  <PhoneIcon className="h-4 w-4 shrink-0" />
-                  {siteConfig.contact.phone}
-                </a>
+                  fallbackLabel={t.talkCta}
+                  href={t.langSwitchHref === "/" ? "/es/como-empezar/" : "/contact/"}
+                />
               </li>
               <li>
                 <a

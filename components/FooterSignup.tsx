@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { siteConfig } from "@/site.config";
 import Sprout from "@/components/Sprout";
 
 /**
@@ -117,8 +116,7 @@ export default function FooterSignup() {
 
               {status === "error" && (
                 <p role="alert" className="mt-3 font-semibold text-err">
-                  That didn&rsquo;t go through. Try again, or call{" "}
-                  {siteConfig.contact.phone}.
+                  That didn&rsquo;t go through. Please try again in a moment.
                 </p>
               )}
 

@@ -116,7 +116,7 @@ const faqs: StickyItem[] = [
     q: "Do I need a diagnosis before calling you?",
     a: (
       <p>
-        No. Plenty of families call us while the evaluation is still pending,
+        No. Plenty of families contact us while the evaluation is still pending,
         and we&rsquo;ll tell you what the path looks like in your state and
         what to do in the meantime. Insurance-funded ABA generally does require
         a diagnosis — but the free doors don&rsquo;t, and those you can open

@@ -1,7 +1,6 @@
 import Link from "next/link";
+import CallCta from "@/components/CallCta";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
-import { siteConfig } from "@/site.config";
 
 /**
  * `cta-image-background-section` — a full-width rounded band carrying a
@@ -43,13 +42,7 @@ export default function CtaImageBackground({
             <Link href={primary.href} className="btn btn-primary">
               {primary.label}
             </Link>
-            <a
-              href={siteConfig.contact.phoneHref}
-              className="btn btn-outline !border-cream !bg-transparent !text-cream hover:!bg-cream hover:!text-ink"
-            >
-              <PhoneIcon />
-              {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline !border-cream !bg-transparent !text-cream hover:!bg-cream hover:!text-ink" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
           <h1 className="display display-hero mt-5 max-w-3xl">Privacy policy</h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-muted">
             Plain language about what we collect and why. If anything here
-            isn&rsquo;t clear, call us and ask.
+            isn&rsquo;t clear, get in touch and ask.
           </p>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
               >
                 {siteConfig.contact.email}
               </a>{" "}
-              or call {siteConfig.contact.phone}.
+  .
             </p>
           </section>
 
@@ -147,8 +147,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <p className="mt-12 text-sm text-ink-muted">
-          Questions about this policy? Call {siteConfig.contact.phone} or read
-          our{" "}
+          Questions about this policy? Read our{" "}
           <Link href="/terms/" className="underline underline-offset-4">
             terms of service
           </Link>

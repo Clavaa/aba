@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { openings } from "@/lib/careers";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Open roles.
@@ -96,10 +96,7 @@ export default function OpeningsPage() {
             <a href={applyHref} className="btn btn-primary">
               Apply in 5 minutes
             </a>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </section>

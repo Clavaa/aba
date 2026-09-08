@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Signs by age. Two things here that most versions of this page lack:
@@ -311,13 +311,7 @@ export default function SignsByAgePage() {
               tell you how it works where you live.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

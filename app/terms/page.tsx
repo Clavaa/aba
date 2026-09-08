@@ -64,7 +64,7 @@ export default function TermsPage() {
               We describe public Medicaid programs and state insurance laws as
               accurately as we can, and those rules change. Nothing on this
               site is a benefits determination or a guarantee of coverage. Your
-              health plan&rsquo;s written decision is what counts. Call us and
+              health plan&rsquo;s written decision is what counts. Contact us and
               we&rsquo;ll check your specific plan.
             </p>
           </section>

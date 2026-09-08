@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { siteConfig } from "@/site.config";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * Parent developmental checklist — OUR OWN plain-language items.
@@ -426,13 +425,7 @@ export default function ScreenerQuiz({
               A real person from our intake team will walk you through the next
               step for your state. Want to talk sooner?
             </p>
-            <a
-              href={siteConfig.contact.phoneHref}
-              className="btn btn-primary mt-5"
-            >
-              <PhoneIcon />
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-primary mt-5" fallbackLabel="Talk to a person" />
           </div>
         ) : showForm ? (
           <form
@@ -535,8 +528,8 @@ export default function ScreenerQuiz({
 
             {status === "error" && (
               <p role="alert" className="mt-3 font-semibold text-err">
-                Something went wrong on our end. Please try again — or just call{" "}
-                {siteConfig.contact.phone}.
+                Something went wrong on our end. Please try again in a moment.
+                
               </p>
             )}
 
@@ -566,13 +559,7 @@ export default function ScreenerQuiz({
               >
                 Have someone call me
               </button>
-              <a
-                href={siteConfig.contact.phoneHref}
-                className="btn btn-outline !border-ivory !text-ivory hover:!bg-ivory hover:!text-spruce"
-              >
-                <PhoneIcon />
-                {siteConfig.contact.phone}
-              </a>
+              <CallCta className="btn btn-outline !border-ivory !text-ivory hover:!bg-ivory hover:!text-spruce" fallbackLabel="Talk to a person" />
             </div>
           </div>
         )}

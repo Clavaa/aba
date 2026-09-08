@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { events } from "@/lib/events";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import ImageSlot from "@/components/ImageSlot";
 import FeatureStrip from "@/components/FeatureStrip";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Sensory-friendly events.
@@ -113,14 +113,11 @@ export default function EventsPage() {
               </p>
               <p className="mt-4 text-lg text-ink-muted">
                 Want to hear when it is? Join the list at the bottom of this
-                page, or call and ask what&rsquo;s happening near you — plenty
+                page, or ask us what&rsquo;s happening near you — plenty
                 of good sensory-friendly events are run by other people, and
                 we&rsquo;ll happily point you at those instead.
               </p>
-              <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-7">
-                <PhoneIcon />
-                Ask what&rsquo;s near me
-              </a>
+              <CallCta className="btn btn-primary mt-7" fallbackLabel="Talk to a person" />
             </div>
 
             <div className="rounded-[30px] bg-beige-80 p-8">

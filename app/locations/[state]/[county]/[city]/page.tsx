@@ -23,12 +23,12 @@ import {
   type CitySize,
   type Reach,
 } from "@/lib/cities";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ModalityChips from "@/components/ModalityChips";
 import FeatureStrip from "@/components/FeatureStrip";
 import Quiz from "@/components/Quiz";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * City pages — 10,255 places of 1,000+ residents nationwide.
@@ -265,7 +265,7 @@ export default async function CityPage({
     "@id": `${pageUrl}#clinic`,
     name: `${siteConfig.brand.name} — ABA therapy in ${city.name}, ${city.stateAbbrev}`,
     url: pageUrl,
-    telephone: siteConfig.contact.phone,
+    ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
     medicalSpecialty: "Psychiatric",
     parentOrganization: { "@id": `${base}/#organization` },
     areaServed: {
@@ -328,10 +328,7 @@ export default async function CityPage({
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
           <ModalityChips />
         </div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import ScrollRail from "@/components/ScrollRail";
 import ImageSlot from "@/components/ImageSlot";
-import { siteConfig } from "@/site.config";
 
 /**
  * `services-horizontal-scroll` — photo-topped cards on a snapping rail,
@@ -65,8 +64,8 @@ export default function ServiceRail({
         </Link>
       </div>
       <p className="mt-5 px-4 text-center text-sm text-ink-muted">
-        Not sure which fits? Call {siteConfig.contact.phone} and describe your
-        week.
+        Not sure which fits? Tell us about your week and we&rsquo;ll say which
+        setting we&rsquo;d start with.
       </p>
     </section>
   );

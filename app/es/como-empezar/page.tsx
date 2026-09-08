@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Quiz from "@/components/Quiz";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Cómo Empezar la Terapia ABA",
@@ -128,10 +128,7 @@ export default function EsComoEmpezarPage() {
             compromiso y sin costo.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <a href={siteConfig.contact.phoneHref} className="btn btn-primary">
-              <PhoneIcon />
-              Prefiero llamar: {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-primary" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
           </div>
         </div>
       </section>
@@ -199,13 +196,7 @@ export default function EsComoEmpezarPage() {
               aunque nunca se haga cliente nuestro.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
         </div>
       </section>
     </div>

@@ -3,10 +3,10 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { payers, SELF_FUNDED_NOTE } from "@/lib/payers";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import StateSelect from "@/components/StateSelect";
 import TriageTrio from "@/components/TriageTrio";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "ABA Therapy Insurance — Medicaid & Private",
@@ -40,10 +40,7 @@ export default function InsurancePage() {
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.cta.talk} · {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" />
           </div>
           <div className="mt-7 max-w-xl rounded-3xl bg-white/70 p-4 sm:p-5">
             <StateSelect

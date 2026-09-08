@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { services, getService } from "@/lib/services";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import StateSelect from "@/components/StateSelect";
 import HeroIntakeForm from "@/components/HeroIntakeForm";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));
@@ -113,13 +113,7 @@ export default async function ServicePage(props: {
                 <Link href="/getting-started/" className="btn btn-primary">
                   {siteConfig.cta.checkCoverage}
                 </Link>
-                <a
-                  href={siteConfig.contact.phoneHref}
-                  className="btn btn-outline"
-                >
-                  <PhoneIcon />
-                  {siteConfig.cta.talk} · {siteConfig.contact.phone}
-                </a>
+                <CallCta className="btn btn-outline" />
               </div>
               <ul
                 className="mt-7 flex flex-wrap gap-2"
@@ -173,7 +167,7 @@ export default async function ServicePage(props: {
           >
             Compare every setting side by side
           </Link>{" "}
-          — or call and describe your week to a person who does this every day.
+          — or tell us about your week and a person who does this every day will answer.
         </p>
       </section>
 
@@ -293,13 +287,7 @@ export default async function ServicePage(props: {
               usually settles it.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

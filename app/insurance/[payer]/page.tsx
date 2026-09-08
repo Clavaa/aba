@@ -4,10 +4,10 @@ import { notFound } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { payers, getPayer, SELF_FUNDED_NOTE } from "@/lib/payers";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import StateSelect from "@/components/StateSelect";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export function generateStaticParams() {
   return payers.map((p) => ({ payer: p.slug }));
@@ -99,10 +99,7 @@ export default async function PayerPage(props: {
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.cta.talk} · {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" />
           </div>
         </div>
       </section>
@@ -120,7 +117,7 @@ export default async function PayerPage(props: {
           <p className="mt-2 text-spruce-soft">
             That depends on your specific plan and your state, and we&rsquo;d
             rather tell you the truth on the phone than post a blanket claim
-            here. Call us with the card in your hand and we&rsquo;ll check it
+            here. Send us your plan details and we&rsquo;ll check it
             while you wait — and if the answer is no, we&rsquo;ll tell you what
             your options are anyway.
           </p>
@@ -218,13 +215,7 @@ export default async function PayerPage(props: {
             Or skip it — this is exactly the call we make for families every
             day, and we&rsquo;re better at it because we do it constantly.
           </p>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-primary mt-5"
-          >
-            <PhoneIcon />
-            Have us make the call
-          </a>
+          <CallCta className="btn btn-primary mt-5" fallbackLabel="Talk to a person" />
         </div>
       </section>
 
@@ -301,18 +292,12 @@ export default async function PayerPage(props: {
               Have the card in your hand?
             </h2>
             <p className="mt-2 max-w-xl text-ivory/80">
-              One {siteConfig.intake.callLength} call and we&rsquo;ll tell you
+              One {siteConfig.intake.callLength} get in touch and we&rsquo;ll tell you
               what your plan actually covers — including when the answer
               isn&rsquo;t what you hoped.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

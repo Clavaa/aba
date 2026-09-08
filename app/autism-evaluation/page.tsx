@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Autism Evaluation: How to Get One, and What Happens",
@@ -162,13 +162,7 @@ export default function AutismEvaluationPage() {
                 >
                   Answer a few questions first
                 </Link>
-                <a
-                  href={siteConfig.contact.phoneHref}
-                  className="btn btn-outline"
-                >
-                  <PhoneIcon />
-                  {siteConfig.cta.talk} · {siteConfig.contact.phone}
-                </a>
+                <CallCta className="btn btn-outline" />
               </div>
             </div>
             <div className="relative hidden lg:block">
@@ -435,13 +429,7 @@ export default function AutismEvaluationPage() {
               to say when you call — even if you never become a client.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
     </>

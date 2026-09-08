@@ -47,7 +47,7 @@ const organizationJsonLd = {
   "@id": `${siteConfig.brand.domain}/#organization`,
   name: siteConfig.brand.name,
   url: `${siteConfig.brand.domain}/`,
-  telephone: siteConfig.contact.phone,
+  ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
   email: siteConfig.contact.email,
   medicalSpecialty: "Psychiatric",
   description:

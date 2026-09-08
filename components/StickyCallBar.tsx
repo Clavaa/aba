@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { strings } from "@/lib/i18n";
-import { siteConfig } from "@/site.config";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * Mobile-only sticky bottom bar (Shared CRO spine: phone-first category —
@@ -21,19 +20,17 @@ export default function StickyCallBar() {
       aria-label={t.quickContact}
     >
       <div className="mx-auto flex max-w-md gap-2">
-        <a
-          href={siteConfig.contact.phoneHref}
-          className="btn btn-primary flex-1 !px-3 !py-3.5"
-        >
-          <PhoneIcon />
-          {t.callNow}
-        </a>
         <Link
           href={isEs ? "/es/como-empezar/#quiz" : "/getting-started/#quiz"}
-          className="btn btn-outline flex-1 !px-3 !py-3.5"
+          className="btn btn-primary flex-1 !px-3 !py-3.5"
         >
           {t.checkCoverage}
         </Link>
+        <CallCta
+          className="btn btn-outline flex-1 !px-3 !py-3.5"
+          fallbackLabel={t.talkCta}
+          href={isEs ? "/es/como-empezar/" : "/contact/"}
+        />
       </div>
     </div>
   );

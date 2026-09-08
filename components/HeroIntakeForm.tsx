@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { siteConfig } from "@/site.config";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * The white intake card that floats in the hero on the target's service
@@ -64,10 +63,7 @@ export default function HeroIntakeForm({
         <p className="mt-3 text-ink-muted">
           A real person from our intake team will call you. Want to talk sooner?
         </p>
-        <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-6">
-          <PhoneIcon />
-          {siteConfig.contact.phone}
-        </a>
+        <CallCta className="btn btn-primary mt-6" fallbackLabel="Talk to a person" />
       </div>
     );
   }
@@ -130,7 +126,7 @@ export default function HeroIntakeForm({
 
       {status === "error" && (
         <p role="alert" className="mt-4 font-semibold text-err">
-          Something went wrong. Try again, or call {siteConfig.contact.phone}.
+          Something went wrong on our end. Please try again in a moment.
         </p>
       )}
 
@@ -139,10 +135,12 @@ export default function HeroIntakeForm({
       </button>
 
       <p className="mt-4 text-center text-sm text-ink-muted">
-        Or give us a call anytime{" "}
-        <a href={siteConfig.contact.phoneHref} className="font-bold underline underline-offset-4">
-          {siteConfig.contact.phone}
-        </a>
+        Prefer to reach us another way?{" "}
+        <CallCta
+          className="font-bold underline underline-offset-4"
+          fallbackLabel="Other ways to reach us"
+          icon={false}
+        />
       </p>
       <p className="mt-3 text-center text-sm text-ink-muted">
         Confidential and HIPAA-protected.

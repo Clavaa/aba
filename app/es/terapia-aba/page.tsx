@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "¿Qué Es la Terapia ABA? Explicado para Padres",
@@ -268,10 +268,7 @@ export default function EsTerapiaAbaPage() {
               funciona donde usted vive.
             </p>
           </div>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-marigold shrink-0">
-            <PhoneIcon />
-            {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
         </div>
       </section>
     </div>

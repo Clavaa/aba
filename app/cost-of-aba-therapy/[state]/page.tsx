@@ -3,10 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/site.config";
 import { getAllStates, getState, usd } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 import JsonLd from "@/components/JsonLd";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const dynamicParams = false;
 
@@ -134,10 +134,7 @@ export default async function CostStatePage({
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </section>

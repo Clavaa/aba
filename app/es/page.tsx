@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import StateSelect from "@/components/StateSelect";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * Spanish home page. Only 1 of the 10 competitors in the teardown has a
@@ -81,13 +81,7 @@ export default function EsHomePage() {
                 <Link href="/es/como-empezar/" className="btn btn-primary">
                   Revisar mi cobertura
                 </Link>
-                <a
-                  href={siteConfig.contact.phoneHref}
-                  className="btn btn-outline"
-                >
-                  <PhoneIcon />
-                  Llame al {siteConfig.contact.phone}
-                </a>
+                <CallCta className="btn btn-outline" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
               </div>
               <p className="mt-4 font-semibold text-garden">
                 Hablamos español. Atendemos su llamada en español.
@@ -194,10 +188,7 @@ export default function EsHomePage() {
             <Link href="/es/como-empezar/" className="btn btn-primary">
               Empezar ahora
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Llame al {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
           </div>
         </div>
       </section>
@@ -269,13 +260,7 @@ export default function EsHomePage() {
               vive — aunque la respuesta no sea la que esperaba.
             </p>
           </div>
-          <a
-            href={siteConfig.contact.phoneHref}
-            className="btn btn-marigold shrink-0"
-          >
-            <PhoneIcon />
-            {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
         </div>
       </section>
     </div>

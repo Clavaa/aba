@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import StateSelect from "@/components/StateSelect";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Seguro y Medicaid para la Terapia ABA",
@@ -138,10 +138,7 @@ export default function EsSeguroPage() {
             <Link href="/es/como-empezar/" className="btn btn-primary">
               Revisar mi cobertura
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              Llame al {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
           </div>
         </div>
       </section>
@@ -260,10 +257,7 @@ export default function EsSeguroPage() {
               cuando la respuesta no es la que esperaba.
             </p>
           </div>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-marigold shrink-0">
-            <PhoneIcon />
-            {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Hable con una persona" href="/es/como-empezar/" />
         </div>
       </section>
     </div>

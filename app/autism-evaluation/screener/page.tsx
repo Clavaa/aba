@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { getStateLinks } from "@/lib/states";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import ScreenerQuiz from "@/components/ScreenerQuiz";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Autism Signs Checklist for Parents (Free, 2 Minutes)",
@@ -148,10 +148,7 @@ export default function ScreenerPage() {
           <Link href="/autism-evaluation/" className="btn btn-primary">
             How to get an evaluation
           </Link>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-            <PhoneIcon />
-            {siteConfig.cta.talk} · {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-outline" />
         </div>
       </section>
     </>

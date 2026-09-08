@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import FeatureStrip from "@/components/FeatureStrip";
 import TriageTrio from "@/components/TriageTrio";
 import CtaImageBackground from "@/components/CtaImageBackground";
-import PhoneIcon from "@/components/PhoneIcon";
 
 /**
  * The "everything around the therapy" page — their /aba-plus.
@@ -89,10 +89,7 @@ export default function SupportServicesPage() {
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </section>

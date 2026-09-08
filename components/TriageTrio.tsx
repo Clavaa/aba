@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * Next-step triage trio (Style Bible signature #5): diagnose / learn /
@@ -49,10 +49,7 @@ export default function TriageTrio({ heading = "NOT SURE WHERE TO START?" }: { h
             One {siteConfig.intake.callLength} call. A real human who does this
             every day, no pressure and no obligation.
           </p>
-          <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-5 self-start">
-            <PhoneIcon />
-            Call {siteConfig.contact.phone}
-          </a>
+          <CallCta className="btn btn-primary mt-5 self-start" fallbackLabel="Talk to a person" />
         </div>
       </div>
     </section>

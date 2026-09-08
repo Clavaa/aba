@@ -1,7 +1,7 @@
 import Link from "next/link";
+import CallCta from "@/components/CallCta";
 import TriageTrio from "@/components/TriageTrio";
 import Sprout from "@/components/Sprout";
-import { siteConfig } from "@/site.config";
 
 /**
  * A 404 that converts: acknowledge the miss, then open all three
@@ -27,9 +27,7 @@ export default function NotFound() {
             <Link href="/locations/" className="btn btn-outline">
               Find my state
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              Call {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" icon={false} />
           </div>
         </div>
       </section>

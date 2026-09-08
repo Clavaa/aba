@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import {
   executives,
@@ -12,7 +13,6 @@ import {
 } from "@/data/leadership";
 import InitialsAvatar from "@/components/InitialsAvatar";
 import Sprout from "@/components/Sprout";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Our Leadership Team",
@@ -174,10 +174,7 @@ export default function LeadershipPage() {
             <Link href="/getting-started/" className="btn btn-marigold">
               {siteConfig.cta.primary}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline !border-ivory !text-ivory hover:!bg-ivory hover:!text-spruce">
-              <PhoneIcon />
-              {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline !border-ivory !text-ivory hover:!bg-ivory hover:!text-spruce" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </section>

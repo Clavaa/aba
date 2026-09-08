@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { siteConfig } from "@/site.config";
-import PhoneIcon from "@/components/PhoneIcon";
+import CallCta from "@/components/CallCta";
 
 /**
  * Multi-step insurance-check quiz (Shared CRO spine: quiz funnels convert
@@ -162,10 +161,7 @@ export default function Quiz({
       <div className="rounded-[30px] bg-teal-80 p-8 text-center sm:p-12">
         <p className="display display-h3">{c.doneTitle}</p>
         <p className="mx-auto mt-3 max-w-md text-spruce-soft">{c.doneBody}</p>
-        <a href={siteConfig.contact.phoneHref} className="btn btn-primary mt-5">
-          <PhoneIcon />
-          {c.doneCall} {siteConfig.contact.phone}
-        </a>
+        <CallCta className="btn btn-primary mt-5" fallbackLabel="Talk to a person" />
       </div>
     );
   }
@@ -354,7 +350,7 @@ export default function Quiz({
 
           {status === "error" && (
             <p role="alert" className="mt-3 font-semibold text-err">
-              {c.error} {siteConfig.contact.phone}.
+              {c.error}
             </p>
           )}
 

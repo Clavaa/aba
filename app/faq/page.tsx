@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
+import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 import StickyAccordion, { type StickyItem } from "@/components/StickyAccordion";
 import FeatureStrip from "@/components/FeatureStrip";
-import PhoneIcon from "@/components/PhoneIcon";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
@@ -18,7 +18,7 @@ const url = `${siteConfig.brand.domain}/faq/`;
 const faqs: { q: string; a: string }[] = [
   {
     q: "Do we need a diagnosis to start ABA therapy?",
-    a: "For insurance-funded ABA, almost always yes — it's authorized as treatment for a documented autism diagnosis. But you don't need one to call us, and you don't need one to start your state's early intervention program if your child is under three. If you're waiting on an evaluation, call anyway and we'll tell you what to do in the meantime.",
+    a: "For insurance-funded ABA, almost always yes — it's authorized as treatment for a documented autism diagnosis. But you don't need one to contact us, and you don't need one to start your state's early intervention program if your child is under three. If you're waiting on an evaluation, call anyway and we'll tell you what to do in the meantime.",
   },
   {
     q: "How much does ABA therapy cost us?",
@@ -42,7 +42,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Do you take my insurance?",
-    a: "Network status varies by plan and by state, and we'd rather tell you the truth on the phone than post a blanket claim. Call with the card in your hand and we'll check it while you wait — and if the answer is no, we'll tell you what your options are anyway.",
+    a: "Network status varies by plan and by state, and we'd rather tell you the truth on the phone than post a blanket claim. Send us your plan details and we'll check it while you wait — and if the answer is no, we'll tell you what your options are anyway.",
   },
   {
     q: "Is ABA the right choice for my child?",
@@ -87,10 +87,7 @@ export default function FaqPage() {
             <Link href="/getting-started/" className="btn btn-primary">
               {siteConfig.cta.checkCoverage}
             </Link>
-            <a href={siteConfig.contact.phoneHref} className="btn btn-outline">
-              <PhoneIcon />
-              {siteConfig.contact.phone}
-            </a>
+            <CallCta className="btn btn-outline" fallbackLabel="Talk to a person" />
           </div>
         </div>
       </section>
