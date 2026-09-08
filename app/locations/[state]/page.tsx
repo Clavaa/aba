@@ -140,7 +140,10 @@ export default async function StatePage({
 
   const otherStates = getAllStates().filter((s) => s.slug !== state.slug);
   const counties = getCountiesForState(state.slug);
-  const cities = getCitiesForState(state.slug);
+  const allCities = getCitiesForState(state.slug);
+  // Texas alone has 800+ places; a chip list that long helps nobody. Show the
+  // largest, and let the county pages carry the rest.
+  const cities = allCities.slice(0, 60);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -367,8 +370,16 @@ export default async function StatePage({
             </h2>
             <p className="mt-3 max-w-2xl text-spruce-soft">
               Local pages for {state.name}&rsquo;s largest communities — what
-              settings are realistic in each, and which county&rsquo;s rules
-              apply to you.
+              settings are realistically available in each, how far the nearest
+              city is, and which county&rsquo;s rules apply to you.
+              {allCities.length > cities.length && (
+                <>
+                  {" "}
+                  We cover {allCities.length.toLocaleString("en-US")} towns and
+                  cities across {state.name}; the rest are listed on their
+                  county pages.
+                </>
+              )}
             </p>
             <ul className="mt-6 flex flex-wrap gap-2">
               {cities.map((c) => (

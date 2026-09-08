@@ -1,0 +1,21 @@
+# WHOIS contact data for registering sproutwellaba.com via Google Cloud Domains.
+#
+# Fill this in, save it as ops/domain-contacts.yaml (gitignored), and the
+# registration is a single command — see ops/REGISTER-DOMAIN.md.
+#
+# This data must be ACCURATE. ICANN requires truthful registrant details and
+# can suspend or cancel a domain registered with false ones. Use
+# --contact-privacy=private-contact-data (the default in our command) so the
+# details are shielded from public WHOIS while still being correct on file.
+
+allContacts:
+  email: 'you@example.com'            # a mailbox you can receive verification at
+  phoneNumber: '+1.5551234567'        # E.164 format, note the dot
+  postalAddress:
+    regionCode: 'US'
+    postalCode: '00000'
+    administrativeArea: 'NY'          # two-letter state
+    locality: 'Your City'
+    addressLines: ['123 Example Street', 'Suite 4']
+    recipients: ['Your Full Name']
+    organization: 'Sproutwell ABA, LLC'   # optional; omit if registering personally
