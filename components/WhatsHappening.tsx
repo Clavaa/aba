@@ -14,6 +14,8 @@ export type HappeningCard = {
   title: string;
   body: string;
   photoIntent: string;
+  photo?: string;
+  photoAlt?: string;
 };
 
 export default function WhatsHappening({
@@ -44,7 +46,10 @@ export default function WhatsHappening({
               <Link href={c.href} className="group block">
                 <ImageSlot
                   intent={c.photoIntent}
+                  src={c.photo}
+                  alt={c.photoAlt}
                   tint="bg-white/70"
+                  sizes="(max-width: 640px) 80vw, 21rem"
                   className="aspect-[16/10] rounded-[20px]"
                 />
                 <p className="eyebrow mt-5 text-coral">{c.kicker}</p>

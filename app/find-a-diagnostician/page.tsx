@@ -233,6 +233,8 @@ export default function FindADiagnosticianPage() {
         }
         cta={{ href: "/autism-evaluation/", label: "How the three doors work" }}
         photoIntent="Parent at a kitchen table with a notebook and phone, making the call, morning light"
+        photo="/photos/parent-on-phone.jpg"
+        photoAlt="A father on the phone at his kitchen counter with a laptop and notepad open, his toddler eating behind him"
         tint="bg-peach-100"
       />
 

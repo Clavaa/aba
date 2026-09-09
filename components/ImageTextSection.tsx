@@ -12,6 +12,8 @@ export default function ImageTextSection({
   body,
   cta,
   photoIntent,
+  photo,
+  photoAlt,
   tint = "bg-peach-100",
   reverse = false,
 }: {
@@ -20,6 +22,8 @@ export default function ImageTextSection({
   body: ReactNode;
   cta?: { href: string; label: string };
   photoIntent: string;
+  photo?: string;
+  photoAlt?: string;
   tint?: string;
   reverse?: boolean;
 }) {
@@ -40,10 +44,13 @@ export default function ImageTextSection({
     </div>
   );
 
-  const photo = (
+  const photoEl = (
     <ImageSlot
       intent={photoIntent}
+      src={photo}
+      alt={photoAlt}
       tint="bg-beige-100"
+      sizes="(max-width: 1024px) 100vw, 50vw"
       className={`${reverse ? "pair-left" : "pair-right"} min-h-[24rem]`}
     />
   );
@@ -53,13 +60,13 @@ export default function ImageTextSection({
       <div className="grid overflow-hidden lg:grid-cols-2">
         {reverse ? (
           <>
-            {photo}
+            {photoEl}
             {panel}
           </>
         ) : (
           <>
             {panel}
-            {photo}
+            {photoEl}
           </>
         )}
       </div>

@@ -274,7 +274,9 @@ export default function HomePage() {
           </>
         }
         cta={{ href: "/getting-started/", label: "Get help today" }}
-        photoIntent="Golden hour: parent leaning in to kiss their child on the temple, both mid-laugh, outdoors"
+        photoIntent="Golden hour: parent and child together outdoors, both mid-laugh"
+        photo="/photos/garden-watering.jpg"
+        photoAlt="A mother helping her young son water a raised vegetable bed with a green watering can, evening sun behind them"
       />
 
       {/* 5 · cta-image-background-section */}
@@ -326,6 +328,8 @@ export default function HomePage() {
             title: "Early intervention",
             body: "Play-based teaching for toddlers, aimed at communication first.",
             photoIntent: "Toddler and parent on the floor with blocks, clinician sitting back on her heels",
+            photo: "/photos/blocks-wide.jpg",
+            photoAlt: "A behavior technician sitting back on her heels on a living-room rug while a young boy stacks coloured blocks",
           },
           {
             href: "/autism-evaluation/",
@@ -393,6 +397,8 @@ export default function HomePage() {
               </p>
             ),
             photoIntent: "Toddler pointing at a picture card while a parent responds, warm light",
+            photo: "/photos/picture-card.jpg",
+            photoAlt: "A toddler on a living-room rug pointing at a picture card of a dog held up by her mother, both smiling",
           },
           {
             title: "A BCBA owns the plan, and you can see it",
@@ -405,6 +411,8 @@ export default function HomePage() {
               </p>
             ),
             photoIntent: "BCBA reviewing a printed progress graph with a parent at a kitchen table",
+            photo: "/photos/progress-graph.jpg",
+            photoAlt: "A BCBA at a kitchen table pointing to a rising progress chart on a laptop while a parent listens",
           },
           {
             title: "Parent coaching is part of it, not an upsell",
@@ -470,6 +478,8 @@ export default function HomePage() {
             title: "What is ABA therapy?",
             body: "The core idea in one example — and the criticism of ABA, answered without defensiveness.",
             photoIntent: "Parent and child reading together on a sunlit couch",
+            photo: "/photos/porch-golden-hour.jpg",
+            photoAlt: "A mother and her young son laughing together on a sunlit porch",
           },
           {
             href: "/resources/autism-levels/",
@@ -477,6 +487,8 @@ export default function HomePage() {
             title: "Autism levels 1, 2 and 3",
             body: "Why there are really two levels, not one, and the four things the number doesn't tell you.",
             photoIntent: "Close-up of a parent's hands holding an evaluation report",
+            photo: "/photos/progress-graph.jpg",
+            photoAlt: "A BCBA at a kitchen table showing a parent a rising progress chart on a laptop",
           },
           {
             href: "/resources/signs-of-autism-by-age/",
@@ -484,6 +496,8 @@ export default function HomePage() {
             title: "Signs of autism by age",
             body: "12 months to the teen years — plus the children this kind of list usually misses.",
             photoIntent: "Toddler pointing at something off-frame while a parent watches",
+            photo: "/photos/picture-card.jpg",
+            photoAlt: "A toddler pointing at a picture card of a dog held up by her mother, both smiling",
           },
           {
             href: "/careers/pay/",
@@ -491,6 +505,8 @@ export default function HomePage() {
             title: "How ABA pay actually works",
             body: "Why two jobs at the same hourly rate pay thousands apart over a year.",
             photoIntent: "RBT walking to a car with a session bag, early morning light",
+            photo: "/photos/matching-game.jpg",
+            photoAlt: "A behavior technician and a young girl doing a picture-matching puzzle at a low table",
           },
         ]}
         cta={{ href: "/resources/", label: "All parent guides" }}
