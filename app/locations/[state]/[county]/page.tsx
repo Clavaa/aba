@@ -59,7 +59,7 @@ function settingCopy(county: CountyRecord, size: CountySize): { lead: string; de
     case "metro":
       return {
         lead: "In-home, in-center, school, and telehealth",
-        detail: `${county.name} is one of ${county.stateName}'s biggest communities, so families here usually have the most setting options: in-home sessions where your child is most comfortable, center-based programs, school collaboration, and telehealth parent coaching. On the first call we'll tell you exactly which options are open near you right now.`,
+        detail: `${county.name} is one of ${county.stateName}'s biggest communities, so families here usually have the most setting options: in-home sessions where your child is most comfortable, center-based programs, school collaboration, and telehealth parent coaching. On the first conversation we'll tell you exactly which options are open near you right now.`,
       };
     case "large":
       return {
@@ -169,8 +169,8 @@ export default async function CountyPage({
       q: `Can my child get in-home ABA therapy in ${county.name}?`,
       a:
         size === "metro"
-          ? `Yes — in ${county.name} families can usually choose between in-home sessions, center-based programs, school collaboration, and telehealth parent coaching. We'll confirm what's open near your part of the county on the first call.`
-          : `Yes — in-home is the most common way families in ${county.name} receive ABA. Your child's therapist comes to you, and telehealth parent coaching keeps progress moving between visits. We'll confirm current availability for your address on the first call.`,
+          ? `Yes — in ${county.name} families can usually choose between in-home sessions, center-based programs, school collaboration, and telehealth parent coaching. We'll confirm what's open near your part of the county when you get in touch.`
+          : `Yes — in-home is the most common way families in ${county.name} receive ABA. Your child's therapist comes to you, and telehealth parent coaching keeps progress moving between visits. We'll confirm current availability for your address when you get in touch.`,
     },
     {
       q: `How many hours of ABA per week will my child get in ${county.name}?`,

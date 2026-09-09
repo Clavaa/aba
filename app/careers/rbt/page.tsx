@@ -99,7 +99,7 @@ export default function RbtPage() {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=RBT%20role%20—%20I%27m%20interested`}
+              href="/contact/"
               className="btn btn-primary"
             >
               Apply in 5 minutes
@@ -229,7 +229,7 @@ export default function RbtPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=RBT%20role%20—%20I%27m%20interested`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Apply in 5 minutes

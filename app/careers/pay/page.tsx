@@ -330,11 +330,11 @@ export default function CareersPayPage() {
               </p>
               <p className="mt-3 text-lg text-spruce-soft">
                 What we&rsquo;ll do instead: tell you a real range for your
-                market, on the phone, in the first conversation. Ask us
+                market, when you get in touch, in the first conversation. Ask us
                 directly and we&rsquo;ll answer directly.
               </p>
               <a
-                href={`mailto:${siteConfig.contact.email}?subject=Pay%20range%20question`}
+                href="/contact/"
                 className="btn btn-primary mt-5"
               >
                 Ask for a real range

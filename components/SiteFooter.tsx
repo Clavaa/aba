@@ -33,7 +33,6 @@ export default function SiteFooter() {
         ...(siteConfig.contact.phoneHref && siteConfig.contact.phone
           ? [{ href: siteConfig.contact.phoneHref, label: t.call(siteConfig.contact.phone) }]
           : [{ href: "/contact/", label: t.talkCta }]),
-        { href: `mailto:${siteConfig.contact.email}`, label: siteConfig.contact.email },
         { href: t.langSwitchHref, label: t.langSwitchLabel },
       ],
     },
@@ -83,17 +82,9 @@ export default function SiteFooter() {
                   href={t.langSwitchHref === "/" ? "/es/como-empezar/" : "/contact/"}
                 />
               </li>
-              <li>
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="flex items-center gap-3 break-all underline-offset-4 hover:text-coral hover:underline"
-                >
-                  <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0" fill="none" aria-hidden="true">
-                    <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
-                    <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-                  </svg>
-                  {siteConfig.contact.email}
-                </a>
+              <li className="text-ink/80">
+                Send us your details and a real person replies — the form takes
+                about a minute.
               </li>
             </ul>
             <Link

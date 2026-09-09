@@ -43,7 +43,7 @@ export async function generateMetadata({
 
 function hoursCopy(state: StateRecord): string {
   if (state.hoursUnpublished) {
-    return `${state.name} doesn't publish a fixed weekly-hours number. Hours are set child by child: your BCBA writes a treatment plan, and the reviewer approves the hours that plan supports. We'll tell you what to expect for your child on the first call.`;
+    return `${state.name} doesn't publish a fixed weekly-hours number. Hours are set child by child: your BCBA writes a treatment plan, and the reviewer approves the hours that plan supports. We'll tell you what to expect for your child when you get in touch.`;
   }
   // "Not published — {useful detail}" → keep the detail, drop the research lead-in
   const m = state.hours.match(

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/site.config";
 
 /**
  * Privacy policy.
@@ -122,14 +121,14 @@ export default function PrivacyPolicyPage() {
             <h2 className="display display-h3 text-ink">Your choices</h2>
             <p className="mt-3">
               You can ask us what we hold about you, ask us to correct it, or
-              ask us to delete it. Email{" "}
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
+              ask us to delete it. Send the request through our{" "}
+              <Link
+                href="/contact/"
                 className="font-semibold text-coral underline underline-offset-4"
               >
-                {siteConfig.contact.email}
-              </a>{" "}
-  .
+                contact form
+              </Link>{" "}
+              and we&rsquo;ll action it.
             </p>
           </section>
 

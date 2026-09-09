@@ -91,7 +91,7 @@ export default function InsuranceMarquee({
         {/* TODO(config): once contracts exist, mark which of these we are
             actually in-network with, per state. */}
         Plans families ask us about most. We verify your specific plan on the
-        first call — network status varies by state.
+        first conversation — network status varies by state.
       </p>
     </section>
   );

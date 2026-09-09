@@ -307,7 +307,7 @@ export default function SignsByAgePage() {
               Recognize your kid in any of this?
             </h2>
             <p className="mt-2 max-w-xl text-ivory/80">
-              Then the next step is a phone call, not more reading. We&rsquo;ll
+              Then the next step is a phone conversation, not more reading. We&rsquo;ll
               tell you how it works where you live.
             </p>
           </div>

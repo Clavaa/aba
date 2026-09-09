@@ -116,7 +116,7 @@ export default async function PayerPage(props: {
           </h2>
           <p className="mt-2 text-spruce-soft">
             That depends on your specific plan and your state, and we&rsquo;d
-            rather tell you the truth on the phone than post a blanket claim
+            rather tell you the truth when you get in touch than post a blanket claim
             here. Send us your plan details and we&rsquo;ll check it
             while you wait — and if the answer is no, we&rsquo;ll tell you what
             your options are anyway.

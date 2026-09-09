@@ -71,7 +71,9 @@ export default function AboutPage() {
             <div className="relative hidden lg:block">
               <ImageSlot
                 intent="Golden-hour photo: parent and child watering a small garden together outside a real home"
-                tint="bg-butter"
+                src="/photos/garden-watering.jpg"
+                alt="A mother helping her young son water a raised vegetable bed with a green watering can, evening sun behind them"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="aspect-[4/5]"
               />
               <Sprout className="absolute -bottom-4 -left-4 h-16 w-16 rotate-[-8deg] text-garden" />
@@ -176,7 +178,7 @@ export default function AboutPage() {
         </h2>
         <p className="mt-3 max-w-2xl text-lg text-spruce-soft">
           Six things we hold ourselves to — in every state, every session,
-          every phone call.
+          every phone conversation.
         </p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {values.map((v, i) => (

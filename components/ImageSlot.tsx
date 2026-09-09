@@ -1,26 +1,53 @@
+import Image from "next/image";
 import Sprout from "@/components/Sprout";
 
 /**
- * Styled placeholder for a real photo slot — no stock photos ship.
+ * A photo slot.
  *
- * Ground is a warm neutral rather than a brand tint, so the tinted panels
- * that overlap photos in this design keep their contrast even before real
- * photography lands.
+ * With `src`, renders the real photograph through next/image (which handles
+ * responsive sizes and modern formats). Without one, renders a labelled
+ * placeholder carrying the art direction for the shot that belongs here — so
+ * an unfilled slot is a brief, not a mystery.
  *
- * `intent` documents exactly what photo belongs here per the Style Bible:
- * golden-hour, real homes, caregiver + child TOGETHER, never a child alone
- * being treated.
+ * `intent` stays required either way: it documents the shot, and when a photo
+ * is present it becomes the basis for the alt text.
  */
 export default function ImageSlot({
   intent,
+  src,
+  alt,
   className = "",
   tint = "bg-beige-100",
+  priority = false,
+  sizes = "(max-width: 1024px) 100vw, 50vw",
 }: {
   /** Art direction note, e.g. "Parent and child reading on a sunlit couch" */
   intent: string;
+  /** Path under /public once the real photo exists */
+  src?: string;
+  /** Describes the photo for screen readers. Falls back to `intent`. */
+  alt?: string;
   className?: string;
   tint?: string;
+  /** Set on the above-the-fold hero image so it isn't lazy-loaded */
+  priority?: boolean;
+  sizes?: string;
 }) {
+  if (src) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={src}
+          alt={alt ?? intent}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative grid place-items-center overflow-hidden ${tint} ${className}`}

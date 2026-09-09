@@ -121,7 +121,10 @@ export default function EsHomePage() {
             <div className="relative hidden lg:block">
               <ImageSlot
                 intent="Luz dorada: madre e hijo riéndose juntos en el porche de una casa real"
-                tint="bg-butter"
+                src="/photos/porch-golden-hour.jpg"
+                alt="Una madre y su hijo pequeño sentados juntos en un porche iluminado por el sol del atardecer, los dos riéndose"
+                priority
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="aspect-[4/5]"
               />
               <Sprout className="absolute -bottom-4 -left-4 h-16 w-16 rotate-[-8deg] text-garden" />

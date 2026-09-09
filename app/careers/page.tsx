@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/site.config";
 import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
 
@@ -199,7 +198,7 @@ export default function CareersPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=Careers%20—%20I%27m%20interested`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Introduce myself

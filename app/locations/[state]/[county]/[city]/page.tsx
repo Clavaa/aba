@@ -74,7 +74,7 @@ function reachCopy(
         lead: "Every setting is realistic here",
         detail: `${city.name} is itself a city of ${approxPop(
           city.pop
-        )}, which means centers, in-home routes, school collaboration and telehealth are all live options rather than theoretical ones. In a place this size the constraint is almost never whether a service exists — it's capacity at any given moment, and that's exactly what we check on the first call.`,
+        )}, which means centers, in-home routes, school collaboration and telehealth are all live options rather than theoretical ones. In a place this size the constraint is almost never whether a service exists — it's capacity at any given moment, and that's exactly what we check when you get in touch.`,
         strip: "All four settings realistic",
       };
     case "close":
@@ -155,7 +155,7 @@ function cityFaqs(
   const out: { q: string; a: string }[] = [
     {
       q: `Do you serve families in ${city.name}?`,
-      a: `Yes — ${city.name} is in ${county.name}, and we work with families across ${state.name}. What varies is which settings can reach a specific address and how quickly. One call tells you what's actually open for you right now instead of a general promise.`,
+      a: `Yes — ${city.name} is in ${county.name}, and we work with families across ${state.name}. What varies is which settings can reach a specific address and how quickly. One conversation tells you what's actually open for you right now instead of a general promise.`,
     },
     {
       q: `Does ${program} cover ABA therapy in ${city.name}?`,
@@ -183,7 +183,7 @@ function cityFaqs(
   } else {
     out.push({
       q: `Can therapy happen at my child's school in ${city.name}?`,
-      a: `Sometimes, and it needs two separate yes-answers: your health plan has to cover services during school hours, and the district has to allow an outside clinician in the building. Both vary. We check the plan language first, because that's the one that can be settled on a phone call.`,
+      a: `Sometimes, and it needs two separate yes-answers: your health plan has to cover services during school hours, and the district has to allow an outside clinician in the building. Both vary. We check the plan language first, because that's the one that can be settled quickly.`,
     });
   }
 

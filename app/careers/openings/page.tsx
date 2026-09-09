@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const url = `${siteConfig.brand.domain}/careers/openings/`;
 
 export default function OpeningsPage() {
-  const applyHref = `mailto:${siteConfig.contact.email}?subject=Application%20—%20ABA%20role`;
+  const applyHref = "/contact/";
 
   return (
     <>
@@ -154,9 +154,7 @@ export default function OpeningsPage() {
                     </div>
                   </div>
                   <a
-                    href={`mailto:${siteConfig.contact.email}?subject=Application%20—%20${encodeURIComponent(
-                      o.title
-                    )}%20(${encodeURIComponent(o.location)})`}
+                    href="/contact/"
                     className="btn btn-primary mt-5"
                   >
                     Apply for this role

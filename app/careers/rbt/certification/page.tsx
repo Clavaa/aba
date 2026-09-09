@@ -260,7 +260,7 @@ export default function RbtCertificationPage() {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=RBT%20certification%20—%20I%27m%20interested`}
+              href="/contact/"
               className="btn btn-primary"
             >
               Get certified with us
@@ -412,7 +412,7 @@ export default function RbtCertificationPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=RBT%20certification%20—%20I%27m%20interested`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Talk to us first

@@ -152,7 +152,7 @@ export default function AutismEvaluationPage() {
                 Waiting for certainty is the most expensive thing a worried
                 parent can do, because the appointment itself takes months to
                 get. Here&rsquo;s exactly how an autism evaluation works, and
-                the three phone calls that start it — two of which are free and
+                the three phone conversations that start it — two of which are free and
                 need nobody&rsquo;s permission.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -167,7 +167,7 @@ export default function AutismEvaluationPage() {
             </div>
             <div className="relative hidden lg:block">
               <ImageSlot
-                intent="Parent on the phone at a kitchen counter, toddler visible playing on the floor behind, morning light"
+                intent="Parent when you get in touch at a kitchen counter, toddler visible playing on the floor behind, morning light"
                 tint="bg-white/70"
                 className="aspect-[4/5]"
               />

@@ -357,7 +357,7 @@ export default function ScreenerQuiz({
             </p>
             <p className="mt-2 text-spruce-soft">
               It is a set of questions to help you decide whether to make a
-              phone call. Autism is diagnosed by qualified professionals — a
+              phone conversation. Autism is diagnosed by qualified professionals — a
               developmental pediatrician, a child psychologist, a psychiatrist,
               or a neurologist — after watching your child directly. No set of
               questions answered by a parent on a website can do that, and any
@@ -538,7 +538,7 @@ export default function ScreenerQuiz({
               className="btn btn-primary mt-5"
               disabled={status === "sending"}
             >
-              {status === "sending" ? "Sending…" : "Have someone call me"}
+              {status === "sending" ? "Sending…" : "Have someone conversation me"}
             </button>
             <p className="mt-3 text-sm text-spruce-soft">
               Your answers above stay on your device — we never receive them.
@@ -557,7 +557,7 @@ export default function ScreenerQuiz({
                 className="btn btn-marigold"
                 onClick={() => setShowForm(true)}
               >
-                Have someone call me
+                Have someone conversation me
               </button>
               <CallCta className="btn btn-outline !border-ivory !text-ivory hover:!bg-ivory hover:!text-spruce" fallbackLabel="Talk to a person" />
             </div>

@@ -228,7 +228,10 @@ export default function HomePage() {
           <div className="relative mx-auto mt-12 max-w-3xl">
             <ImageSlot
               intent="Golden-hour photo: parent and child laughing together on the porch of a real home"
-              tint="bg-white/60"
+              src="/photos/porch-golden-hour.jpg"
+              alt="A mother and her young son sitting together on a sunlit porch at golden hour, both laughing"
+              priority
+              sizes="(max-width: 768px) 100vw, 768px"
               className="aspect-[16/6] rounded-t-[40px]"
             />
             <Sprout className="absolute -top-8 right-6 h-20 w-20 rotate-[8deg] text-coral" />
@@ -320,7 +323,7 @@ export default function HomePage() {
             href: "/autism-evaluation/",
             title: "Help getting evaluated",
             body: "Three referral doors, two of them free and open to you today.",
-            photoIntent: "Parent on the phone at a kitchen counter, toddler playing behind",
+            photoIntent: "Parent when you get in touch at a kitchen counter, toddler playing behind",
           },
         ]}
         primary={{ href: "/getting-started/", label: "Get in touch" }}
@@ -418,7 +421,7 @@ export default function HomePage() {
           "Every state Medicaid program covers ABA for eligible children — we explain exactly how yours works",
           "In-home, center, school and telehealth, with the honest trade-offs of each",
           "County and city pages for the local picture, not a swap-the-name template",
-          "One call tells you what's actually open near your address right now",
+          "One conversation tells you what's actually open near your address right now",
         ]}
       />
 
@@ -466,7 +469,7 @@ export default function HomePage() {
 
       {/* 13 · sticky-accordion-section */}
       <StickyAccordion
-        eyebrow="From first call to first session"
+        eyebrow="From first conversation to first session"
         heading="Four steps. We carry all four."
         items={steps.map((s) => ({
           q: s.title,

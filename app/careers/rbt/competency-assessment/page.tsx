@@ -178,7 +178,7 @@ export default function CompetencyAssessmentPage() {
               ← The full certification path
             </Link>
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=RBT%20—%20competency%20assessment%20question`}
+              href="/contact/"
               className="btn btn-primary"
             >
               Ask us about getting assessed
@@ -292,7 +292,7 @@ export default function CompetencyAssessmentPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=RBT%20—%20I%20need%20a%20competency%20assessor`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Talk to us

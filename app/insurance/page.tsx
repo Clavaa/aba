@@ -137,7 +137,7 @@ export default function InsurancePage() {
           <p className="mt-4 max-w-2xl text-spruce-soft">
             Don&rsquo;t see your plan? Networks change monthly and we add
             payers all the time. The fastest way to know is to ask — checking
-            takes us one phone call.
+            takes us one phone conversation.
           </p>
         </div>
       </section>

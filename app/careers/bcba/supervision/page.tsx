@@ -179,7 +179,7 @@ export default function SupervisionPage() {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=BCBA%20fieldwork%20—%20supervision%20question`}
+              href="/contact/"
               className="btn btn-primary"
             >
               Ask how supervision works here
@@ -308,7 +308,7 @@ export default function SupervisionPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=BCBA%20fieldwork%20—%20where%20I%20am`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Start the conversation

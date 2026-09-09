@@ -48,7 +48,7 @@ const organizationJsonLd = {
   name: siteConfig.brand.name,
   url: `${siteConfig.brand.domain}/`,
   ...(siteConfig.contact.phone ? { telephone: siteConfig.contact.phone } : {}),
-  email: siteConfig.contact.email,
+  ...(siteConfig.contact.email ? { email: siteConfig.contact.email } : {}),
   medicalSpecialty: "Psychiatric",
   description:
     "Applied Behavior Analysis (ABA) therapy provider for children with autism, serving families in all 50 U.S. states and the District of Columbia.",

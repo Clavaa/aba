@@ -9,7 +9,7 @@ import FeatureStrip from "@/components/FeatureStrip";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Straight answers about ABA therapy, autism diagnosis, insurance and Medicaid coverage, waitlists, hours, and what happens on the first call.",
+    "Straight answers about ABA therapy, autism diagnosis, insurance and Medicaid coverage, waitlists, hours, and what happens when you get in touch.",
   alternates: { canonical: "/faq/" },
 };
 
@@ -22,7 +22,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How much does ABA therapy cost us?",
-    a: "With Medicaid, most families pay nothing out of pocket. With a private plan it depends on your deductible, coinsurance, and out-of-pocket maximum — real numbers we can read off your specific plan in one phone call. Every state also has a cost page on this site.",
+    a: "With Medicaid, most families pay nothing out of pocket. With a private plan it depends on your deductible, coinsurance, and out-of-pocket maximum — real numbers we can read off your specific plan in one phone conversation. Every state also has a cost page on this site.",
   },
   {
     q: "How long is the wait to start?",
@@ -34,22 +34,22 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "What if I have a very full daily schedule?",
-    a: "Then say so on the first call, because it changes what we'd recommend. In-home sessions remove the commute, telehealth coaching can happen during the routine that's actually hard, and a focused program targeting two or three goals is a legitimate choice — not a lesser one.",
+    a: "Then say so when you get in touch, because it changes what we'd recommend. In-home sessions remove the commute, telehealth coaching can happen during the routine that's actually hard, and a focused program targeting two or three goals is a legitimate choice — not a lesser one.",
   },
   {
     q: "Can therapy happen at my child's school?",
-    a: "Sometimes, and it needs two separate yes-answers: your health plan has to cover services during school hours, and the district has to allow an outside clinician in the building. Both vary a lot. We check the plan language first, because that one can be answered on the phone.",
+    a: "Sometimes, and it needs two separate yes-answers: your health plan has to cover services during school hours, and the district has to allow an outside clinician in the building. Both vary a lot. We check the plan language first, because that one we can answer quickly.",
   },
   {
     q: "Do you take my insurance?",
-    a: "Network status varies by plan and by state, and we'd rather tell you the truth on the phone than post a blanket claim. Send us your plan details and we'll check it while you wait — and if the answer is no, we'll tell you what your options are anyway.",
+    a: "Network status varies by plan and by state, and we'd rather tell you the truth when you get in touch than post a blanket claim. Send us your plan details and we'll check it while you wait — and if the answer is no, we'll tell you what your options are anyway.",
   },
   {
     q: "Is ABA the right choice for my child?",
     a: "Honestly, not always — and any provider who says otherwise is selling. ABA is well-supported for teaching skills, especially communication and daily-living routines. If what your child needs most is speech therapy, an OT, or a different evaluation first, we'll say that.",
   },
   {
-    q: "What happens on the first call?",
+    q: "What happens when you get in touch?",
     a: `One ${siteConfig.intake.callLength} conversation. You tell us about your child and your insurance; we tell you what's covered, what the honest timeline is, and what the next step is. No script and no pressure, and it costs nothing.`,
   },
 ];
@@ -79,7 +79,7 @@ export default function FaqPage() {
             Ask us the awkward ones.
           </h1>
           <p className="mx-auto mt-7 max-w-[38rem] text-lg text-ink-muted">
-            The questions families actually ask on the first call — including
+            The questions families actually ask when you get in touch — including
             the ones where the honest answer isn&rsquo;t the one that gets us a
             client.
           </p>

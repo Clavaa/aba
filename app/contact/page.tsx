@@ -36,7 +36,7 @@ export default function ContactPage() {
             <div>
               <p className="eyebrow">Talk to a person</p>
               <h1 className="display display-hero mt-5 text-coral">
-                A real human, on the first call.
+                A real human, when you get in touch.
               </h1>
               <p className="mt-6 max-w-xl text-lg text-ink-muted">
                 Not a phone tree and not a chatbot. Tell us what&rsquo;s going
@@ -53,14 +53,10 @@ export default function ContactPage() {
                   </dd>
                 </div>
                 <div className="rounded-[24px] bg-white/70 p-6">
-                  <dt className="eyebrow">Email us</dt>
-                  <dd className="mt-2">
-                    <a
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="font-bold break-all underline-offset-4 hover:text-coral hover:underline"
-                    >
-                      {siteConfig.contact.email}
-                    </a>
+                  <dt className="eyebrow">What happens next</dt>
+                  <dd className="mt-2 text-ink-muted">
+                    A real person reads it and replies — usually the same day.
+                    No autoresponder loop, no chatbot.
                   </dd>
                 </div>
               </dl>

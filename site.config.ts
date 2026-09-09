@@ -90,12 +90,13 @@ export const siteConfig = {
     /** tel: href form of the number above — keep the two in sync */
     phoneHref: null as string | null,
     /**
-     * Public-facing email, shown on the site.
-     * TODO(mail): sproutwellaba.com is registered but has no mailbox yet, so
-     * this address currently bounces. Either create it or the contact form is
-     * the only working channel.
+     * Public-facing email. NULL until a real mailbox exists on the domain —
+     * sproutwellaba.com is registered but has no mail set up, and an address
+     * that bounces is worse than no address. While this is null the site
+     * shows the contact form instead, everywhere. Set it and the mailto links
+     * return on their own.
      */
-    email: "hello@sproutwellaba.com",
+    email: null as string | null,
     /** Where /api/lead delivers. Real, monitored inbox — leads arrive here. */
     leadInbox: "support@offendersearch.app",
     /** Verified sender for SendGrid. TODO: verify this sender on the domain */
@@ -182,6 +183,10 @@ export type SiteConfig = typeof siteConfig;
  * on the site is behind this, so the site never shows a number that doesn't
  * ring — it offers the contact form instead.
  */
+export const hasEmail: boolean =
+  typeof siteConfig.contact.email === "string" &&
+  siteConfig.contact.email.length > 0;
+
 export const hasPhone: boolean =
   typeof siteConfig.contact.phone === "string" &&
   siteConfig.contact.phone.length > 0;

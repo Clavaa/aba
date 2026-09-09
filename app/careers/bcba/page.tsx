@@ -99,7 +99,7 @@ export default function BcbaPage() {
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href={`mailto:${siteConfig.contact.email}?subject=BCBA%20role%20—%20I%27m%20interested`}
+              href="/contact/"
               className="btn btn-primary"
             >
               Talk to our clinical team
@@ -181,7 +181,7 @@ export default function BcbaPage() {
             </p>
           </div>
           <a
-            href={`mailto:${siteConfig.contact.email}?subject=BCBA%20role%20—%20I%27m%20interested`}
+            href="/contact/"
             className="btn btn-marigold shrink-0"
           >
             Talk to our clinical team

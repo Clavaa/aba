@@ -18,7 +18,7 @@ export default function NotFound() {
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-spruce-soft">
             Happens to the best of us — kids move things. What you came for is
-            probably one click away, and a real person is one call away.
+            probably one click away, and a real person is one conversation away.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link href="/" className="btn btn-primary">

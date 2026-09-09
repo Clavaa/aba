@@ -30,7 +30,7 @@ const worried: AccordionItem[] = [
     ),
   },
   {
-    title: "What happens on the first call?",
+    title: "What happens when you get in touch?",
     body: (
       <p>
         A real person asks about your child, your state, and your insurance —
