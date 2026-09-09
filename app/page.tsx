@@ -427,7 +427,12 @@ export default function HomePage() {
       <FindYourCenter
         states={states}
         slides={[
-          { intent: "Wide shot of a bright therapy room: low tables, swing, climbing wall", caption: "A therapy room" },
+          {
+            intent: "Sunlit living room set up for a session: low table, two small chairs, toys on the rug",
+            photo: "/photos/living-room-setup.jpg",
+            alt: "A sunlit living room set up for a session, with a low wooden table and two child-sized chairs on a rug beside a sofa",
+            caption: "Set up for a session at home",
+          },
           {
             intent: "Sunlit living room set up for an in-home session, toys on a rug",
             photo: "/photos/in-home-session.jpg",
