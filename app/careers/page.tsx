@@ -39,7 +39,9 @@ export default function CareersPage() {
             <div className="hidden lg:block">
               <ImageSlot
                 intent="Bright daylight photo: behavior technician and child playing a matching game at a family's kitchen table, both mid-laugh"
-                tint="bg-mint"
+                src="/photos/matching-game.jpg"
+                alt="A behavior technician and a young girl at a low table doing an animal picture-matching puzzle together, both smiling"
+                sizes="(max-width: 1024px) 100vw, 45vw"
                 className="aspect-[4/3]"
               />
             </div>
