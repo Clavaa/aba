@@ -97,10 +97,25 @@ export const siteConfig = {
      * return on their own.
      */
     email: null as string | null,
-    /** Where /api/lead delivers. Real, monitored inbox — leads arrive here. */
+    /**
+     * Where /api/lead delivers. Real, monitored inbox — leads arrive here.
+     * Interim: shares the Offendersearch mailbox until Sproutwell has its own.
+     */
     leadInbox: "support@offendersearch.app",
-    /** Verified sender for SendGrid. TODO: verify this sender on the domain */
-    leadFrom: "website@sproutwellaba.com",
+    /**
+     * Envelope sender. offendersearch.app is a SendGrid-authenticated domain,
+     * so any address on it sends without per-address verification — this one
+     * is distinct so Sproutwell leads are filterable in a shared inbox.
+     *
+     * This address is NEVER shown to a visitor: /api/lead only notifies us and
+     * sends no acknowledgement back to the person who filled the form, so the
+     * two businesses are not linked anywhere a visitor can see. Keep it that
+     * way — an auto-ack from this domain would leak the connection.
+     *
+     * TODO(mail): move to a sproutwellaba.com sender once that domain is
+     * authenticated in SendGrid.
+     */
+    leadFrom: "sproutwell@offendersearch.app",
   },
 
   /**
