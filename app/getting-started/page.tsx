@@ -104,7 +104,9 @@ export default function GettingStartedPage() {
               <div className="mt-8 hidden lg:block">
                 <ImageSlot
                   intent="Golden-hour photo: caregiver and child building a block tower on the living-room floor of a real home"
-                  tint="bg-butter"
+                  src="/photos/blocks-wide.jpg"
+                  alt="A behavior technician and a young boy sitting on a living-room rug stacking coloured wooden blocks together"
+                  sizes="(max-width: 1024px) 100vw, 45vw"
                   className="aspect-[16/10]"
                 />
               </div>

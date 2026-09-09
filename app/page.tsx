@@ -416,6 +416,8 @@ export default function HomePage() {
               </p>
             ),
             photoIntent: "Clinician showing a parent a strategy in a doorway, child playing beyond",
+            photo: "/photos/blocks-close.jpg",
+            photoAlt: "A behavior technician and a young boy building a block tower together on a living-room rug, both mid-laugh",
           },
         ]}
         cta={{ href: "/services/", label: "Learn all about ABA" }}
