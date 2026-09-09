@@ -91,7 +91,7 @@ export const payers: PayerRecord[] = [
       },
       {
         q: "Will Aetna cover ABA in my home?",
-        a: "In-home is a standard place of service for ABA and is commonly covered. Whether your specific plan authorizes home, center, school, or a mix is a plan-level question worth asking before you build your week around one setting.",
+        a: "In-home is a standard place of service for ABA and is commonly covered. Whether your specific plan authorizes home, school, daycare, or a mix is a plan-level question worth asking before you build your week around one setting.",
       },
       {
         q: "What if Aetna denies the request?",

@@ -53,23 +53,23 @@ function familiesPhrase(size: CountySize): string {
   }
 }
 
-/** In-home vs. center framing, varied by county size. */
+/** In-home vs. setting framing, varied by county size. */
 function settingCopy(county: CountyRecord, size: CountySize): { lead: string; detail: string } {
   switch (size) {
     case "metro":
       return {
-        lead: "In-home, in-center, school, and telehealth",
-        detail: `${county.name} is one of ${county.stateName}'s biggest communities, so families here usually have the most setting options: in-home sessions where your child is most comfortable, center-based programs, school collaboration, and telehealth parent coaching. On the first conversation we'll tell you exactly which options are open near you right now.`,
+        lead: "In-home, school, daycare, and telehealth",
+        detail: `${county.name} is one of ${county.stateName}'s biggest communities, so families here usually have the most setting options: in-home sessions where your child is most comfortable, school and daycare collaboration, and telehealth parent coaching. On the first conversation we'll tell you exactly which options are open near you right now.`,
       };
     case "large":
       return {
-        lead: "In-home first, with center and school options",
-        detail: `For most families in ${county.name}, therapy starts in the home — it's where young kids learn fastest and where parents see the plan work day to day. Center-based and school-based sessions are often available around the county's larger towns, and telehealth keeps parent coaching consistent between visits.`,
+        lead: "In-home first, with school and daycare options",
+        detail: `For most families in ${county.name}, therapy starts in the home — it's where young kids learn fastest and where parents see the plan work day to day. School- and daycare-based sessions are often available around the county's larger towns, and telehealth keeps parent coaching consistent between visits.`,
       };
     case "mid":
       return {
         lead: "In-home and telehealth, built for real schedules",
-        detail: `In a county the size of ${county.name}, in-home ABA is usually the fastest way to start — your clinician comes to you, so there's no waitlist for a center seat and no daily drive. Telehealth parent coaching fills the gaps between in-person sessions, and school-based support is possible where districts allow it.`,
+        detail: `In a county the size of ${county.name}, in-home ABA is usually the fastest way to start — your clinician comes to you, so there's no daily drive and no seat to wait for. Telehealth parent coaching fills the gaps between in-person sessions, and school-based support is possible where districts allow it.`,
       };
     case "small":
       return {
@@ -103,7 +103,7 @@ function descriptionFor(county: CountyRecord, state: StateRecord, size: CountySi
   const program = medicaidProgramName(state);
   switch (size) {
     case "metro":
-      return `In-home and center-based ABA therapy across ${county.name}, ${county.stateAbbrev} (pop. ${formatPop(county.pop)}). How ${program} covers ABA — and how to start.`;
+      return `In-home and school-based ABA therapy across ${county.name}, ${county.stateAbbrev} (pop. ${formatPop(county.pop)}). How ${program} covers ABA — and how to start.`;
     case "large":
       return `ABA therapy for children in ${county.name}, ${county.stateAbbrev} — home to ${formatPop(county.pop)} people. ${program} coverage, in-home care, and how to start.`;
     case "mid":
@@ -169,7 +169,7 @@ export default async function CountyPage({
       q: `Can my child get in-home ABA therapy in ${county.name}?`,
       a:
         size === "metro"
-          ? `Yes — in ${county.name} families can usually choose between in-home sessions, center-based programs, school collaboration, and telehealth parent coaching. We'll confirm what's open near your part of the county when you get in touch.`
+          ? `Yes — in ${county.name} families can usually choose between in-home sessions, school and daycare collaboration, and telehealth parent coaching. We'll confirm what's open near your part of the county when you get in touch.`
           : `Yes — in-home is the most common way families in ${county.name} receive ABA. Your child's therapist comes to you, and telehealth parent coaching keeps progress moving between visits. We'll confirm current availability for your address when you get in touch.`,
     },
     {
@@ -276,7 +276,7 @@ export default async function CountyPage({
         </div>
       </section>
 
-      {/* ─────────── SETTINGS: in-home vs center, sized honestly ─────────── */}
+      {/* ─────────── SETTINGS: sized honestly to the county ─────────── */}
       <section
         className="mx-auto max-w-6xl px-4 py-14 sm:py-16"
         aria-labelledby="setting-heading"

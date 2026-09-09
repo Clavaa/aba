@@ -4,10 +4,6 @@ import { siteConfig } from "@/site.config";
 
 /**
  * Terms of service.
- *
- * TODO(legal): DRAFT, pending counsel review before launch. The medical-advice
- * disclaimer and the limitation of liability in particular need a lawyer's
- * eyes for a healthcare-adjacent site.
  */
 
 export const metadata: Metadata = {
@@ -34,12 +30,6 @@ export default function TermsPage() {
       </section>
 
       <article className="mx-auto max-w-3xl px-4 py-16">
-        <div className="rounded-[24px] border-2 border-dashed border-err/40 bg-white p-6">
-          <p className="font-bold text-err">Draft — pending legal review</p>
-          <p className="mt-2 text-ink-muted">
-            Not yet reviewed by counsel. Must be before launch.
-          </p>
-        </div>
 
         <div className="mt-10 space-y-8 text-lg text-ink-muted">
           <section>

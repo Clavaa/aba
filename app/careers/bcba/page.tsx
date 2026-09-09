@@ -49,7 +49,7 @@ const faq: AccordionItem[] = [
     body: (
       <p>
         Both exist here. Telehealth supervision and parent coaching are part of
-        our model, and in-home and center roles are open across all 50 states —
+        our model, and in-home and school-based roles are open across all 50 states —
         tell us what your life needs.
       </p>
     ),

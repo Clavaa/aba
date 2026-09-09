@@ -9,9 +9,9 @@ import FeatureStrip from "@/components/FeatureStrip";
 import Sprout from "@/components/Sprout";
 
 export const metadata: Metadata = {
-  title: "ABA Therapy Services — At Home, In Center, At School, Online",
+  title: "ABA Therapy Services — At Home, At School, In Daycare, Online",
   description:
-    "In-home, center-based, school-based, telehealth, and early intervention ABA — what each setting is good at, what it costs you, and how to pick.",
+    "In-home, school-based, daycare, telehealth, and early intervention ABA — what each setting is good at, what it costs you, and how to pick.",
   alternates: { canonical: "/services/" },
 };
 
@@ -28,9 +28,9 @@ const picker: { goal: string; setting: string; slug: string; why: string }[] = [
   },
   {
     goal: "My child needs to be ready for a classroom",
-    setting: "In center",
-    slug: "center-based",
-    why: "A day with a shape, and peers to practice on deliberately.",
+    setting: "In daycare",
+    slug: "daycare",
+    why: "Peers are already there — we make the practice deliberate.",
   },
   {
     goal: "Everything falls apart at school",
@@ -77,8 +77,8 @@ export default function ServicesPage() {
             Same therapy. Very different rooms.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-spruce-soft">
-            ABA works at your kitchen table, in a center built for it, in your
-            child&rsquo;s classroom, and over a video call at 5:45pm. The
+            ABA works at your kitchen table, in your child&rsquo;s classroom,
+            in their daycare room, and over a video call at 5:45pm. The
             question isn&rsquo;t which one is best — it&rsquo;s which one
             matches the thing you&rsquo;re trying to fix first.
           </p>
@@ -93,7 +93,7 @@ export default function ServicesPage() {
 
       <FeatureStrip
         features={[
-          { icon: "map", text: "At home, in center, at school, online" },
+          { icon: "map", text: "At home, at school, in daycare, online" },
           { icon: "clock", text: "Settings can be mixed and changed" },
           { icon: "shield", text: "Covered by Medicaid and most plans" },
         ]}
@@ -181,7 +181,7 @@ export default function ServicesPage() {
             You don&rsquo;t have to pick one forever
           </h2>
           <p className="mt-4 max-w-3xl text-lg text-spruce-soft">
-            A child can start at home while a center seat opens up, add school
+            A child can start at home, add school
             support the year kindergarten begins, and keep a telehealth
             coaching call through a move or a hard winter. What your plan
             authorizes matters here — some health plans will approve a mix of

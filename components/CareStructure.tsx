@@ -12,7 +12,7 @@ const layers: { role: string; job: string }[] = [
   },
   {
     role: "Clinical Directors",
-    job: "Senior clinicians who make sure every care team in their area holds the same standard — no matter which center or home you're in.",
+    job: "Senior clinicians who make sure every care team in their area holds the same standard — no matter whose home, school or daycare they're working in.",
   },
   {
     role: "BCBAs",

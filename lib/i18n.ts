@@ -76,8 +76,8 @@ export const STRINGS: Record<Lang, Strings> = {
         label: "Our services",
         children: [
           { href: "/services/in-home/", label: "In-home ABA", note: "Therapy where life happens" },
-          { href: "/services/center-based/", label: "Center-based ABA", note: "A room built for the work" },
           { href: "/services/school/", label: "School-based support", note: "The hardest six hours" },
+          { href: "/services/daycare/", label: "ABA in daycare", note: "Inside the day they already have" },
           { href: "/services/telehealth/", label: "Telehealth & parent coaching", note: "No drive required" },
           { href: "/services/early-intervention/", label: "Early intervention", note: "Toddlers and preschoolers" },
           { href: "/services/daycare/", label: "ABA in daycare", note: "Inside the day they already have" },

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.brand.name}`,
   },
   description:
-    "In-home, in-center, school, and telehealth ABA therapy for kids with autism — covered by Medicaid and most insurance plans in all 50 states and DC.",
+    "In-home, school-based, daycare, and telehealth ABA therapy for kids with autism — covered by Medicaid and most insurance plans in all 50 states and DC.",
   openGraph: {
     siteName: siteConfig.brand.name,
     type: "website",

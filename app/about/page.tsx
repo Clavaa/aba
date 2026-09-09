@@ -36,7 +36,7 @@ const values: { title: string; body: string }[] = [
   },
   {
     title: "Meet families where they are",
-    body: "Home, center, school, or telehealth — care fits your family's life, not the other way around.",
+    body: "Home, school, daycare, or telehealth — care fits your family's life, not the other way around.",
   },
   {
     title: "Honest about fit",
@@ -139,7 +139,7 @@ export default function AboutPage() {
               <p className="mt-3 text-spruce-soft">
                 The people your child actually knows: a BCBA who builds and
                 owns the plan, and the technicians who run sessions at home,
-                in a center, at school, or online. They live and work where
+                at school, in daycare, or online. They live and work where
                 you do, and they answer to clinical leaders — not to a sales
                 office.
               </p>

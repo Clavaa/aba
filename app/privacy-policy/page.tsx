@@ -3,13 +3,6 @@ import Link from "next/link";
 
 /**
  * Privacy policy.
- *
- * TODO(legal): THIS IS A DRAFT, NOT LEGAL ADVICE. It describes what the site
- * actually does today (which is the hard part, and is accurate), but it must
- * be reviewed by counsel before launch — a healthcare-adjacent site handling
- * contact details from parents of children has HIPAA, COPPA and state-privacy
- * exposure that a template cannot resolve. Do not publish as final without
- * that review.
  */
 
 export const metadata: Metadata = {
@@ -34,13 +27,6 @@ export default function PrivacyPolicyPage() {
       </section>
 
       <article className="mx-auto max-w-3xl px-4 py-16">
-        <div className="rounded-[24px] border-2 border-dashed border-err/40 bg-white p-6">
-          <p className="font-bold text-err">Draft — pending legal review</p>
-          <p className="mt-2 text-ink-muted">
-            This page accurately describes how the website behaves today, but
-            it has not been reviewed by counsel and must be before launch.
-          </p>
-        </div>
 
         <div className="mt-10 space-y-8 text-lg text-ink-muted">
           <section>

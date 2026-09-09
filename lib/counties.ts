@@ -197,7 +197,7 @@ export function approxPop(pop: number): string {
 
 export type CountySize = "metro" | "large" | "mid" | "small";
 
-/** Size bucket drives the in-home vs. center framing and FAQ variants. */
+/** Size bucket drives the in-home vs. setting framing and FAQ variants. */
 export function countySize(pop: number): CountySize {
   if (pop >= 500_000) return "metro";
   if (pop >= 150_000) return "large";

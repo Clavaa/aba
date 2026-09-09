@@ -56,7 +56,7 @@ export const services: ServiceRecord[] = [
     bestFor: [
       "The hardest parts of your day are home routines — meals, sleep, dressing, transitions",
       "Your child does better in familiar places and shuts down in new ones",
-      "There's no center within a reasonable drive",
+      "You want therapy to fit around the day your family already has",
       "Your child is young and a full day away from home isn't realistic yet",
       "You want the people who live in the house — you, a partner, grandma, a sibling — coached directly",
     ],
@@ -87,8 +87,8 @@ export const services: ServiceRecord[] = [
     tradeoffs: [
       "Fewer built-in chances to practice with other kids — peer goals need a deliberate plan",
       "Your home becomes a work space for a set number of hours a week, and that's a real adjustment",
-      "Scheduling depends on one clinician's route; a sick technician is harder to backfill than at a center",
-      "Some group and classroom-readiness goals are genuinely easier to run in a center",
+      "Scheduling depends on one clinician's route, so a sick technician is harder to cover than in a building full of staff",
+      "Group and classroom-readiness goals need a deliberate plan — school or daycare sessions usually carry those better than a living room",
     ],
     coverage:
       "Every state Medicaid program covers medically necessary ABA for eligible children under EPSDT, and in-home is a standard place of service for it. Private plans covered by your state's autism insurance law generally cover in-home ABA too. What varies is the authorization: how many hours, for how long, and what documentation your plan wants first.",
@@ -106,81 +106,8 @@ export const services: ServiceRecord[] = [
         a: "It depends entirely on the plan your BCBA writes and what your insurer authorizes — the range across families is wide. Focused programs targeting a few specific skills run far fewer hours than comprehensive early-childhood programs. Your state page lists what your state publishes about authorized hours.",
       },
       {
-        q: "Can we switch to a center later, or do both?",
-        a: "Yes. A lot of children start at home, add center time when peer and classroom goals become the priority, and taper as skills hold. The plan should follow the child, not the building.",
-      },
-    ],
-  },
-
-  /* ────────────────────────── CENTER-BASED ────────────────────────── */
-  {
-    slug: "center-based",
-    name: "Center-based ABA therapy",
-    navLabel: "In center",
-    title: "Center-Based ABA Therapy for Kids",
-    metaDescription:
-      "Center-based ABA therapy: a purpose-built room, peers on purpose, and school-readiness goals — plus the honest trade-offs and how coverage works.",
-    h1: "A room built for the work — and other kids in it.",
-    lede:
-      "Some goals need what a house can't give: a space with no laundry pile to climb, a schedule that repeats, and other children to practice with on purpose.",
-    tint: "bg-butter",
-    photoIntent:
-      "Bright center room, two children at a low table with a clinician between them, natural window light, lanyard visible",
-    bestFor: [
-      "Preschool or kindergarten is coming and your child needs the shape of a school day",
-      "The goals are social: sharing, waiting, joining, group instructions",
-      "Home is too distracting, too small, or too loud to run sessions in",
-      "You want more clinical eyes on your child — supervision is denser when everyone's in one building",
-      "You want more hours a week than a home schedule can hold",
-    ],
-    whatItLooksLike: [
-      {
-        t: "A day with a shape",
-        d: "Arrival, table work, snack, play, group, transitions between all of it. The predictable rhythm is part of the therapy — it's the same rhythm a classroom will ask for later.",
-      },
-      {
-        t: "Peers, staged deliberately",
-        d: "Social goals get set up rather than waited for. A technician can engineer a turn-taking moment ten times in an hour, at exactly the difficulty your child is ready for.",
-      },
-      {
-        t: "The BCBA is down the hall",
-        d: "When something changes mid-session, the analyst can walk in and see it happen instead of hearing about it next week. Plan changes land faster.",
-      },
-      {
-        t: "Materials that would never fit at home",
-        d: "Sensory equipment, a real toy library, a mock classroom, a snack routine that resets every day. Programs that need specific setups can run without improvising.",
-      },
-    ],
-    strengths: [
-      "Peer practice is built in, not bolted on",
-      "Fewer distractions means more learning opportunities per hour",
-      "Denser supervision — more clinicians in one place, easier coverage when someone's out",
-      "Closest thing to a school environment before school, which makes that transition easier",
-    ],
-    tradeoffs: [
-      "You drive, twice a day, on the center's schedule and not yours",
-      "Skills learned in a center do not automatically show up at home — transfer has to be planned and coached, or you'll see the gap",
-      "Center hours are fixed; if they don't fit your work schedule, they don't fit",
-      "Group settings mean shared illness and closure days",
-    ],
-    coverage:
-      "Center-based ABA is a standard place of service for both Medicaid and private plans, and some plans authorize center hours more readily than home hours because supervision ratios are documented. Plans differ on whether they'll authorize a mix of settings in the same period — that's a question worth asking before you build your week around one.",
-    faqs: [
-      {
-        q: "Is a center better than in-home?",
-        a: "Neither is better in general; they're better at different things. Center wins on peers, structure, and classroom readiness. Home wins on real-life routines and generalization. Many children need both at different points, and the honest answer depends on what your child's next milestone actually is.",
-      },
-      {
-        q: "Will my child be in a group all day?",
-        a: "No. Center-based ABA is still primarily one-to-one, with group and peer time programmed in deliberately as goals call for it.",
-      },
-      {
-        q: "How do skills get home?",
-        a: "Through parent coaching and a written transfer plan — the same targets practiced in your routines, with you running them. If a provider can't tell you how center skills move home, that's the question to keep asking.",
-      },
-      {
-        q: "What ages are centers for?",
-        a: "Most center programming is built around early childhood and school-age children, and the grouping is by skill level and goals more than by birthday.",
+        q: "Can we add another setting later, or do both?",
+        a: "Yes. A lot of children start at home, add school or daycare sessions when peer and classroom goals become the priority, and taper as skills hold. The plan should follow the child, not the setting.",
       },
     ],
   },
@@ -382,11 +309,11 @@ export const services: ServiceRecord[] = [
       "Coordination takes time: permissions, scheduling, and a relationship with staff who didn't ask for a new person in their room",
     ],
     coverage:
-      "Daycare is a place of service, and how a plan treats it varies more than home or center does. Some plans cover it outright, some exclude childcare and educational settings by name, and some require the same documentation as a school placement. This has to be checked in your plan language before anything is arranged with the daycare — it is not a question anyone should answer from a general rule.",
+      "Daycare is a place of service, and how a plan treats it varies more than the home does. Some plans cover it outright, some exclude childcare and educational settings by name, and some require the same documentation as a school placement. This has to be checked in your plan language before anything is arranged with the daycare — it is not a question anyone should answer from a general rule.",
     faqs: [
       {
         q: "Will my daycare allow this?",
-        a: "Maybe. It is entirely their decision, and it varies enormously between centers — some welcome it because it helps them support a child they're struggling with, and others decline for licensing or liability reasons. It's worth asking directly and early, and we can talk to them with you.",
+        a: "Maybe. It is entirely their decision, and it varies enormously between providers — some welcome it because it helps them support a child they're struggling with, and others decline for licensing or liability reasons. It's worth asking directly and early, and we can talk to them with you.",
       },
       {
         q: "Does this replace in-home therapy?",
@@ -398,7 +325,7 @@ export const services: ServiceRecord[] = [
       },
       {
         q: "What if the daycare says no?",
-        a: "Then in-home or center-based becomes the path, with the daycare supported by consultation from outside where they're willing. A refusal closes one setting, not the whole plan.",
+        a: "Then in-home becomes the path, with the daycare supported by consultation from outside where they're willing. A refusal closes one setting, not the whole plan.",
       },
     ],
   },

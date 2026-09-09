@@ -175,7 +175,7 @@ const steps: AccordionItem[] = [
     title: "Start therapy — and see the plan work",
     body: (
       <p>
-        Sessions start at home, in a center, at school, or by telehealth.{" "}
+        Sessions start at home, at school, in daycare, or by telehealth.{" "}
         {siteConfig.intake.startTimeframe}. You see goals, progress, and data
         the whole way — no black box.
       </p>
@@ -196,7 +196,7 @@ export default function HomePage() {
             Let&rsquo;s get your family some backup.
           </h1>
           <p className="mx-auto mt-7 max-w-[38rem] text-lg text-ink-muted">
-            ABA therapy for kids with autism — at home, in a center, at school,
+            ABA therapy for kids with autism — at home, at school, in daycare,
             or online. Covered by Medicaid and most insurance plans in all 50
             states and DC. With Medicaid, most families pay nothing out of
             pocket.
@@ -296,10 +296,10 @@ export default function HomePage() {
             photoIntent: "RBT and child playing on a living-room rug, parent nearby, real clutter",
           },
           {
-            href: "/services/center-based/",
-            title: "Center-based ABA",
-            body: "A day with a shape, and other children to practice with on purpose.",
-            photoIntent: "Two children at a low table in a bright center room, clinician between them",
+            href: "/services/daycare/",
+            title: "ABA in daycare",
+            body: "Therapy that fits inside the day your child already has.",
+            photoIntent: "Daycare classroom mid-morning, clinician kneeling beside a toddler at a low table",
           },
           {
             href: "/services/school/",
@@ -413,13 +413,13 @@ export default function HomePage() {
       <FindYourCenter
         states={states}
         slides={[
-          { intent: "Wide shot of a bright therapy room: low tables, swing, climbing wall", caption: "A center room" },
+          { intent: "Wide shot of a bright therapy room: low tables, swing, climbing wall", caption: "A therapy room" },
           { intent: "Sunlit living room set up for an in-home session, toys on a rug", caption: "A family's living room" },
           { intent: "Quiet classroom corner with a small table and two chairs", caption: "A school setting" },
         ]}
         bullets={[
           "Every state Medicaid program covers ABA for eligible children — we explain exactly how yours works",
-          "In-home, center, school and telehealth, with the honest trade-offs of each",
+          "In-home, school, daycare and telehealth, with the honest trade-offs of each",
           "County and city pages for the local picture, not a swap-the-name template",
           "One conversation tells you what's actually open near your address right now",
         ]}

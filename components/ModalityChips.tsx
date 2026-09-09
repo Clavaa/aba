@@ -2,7 +2,7 @@ import Link from "next/link";
 import { services } from "@/lib/services";
 
 /**
- * The modality chip strip (Style Bible: "In Center · At Home · School").
+ * The modality chip strip: At Home · In School · In Daycare · Telehealth.
  *
  * Every chip is a link to its service page — this is the internal-linking
  * spine that connects the homepage and all 3,000+ location pages to the

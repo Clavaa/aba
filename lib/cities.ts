@@ -12,8 +12,8 @@
  *  - density: population / land area, which separates a dense small city from
  *    a spread-out town of the same size
  *  - nearest hub: the closest place of 50,000+ and the great-circle distance
- *    to it. This is the fact that actually decides whether a center is
- *    realistic for a family, which is why it drives the page's recommendation
+ *    to it. This is the best available proxy for local clinician supply, which
+ *    is why it drives what the page recommends
  *  - the county's largest place and the distance to it
  *  - how many places share the county
  *
@@ -281,7 +281,15 @@ export function citySize(pop: number): CitySize {
 
 export type Reach = "in-hub" | "close" | "moderate" | "far";
 
-/** How reachable an in-person center realistically is from here. */
+/**
+ * How dense in-person coverage realistically is here.
+ *
+ * We deliver in the home, in schools and daycares, and by telehealth — not in
+ * centers — so this isn't about a building a family drives to. It's about
+ * clinician supply: near a population centre there are more technicians
+ * covering more routes, which means more scheduling flexibility and a shorter
+ * wait. Far out, the same care happens, it just gets planned differently.
+ */
 export function reachFor(city: CityRecord): Reach {
   if (city.isHub) return "in-hub";
   const m = city.hub?.miles ?? 999;

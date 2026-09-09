@@ -6,10 +6,10 @@ import CallCta from "@/components/CallCta";
 import ImageSlot from "@/components/ImageSlot";
 
 /**
- * `find-your-center` — a photo carousel with an overlaid control strip and a
+ * `find-your-center` (their name) — a photo carousel with an overlaid control strip and a
  * location caption, a benefits list beside it, then a grid of place cards.
  *
- * Ours are STATES rather than centers, because that's the real footprint:
+ * Ours are STATES rather than buildings, because that's the real footprint — we
  * all 50 plus DC, each with its own coverage page.
  */
 

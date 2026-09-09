@@ -58,7 +58,7 @@ const nextSteps = [
   {
     href: "/services/",
     t: "Where therapy happens",
-    d: "Home, center, school, telehealth — with the trade-offs of each.",
+    d: "Home, school, daycare, telehealth — with the trade-offs of each.",
   },
 ];
 

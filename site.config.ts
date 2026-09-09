@@ -154,17 +154,30 @@ export const siteConfig = {
   },
 
   /**
-   * Payers we can name on insurance pages.
-   * TODO: replace with the plans you are ACTUALLY in-network with (per state
-   * if it differs). "Medicaid" stays — the state pages document the real
-   * state-by-state Medicaid pathways from the research dataset.
+   * Payers named on the site, per the owner's instruction to list every plan.
+   *
+   * NOTE: this is a claim about your business that only you can stand behind.
+   * Network status varies by state and by plan, and the payer pages still say
+   * so and route the specific question to intake — but this list is what a
+   * visitor sees first. Trim it if any of these turn out not to be accurate.
    */
   acceptedPlans: [
     "Medicaid & CHIP",
-    "TODO: Payer 1",
-    "TODO: Payer 2",
-    "TODO: Payer 3",
-    "TODO: Payer 4",
+    "Aetna",
+    "UnitedHealthcare",
+    "Cigna",
+    "Blue Cross Blue Shield",
+    "TRICARE",
+    "Kaiser Permanente",
+    "Humana",
+    "Optum",
+    "Evernorth",
+    "Anthem",
+    "Molina Healthcare",
+    "Centene / Ambetter",
+    "CareSource",
+    "Magellan Health",
+    "Beacon Health Options",
   ],
 
   cta: {

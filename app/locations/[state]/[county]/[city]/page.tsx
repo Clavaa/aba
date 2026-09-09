@@ -62,7 +62,12 @@ function densityWord(d: number): string {
   return "spread out";
 }
 
-/** The recommendation, driven by real distance to the nearest hub. */
+/**
+ * The recommendation, driven by real distance to the nearest population
+ * centre. We work in homes, schools, daycares and by video — never in
+ * centers — so this is about how thick local clinician coverage is, not about
+ * a building anyone drives to.
+ */
 function reachCopy(
   city: CityRecord,
   reach: Reach
@@ -71,29 +76,29 @@ function reachCopy(
   switch (reach) {
     case "in-hub":
       return {
-        lead: "Every setting is realistic here",
+        lead: "Coverage here is as good as it gets",
         detail: `${city.name} is itself a city of ${approxPop(
           city.pop
-        )}, which means centers, in-home routes, school collaboration and telehealth are all live options rather than theoretical ones. In a place this size the constraint is almost never whether a service exists — it's capacity at any given moment, and that's exactly what we check when you get in touch.`,
-        strip: "All four settings realistic",
+        )}, which means the deepest bench of technicians and the most scheduling flexibility — mornings, afternoons, after school. Sessions still happen in your home, your child's school or daycare, or over video; a city this size just means more people available to run them.`,
+        strip: "Widest scheduling choice",
       };
     case "close":
       return {
-        lead: "A center is a normal commute from here",
-        detail: `${hub!.name} is about ${hub!.miles} miles away, which is a school-run sort of distance rather than an expedition. Families in ${city.name} can realistically use a center for peer and classroom-readiness goals while keeping in-home sessions for the routines that only happen at home.`,
-        strip: `${hub!.miles} mi to ${hub!.name}`,
+        lead: "You're inside a well-covered area",
+        detail: `${hub!.name} is about ${hub!.miles} miles away, close enough that ${city.name} sits comfortably inside a clinician's normal route. That usually means a shorter wait to start and real choice about session times, with school or daycare sessions easy to add once peer goals matter.`,
+        strip: `${hub!.miles} mi from ${hub!.name}`,
       };
     case "moderate":
       return {
-        lead: "In-home usually starts sooner than the drive is worth",
-        detail: `The nearest city of any size is ${hub!.name}, roughly ${hub!.miles} miles away. That's a real trip twice a day, and for most families in ${city.name} it means in-home ABA starts sooner and sticks better — with a center added later only if peer goals become the priority.`,
-        strip: `${hub!.miles} mi to ${hub!.name}`,
+        lead: "We build the schedule around the drive",
+        detail: `The nearest city of any size is ${hub!.name}, roughly ${hub!.miles} miles away. At that distance a clinician's day is planned around fewer, longer visits rather than short ones scattered across town — so sessions here tend to be blocked deliberately, with telehealth carrying the parent coaching in between.`,
+        strip: `${hub!.miles} mi from ${hub!.name}`,
       };
     case "far":
       return {
-        lead: "In-home and telehealth aren't a compromise here",
-        detail: `The nearest city of 50,000 or more is ${hub!.name}, about ${hub!.miles} miles from ${city.name}. Nobody should relocate or spend three hours a day in a car to get their child autism care. A plan built around your home — with telehealth carrying the parent coaching between visits — is the right answer here, not the fallback.`,
-        strip: `${hub!.miles} mi to the nearest city`,
+        lead: "Distance is a scheduling problem, not a coverage one",
+        detail: `The nearest city of 50,000 or more is ${hub!.name}, about ${hub!.miles} miles from ${city.name}. Nobody should relocate to get their child autism care. Sessions happen in your home and, where the school agrees, in your child's classroom — with telehealth carrying the parent coaching between visits so the weeks in between still count.`,
+        strip: `${hub!.miles} mi from the nearest city`,
       };
   }
 }
@@ -134,9 +139,9 @@ function metaDescription(city: CityRecord, state: StateRecord, reach: Reach): st
   )})`;
   switch (reach) {
     case "in-hub":
-      return `${base} — at home, in a center, at school or online. How ${program} and private plans cover it.`;
+      return `${base} — at home, at school, in daycare or online. How ${program} and private plans cover it.`;
     case "close":
-      return `${base}. In-home and center-based options, and what ${program} covers for autism care.`;
+      return `${base}. In-home sessions and school support, and what ${program} covers for autism care.`;
     case "moderate":
       return `${base}. In-home ABA and telehealth built for the distance, plus how ${program} covers it.`;
     case "far":
@@ -165,13 +170,13 @@ function cityFaqs(
 
   if (reach === "far" || reach === "moderate") {
     out.push({
-      q: `Do we have to drive to ${city.hub?.name} for therapy?`,
+      q: `Do we have to travel to ${city.hub?.name} for therapy?`,
       a: `No. In-home ABA means the clinician travels, not your family, and telehealth covers parent coaching between visits. The ${city.hub?.miles}-mile distance changes how a plan is built and scheduled — it does not change whether your child can get care.`,
     });
   } else {
     out.push({
       q: `How long is the wait to start in ${city.name}?`,
-      a: `It depends on the setting and the moment — in-home routes usually open sooner than center seats, and capacity moves week to week. ${siteConfig.intake.startTimeframe}, and if that isn't true for your address on the day you call, we'll say so rather than put you on a list and go quiet.`,
+      a: `It depends on the setting and how thick local coverage is, and capacity moves week to week. ${siteConfig.intake.startTimeframe}, and if that isn't true for your address on the day you call, we'll say so rather than put you on a list and go quiet.`,
     });
   }
 
@@ -358,8 +363,8 @@ export default async function CityPage({
               How telehealth coaching works
             </Link>
           ) : (
-            <Link href="/services/center-based/" className="btn btn-outline">
-              What a center adds
+            <Link href="/services/school/" className="btn btn-outline">
+              Support at school
             </Link>
           )}
         </div>

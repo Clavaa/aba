@@ -169,7 +169,7 @@ export default function RbtPage() {
               <p className="mt-2 text-spruce-soft">
                 Four things, in order: your state and metro, your experience,
                 your setting (in-home routes often pay differently than
-                centers), and your hours mix. Certification itself is the entry
+                schools and daycares), and your hours mix. Certification itself is the entry
                 ticket — experience compounds from there.
               </p>
             </div>

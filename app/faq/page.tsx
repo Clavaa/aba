@@ -26,7 +26,7 @@ const faqs: { q: string; a: string }[] = [
   },
   {
     q: "How long is the wait to start?",
-    a: `${siteConfig.intake.startTimeframe}. That depends on your state, your plan's authorization speed, and which setting you need — in-home routes usually open sooner than center seats. If it isn't true for your address on the day you call, we'll say so rather than put you on a list and go quiet.`,
+    a: `${siteConfig.intake.startTimeframe}. That depends on your state, your plan's authorization speed, and which setting you need — in-home routes usually open soonest. If it isn't true for your address on the day you call, we'll say so rather than put you on a list and go quiet.`,
   },
   {
     q: "How many hours a week will my child do?",

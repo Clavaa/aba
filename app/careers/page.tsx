@@ -38,7 +38,7 @@ export default function CareersPage() {
             </div>
             <div className="hidden lg:block">
               <ImageSlot
-                intent="Bright daylight photo: behavior technician and child playing a matching game at a center table, both mid-laugh"
+                intent="Bright daylight photo: behavior technician and child playing a matching game at a family's kitchen table, both mid-laugh"
                 tint="bg-mint"
                 className="aspect-[4/3]"
               />
@@ -175,7 +175,7 @@ export default function CareersPage() {
             <li className="rounded-3xl bg-white/80 p-6">
               <h3 className="display display-h3">Work near home</h3>
               <p className="mt-2 text-spruce-soft">
-                In-home, in-center, school, and telehealth roles across all 50
+                In-home, school, daycare, and telehealth roles across all 50
                 states — which means schedules that can flex around your life.
               </p>
             </li>
