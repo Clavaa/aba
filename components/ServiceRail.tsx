@@ -13,6 +13,9 @@ export type RailCard = {
   title: string;
   body: string;
   photoIntent: string;
+  /** Real photo, once one exists for this card */
+  photo?: string;
+  photoAlt?: string;
 };
 
 export default function ServiceRail({
@@ -39,7 +42,10 @@ export default function ServiceRail({
               <Link href={c.href} className="group block">
                 <ImageSlot
                   intent={c.photoIntent}
+                  src={c.photo}
+                  alt={c.photoAlt}
                   tint="bg-beige-100"
+                  sizes="(max-width: 640px) 80vw, 19rem"
                   className="aspect-[4/3] rounded-[20px]"
                 />
                 <h3 className="display-round display-round-md mt-5 flex items-start gap-2 group-hover:text-coral">

@@ -14,6 +14,8 @@ export type AccordionPoint = {
   title: string;
   body: ReactNode;
   photoIntent: string;
+  photo?: string;
+  photoAlt?: string;
 };
 
 export default function ImageTextAccordion({
@@ -39,7 +41,10 @@ export default function ImageTextAccordion({
         <div className="lg:sticky lg:top-28 lg:self-start">
           <ImageSlot
             intent={points[open]?.photoIntent ?? points[0].photoIntent}
+            src={points[open]?.photo ?? points[0].photo}
+            alt={points[open]?.photoAlt ?? points[0].photoAlt}
             tint="bg-beige-100"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="field-card aspect-[4/5] w-full"
           />
         </div>

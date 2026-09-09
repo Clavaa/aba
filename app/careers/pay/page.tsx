@@ -330,7 +330,7 @@ export default function CareersPayPage() {
               </p>
               <p className="mt-3 text-lg text-spruce-soft">
                 What we&rsquo;ll do instead: tell you a real range for your
-                market, when you get in touch, in the first conversation. Ask us
+                market in the first conversation. Ask us
                 directly and we&rsquo;ll answer directly.
               </p>
               <a

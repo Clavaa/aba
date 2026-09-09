@@ -167,7 +167,9 @@ export default function AutismEvaluationPage() {
             </div>
             <div className="relative hidden lg:block">
               <ImageSlot
-                intent="Parent when you get in touch at a kitchen counter, toddler visible playing on the floor behind, morning light"
+                intent="Parent on the phone at a kitchen counter, toddler visible playing on the floor behind, morning light"
+                src="/photos/parent-on-phone.jpg"
+                alt="A father on the phone at his kitchen counter with a laptop and notepad open, his toddler eating in a high chair behind him"
                 tint="bg-white/70"
                 className="aspect-[4/5]"
               />

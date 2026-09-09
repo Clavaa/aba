@@ -13,7 +13,7 @@ import ImageSlot from "@/components/ImageSlot";
  * all 50 plus DC, each with its own coverage page.
  */
 
-type Slide = { intent: string; caption: string };
+type Slide = { intent: string; caption: string; photo?: string; alt?: string };
 
 export default function FindYourCenter({
   states,
@@ -36,7 +36,10 @@ export default function FindYourCenter({
         <div className="relative">
           <ImageSlot
             intent={slides[i].intent}
+            src={slides[i].photo}
+            alt={slides[i].alt}
             tint="bg-beige-100"
+            sizes="(max-width: 1024px) 100vw, 50vw"
             className="field-card aspect-[4/3] w-full"
           />
           <div className="absolute inset-x-5 bottom-5 flex items-center justify-between gap-4 rounded-full bg-ink/45 px-3 py-2 backdrop-blur">

@@ -294,24 +294,32 @@ export default function HomePage() {
             title: "In-home ABA",
             body: "Bedtime, meals, the shoes, the doorway meltdown — taught in the rooms where they actually happen.",
             photoIntent: "RBT and child playing on a living-room rug, parent nearby, real clutter",
+            photo: "/photos/in-home-session.jpg",
+            photoAlt: "A behavior technician and a young boy sorting shape blocks on a living-room rug while his father watches from the sofa",
           },
           {
             href: "/services/daycare/",
             title: "ABA in daycare",
             body: "Therapy that fits inside the day your child already has.",
             photoIntent: "Daycare classroom mid-morning, clinician kneeling beside a toddler at a low table",
+            photo: "/photos/daycare-peers.jpg",
+            photoAlt: "A clinician at a low table with two young children, all three sorting coloured counting bears onto matching cards",
           },
           {
             href: "/services/school/",
             title: "School-based support",
             body: "One plan the whole building runs, plus classroom data you can take to an IEP meeting.",
             photoIntent: "Clinician crouched beside a student at a classroom desk, teacher in background",
+            photo: "/photos/school-desk.jpg",
+            photoAlt: "A clinician crouched at eye level beside a boy at his classroom desk, both smiling",
           },
           {
             href: "/services/telehealth/",
             title: "Telehealth & parent coaching",
             body: "A BCBA in your kitchen at 5:45pm, coaching the routine while it's happening.",
             photoIntent: "Parent with a propped phone at the kitchen table while a toddler eats",
+            photo: "/photos/telehealth-kitchen.jpg",
+            photoAlt: "A mother waving at a propped tablet on the kitchen table while her toddler eats breakfast beside her",
           },
           {
             href: "/services/early-intervention/",
@@ -323,7 +331,9 @@ export default function HomePage() {
             href: "/autism-evaluation/",
             title: "Help getting evaluated",
             body: "Three referral doors, two of them free and open to you today.",
-            photoIntent: "Parent when you get in touch at a kitchen counter, toddler playing behind",
+            photoIntent: "Parent on the phone at a kitchen counter, toddler playing behind",
+            photo: "/photos/parent-on-phone.jpg",
+            photoAlt: "A father on the phone at his kitchen counter with a laptop and notepad open, his toddler eating in a high chair behind him",
           },
         ]}
         primary={{ href: "/getting-started/", label: "Get in touch" }}
@@ -370,6 +380,8 @@ export default function HomePage() {
               </p>
             ),
             photoIntent: "Clinician and child at a low table mid-play, natural window light",
+            photo: "/photos/in-home-session.jpg",
+            photoAlt: "A behavior technician and a young boy sorting shape blocks together on a living-room rug",
           },
           {
             title: "Communication comes before almost everything",
@@ -414,8 +426,18 @@ export default function HomePage() {
         states={states}
         slides={[
           { intent: "Wide shot of a bright therapy room: low tables, swing, climbing wall", caption: "A therapy room" },
-          { intent: "Sunlit living room set up for an in-home session, toys on a rug", caption: "A family's living room" },
-          { intent: "Quiet classroom corner with a small table and two chairs", caption: "A school setting" },
+          {
+            intent: "Sunlit living room set up for an in-home session, toys on a rug",
+            photo: "/photos/in-home-session.jpg",
+            alt: "A behavior technician and a young boy playing with shape blocks on a living-room rug, a parent nearby",
+            caption: "A family's living room",
+          },
+          {
+            intent: "Quiet classroom corner with a small table and two chairs",
+            photo: "/photos/quiet-corner.jpg",
+            alt: "A quiet corner of a bright room with two navy armchairs, a small round table and a shelf of picture books",
+            caption: "A quiet corner to work in",
+          },
         ]}
         bullets={[
           "Every state Medicaid program covers ABA for eligible children — we explain exactly how yours works",
