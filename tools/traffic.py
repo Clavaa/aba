@@ -77,15 +77,15 @@ def main():
         COUNT(DISTINCT visitor) AS visitors,
         COUNT(DISTINCT session) AS sessions,
         COUNTIF(kind='view')    AS views,
+        COUNTIF(kind='leave')   AS leaves,
         APPROX_QUANTILES(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL), 2)[OFFSET(1)] AS med_dwell,
         AVG(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL)) AS avg_dwell,
         APPROX_QUANTILES(IF(kind='leave', scroll_pct, NULL), 2)[OFFSET(1)] AS med_scroll
       FROM {T} WHERE {window} AND {HUMAN}
     """)
     t = tot[0] if tot else {}
-    if n(t.get("views")) == 0:
-        print("\n  No human page views recorded in this window.")
-        print("  (If the beacon only just shipped, give it a visit and re-run.)\n")
+    if n(t.get("visitors")) == 0:
+        print("\n  Nobody. No human visits recorded in this window.\n")
         if not show_bots:
             return
 
@@ -94,15 +94,23 @@ def main():
     print(f"  Visitors          {v:>7,}   {'(a returning visitor counts once per day)' if days > 1 else ''}")
     print(f"  Sessions          {s:>7,}")
     print(f"  Page views        {pv:>7,}   {pv / v:.1f} per visitor" if v else f"  Page views        {pv:>7,}")
+    lv = n(t.get("leaves"))
+    if lv > pv:
+        # Every view should have a matching leave. More leaves than views means
+        # load beacons are being lost — an ad blocker, or stale cached JS.
+        print(f"  \033[33m! {lv - pv} visit(s) recorded only on exit — the load beacon didn't arrive\033[0m")
     print(f"  Time on page      {dur(t.get('med_dwell')):>7}   median   ({dur(t.get('avg_dwell'))} mean)")
     print(f"  Scroll depth      {n(t.get('med_scroll')):>6}%   median")
 
     rule("Where they came from")
-    for r in bq(f"""
+    src = bq(f"""
       SELECT source_group AS g, COUNT(DISTINCT visitor) AS v, COUNT(*) AS pv
       FROM {T} WHERE {window} AND {HUMAN} AND kind='view'
       GROUP BY g ORDER BY v DESC
-    """):
+    """)
+    if not src:
+        print("  Unknown — the load beacon carries the referrer, and it didn't arrive.")
+    for r in src:
         share = n(r["v"]) / v * 100 if v else 0
         bar = "█" * max(0, round(share / 4))
         print(f"  {r['g']:<18} {n(r['v']):>5} visitors  {n(r['pv']):>5} views  {share:5.1f}% {bar}")
@@ -120,14 +128,14 @@ def main():
     rule("Pages — most read, with real time on page")
     for r in bq(f"""
       SELECT path,
-             COUNTIF(kind='view') AS views,
+             COUNT(DISTINCT session) AS views,
              COUNT(DISTINCT visitor) AS visitors,
              APPROX_QUANTILES(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL), 2)[OFFSET(1)] AS med,
              APPROX_QUANTILES(IF(kind='leave', scroll_pct, NULL), 2)[OFFSET(1)] AS scr
       FROM {T} WHERE {window} AND {HUMAN}
-      GROUP BY path HAVING views > 0 ORDER BY views DESC LIMIT 25
+      GROUP BY path ORDER BY views DESC LIMIT 25
     """):
-        print(f"  {n(r['views']):>4} views {n(r['visitors']):>4} ppl  {dur(r['med']):>7}  {n(r['scr']):>3}% scroll  {r['path'][:44]}")
+        print(f"  {n(r['views']):>4} visit {n(r['visitors']):>4} ppl  {dur(r['med']):>7}  {n(r['scr']):>3}% scroll  {r['path'][:44]}")
 
     ent = bq(f"""
       SELECT path, COUNT(DISTINCT visitor) AS v
