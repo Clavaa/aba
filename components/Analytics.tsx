@@ -16,7 +16,10 @@ import { usePathname, useSearchParams } from "next/navigation";
  * exclude them, the same way internal traffic is excluded on Offendersearch.
  */
 
-const ENDPOINT = "/api/t";
+/* Trailing slash matters: next.config sets trailingSlash, so "/api/t" 308s
+   and every beacon would pay a redirect. The lead forms post to "/api/lead/"
+   for the same reason. */
+const ENDPOINT = "/api/t/";
 const KEY_INTERNAL = "sw_internal";
 const KEY_SESSION = "sw_session";
 
