@@ -30,6 +30,7 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
 import ModalityChips from "@/components/ModalityChips";
 import FeatureStrip from "@/components/FeatureStrip";
 import Quiz from "@/components/Quiz";
+import FindingCare from "@/components/FindingCare";
 
 /**
  * City pages — 10,255 places of 1,000+ residents nationwide.
@@ -452,6 +453,9 @@ export default async function CityPage({
           </div>
         </div>
       </section>
+
+      {/* ─────────────── FINDING A PROVIDER ─────────────── */}
+      <FindingCare place={city.name} stateName={state.name} scope="city" />
 
       {/* ─────────────────────── FAQ ─────────────────────── */}
       <section className="mx-auto max-w-[1400px] px-4 py-14 sm:py-20" aria-labelledby="city-faq-heading">

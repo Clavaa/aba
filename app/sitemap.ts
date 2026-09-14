@@ -131,6 +131,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     { url: `${base}/careers/pay/`, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${base}/resources/autism-therapy-types/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${base}/resources/positive-reinforcement/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/resources/autism-resources-for-parents/`,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // State + county location pages live in the per-state sharded sitemaps
@@ -146,6 +161,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${base}/insurance/${p.slug}/`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
+  }));
+
+  const payStatePages: MetadataRoute.Sitemap = states.map((st) => ({
+    url: `${base}/careers/pay/${st.slug}/`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
   }));
 
   const jobCityPages: MetadataRoute.Sitemap = getJobCities(150).map((c) => ({
@@ -166,5 +187,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...payerPages,
     ...costPages,
     ...jobCityPages,
+    ...payStatePages,
   ];
 }

@@ -74,16 +74,16 @@ export default function StickyAccordion({
                     </span>
                   </button>
                 </h3>
-                {isOpen && (
-                  <div
-                    id={panelId}
-                    role="region"
-                    aria-labelledby={btnId}
-                    className="px-6 pb-7 text-lg text-ink-muted"
-                  >
-                    {item.a}
-                  </div>
-                )}
+                {/* Always rendered, hidden when closed — see Accordion.tsx. */}
+                <div
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={btnId}
+                  hidden={!isOpen}
+                  className="px-6 pb-7 text-lg text-ink-muted"
+                >
+                  {item.a}
+                </div>
               </div>
             );
           })}

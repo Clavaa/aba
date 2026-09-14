@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 export const metadata: Metadata = {
@@ -78,8 +79,67 @@ const faq: AccordionItem[] = [
       </p>
     ),
   },
+  {
+    title: "How much does RBT certification cost?",
+    body: (
+      <p>
+        There are three separate costs, and job ads rarely separate them: the
+        40-hour training, the certification board&rsquo;s application fee, and
+        the exam fee &mdash; plus a background check and, in some states, a
+        separate registration. Most people never pay the training cost
+        themselves, because employers run it during onboarding; we do. Before
+        you pay for a course out of pocket, ask any employer you are talking to
+        whether they cover it, because the answer is usually yes.
+      </p>
+    ),
+  },
+  {
+    title: "What RBT interview questions should I expect?",
+    body: (
+      <>
+        <p>
+          Almost none of it is technical &mdash; you are not expected to know
+          ABA yet. Expect to be asked: why you want to work with children, how
+          you would handle a child who is screaming and refusing to work, what
+          you would do if a parent asked you a clinical question you
+          couldn&rsquo;t answer, how you feel about writing notes after every
+          session, and whether you can commit to the same after-school hours
+          every week.
+        </p>
+        <p className="mt-3">
+          The consistent-hours question is the one that decides most hires.
+          Sessions are scheduled around a child&rsquo;s routine, so reliability
+          matters more than experience. Ask your own questions back &mdash;
+          guaranteed hours, paid drive time and supervision are all fair game,
+          and an employer who dodges them has told you something.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Is being an RBT worth it?",
+    body: (
+      <>
+        <p>
+          It depends entirely on what you want out of it, and the honest answer
+          splits in two. As a stepping stone it is genuinely excellent: no
+          degree required, certified in weeks, and it is the standard route
+          into a field where the master&rsquo;s-level credential above it is in
+          real demand. People who go in knowing they want to become a BCBA
+          almost never regret it.
+        </p>
+        <p className="mt-3">
+          As an indefinite job it is harder, and the field&rsquo;s turnover
+          reflects that: part-time hours that can be cancelled, driving between
+          clients, emotionally demanding work, and pay that is capped by what
+          payers reimburse. What separates a good RBT job from a bad one is
+          guaranteed hours, paid drive time, and a supervisor who is actually
+          available. Ask about all three before you accept anything.
+        </p>
+      </>
+    ),
+  },
 ];
-
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -99,6 +159,39 @@ const breadcrumbJsonLd = {
     },
   ],
 };
+
+const related = [
+  {
+    href: "/careers/rbt/certification/",
+    label: "RBT certification",
+    note: "The 40-hour training, the competency assessment and the exam.",
+  },
+  {
+    href: "/careers/rbt/competency-assessment/",
+    label: "Competency assessment",
+    note: "The part you can't do alone, and how it actually runs.",
+  },
+  {
+    href: "/careers/pay/",
+    label: "How ABA pay works",
+    note: "Why paid hours matter more than the advertised hourly rate.",
+  },
+  {
+    href: "/careers/bcba/",
+    label: "The BCBA path",
+    note: "Where this leads if you want the clinical credential.",
+  },
+  {
+    href: "/careers/openings/",
+    label: "Open roles",
+    note: "Where we're hiring right now.",
+  },
+  {
+    href: "/resources/what-is-aba/",
+    label: "What is ABA therapy?",
+    note: "The field you'd be joining, explained plainly.",
+  },
+];
 
 export default function RbtPage() {
   return (
@@ -259,6 +352,7 @@ export default function RbtPage() {
           </a>
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

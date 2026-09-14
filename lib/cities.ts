@@ -98,16 +98,58 @@ type RawCity = {
   nearby: { name: string; pop: number; miles: number; cfips: string }[];
 };
 
-/** Strip the Census legal-status suffix for display: "Austin city" → "Austin" */
-export function cleanPlaceName(raw: string): string {
-  return raw
+/**
+ * Strip the Census legal-status suffix for display: "Austin city" → "Austin".
+ *
+ * Exactly ONE strip. A second blanket strip used to run here and it was
+ * badly wrong: 283 places in this dataset are genuinely named "… City"
+ * (Oklahoma City, Kansas City, Atlantic City, Bullhead City) and 37 "…
+ * Village" (Greenwood Village, Westlake Village). Stripping twice turned
+ * "Oklahoma City city" into "Oklahoma" — in the H1, the title, the slug, the
+ * JSON-LD and the sitemap — across 336 cities.
+ *
+ * Massachusetts is the one genuine exception: the Census writes its towns as
+ * "Agawam Town city", so those do need the second strip. It is keyed to the
+ * state and not to the word, because "Old Town" (ME), "New Town" (ND) and
+ * "Charles Town" (WV) are real place names that must survive intact.
+ */
+export function cleanPlaceName(raw: string, stateName?: string): string {
+  const once = raw
     .replace(/\s*\(balance\)$/i, "")
     .replace(
       /\s+(city and borough|consolidated government|metropolitan government|unified government|urban county|municipality|borough|village|township|town|city|CDP)$/i,
       ""
     )
-    .replace(/\s+(town|city|village|borough)$/i, "")
     .trim();
+  return stateName === "Massachusetts" ? once.replace(/\s+Town$/, "").trim() : once;
+}
+
+/**
+ * Consolidated city-county governments are recorded under their legal name:
+ * "Nashville-Davidson", "Louisville/Jefferson County metro government",
+ * "Augusta-Richmond County". Nobody searches for those and they read as
+ * mistakes in a headline, so reduce them to the city everybody means.
+ *
+ * The county name is what makes this safe. We only drop a hyphenated tail
+ * when that tail IS the county, which is why genuinely hyphenated places —
+ * Winston-Salem in Forsyth County, Wilkes-Barre in Luzerne — survive intact.
+ */
+export function shortCityName(name: string, countyName?: string): string {
+  let n = name.includes("/") ? name.split("/")[0].trim() : name;
+  n = n
+    .replace(
+      /\s+(?:metro(?:politan)?|consolidated|unified|urban county)\s+government$/i,
+      ""
+    )
+    .trim();
+  const county = countyName
+    ?.replace(/\s+(?:County|Parish|Borough|Municipality)$/i, "")
+    .trim();
+  if (county) {
+    const m = n.match(/^(.+?)-(.+?)(?:\s+County)?$/);
+    if (m && m[2].toLowerCase() === county.toLowerCase()) return m[1].trim();
+  }
+  return n;
 }
 
 function slugify(s: string): string {
@@ -141,7 +183,7 @@ function load(): Map<string, CityRecord[]> {
 
       const key = `${state.slug}/${county.slug}`;
       const siblings = cache.get(key) ?? [];
-      const display = cleanPlaceName(c.city);
+      const display = shortCityName(cleanPlaceName(c.city, state.name), county.name);
       let slug = slugify(display);
       // Two places in one county can clean to the same name (a village and a
       // town). Keep both reachable rather than dropping one.
@@ -160,17 +202,17 @@ function load(): Map<string, CityRecord[]> {
         spansCounties: c.spansCounties,
         placesInCounty: c.placesInCounty,
         isHub: c.isHub,
-        hub: c.hub ? { ...c.hub, name: cleanPlaceName(c.hub.name) } : null,
+        hub: c.hub ? { ...c.hub, name: shortCityName(cleanPlaceName(c.hub.name, state.name)) } : null,
         countyBiggest: {
           ...c.countyBiggest,
-          name: cleanPlaceName(c.countyBiggest.name),
+          name: shortCityName(cleanPlaceName(c.countyBiggest.name, state.name)),
         },
         pop2020: c.pop2020 ?? null,
         stateRank: c.stateRank,
         countyRank: c.countyRank,
         citiesInCountyPublished: c.citiesInCountyPublished,
         nearby: c.nearby.map((n) => {
-          const nm = cleanPlaceName(n.name);
+          const nm = shortCityName(cleanPlaceName(n.name, state.name));
           const nc = byFips.get(n.cfips);
           return {
             name: nm,

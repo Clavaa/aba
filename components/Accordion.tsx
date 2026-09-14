@@ -72,26 +72,27 @@ export default function Accordion({
                 </span>
               </button>
             </h3>
-            {isOpen && (
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={buttonId}
-                className="px-5 pb-5 sm:px-7 sm:pb-6"
-              >
-                <div className="max-w-2xl text-spruce-soft">{item.body}</div>
-                {item.relief && (
-                  <div className="mt-5 rounded-[20px] bg-white/75 p-5">
-                    <p className="eyebrow text-coral">
-                      {item.relief.kicker}
-                    </p>
-                    <div className="mt-1 max-w-2xl text-spruce">
-                      {item.relief.body}
-                    </div>
+            {/* Rendered whether or not it's open, and hidden with the `hidden`
+                attribute rather than unmounted. Conditional rendering kept every
+                collapsed answer out of the static HTML — so crawlers saw the
+                questions and none of the answers, on thousands of pages. */}
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={buttonId}
+              hidden={!isOpen}
+              className="px-5 pb-5 sm:px-7 sm:pb-6"
+            >
+              <div className="max-w-2xl text-spruce-soft">{item.body}</div>
+              {item.relief && (
+                <div className="mt-5 rounded-[20px] bg-white/75 p-5">
+                  <p className="eyebrow text-coral">{item.relief.kicker}</p>
+                  <div className="mt-1 max-w-2xl text-spruce">
+                    {item.relief.body}
                   </div>
-                )}
-              </div>
-            )}
+                </div>
+              )}
+            </div>
           </div>
         );
       })}

@@ -68,6 +68,18 @@ export default async function CostStatePage({
       a: `Those figures are full-price provider billing across many weekly hours — the amount insurers negotiate against, not what covered families pay. Once Medicaid or a covered private plan is in place, your cost is your plan's cost-sharing, which is a completely different number.`,
     },
     {
+      q: `What does the ${state.name} autism insurance mandate require?`,
+      a: `${state.mandate} A mandate only reaches state-regulated plans, though — a self-funded employer plan is governed by federal law and can set its own terms regardless of what ${state.name} requires. So autism insurance coverage in ${state.name} is really two questions: what the state mandates, and what kind of plan you actually hold. Your plan documents or HR will tell you which one you have.`,
+    },
+    {
+      q: `Does ${state.name} Medicaid cover ABA therapy?`,
+      a: `Yes. ${state.name} Medicaid ABA therapy coverage is not optional for the state: it covers medically necessary ABA for eligible children — that obligation comes from the federal EPSDT requirement, so it holds in every state. What differs here is the route in: ${state.pathway} Pediatric ABA therapy in ${state.name} still needs a current diagnostic evaluation on file and, in most cases, prior authorization before sessions start.`,
+    },
+    {
+      q: `Can we get ABA therapy without insurance in ${state.name}?`,
+      a: `Paying cash is the last option to consider, not the first. Before that, check three things: whether your child qualifies for ${state.name} Medicaid on their own disability regardless of household income, which many families assume they don't; whether a waiver applies — in ${state.name}: ${state.waivers}; and whether your employer plan excludes ABA outright or merely requires authorization you haven't filed yet. Those three account for most of the families who believe they have no coverage.`,
+    },
+    {
       q: `What if we don't have coverage yet?`,
       a: `Ask about waivers before assuming you'll pay cash. In ${state.name}: ${state.waivers}`,
     },

@@ -21,6 +21,7 @@ import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
 import { getCitiesForCounty } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
+import FindingCare from "@/components/FindingCare";
 
 export const dynamicParams = false;
 
@@ -344,6 +345,9 @@ export default async function CountyPage({
           </div>
         </div>
       </section>
+
+      {/* ─────────────── FINDING A PROVIDER ─────────────── */}
+      <FindingCare place={county.name} stateName={state.name} scope="county" />
 
       {/* ─────────────────────── FAQ ─────────────────────── */}
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="faq-heading">

@@ -11,6 +11,7 @@ import JsonLd from "@/components/JsonLd";
 import ModalityChips from "@/components/ModalityChips";
 import { getCitiesForState } from "@/lib/cities";
 import Sprout from "@/components/Sprout";
+import FindingCare from "@/components/FindingCare";
 
 export const dynamicParams = false;
 
@@ -332,6 +333,9 @@ export default async function StatePage({
           </Link>
         </div>
       </section>
+
+      {/* ─────────────── FINDING A PROVIDER ─────────────── */}
+      <FindingCare place={state.name} stateName={state.name} scope="state" />
 
       {/* ─────────────────────── FAQ ─────────────────────── */}
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="faq-heading">

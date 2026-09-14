@@ -8,6 +8,9 @@ import SiteFooter from "@/components/SiteFooter";
 import FooterSignup from "@/components/FooterSignup";
 import StickyCallBar from "@/components/StickyCallBar";
 import JsonLd from "@/components/JsonLd";
+import type { FooterGroup, FooterLink } from "@/components/FooterSitemap";
+import { getStateLinks } from "@/lib/states";
+import { payers } from "@/lib/payers";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -58,6 +61,77 @@ const organizationJsonLd = {
   areaServed: { "@type": "Country", name: "United States" },
 };
 
+/**
+ * Footer sitemap data. Built here because lib/states.ts and lib/payers.ts read
+ * the dataset from disk at build time and the footer itself is a client
+ * component — these arrays are plain strings by the time they cross over.
+ */
+const footerGroups: FooterGroup[] = [
+  {
+    heading: "Where therapy happens",
+    links: [
+      /* Descriptive anchor text, not the short nav chips ("At home"): the
+         footer is the main internal link surface for these pages. */
+      { href: "/services/in-home/", label: "In-home ABA therapy" },
+      { href: "/services/school/", label: "School-based ABA and IEP support" },
+      { href: "/services/daycare/", label: "ABA therapy in daycare" },
+      { href: "/services/telehealth/", label: "Telehealth and parent coaching" },
+      { href: "/services/early-intervention/", label: "Early intervention ABA" },
+      { href: "/services/", label: "Compare every setting" },
+      { href: "/support-services/", label: "Support beyond ABA" },
+      { href: "/getting-started/", label: "Check your coverage" },
+    ],
+  },
+  {
+    heading: "Guides for parents",
+    links: [
+      { href: "/resources/what-is-aba/", label: "What is ABA therapy?" },
+      { href: "/resources/autism-levels/", label: "Autism levels 1, 2 and 3" },
+      { href: "/resources/signs-of-autism-by-age/", label: "Signs of autism by age" },
+      { href: "/resources/autism-therapy-types/", label: "Types of autism therapy" },
+      { href: "/resources/positive-reinforcement/", label: "Positive reinforcement" },
+      { href: "/resources/discrete-trial-training/", label: "Discrete trial training" },
+      { href: "/resources/aba-therapy-examples/", label: "ABA therapy examples" },
+      { href: "/resources/aba-therapy-for-adhd/", label: "ABA therapy for ADHD" },
+      { href: "/resources/autism-resources-for-parents/", label: "Autism resources for parents" },
+      { href: "/autism-evaluation/", label: "Getting an autism evaluation" },
+      { href: "/autism-evaluation/m-chat/", label: "The M-CHAT screener" },
+      { href: "/find-a-diagnostician/", label: "Find a diagnostician" },
+    ],
+  },
+  {
+    heading: "Insurance and cost",
+    links: [
+      { href: "/insurance/", label: "Insurance and Medicaid" },
+      ...payers.map((p) => ({ href: `/insurance/${p.slug}/`, label: p.name })),
+      { href: "/cost-of-aba-therapy/", label: "What ABA costs by state" },
+      { href: "/faq/", label: "Questions families ask" },
+    ],
+  },
+  {
+    heading: "Careers in ABA",
+    links: [
+      { href: "/careers/", label: "Work with us" },
+      { href: "/careers/openings/", label: "Open roles" },
+      { href: "/careers/rbt/", label: "Become an RBT" },
+      { href: "/careers/rbt/certification/", label: "RBT certification" },
+      { href: "/careers/rbt/competency-assessment/", label: "RBT competency assessment" },
+      { href: "/careers/bcba/", label: "BCBA careers" },
+      { href: "/careers/bcba/supervision/", label: "BCBA supervision" },
+      { href: "/careers/pay/", label: "How ABA pay works" },
+      { href: "/about/", label: "About Sproutwell" },
+      { href: "/about/leadership/", label: "Our leadership" },
+      { href: "/events/", label: "Sensory-friendly events" },
+      { href: "/contact/", label: "Contact us" },
+    ],
+  },
+];
+
+const footerStates: FooterLink[] = getStateLinks().map((st) => ({
+  href: `/locations/${st.slug}/`,
+  label: st.name,
+}));
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -75,7 +149,7 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <FooterSignup />
-        <SiteFooter />
+        <SiteFooter sitemapGroups={footerGroups} sitemapStates={footerStates} />
         <StickyCallBar />
       </body>
     </html>

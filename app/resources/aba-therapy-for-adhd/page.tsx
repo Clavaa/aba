@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import FeatureStrip from "@/components/FeatureStrip";
 import CallCta from "@/components/CallCta";
@@ -49,6 +50,39 @@ const faqs = [
 ];
 
 const items: AccordionItem[] = faqs.map((f) => ({ title: f.q, body: <p>{f.a}</p> }));
+
+const related = [
+  {
+    href: "/resources/what-is-aba/",
+    label: "What is ABA therapy?",
+    note: "The methods underneath, and what the evidence supports.",
+  },
+  {
+    href: "/resources/autism-therapy-types/",
+    label: "Types of autism therapy",
+    note: "The fuller menu, including what's funded and what isn't.",
+  },
+  {
+    href: "/insurance/",
+    label: "Insurance and Medicaid",
+    note: "Why funding usually follows the diagnosis rather than the method.",
+  },
+  {
+    href: "/support-services/",
+    label: "Support beyond ABA",
+    note: "School paperwork, referrals and the things that aren't therapy.",
+  },
+  {
+    href: "/faq/",
+    label: "Questions families ask",
+    note: "Hours, referrals, authorization and cost.",
+  },
+  {
+    href: "/contact/",
+    label: "Talk to someone",
+    note: "Tell us the situation and we'll say plainly whether we can help.",
+  },
+];
 
 export default function AbaForAdhdPage() {
   return (
@@ -147,6 +181,7 @@ export default function AbaForAdhdPage() {
           what decide.
         </p>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

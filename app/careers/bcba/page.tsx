@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 export const metadata: Metadata = {
@@ -65,6 +66,64 @@ const faq: AccordionItem[] = [
       </p>
     ),
   },
+  {
+    title: "BCBA certification requirements, in full",
+    body: (
+      <p>
+        The certification board sets five: a qualifying master&rsquo;s degree
+        or higher, behavior-analytic coursework from an acceptable sequence,
+        supervised fieldwork, a passing score on the BCBA exam, and agreement
+        to the ethics code and ongoing recertification. Requirements are
+        revised periodically, so confirm the current standard with the
+        certification board before you enroll in anything &mdash; a course that
+        met the old sequence may not meet the new one.
+      </p>
+    ),
+  },
+  {
+    title: "How many BCBA fieldwork hours do you need?",
+    body: (
+      <p>
+        Fieldwork is counted in supervised hours accrued over a minimum number
+        of months, with a cap on how many you can bank per month, and a
+        required proportion spent in direct contact with the supervisor. That
+        monthly cap is the part people miss: it means fieldwork has a floor in
+        calendar time no matter how many hours a week you work. The board
+        publishes the current totals, and a supervisor who cannot state them
+        from memory is not one you want signing your hours.
+      </p>
+    ),
+  },
+  {
+    title: "How do BCBA supervision hours work?",
+    body: (
+      <p>
+        Your supervisor observes you working with clients, meets with you on a
+        set cadence, and signs a monthly form recording what was supervised.
+        Supervision must be contracted before it starts, and hours accrued
+        without that agreement in place generally do not count. If you are
+        accruing with us we tell you at the outset how many hours a month we
+        can realistically sign, rather than discovering a shortfall a year in.{" "}
+        <Link href="/careers/bcba/supervision/" className="font-semibold text-coral underline underline-offset-4">
+          How supervision runs here
+        </Link>
+        .
+      </p>
+    ),
+  },
+  {
+    title: "What is a BCaBA?",
+    body: (
+      <p>
+        A Board Certified Assistant Behavior Analyst &mdash; the bachelor&rsquo;s-level
+        credential that sits between RBT and BCBA. A BCaBA can do more
+        independent clinical work than an RBT, including some assessment and
+        program writing, but must practise under the supervision of a BCBA. It
+        is a genuine middle rung for someone with a bachelor&rsquo;s degree who
+        is not ready to commit to a master&rsquo;s.
+      </p>
+    ),
+  },
 ];
 
 const breadcrumbJsonLd = {
@@ -86,6 +145,39 @@ const breadcrumbJsonLd = {
     },
   ],
 };
+
+const related = [
+  {
+    href: "/careers/bcba/supervision/",
+    label: "BCBA supervision",
+    note: "Accruing and signing off fieldwork hours, in detail.",
+  },
+  {
+    href: "/careers/pay/",
+    label: "How ABA pay works",
+    note: "Caseloads, billable ratios and what actually decides income.",
+  },
+  {
+    href: "/careers/rbt/",
+    label: "The RBT path",
+    note: "Where most BCBAs start, and what it asks for.",
+  },
+  {
+    href: "/careers/openings/",
+    label: "Open roles",
+    note: "Where we're hiring, and how to apply.",
+  },
+  {
+    href: "/careers/",
+    label: "Work with us",
+    note: "Caseloads, autonomy and how we run clinical decisions.",
+  },
+  {
+    href: "/resources/what-is-aba/",
+    label: "What is ABA therapy?",
+    note: "The parent-facing version, useful for explaining your job.",
+  },
+];
 
 export default function BcbaPage() {
   return (
@@ -199,6 +291,7 @@ export default function BcbaPage() {
           </a>
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

@@ -90,6 +90,31 @@ const faq: AccordionItem[] = [
       </p>
     ),
   },
+  {
+    title: "What is the ADOS-2 test?",
+    body: (
+      <>
+        <p>
+          The Autism Diagnostic Observation Schedule, Second Edition &mdash;
+          the structured observation most commonly used in a diagnostic
+          evaluation. A trained clinician works through a set of activities
+          designed to create natural opportunities for social communication,
+          and scores what your child does. There are five modules chosen by age
+          and language level, so the session looks completely different for a
+          non-speaking toddler than for a verbal ten-year-old.
+        </p>
+        <p className="mt-3">
+          Two things worth knowing. It usually takes under an hour, and it is
+          designed to feel like play rather than a test &mdash; there is
+          nothing to prepare your child for. And it is never the whole
+          evaluation: the ADOS-2 is one source of evidence alongside your
+          developmental history, questionnaires and the clinician&rsquo;s
+          judgement. A diagnosis should never rest on a single score, and a
+          clinician who tells you otherwise is cutting a corner.
+        </p>
+      </>
+    ),
+  },
 ];
 
 const breadcrumbJsonLd = {

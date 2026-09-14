@@ -49,6 +49,24 @@ const guides = [
     d: "The four parts of a trial, how DTT differs from teaching in the natural environment, and six things to watch for as a parent.",
     tint: "bg-mint",
   },
+  {
+    href: "/resources/autism-therapy-types/",
+    t: "Types of autism therapy",
+    d: "ABA, speech, OT, developmental approaches, social groups, parent training and medication — including the ones we don't sell, and why there's no single best.",
+    tint: "bg-butter",
+  },
+  {
+    href: "/resources/positive-reinforcement/",
+    t: "Positive reinforcement",
+    d: "The most misused term in the field. What it actually means, how it differs from bribery, why reinforcers stop working, and how they get faded out.",
+    tint: "bg-peach",
+  },
+  {
+    href: "/resources/autism-resources-for-parents/",
+    t: "Autism resources for parents",
+    d: "Six federally funded programmes in every state that cost nothing and need no referral — plus what to actually do in the first month after a diagnosis.",
+    tint: "bg-mint",
+  },
 ];
 
 const nextSteps = [

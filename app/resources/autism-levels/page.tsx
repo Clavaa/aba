@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 /**
@@ -160,6 +161,39 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const related = [
+  {
+    href: "/resources/signs-of-autism-by-age/",
+    label: "Signs of autism by age",
+    note: "From 12 months to the teen years, described the way you'd actually notice it.",
+  },
+  {
+    href: "/autism-evaluation/",
+    label: "Getting an evaluation",
+    note: "Who can diagnose, how long the wait runs, and what the appointment involves.",
+  },
+  {
+    href: "/resources/autism-therapy-types/",
+    label: "Types of autism therapy",
+    note: "What the level on the report does and doesn't tell you about which therapy to pursue.",
+  },
+  {
+    href: "/resources/autism-resources-for-parents/",
+    label: "Autism resources for parents",
+    note: "Six free programmes in every state, and what to do in the first month.",
+  },
+  {
+    href: "/insurance/",
+    label: "Insurance and Medicaid",
+    note: "How a diagnosis turns into authorized therapy hours.",
+  },
+  {
+    href: "/find-a-diagnostician/",
+    label: "Find a diagnostician",
+    note: "Where evaluations actually happen, and how to shorten the wait.",
+  },
+];
+
 export default function AutismLevelsPage() {
   return (
     <>
@@ -225,7 +259,7 @@ export default function AutismLevelsPage() {
       {/* ───────────────── THE THREE LEVELS ───────────────── */}
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="levels-heading">
         <h2 id="levels-heading" className="display display-h2">
-          Autism levels 1, 2 and 3, side by side
+          Autism support levels 1, 2 and 3, side by side
         </h2>
         <div className="mt-8 space-y-4">
           {levels.map((l) => (
@@ -327,6 +361,7 @@ export default function AutismLevelsPage() {
           <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

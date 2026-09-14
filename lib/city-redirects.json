@@ -1,0 +1,1667 @@
+[
+  {
+    "source": "/locations/alabama/russell/phenix/",
+    "destination": "/locations/alabama/russell/phenix-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/tallapoosa/alexander/",
+    "destination": "/locations/alabama/tallapoosa/alexander-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/st-clair/pell/",
+    "destination": "/locations/alabama/st-clair/pell-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/etowah/rainbow/",
+    "destination": "/locations/alabama/etowah/rainbow-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/shelby/indian-springs/",
+    "destination": "/locations/alabama/shelby/indian-springs-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/dale/midland/",
+    "destination": "/locations/alabama/dale/midland-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/etowah/sardis/",
+    "destination": "/locations/alabama/etowah/sardis-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/alabama/monroe/frisco/",
+    "destination": "/locations/alabama/monroe/frisco-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/mohave/lake-havasu/",
+    "destination": "/locations/arizona/mohave/lake-havasu-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/mohave/bullhead/",
+    "destination": "/locations/arizona/mohave/bullhead-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/mohave/colorado/",
+    "destination": "/locations/arizona/mohave/colorado-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arizona/cochise/huachuca/",
+    "destination": "/locations/arizona/cochise/huachuca-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/st-francis/forrest/",
+    "destination": "/locations/arkansas/st-francis/forrest-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/sharp/cherokee/",
+    "destination": "/locations/arkansas/sharp/cherokee-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/craighead/lake/",
+    "destination": "/locations/arkansas/craighead/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/lincoln/star/",
+    "destination": "/locations/arkansas/lincoln/star-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/sharp/cave/",
+    "destination": "/locations/arkansas/sharp/cave-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/arkansas/chicot/lake/",
+    "destination": "/locations/arkansas/chicot/lake-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-mateo/daly/",
+    "destination": "/locations/california/san-mateo/daly-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-mateo/redwood/",
+    "destination": "/locations/california/san-mateo/redwood-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/sutter/yuba/",
+    "destination": "/locations/california/sutter/yuba-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/alameda/union/",
+    "destination": "/locations/california/alameda/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-diego/national/",
+    "destination": "/locations/california/san-diego/national-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/riverside/cathedral/",
+    "destination": "/locations/california/riverside/cathedral-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/los-angeles/culver/",
+    "destination": "/locations/california/los-angeles/culver-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/los-angeles/temple/",
+    "destination": "/locations/california/los-angeles/temple-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/san-mateo/foster/",
+    "destination": "/locations/california/san-mateo/foster-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/solano/suisun/",
+    "destination": "/locations/california/solano/suisun-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/monterey/king/",
+    "destination": "/locations/california/monterey/king-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/kern/california/",
+    "destination": "/locations/california/kern/california-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/los-angeles/westlake/",
+    "destination": "/locations/california/los-angeles/westlake-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/del-norte/crescent/",
+    "destination": "/locations/california/del-norte/crescent-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/california/nevada/nevada/",
+    "destination": "/locations/california/nevada/nevada-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/adams/commerce/",
+    "destination": "/locations/colorado/adams/commerce-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/fremont/canon/",
+    "destination": "/locations/colorado/fremont/canon-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/arapahoe/greenwood/",
+    "destination": "/locations/colorado/arapahoe/greenwood-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/arapahoe/cherry-hills/",
+    "destination": "/locations/colorado/arapahoe/cherry-hills-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/delta/orchard/",
+    "destination": "/locations/colorado/delta/orchard-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/pitkin/snowmass/",
+    "destination": "/locations/colorado/pitkin/snowmass-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/colorado/san-miguel/mountain/",
+    "destination": "/locations/colorado/san-miguel/mountain-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/connecticut/southeastern-connecticut-planning-region/jewett/",
+    "destination": "/locations/connecticut/southeastern-connecticut-planning-region/jewett-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/delaware/new-castle/delaware/",
+    "destination": "/locations/delaware/new-castle/delaware-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/hillsborough/plant/",
+    "destination": "/locations/florida/hillsborough/plant-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/polk/haines/",
+    "destination": "/locations/florida/polk/haines-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/bay/panama/",
+    "destination": "/locations/florida/bay/panama-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/broward/cooper/",
+    "destination": "/locations/florida/broward/cooper-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/volusia/orange/",
+    "destination": "/locations/florida/volusia/orange-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/miami-dade/florida/",
+    "destination": "/locations/florida/miami-dade/florida-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/columbia/lake/",
+    "destination": "/locations/florida/columbia/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/pasco/dade/",
+    "destination": "/locations/florida/pasco/dade-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/miami-dade/north-bay/",
+    "destination": "/locations/florida/miami-dade/north-bay-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/pinellas/kenneth/",
+    "destination": "/locations/florida/pinellas/kenneth-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/polk/polk/",
+    "destination": "/locations/florida/polk/polk-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/dixie/cross/",
+    "destination": "/locations/florida/dixie/cross-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/florida/putnam/crescent/",
+    "destination": "/locations/florida/putnam/crescent-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/richmond/augusta-richmond-county/",
+    "destination": "/locations/georgia/richmond/augusta/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/bibb/macon-bibb-county/",
+    "destination": "/locations/georgia/bibb/macon/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/clarke/athens-clarke-county/",
+    "destination": "/locations/georgia/clarke/athens/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/fayette/peachtree/",
+    "destination": "/locations/georgia/fayette/peachtree-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/fulton/union/",
+    "destination": "/locations/georgia/fulton/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/chatham/garden/",
+    "destination": "/locations/georgia/chatham/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/chattahoochee/cusseta-chattahoochee-county/",
+    "destination": "/locations/georgia/chattahoochee/cusseta/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/clayton/lake/",
+    "destination": "/locations/georgia/clayton/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/quitman/georgetown-quitman-county/",
+    "destination": "/locations/georgia/quitman/georgetown/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/emanuel/twin/",
+    "destination": "/locations/georgia/emanuel/twin-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/georgia/berrien/ray/",
+    "destination": "/locations/georgia/berrien/ray-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/idaho/ada/boise/",
+    "destination": "/locations/idaho/ada/boise-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/idaho/ada/garden/",
+    "destination": "/locations/idaho/ada/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/idaho/madison/sugar/",
+    "destination": "/locations/idaho/madison/sugar-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/idaho/oneida/malad/",
+    "destination": "/locations/idaho/oneida/malad-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/cook/calumet/",
+    "destination": "/locations/illinois/cook/calumet-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/cook/elk-grove/",
+    "destination": "/locations/illinois/cook/elk-grove-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/madison/granite/",
+    "destination": "/locations/illinois/madison/granite-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/cook/sauk/",
+    "destination": "/locations/illinois/cook/sauk-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/lake/park/",
+    "destination": "/locations/illinois/lake/park-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/grundy/coal/",
+    "destination": "/locations/illinois/grundy/coal-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/ford/gibson/",
+    "destination": "/locations/illinois/ford/gibson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/williamson/johnston/",
+    "destination": "/locations/illinois/williamson/johnston-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/st-clair/fairmont/",
+    "destination": "/locations/illinois/st-clair/fairmont-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/mason/mason/",
+    "destination": "/locations/illinois/mason/mason-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/de-witt/farmer/",
+    "destination": "/locations/illinois/de-witt/farmer-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/peoria/hanna/",
+    "destination": "/locations/illinois/peoria/hanna-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/white/norris/",
+    "destination": "/locations/illinois/white/norris-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/illinois/marion/central/",
+    "destination": "/locations/illinois/marion/central-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/laporte/michigan/",
+    "destination": "/locations/indiana/laporte/michigan-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/whitley/columbia/",
+    "destination": "/locations/indiana/whitley/columbia-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/perry/tell/",
+    "destination": "/locations/indiana/perry/tell-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/grant/gas/",
+    "destination": "/locations/indiana/grant/gas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/blackford/hartford/",
+    "destination": "/locations/indiana/blackford/hartford-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/randolph/union/",
+    "destination": "/locations/indiana/randolph/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/gibson/oakland/",
+    "destination": "/locations/indiana/gibson/oakland-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/wayne/cambridge/",
+    "destination": "/locations/indiana/wayne/cambridge-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/noble/rome/",
+    "destination": "/locations/indiana/noble/rome-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/indiana/randolph/parker/",
+    "destination": "/locations/indiana/randolph/parker-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/woodbury/sioux/",
+    "destination": "/locations/iowa/woodbury/sioux-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/johnson/iowa/",
+    "destination": "/locations/iowa/johnson/iowa-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/cerro-gordo/mason/",
+    "destination": "/locations/iowa/cerro-gordo/mason-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/hamilton/webster/",
+    "destination": "/locations/iowa/hamilton/webster-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/floyd/charles/",
+    "destination": "/locations/iowa/floyd/charles-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/sioux/orange/",
+    "destination": "/locations/iowa/sioux/orange-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/polk/polk/",
+    "destination": "/locations/iowa/polk/polk-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/winnebago/forest/",
+    "destination": "/locations/iowa/winnebago/forest-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/story/story/",
+    "destination": "/locations/iowa/story/story-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/black-hawk/la-porte/",
+    "destination": "/locations/iowa/black-hawk/la-porte-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/calhoun/rockwell/",
+    "destination": "/locations/iowa/calhoun/rockwell-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/sac/sac/",
+    "destination": "/locations/iowa/sac/sac-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/jasper/prairie/",
+    "destination": "/locations/iowa/jasper/prairie-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/calhoun/lake/",
+    "destination": "/locations/iowa/calhoun/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/iowa/linn/central/",
+    "destination": "/locations/iowa/linn/central-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/wyandotte/kansas/",
+    "destination": "/locations/kansas/wyandotte/kansas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/finney/garden/",
+    "destination": "/locations/kansas/finney/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/ford/dodge/",
+    "destination": "/locations/kansas/ford/dodge-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/johnson/prairie/",
+    "destination": "/locations/kansas/johnson/prairie-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/geary/junction/",
+    "destination": "/locations/kansas/geary/junction-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/cowley/arkansas/",
+    "destination": "/locations/kansas/cowley/arkansas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/sedgwick/park/",
+    "destination": "/locations/kansas/sedgwick/park-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/douglas/baldwin/",
+    "destination": "/locations/kansas/douglas/baldwin-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/scott/scott/",
+    "destination": "/locations/kansas/scott/scott-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/osage/osage/",
+    "destination": "/locations/kansas/osage/osage-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/stanton/johnson/",
+    "destination": "/locations/kansas/stanton/johnson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/graham/hill/",
+    "destination": "/locations/kansas/graham/hill-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kansas/ness/ness/",
+    "destination": "/locations/kansas/ness/ness-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/jefferson/louisville-jefferson-county-metro-government/",
+    "destination": "/locations/kentucky/jefferson/louisville/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/fayette/lexington-fayette/",
+    "destination": "/locations/kentucky/fayette/lexington/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/muhlenberg/central/",
+    "destination": "/locations/kentucky/muhlenberg/central-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/bullitt/pioneer/",
+    "destination": "/locations/kentucky/bullitt/pioneer-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/marshall/calvert/",
+    "destination": "/locations/kentucky/marshall/calvert-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/barren/cave/",
+    "destination": "/locations/kentucky/barren/cave-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/boyle/junction/",
+    "destination": "/locations/kentucky/boyle/junction-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/pike/coal-run/",
+    "destination": "/locations/kentucky/pike/coal-run-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/jefferson/beechwood/",
+    "destination": "/locations/kentucky/jefferson/beechwood-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/kentucky/powell/clay/",
+    "destination": "/locations/kentucky/powell/clay-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/louisiana/bossier/bossier/",
+    "destination": "/locations/louisiana/bossier/bossier-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/louisiana/st-mary/morgan/",
+    "destination": "/locations/louisiana/st-mary/morgan-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/louisiana/tangipahoa/amite/",
+    "destination": "/locations/louisiana/tangipahoa/amite-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/maine/penobscot/old/",
+    "destination": "/locations/maine/penobscot/old-town/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/maryland/worcester/ocean/",
+    "destination": "/locations/maryland/worcester/ocean-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/maryland/worcester/pocomoke/",
+    "destination": "/locations/maryland/worcester/pocomoke-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/maryland/prince-georges/cottage/",
+    "destination": "/locations/maryland/prince-georges/cottage-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/bay/bay/",
+    "destination": "/locations/michigan/bay/bay-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/wayne/garden/",
+    "destination": "/locations/michigan/wayne/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/grand-traverse/traverse/",
+    "destination": "/locations/michigan/grand-traverse/traverse-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/oakland/lathrup/",
+    "destination": "/locations/michigan/oakland/lathrup-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/st-clair/marine/",
+    "destination": "/locations/michigan/st-clair/marine-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/charlevoix/boyne/",
+    "destination": "/locations/michigan/charlevoix/boyne-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/lapeer/imlay/",
+    "destination": "/locations/michigan/lapeer/imlay-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/presque-isle/rogers/",
+    "destination": "/locations/michigan/presque-isle/rogers-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/osceola/reed/",
+    "destination": "/locations/michigan/osceola/reed-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/tuscola/cass/",
+    "destination": "/locations/michigan/tuscola/cass-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/oakland/orchard-lake/",
+    "destination": "/locations/michigan/oakland/orchard-lake-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/montcalm/howard/",
+    "destination": "/locations/michigan/montcalm/howard-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/iosco/tawas/",
+    "destination": "/locations/michigan/iosco/tawas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/branch/union/",
+    "destination": "/locations/michigan/branch/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/kent/kent/",
+    "destination": "/locations/michigan/kent/kent-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/sanilac/brown/",
+    "destination": "/locations/michigan/sanilac/brown-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/michigan/montcalm/carson/",
+    "destination": "/locations/michigan/montcalm/carson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/minnesota/chisago/chisago/",
+    "destination": "/locations/minnesota/chisago/chisago-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/minnesota/wabasha/lake/",
+    "destination": "/locations/minnesota/wabasha/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/minnesota/pine/pine/",
+    "destination": "/locations/minnesota/pine/pine-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/minnesota/chisago/rush/",
+    "destination": "/locations/minnesota/chisago/rush-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/minnesota/chippewa/clara/",
+    "destination": "/locations/minnesota/chippewa/clara-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mississippi/yazoo/yazoo/",
+    "destination": "/locations/mississippi/yazoo/yazoo-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/mississippi/calhoun/calhoun/",
+    "destination": "/locations/mississippi/calhoun/calhoun-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/jackson/kansas/",
+    "destination": "/locations/missouri/jackson/kansas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/cole/jefferson/",
+    "destination": "/locations/missouri/cole/jefferson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/st-louis/university/",
+    "destination": "/locations/missouri/st-louis/university-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/jasper/webb/",
+    "destination": "/locations/missouri/jasper/webb-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/warren/wright/",
+    "destination": "/locations/missouri/warren/wright-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/clay/north-kansas/",
+    "destination": "/locations/missouri/clay/north-kansas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/platte/platte/",
+    "destination": "/locations/missouri/platte/platte-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/jefferson/crystal/",
+    "destination": "/locations/missouri/jefferson/crystal-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/scott/scott/",
+    "destination": "/locations/missouri/scott/scott-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/montgomery/montgomery/",
+    "destination": "/locations/missouri/montgomery/montgomery-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/monroe/monroe/",
+    "destination": "/locations/missouri/monroe/monroe-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/stone/kimberling/",
+    "destination": "/locations/missouri/stone/kimberling-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/cass/garden/",
+    "destination": "/locations/missouri/cass/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/st-louis/velda/",
+    "destination": "/locations/missouri/st-louis/velda-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/lawrence/pierce/",
+    "destination": "/locations/missouri/lawrence/pierce-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/st-clair/appleton/",
+    "destination": "/locations/missouri/st-clair/appleton-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/missouri/holt/mound/",
+    "destination": "/locations/missouri/holt/mound-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/montana/silver-bow/butte-silver-bow/",
+    "destination": "/locations/montana/silver-bow/butte/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/montana/deer-lodge/anaconda-deer-lodge-county/",
+    "destination": "/locations/montana/deer-lodge/anaconda/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/montana/custer/miles/",
+    "destination": "/locations/montana/custer/miles-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/dakota/south-sioux/",
+    "destination": "/locations/nebraska/dakota/south-sioux-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/otoe/nebraska/",
+    "destination": "/locations/nebraska/otoe/nebraska-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/richardson/falls/",
+    "destination": "/locations/nebraska/richardson/falls-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/merrick/central/",
+    "destination": "/locations/nebraska/merrick/central-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/butler/david/",
+    "destination": "/locations/nebraska/butler/david-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/dakota/dakota/",
+    "destination": "/locations/nebraska/dakota/dakota-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nebraska/sherman/loup/",
+    "destination": "/locations/nebraska/sherman/loup-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/nevada/clark/boulder/",
+    "destination": "/locations/nevada/clark/boulder-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/hudson/jersey/",
+    "destination": "/locations/new-jersey/hudson/jersey-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/hudson/union/",
+    "destination": "/locations/new-jersey/hudson/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/atlantic/atlantic/",
+    "destination": "/locations/new-jersey/atlantic/atlantic-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/camden/gloucester/",
+    "destination": "/locations/new-jersey/camden/gloucester-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/cape-may/ocean/",
+    "destination": "/locations/new-jersey/cape-may/ocean-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/atlantic/ventnor/",
+    "destination": "/locations/new-jersey/atlantic/ventnor-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/atlantic/margate/",
+    "destination": "/locations/new-jersey/atlantic/margate-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/monmouth/neptune/",
+    "destination": "/locations/new-jersey/monmouth/neptune-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/atlantic/egg-harbor/",
+    "destination": "/locations/new-jersey/atlantic/egg-harbor-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/cape-may/sea-isle/",
+    "destination": "/locations/new-jersey/cape-may/sea-isle-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-jersey/ocean/surf/",
+    "destination": "/locations/new-jersey/ocean/surf-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-mexico/grant/silver/",
+    "destination": "/locations/new-mexico/grant/silver-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/nassau/garden/",
+    "destination": "/locations/new-york/nassau/garden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/new-york/broome/johnson/",
+    "destination": "/locations/new-york/broome/johnson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/pasquotank/elizabeth/",
+    "destination": "/locations/north-carolina/pasquotank/elizabeth-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/carteret/morehead/",
+    "destination": "/locations/north-carolina/carteret/morehead-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/chatham/siler/",
+    "destination": "/locations/north-carolina/chatham/siler-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/rutherford/forest/",
+    "destination": "/locations/north-carolina/rutherford/forest-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/gaston/bessemer/",
+    "destination": "/locations/north-carolina/gaston/bessemer-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/pender/surf/",
+    "destination": "/locations/north-carolina/pender/surf-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/columbus/tabor/",
+    "destination": "/locations/north-carolina/columbus/tabor-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/swain/bryson/",
+    "destination": "/locations/north-carolina/swain/bryson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-carolina/wilson/elm/",
+    "destination": "/locations/north-carolina/wilson/elm-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-dakota/barnes/valley/",
+    "destination": "/locations/north-dakota/barnes/valley-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-dakota/mckenzie/watford/",
+    "destination": "/locations/north-dakota/mckenzie/watford-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/north-dakota/mountrail/new/",
+    "destination": "/locations/north-dakota/mountrail/new-town/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ohio/franklin/grove/",
+    "destination": "/locations/ohio/franklin/grove-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ohio/cuyahoga/bay/",
+    "destination": "/locations/ohio/cuyahoga/bay-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ohio/miami/tipp/",
+    "destination": "/locations/ohio/miami/tipp-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ohio/madison/plain/",
+    "destination": "/locations/ohio/madison/plain-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/ohio/darke/union/",
+    "destination": "/locations/ohio/darke/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/oklahoma/oklahoma/",
+    "destination": "/locations/oklahoma/oklahoma/oklahoma-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/oklahoma/midwest/",
+    "destination": "/locations/oklahoma/oklahoma/midwest-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/kay/ponca/",
+    "destination": "/locations/oklahoma/kay/ponca-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/oklahoma/del/",
+    "destination": "/locations/oklahoma/oklahoma/del-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/beckham/elk/",
+    "destination": "/locations/oklahoma/beckham/elk-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/oklahoma/the/",
+    "destination": "/locations/oklahoma/oklahoma/the-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/canadian/union/",
+    "destination": "/locations/oklahoma/canadian/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oklahoma/cimarron/boise/",
+    "destination": "/locations/oklahoma/cimarron/boise-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/clackamas/oregon/",
+    "destination": "/locations/oregon/clackamas/oregon-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/baker/baker/",
+    "destination": "/locations/oregon/baker/baker-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/lincoln/lincoln/",
+    "destination": "/locations/oregon/lincoln/lincoln-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/lane/junction/",
+    "destination": "/locations/oregon/lane/junction-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/washington/king/",
+    "destination": "/locations/oregon/washington/king-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/multnomah/wood/",
+    "destination": "/locations/oregon/multnomah/wood-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/linn/mill/",
+    "destination": "/locations/oregon/linn/mill-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/columbia/columbia/",
+    "destination": "/locations/oregon/columbia/columbia-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/lane/dunes/",
+    "destination": "/locations/oregon/lane/dunes-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/tillamook/bay/",
+    "destination": "/locations/oregon/tillamook/bay-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/union/island/",
+    "destination": "/locations/oregon/union/island-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/polk/falls/",
+    "destination": "/locations/oregon/polk/falls-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/oregon/benton/adair/",
+    "destination": "/locations/oregon/benton/adair-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/venango/oil/",
+    "destination": "/locations/pennsylvania/venango/oil-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/mercer/grove/",
+    "destination": "/locations/pennsylvania/mercer/grove-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/lawrence/ellwood/",
+    "destination": "/locations/pennsylvania/lawrence/ellwood-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/lackawanna/dickson/",
+    "destination": "/locations/pennsylvania/lackawanna/dickson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/chester/spring/",
+    "destination": "/locations/pennsylvania/chester/spring-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/schuylkill/mahanoy/",
+    "destination": "/locations/pennsylvania/schuylkill/mahanoy-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/erie/lake/",
+    "destination": "/locations/pennsylvania/erie/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/erie/union/",
+    "destination": "/locations/pennsylvania/erie/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/armstrong/ford/",
+    "destination": "/locations/pennsylvania/armstrong/ford-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/susquehanna/forest/",
+    "destination": "/locations/pennsylvania/susquehanna/forest-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/indiana/homer/",
+    "destination": "/locations/pennsylvania/indiana/homer-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/butler/evans/",
+    "destination": "/locations/pennsylvania/butler/evans-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/pennsylvania/schuylkill/tower/",
+    "destination": "/locations/pennsylvania/schuylkill/tower-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/south-carolina/florence/lake/",
+    "destination": "/locations/south-carolina/florence/lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/south-dakota/pennington/rapid/",
+    "destination": "/locations/south-dakota/pennington/rapid-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/south-dakota/union/north-sioux/",
+    "destination": "/locations/south-dakota/union/north-sioux-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/davidson/nashville-davidson/",
+    "destination": "/locations/tennessee/davidson/nashville/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/washington/johnson/",
+    "destination": "/locations/tennessee/washington/johnson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/trousdale/hartsville-trousdale-county/",
+    "destination": "/locations/tennessee/trousdale/hartsville/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/loudon/lenoir/",
+    "destination": "/locations/tennessee/loudon/lenoir-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/obion/union/",
+    "destination": "/locations/tennessee/obion/union-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/jefferson/jefferson/",
+    "destination": "/locations/tennessee/jefferson/jefferson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/cheatham/ashland/",
+    "destination": "/locations/tennessee/cheatham/ashland-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/johnson/mountain/",
+    "destination": "/locations/tennessee/johnson/mountain-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/rhea/spring/",
+    "destination": "/locations/tennessee/rhea/spring-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/sullivan/bluff/",
+    "destination": "/locations/tennessee/sullivan/bluff-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/tennessee/grundy/tracy/",
+    "destination": "/locations/tennessee/grundy/tracy-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/galveston/league/",
+    "destination": "/locations/texas/galveston/league-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/fort-bend/missouri/",
+    "destination": "/locations/texas/fort-bend/missouri-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/galveston/texas/",
+    "destination": "/locations/texas/galveston/texas-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/tarrant/haltom/",
+    "destination": "/locations/texas/tarrant/haltom-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/rockwall/royse/",
+    "destination": "/locations/texas/rockwall/royse-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/el-paso/horizon/",
+    "destination": "/locations/texas/el-paso/horizon-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/bexar/universal/",
+    "destination": "/locations/texas/bexar/universal-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/matagorda/bay/",
+    "destination": "/locations/texas/matagorda/bay-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/denton/highland/",
+    "destination": "/locations/texas/denton/highland-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/starr/rio-grande/",
+    "destination": "/locations/texas/starr/rio-grande-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/denton/providence/",
+    "destination": "/locations/texas/denton/providence-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/orange/bridge/",
+    "destination": "/locations/texas/orange/bridge-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/jacinto/",
+    "destination": "/locations/texas/harris/jacinto-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/jersey/",
+    "destination": "/locations/texas/harris/jersey-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/henderson/gun-barrel/",
+    "destination": "/locations/texas/henderson/gun-barrel-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/zavala/crystal/",
+    "destination": "/locations/texas/zavala/crystal-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/bowie/wake/",
+    "destination": "/locations/texas/bowie/wake-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/hunters-creek/",
+    "destination": "/locations/texas/harris/hunters-creek-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/spring-valley/",
+    "destination": "/locations/texas/harris/spring-valley-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/yoakum/denver/",
+    "destination": "/locations/texas/yoakum/denver-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/mitchell/colorado/",
+    "destination": "/locations/texas/mitchell/colorado-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/hidalgo/sullivan/",
+    "destination": "/locations/texas/hidalgo/sullivan-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/bunker-hill/",
+    "destination": "/locations/texas/harris/bunker-hill-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/taylor-lake/",
+    "destination": "/locations/texas/harris/taylor-lake-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/tarrant/edgecliff/",
+    "destination": "/locations/texas/tarrant/edgecliff-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/karnes/karnes/",
+    "destination": "/locations/texas/karnes/karnes-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/chambers/beach/",
+    "destination": "/locations/texas/chambers/beach-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/piney-point/",
+    "destination": "/locations/texas/harris/piney-point-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/tarrant/westworth/",
+    "destination": "/locations/texas/tarrant/westworth-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/montgomery/panorama/",
+    "destination": "/locations/texas/montgomery/panorama-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/harris/hedwig/",
+    "destination": "/locations/texas/harris/hedwig-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/blanco/johnson/",
+    "destination": "/locations/texas/blanco/johnson-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/montgomery/patton/",
+    "destination": "/locations/texas/montgomery/patton-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/archer/archer/",
+    "destination": "/locations/texas/archer/archer-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/brazoria/brookside/",
+    "destination": "/locations/texas/brazoria/brookside-village/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/hunt/wolfe/",
+    "destination": "/locations/texas/hunt/wolfe-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/cass/queen/",
+    "destination": "/locations/texas/cass/queen-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/archer/lakeside/",
+    "destination": "/locations/texas/archer/lakeside-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/upshur/ore/",
+    "destination": "/locations/texas/upshur/ore-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/sterling/sterling/",
+    "destination": "/locations/texas/sterling/sterling-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/texas/knox/knox/",
+    "destination": "/locations/texas/knox/knox-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/salt-lake/salt-lake/",
+    "destination": "/locations/utah/salt-lake/salt-lake-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/salt-lake/west-valley/",
+    "destination": "/locations/utah/salt-lake/west-valley-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/iron/cedar/",
+    "destination": "/locations/utah/iron/cedar-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/box-elder/brigham/",
+    "destination": "/locations/utah/box-elder/brigham-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/weber/plain/",
+    "destination": "/locations/utah/weber/plain-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/summit/park/",
+    "destination": "/locations/utah/summit/park-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/utah/sanpete/spring/",
+    "destination": "/locations/utah/sanpete/spring-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/virginia/frederick/stephens/",
+    "destination": "/locations/virginia/frederick/stephens-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/virginia/mecklenburg/chase/",
+    "destination": "/locations/virginia/mecklenburg/chase-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/virginia/scott/gate/",
+    "destination": "/locations/virginia/scott/gate-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/virginia/scott/weber/",
+    "destination": "/locations/virginia/scott/weber-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/washington/benton/benton/",
+    "destination": "/locations/washington/benton/benton-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/washington/grant/royal/",
+    "destination": "/locations/washington/grant/royal-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/west-virginia/jefferson/charles/",
+    "destination": "/locations/west-virginia/jefferson/charles-town/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/west-virginia/wetzel/paden/",
+    "destination": "/locations/west-virginia/wetzel/paden-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/west-virginia/monongalia/star/",
+    "destination": "/locations/west-virginia/monongalia/star-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/sauk/sauk/",
+    "destination": "/locations/wisconsin/sauk/sauk-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/walworth/genoa/",
+    "destination": "/locations/wisconsin/walworth/genoa-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/grant/cuba/",
+    "destination": "/locations/wisconsin/grant/cuba-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/marathon/marathon/",
+    "destination": "/locations/wisconsin/marathon/marathon-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/st-croix/glenwood/",
+    "destination": "/locations/wisconsin/st-croix/glenwood-city/",
+    "permanent": true
+  },
+  {
+    "source": "/locations/wisconsin/buffalo/buffalo/",
+    "destination": "/locations/wisconsin/buffalo/buffalo-city/",
+    "permanent": true
+  }
+]

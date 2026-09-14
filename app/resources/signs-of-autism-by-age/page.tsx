@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 /**
@@ -161,6 +162,39 @@ const breadcrumbJsonLd = {
   ],
 };
 
+const related = [
+  {
+    href: "/autism-evaluation/m-chat/",
+    label: "The M-CHAT screener",
+    note: "The screening questionnaire most pediatricians use at 18 and 24 months.",
+  },
+  {
+    href: "/autism-evaluation/",
+    label: "Getting an evaluation",
+    note: "What to do once you've noticed something, in the order that actually works.",
+  },
+  {
+    href: "/resources/autism-levels/",
+    label: "Autism levels 1, 2 and 3",
+    note: "What the level on a diagnostic report means — and the four things it doesn't.",
+  },
+  {
+    href: "/find-a-diagnostician/",
+    label: "Find a diagnostician",
+    note: "Developmental pediatricians, psychologists, and how to get seen sooner.",
+  },
+  {
+    href: "/services/early-intervention/",
+    label: "Early intervention",
+    note: "Why under-three is the window everyone talks about, and what it involves.",
+  },
+  {
+    href: "/resources/autism-resources-for-parents/",
+    label: "Autism resources for parents",
+    note: "Free evaluation routes that need no diagnosis and no referral.",
+  },
+];
+
 export default function SignsByAgePage() {
   return (
     <>
@@ -314,6 +348,7 @@ export default function SignsByAgePage() {
           <CallCta className="btn btn-marigold shrink-0" fallbackLabel="Talk to a person" />
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

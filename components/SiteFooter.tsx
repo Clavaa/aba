@@ -6,6 +6,10 @@ import { siteConfig } from "@/site.config";
 import { strings } from "@/lib/i18n";
 import CallCta from "@/components/CallCta";
 import Logo from "@/components/Logo";
+import FooterSitemap, {
+  type FooterGroup,
+  type FooterLink,
+} from "@/components/FooterSitemap";
 
 /**
  * Teal footer band: coral tagline headline left, link columns right,
@@ -20,8 +24,19 @@ const SOCIALS = [
   { label: "YouTube", d: "M20.6 8.5a2.2 2.2 0 0 0-1.6-1.6C17.6 6.5 12 6.5 12 6.5s-5.6 0-7 .4A2.2 2.2 0 0 0 3.4 8.5 23 23 0 0 0 3 12a23 23 0 0 0 .4 3.5 2.2 2.2 0 0 0 1.6 1.6c1.4.4 7 .4 7 .4s5.6 0 7-.4a2.2 2.2 0 0 0 1.6-1.6A23 23 0 0 0 21 12a23 23 0 0 0-.4-3.5zM10.3 14.6V9.4l4.5 2.6z" },
 ];
 
-export default function SiteFooter() {
-  const t = strings(usePathname());
+export default function SiteFooter({
+  sitemapGroups = [],
+  sitemapStates = [],
+}: {
+  sitemapGroups?: FooterGroup[];
+  sitemapStates?: FooterLink[];
+}) {
+  const pathname = usePathname();
+  const t = strings(pathname);
+  /* The sitemap band is English-only; the Spanish mirror is four pages and
+     mixing languages in one nav helps nobody. */
+  const showSitemap =
+    !pathname.startsWith("/es") && sitemapGroups.length > 0;
   const year = new Date().getFullYear();
 
   const columns = [
@@ -41,6 +56,11 @@ export default function SiteFooter() {
   return (
     <footer className="bg-teal-80 text-ink">
       <div className="mx-auto max-w-[1400px] px-4 pb-8 pt-16">
+        {showSitemap && (
+          <div className="mb-14">
+            <FooterSitemap groups={sitemapGroups} states={sitemapStates} />
+          </div>
+        )}
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
           <div>
             <Logo markClass="h-11 w-11" textClass="text-[1.5rem]" />

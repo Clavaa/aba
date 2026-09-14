@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 export const metadata: Metadata = {
@@ -108,6 +109,39 @@ const breadcrumbJsonLd = {
     },
   ],
 };
+
+const related = [
+  {
+    href: "/resources/what-is-aba/",
+    label: "What is ABA therapy?",
+    note: "The whole field, of which DTT is one teaching method.",
+  },
+  {
+    href: "/resources/positive-reinforcement/",
+    label: "Positive reinforcement",
+    note: "What makes a reinforcer work, and why yours stopped working.",
+  },
+  {
+    href: "/resources/aba-therapy-examples/",
+    label: "ABA therapy examples",
+    note: "Prompting, chaining and shaping, shown in ordinary moments.",
+  },
+  {
+    href: "/resources/autism-therapy-types/",
+    label: "Types of autism therapy",
+    note: "How ABA sits beside speech, OT and developmental approaches.",
+  },
+  {
+    href: "/services/in-home/",
+    label: "In-home ABA therapy",
+    note: "What a session looks like when it happens in your kitchen.",
+  },
+  {
+    href: "/faq/",
+    label: "Questions families ask",
+    note: "Hours, prior authorization, referrals and what a session looks like.",
+  },
+];
 
 export default function DttPage() {
   return (
@@ -282,6 +316,7 @@ export default function DttPage() {
           <Accordion items={faq} defaultOpen={-1} />
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

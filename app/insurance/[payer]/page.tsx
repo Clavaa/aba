@@ -37,7 +37,54 @@ export default async function PayerPage(props: {
   const others = payers.filter((p) => p.slug !== payer.slug);
   const states = getStateLinks();
 
-  const faqItems: AccordionItem[] = payer.faqs.map((f) => ({
+  /* Brand names people type differently from how the payer writes them.
+     "UnitedHealthcare" is one word on the card and two in the search box;
+     Anthem plans are Blue Cross licensees and families use the names
+     interchangeably. Saying both keeps the page findable either way. */
+  const ALSO_CALLED: Record<string, string> = {
+    unitedhealthcare: "United Healthcare, UHC or United",
+    "blue-cross-blue-shield": "BCBS, Anthem, or your state's Blue plan",
+    tricare: "TriCare or military insurance",
+  };
+  const alsoCalled = ALSO_CALLED[payer.slug];
+
+  /* Written the way people actually type the brand, which is often not how
+     the payer writes it on the card. */
+  const ALIAS_FAQ: Record<string, { q: string; a: string }> = {
+    unitedhealthcare: {
+      q: "Does United Healthcare cover ABA therapy?",
+      a: "Yes — and United Healthcare, UnitedHealthcare and UHC are all the same insurer, written three ways. Coverage for medically necessary ABA is standard across its commercial plans, but the plan document decides, not the brand: a self-funded employer plan administered by United can exclude ABA outright, and its Medicaid and Medicare Advantage lines follow different rules again. Send us the member ID and we will read your actual benefit.",
+    },
+    "blue-cross-blue-shield": {
+      q: "What is Blue Cross Blue Shield ABA therapy coverage like?",
+      a: "Blue Cross Blue Shield is a federation of independent companies rather than one insurer, so Blue Cross Blue Shield ABA therapy coverage genuinely differs by state and by plan — and Anthem autism coverage, Highmark, Premera and the other Blue licensees each set their own medical policy. What is consistent: a current diagnostic evaluation and prior authorization are required almost everywhere. What is not: visit limits, age limits and whether your specific plan is self-funded and therefore outside the state mandate.",
+    },
+    tricare: {
+      q: "How does TRICARE cover ABA therapy?",
+      a: "TRICARE covers ABA through the Autism Care Demonstration, which is a separate programme with its own rules rather than an ordinary benefit — it requires a diagnosis from an approved provider type, referral and authorization, and periodic outcome measures that other payers do not ask for. The requirements are also revised more often than most. Finding ABA therapy that accepts TRICARE means finding a provider who is authorized under that demonstration specifically.",
+    },
+  };
+  const aliasFaq = ALIAS_FAQ[payer.slug];
+
+  /* The question forms families actually type, phrased per payer.
+     Answers stay coverage-mechanics only — we never claim network status. */
+  const coverageFaqs = [
+    {
+      q: `Does ${payer.name} cover ABA therapy?`,
+      a: `${alsoCalled ? `Also written as ${alsoCalled}. ` : ""}${payer.name} plans generally cover medically necessary ABA for an autism diagnosis, but "${payer.name}" is not one policy — it is hundreds of separate plans, and a self-funded employer plan sets its own rules regardless of what the state mandates. What decides your coverage is your specific plan document, whether a current diagnostic evaluation is on file, and whether prior authorization has been approved. Send us your member ID and we will read the actual benefit rather than guess from the logo on the card.`,
+    },
+    {
+      q: `How do I find ABA therapy that accepts ${payer.name}?`,
+      a: `Ask two questions of any provider, in this order: do you bill ${payer.name}, and have you billed my specific plan before? ${payer.name} ABA therapy claims run through plan-level rules, not brand-level ones, so a provider who bills one ${payer.name} plan routinely can still be out of network on another. We will check your exact plan before you commit to anything, and tell you if the answer is no.`,
+    },
+    {
+      q: `What should I check about ${payer.name} autism coverage before starting?`,
+      a: `Four things, in this order: that the plan covers ABA at all and is not a self-funded plan that excludes it; that your child's diagnostic evaluation meets the plan's recency requirement; what the prior authorization asks for and how long it takes; and what you owe after the plan pays — deductible, coinsurance and any visit limit. Getting the authorization right the first time is usually the difference between starting in weeks and starting in months.`,
+    },
+  ];
+  const allFaqs = [...coverageFaqs, ...(aliasFaq ? [aliasFaq] : []), ...payer.faqs];
+
+  const faqItems: AccordionItem[] = allFaqs.map((f) => ({
     title: f.q,
     body: <p>{f.a}</p>,
   }));
@@ -46,7 +93,7 @@ export default async function PayerPage(props: {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${url}#faq`,
-    mainEntity: payer.faqs.map((f) => ({
+    mainEntity: allFaqs.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },

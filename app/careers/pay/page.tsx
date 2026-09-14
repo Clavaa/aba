@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { payBands, hasPayData } from "@/lib/careers";
+import { getStateLinks } from "@/lib/states";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 /**
@@ -155,6 +157,44 @@ const faq: AccordionItem[] = [
       </p>
     ),
   },
+  {
+    title: "Are there entry level ABA jobs with no experience?",
+    body: (
+      <>
+        <p>
+          Yes &mdash; entry level ABA jobs are the normal way into this field.
+          A behavior technician role asks for a high-school diploma, being 18,
+          and a background check. No degree, no prior ABA experience, and no
+          certification before you start: employers run the 40-hour training
+          and the competency assessment during onboarding, because the
+          assessment requires a qualified assessor you would struggle to find
+          on your own.
+        </p>
+        <p className="mt-3">
+          If you are searching &ldquo;RBT jobs no experience&rdquo; and finding
+          postings that demand two years of it, those are usually agencies
+          filtering for people already certified. Ask directly whether training
+          is provided &mdash; plenty of employers, us included, would rather
+          train you than compete for the same certified candidates.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Are part time RBT jobs realistic?",
+    body: (
+      <p>
+        Very &mdash; part time RBT jobs are the majority of this workforce,
+        because sessions cluster after school and in the early evening. That
+        suits students and second-job schedules well. The caution is the
+        benefits threshold: part-time hours often sit just under the line that
+        qualifies you for health insurance and paid time off, and a schedule
+        that drops below it after a cancellation can cost you more than the
+        hours were worth. Ask what the threshold is and how reliably your
+        schedule clears it before you accept.
+      </p>
+    ),
+  },
 ];
 
 const faqJsonLd = {
@@ -195,6 +235,39 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 2, name: "How pay works", item: url },
   ],
 };
+
+const related = [
+  {
+    href: "/careers/rbt/",
+    label: "Become an RBT",
+    note: "No degree, certified in weeks — the full path explained.",
+  },
+  {
+    href: "/careers/rbt/certification/",
+    label: "RBT certification",
+    note: "The 40 hours, the competency assessment and the exam, in order.",
+  },
+  {
+    href: "/careers/bcba/",
+    label: "BCBA careers",
+    note: "Requirements, fieldwork hours and what the role actually involves.",
+  },
+  {
+    href: "/careers/bcba/supervision/",
+    label: "BCBA supervision",
+    note: "How fieldwork hours get accrued and signed off here.",
+  },
+  {
+    href: "/careers/openings/",
+    label: "Open roles",
+    note: "Where we're hiring, and how to apply in about five minutes.",
+  },
+  {
+    href: "/careers/",
+    label: "Work with us",
+    note: "How we run caseloads, scheduling and supervision.",
+  },
+];
 
 export default function CareersPayPage() {
   const rbtBands = payBands.filter((b) => b.role === "RBT");
@@ -415,6 +488,32 @@ export default function CareersPayPage() {
         </div>
       </section>
 
+      {/* ───────────────── PAY BY STATE ───────────────── */}
+      <section
+        className="mx-auto max-w-6xl px-4 pb-14 sm:pb-20"
+        aria-labelledby="pay-states-heading"
+      >
+        <h2 id="pay-states-heading" className="display display-h2">
+          RBT salary by state
+        </h2>
+        <p className="mt-3 max-w-2xl text-lg text-spruce-soft">
+          Each state page carries the one figure we can actually source: what
+          that state&rsquo;s Medicaid programme pays per hour for
+          technician-delivered ABA, which is the ceiling every employer there
+          prices wages under &mdash; plus where the state ranks against the
+          others that publish a rate.
+        </p>
+        <ul className="mt-8 flex flex-wrap gap-2">
+          {getStateLinks().map((st) => (
+            <li key={st.slug}>
+              <Link href={`/careers/pay/${st.slug}/`} className="chip">
+                {st.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       {/* ───────────────── FAQ ───────────────── */}
       <section
         className="mx-auto max-w-6xl px-4 pb-14 sm:pb-20"
@@ -444,6 +543,7 @@ export default function CareersPayPage() {
           </Link>
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

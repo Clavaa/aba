@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 import TriageTrio from "@/components/TriageTrio";
 
@@ -154,6 +155,39 @@ const breadcrumbJsonLd = {
     { "@type": "ListItem", position: 2, name: "What is ABA therapy?", item: url },
   ],
 };
+
+const related = [
+  {
+    href: "/resources/autism-therapy-types/",
+    label: "Types of autism therapy",
+    note: "How ABA compares with speech, OT and developmental approaches — including the ones we don't provide.",
+  },
+  {
+    href: "/resources/positive-reinforcement/",
+    label: "Positive reinforcement",
+    note: "The term everyone uses and most people define wrongly, including some practitioners.",
+  },
+  {
+    href: "/resources/aba-therapy-examples/",
+    label: "ABA therapy examples",
+    note: "Eight techniques you'll see named in a treatment plan, each shown in an ordinary family moment.",
+  },
+  {
+    href: "/resources/discrete-trial-training/",
+    label: "Discrete trial training",
+    note: "The table-and-cards image of ABA: what it's good at, and its three fair criticisms.",
+  },
+  {
+    href: "/cost-of-aba-therapy/",
+    label: "What ABA costs",
+    note: "Published Medicaid rates by state, and why the numbers online look so enormous.",
+  },
+  {
+    href: "/getting-started/",
+    label: "Check your coverage",
+    note: "Tell us your plan and address, and we'll say what's actually available.",
+  },
+];
 
 export default function WhatIsAbaPage() {
   return (
@@ -386,6 +420,7 @@ export default function WhatIsAbaPage() {
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:pb-24">
         <TriageTrio />
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

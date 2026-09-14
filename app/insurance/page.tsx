@@ -113,6 +113,43 @@ export default function InsurancePage() {
       </section>
 
       {/* ─────────────── PLANS WALL ─────────────── */}
+      {/* ───────────── MEDICARE vs MEDICAID ───────────── */}
+      <section
+        className="mx-auto max-w-6xl px-4 py-10"
+        aria-labelledby="medicare-heading"
+      >
+        <h2 id="medicare-heading" className="display display-h2">
+          Does Medicare cover ABA therapy?
+        </h2>
+        <p className="mt-4 max-w-3xl text-lg text-spruce-soft">
+          For a child, almost never &mdash; and the reason is who Medicare is
+          for, not what it thinks of ABA. Medicare covers people 65 and over,
+          and younger people who qualify through long-term disability benefits
+          or end-stage renal disease. Very few children are enrolled. If you
+          are searching this because your child needs ABA,{" "}
+          <strong className="text-ink">Medicaid is almost certainly the
+          programme you mean</strong> &mdash; it is the one that covers
+          medically necessary ABA for eligible children in every state, under
+          the federal EPSDT requirement.
+        </p>
+        <p className="mt-4 max-w-3xl text-lg text-spruce-soft">
+          Put plainly: Medicare autism coverage is a question about adults,
+          and Medicaid autism coverage is the one that matters for a child.
+          The two names get confused constantly, and it costs families weeks.
+          A child can also be eligible for Medicaid on their own disability in
+          many states regardless of household income, which surprises people
+          who assumed they earned too much to apply.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link href="/cost-of-aba-therapy/" className="btn btn-outline">
+            What Medicaid covers in your state
+          </Link>
+          <Link href="/getting-started/" className="btn btn-primary">
+            Check your coverage
+          </Link>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="plans-heading">
         <div className="field-card bg-mint p-6 sm:p-10">
           <div className="flex items-end justify-between gap-4">

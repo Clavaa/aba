@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const faq: AccordionItem[] = [
   {
-    title: "Can I take the M-CHAT online by myself?",
+    title: "Can I take the M-CHAT test online by myself?",
     body: (
       <p>
         The questionnaire is published by its authors and free for clinical,
@@ -104,7 +104,7 @@ const faqJsonLd = {
   "@id": `${url}#faq`,
   mainEntity: [
     {
-      q: "Can I take the M-CHAT online by myself?",
+      q: "Can I take the M-CHAT test online by myself?",
       a: "The questionnaire is published free for clinical, research and educational use, but its value comes from the structured Follow-Up interview and clinician judgment. A web form that returns a result and a sales pitch is not running the instrument as designed.",
     },
     {

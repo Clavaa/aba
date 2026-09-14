@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import JsonLd from "@/components/JsonLd";
+import RelatedLinks from "@/components/RelatedLinks";
 import FeatureStrip from "@/components/FeatureStrip";
 import ImageSlot from "@/components/ImageSlot";
 import CallCta from "@/components/CallCta";
@@ -57,6 +58,39 @@ const EXAMPLES = [
     term: "Generalisation",
     moment: "The skill that only works at the table",
     body: "A child who names colours perfectly in a session and never at the supermarket hasn't finished learning them. Good programs deliberately practise a skill in new rooms, with new people and new objects — otherwise you've taught a trick, not a skill.",
+  },
+];
+
+const related = [
+  {
+    href: "/resources/positive-reinforcement/",
+    label: "Positive reinforcement",
+    note: "The mechanism underneath most of these examples.",
+  },
+  {
+    href: "/resources/discrete-trial-training/",
+    label: "Discrete trial training",
+    note: "The structured end of the teaching spectrum, in four parts.",
+  },
+  {
+    href: "/resources/what-is-aba/",
+    label: "What is ABA therapy?",
+    note: "The core idea, the evidence, and the criticism answered plainly.",
+  },
+  {
+    href: "/services/in-home/",
+    label: "In-home ABA therapy",
+    note: "Where most of these examples actually happen.",
+  },
+  {
+    href: "/resources/autism-therapy-types/",
+    label: "Types of autism therapy",
+    note: "What else belongs in the week alongside ABA.",
+  },
+  {
+    href: "/getting-started/",
+    label: "Check your coverage",
+    note: "What's available for your address and plan.",
   },
 ];
 
@@ -147,6 +181,7 @@ export default function AbaExamplesPage() {
           />
         </div>
       </section>
+      <RelatedLinks links={related} />
     </>
   );
 }

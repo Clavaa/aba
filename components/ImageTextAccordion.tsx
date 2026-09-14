@@ -87,16 +87,16 @@ export default function ImageTextAccordion({
                       </span>
                     </button>
                   </h3>
-                  {isOpen && (
-                    <div
-                      id={panelId}
-                      role="region"
-                      aria-labelledby={btnId}
-                      className="pb-7 text-lg text-ink-muted"
-                    >
-                      {p.body}
-                    </div>
-                  )}
+                  {/* Always rendered, hidden when closed — see Accordion.tsx. */}
+                  <div
+                    id={panelId}
+                    role="region"
+                    aria-labelledby={btnId}
+                    hidden={!isOpen}
+                    className="pb-7 text-lg text-ink-muted"
+                  >
+                    {p.body}
+                  </div>
                 </div>
               );
             })}
