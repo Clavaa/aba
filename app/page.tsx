@@ -424,8 +424,8 @@ export default function HomePage() {
               </p>
             ),
             photoIntent: "Clinician showing a parent a strategy in a doorway, child playing beyond",
-            photo: "/photos/blocks-close.jpg",
-            photoAlt: "A behavior technician and a young boy building a block tower together on a living-room rug, both mid-laugh",
+            photo: "/photos/doorway-coaching.jpg",
+            photoAlt: "A behavior technician and a mother talking warmly in a living-room doorway while a young boy plays with blocks behind them",
           },
         ]}
         cta={{ href: "/services/", label: "Learn all about ABA" }}
@@ -478,8 +478,8 @@ export default function HomePage() {
             title: "What is ABA therapy?",
             body: "The core idea in one example — and the criticism of ABA, answered without defensiveness.",
             photoIntent: "Parent and child reading together on a sunlit couch",
-            photo: "/photos/porch-golden-hour.jpg",
-            photoAlt: "A mother and her young son laughing together on a sunlit porch",
+            photo: "/photos/reading-couch.jpg",
+            photoAlt: "A mother and her young son sitting close on a sunlit couch reading a picture book together",
           },
           {
             href: "/resources/autism-levels/",
@@ -487,8 +487,8 @@ export default function HomePage() {
             title: "Autism levels 1, 2 and 3",
             body: "Why there are really two levels, not one, and the four things the number doesn't tell you.",
             photoIntent: "Close-up of a parent's hands holding an evaluation report",
-            photo: "/photos/progress-graph.jpg",
-            photoAlt: "A BCBA at a kitchen table showing a parent a rising progress chart on a laptop",
+            photo: "/photos/evaluation-report.jpg",
+            photoAlt: "A parent's hands holding a printed clinical evaluation report at a kitchen table in morning light",
           },
           {
             href: "/resources/signs-of-autism-by-age/",
@@ -505,8 +505,8 @@ export default function HomePage() {
             title: "How ABA pay actually works",
             body: "Why two jobs at the same hourly rate pay thousands apart over a year.",
             photoIntent: "RBT walking to a car with a session bag, early morning light",
-            photo: "/photos/matching-game.jpg",
-            photoAlt: "A behavior technician and a young girl doing a picture-matching puzzle at a low table",
+            photo: "/photos/session-bag.jpg",
+            photoAlt: "A behavior technician in a navy polo walking to her car in early morning light, carrying a tote of picture books and wooden blocks",
           },
         ]}
         cta={{ href: "/resources/", label: "All parent guides" }}
