@@ -5,6 +5,7 @@ Traffic report for sproutwellaba.com.
     tools/traffic.sh            # today
     tools/traffic.sh 2          # last 2 days
     tools/traffic.sh 7 --bots   # last week, plus crawler activity
+    tools/traffic.sh 1 --internal  # include your own flagged visits
 
 Humans only by default. "Human" means: the user-agent wasn't recognised as a
 bot AND the visit wasn't flagged internal (visit any page once with
@@ -60,10 +61,16 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     days = int(args[0]) if args else 1
     show_bots = "--bots" in sys.argv
+    # --internal keeps your own flagged visits in, which is how you check that
+    # a visit of yours actually registered.
+    if "--internal" in sys.argv or "--all" in sys.argv:
+        global HUMAN
+        HUMAN = "NOT is_bot"
     window = f"ts >= TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL {days * 24} HOUR)"
     label = "last 24 hours" if days == 1 else f"last {days} days"
 
-    print(f"\n\033[1msproutwellaba.com — {label}\033[0m   (humans only, internal excluded)")
+    scope = "humans only, internal included" if HUMAN == "NOT is_bot" else "humans only, internal excluded"
+    print(f"\n\033[1msproutwellaba.com — {label}\033[0m   ({scope})")
 
     tot = bq(f"""
       SELECT
@@ -92,8 +99,8 @@ def main():
 
     rule("Where they came from")
     for r in bq(f"""
-      SELECT source_group AS g, COUNT(DISTINCT visitor) AS v, COUNTIF(kind='view') AS pv
-      FROM {T} WHERE {window} AND {HUMAN}
+      SELECT source_group AS g, COUNT(DISTINCT visitor) AS v, COUNT(*) AS pv
+      FROM {T} WHERE {window} AND {HUMAN} AND kind='view'
       GROUP BY g ORDER BY v DESC
     """):
         share = n(r["v"]) / v * 100 if v else 0
@@ -102,7 +109,7 @@ def main():
 
     ref = bq(f"""
       SELECT referrer_host AS h, COUNT(DISTINCT visitor) AS v
-      FROM {T} WHERE {window} AND {HUMAN} AND referrer_host IS NOT NULL
+      FROM {T} WHERE {window} AND {HUMAN} AND kind='view' AND referrer_host IS NOT NULL
       GROUP BY h ORDER BY v DESC LIMIT 12
     """)
     if ref:
