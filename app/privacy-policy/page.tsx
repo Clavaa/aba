@@ -79,9 +79,11 @@ export default function PrivacyPolicyPage() {
               Form submissions are delivered to our intake inbox through an
               email service provider. Our hosting provider processes ordinary
               web-server request data in the course of serving these pages.
-              {/* TODO(legal): name the processors (email provider, host,
-                  analytics if any is ever added) and confirm the contractual
-                  basis for each before publishing. */}
+              The visit counts described above are stored in our own cloud
+              project; the cloud provider holds them on our behalf as a
+              processor and does not receive them as an advertising signal.
+              {/* TODO(legal): name each processor explicitly and confirm the
+                  contractual basis before this page is reviewed by counsel. */}
             </p>
           </section>
 
@@ -89,9 +91,25 @@ export default function PrivacyPolicyPage() {
             <h2 className="display display-h3 text-ink">Tracking</h2>
             <p className="mt-3">
               This site does not run advertising trackers or third-party
-              analytics. Some pages remember small preferences in your
-              browser&rsquo;s own storage; that information stays on your
-              device.
+              analytics, and nothing here is shared with an ad network. Some
+              pages remember small preferences in your browser&rsquo;s own
+              storage; that information stays on your device.
+            </p>
+            <p className="mt-3">
+              We do count visits, using our own software rather than a third
+              party&rsquo;s. When you open a page we record which page it was,
+              roughly how long it stayed on your screen, how far down it you
+              scrolled, which site or search engine you arrived from, your
+              device type, and the country and region your connection reports.
+              No cookie is set for this.
+            </p>
+            <p className="mt-3">
+              We do not store your IP address. It is combined with your
+              browser&rsquo;s user-agent string and a secret value that changes
+              every day, then turned into a one-way code. That lets us count
+              how many separate people visited on a given day, and makes it
+              impossible for us to recognise you tomorrow or to work backwards
+              to your address. None of it is linked to a form you submit.
             </p>
           </section>
 

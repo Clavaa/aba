@@ -8,6 +8,8 @@ import SiteFooter from "@/components/SiteFooter";
 import FooterSignup from "@/components/FooterSignup";
 import StickyCallBar from "@/components/StickyCallBar";
 import JsonLd from "@/components/JsonLd";
+import Analytics from "@/components/Analytics";
+import { Suspense } from "react";
 import type { FooterGroup, FooterLink } from "@/components/FooterSitemap";
 import { getStateLinks } from "@/lib/states";
 import { payers } from "@/lib/payers";
@@ -151,6 +153,11 @@ export default function RootLayout({
         <FooterSignup />
         <SiteFooter sitemapGroups={footerGroups} sitemapStates={footerStates} />
         <StickyCallBar />
+        {/* useSearchParams needs a boundary or every page opts out of static
+            rendering. The beacon renders nothing, so the fallback is null. */}
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
