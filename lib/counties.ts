@@ -175,6 +175,30 @@ export function getNeighborCounties(
 /* Display helpers                                                     */
 /* ------------------------------------------------------------------ */
 
+/**
+ * Title-safe short form of a place name.
+ *
+ * Official Census names blow past Google's ~60-char title limit on their own:
+ * "Lower Connecticut River Valley Planning Region",
+ * "Louisville/Jefferson County metro government", "Prince of Wales-Hyder
+ * Census Area". Body copy keeps the full official name — this is only for
+ * <title>, where a truncated name helps nobody.
+ */
+export function shortPlaceName(name: string): string {
+  let n = name
+    .replace(/\s+Planning Region$/i, "")
+    .replace(/\s+Census Area$/i, "")
+    .replace(/\s+(?:metro(?:politan)?|consolidated|unified)\s+government$/i, "")
+    .replace(/\s+City and Borough$/i, "")
+    // The state abbreviation already supplies the context, so the generic
+    // geography suffix is dead weight in a <title>.
+    .replace(/\s+(?:County|Parish|Borough|Municipality)$/i, "")
+    .trim();
+  // "Louisville/Jefferson County" → "Louisville"
+  if (n.includes("/")) n = n.split("/")[0].trim();
+  return n;
+}
+
 /** "664,744" */
 export function formatPop(pop: number): string {
   return pop.toLocaleString("en-US");

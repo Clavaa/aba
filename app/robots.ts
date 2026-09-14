@@ -14,6 +14,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: [{ userAgent: "*", allow: "/", disallow: ["/api/"] }],
     // Root sitemap (core + cost pages) plus one location shard per state.
     sitemap: [
+      // Index first — one submission covers all 52.
+      `${base}/sitemap-index.xml`,
       `${base}/sitemap.xml`,
       ...getAllStates().map(
         (s) => `${base}/locations/sitemap/${s.slug}.xml`

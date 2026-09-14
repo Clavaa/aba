@@ -9,7 +9,7 @@ import FeatureStrip from "@/components/FeatureStrip";
 import Sprout from "@/components/Sprout";
 
 export const metadata: Metadata = {
-  title: "ABA Therapy Services — At Home, At School, In Daycare, Online",
+  title: "ABA Therapy Services for Children",
   description:
     "In-home, school-based, daycare, telehealth, and early intervention ABA — what each setting is good at, what it costs you, and how to pick.",
   alternates: { canonical: "/services/" },

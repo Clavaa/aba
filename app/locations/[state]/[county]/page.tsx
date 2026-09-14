@@ -11,6 +11,7 @@ import {
   getCounty,
   getNeighborCounties,
   medicaidProgramName,
+  shortPlaceName,
   type CountyRecord,
   type CountySize,
 } from "@/lib/counties";
@@ -126,7 +127,7 @@ export async function generateMetadata({
   const state = getState(stateSlug);
   const county = getCounty(stateSlug, countySlug);
   if (!state || !county) return {};
-  const title = `ABA Therapy in ${county.name}, ${county.stateAbbrev}`;
+  const title = `ABA Therapy in ${shortPlaceName(county.name)}, ${county.stateAbbrev}`;
   const description = descriptionFor(county, state, countySize(county.pop));
   const canonical = `/locations/${state.slug}/${county.slug}/`;
   return {
@@ -161,6 +162,10 @@ export default async function CountyPage({
 
   /* ---------------- FAQ (rendered + FAQPage JSON-LD) ---------------- */
   const faqs: { q: string; a: string }[] = [
+    {
+      q: `Is there ABA therapy near me in ${county.name}?`,
+      a: `Yes. We work with families throughout ${county.name}, and sessions happen where your child already is — at home, at school, in daycare, or over video. So "near me" here means a clinician who comes to your address, not a centre you commute to. Give us your ZIP code and we'll tell you what's available near you.`,
+    },
     {
       q: `Does Medicaid cover ABA therapy in ${county.name}?`,
       a: `Yes. ${program} covers ABA statewide for eligible children — coverage doesn't change from county to county, so families in ${county.name} get the same benefit as anywhere else in ${state.name}. ${firstChunk(state.pathway, 200)}`,

@@ -7,9 +7,9 @@ import JsonLd from "@/components/JsonLd";
 import ScreenerQuiz from "@/components/ScreenerQuiz";
 
 export const metadata: Metadata = {
-  title: "Autism Signs Checklist for Parents (Free, 2 Minutes)",
+  title: "Autism Signs Checklist for Parents",
   description:
-    "Age-specific questions about what you're seeing at home, and a straight answer about what to do next. Not a diagnosis or a medical test — a decision aid for worried parents.",
+    "Age-specific questions about what you're seeing at home, and a straight answer on what to do next. Not a diagnosis — a decision aid for parents.",
   alternates: { canonical: "/autism-evaluation/screener/" },
 };
 

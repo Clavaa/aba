@@ -15,9 +15,9 @@ import TriageTrio from "@/components/TriageTrio";
  */
 
 export const metadata: Metadata = {
-  title: "What Is ABA Therapy? A Straight Answer for Parents",
+  title: "What Is ABA Therapy?",
   description:
-    "What applied behavior analysis actually is, what a session looks like, what the evidence says, how modern ABA differs from its history, and the criticism — answered honestly.",
+    "What applied behavior analysis is, what a session looks like, what the evidence supports — and the criticism of ABA, answered honestly.",
   alternates: {
     canonical: "/resources/what-is-aba/",
     languages: { en: "/resources/what-is-aba/", es: "/es/terapia-aba/" },
@@ -170,7 +170,7 @@ export default function WhatIsAbaPage() {
         aria-labelledby="core-heading"
       >
         <h2 id="core-heading" className="display display-h2">
-          The core idea, in one example
+          What applied behavior analysis is, in one example
         </h2>
         <div className="mt-5 space-y-4 text-lg text-spruce-soft">
           <p>
@@ -254,7 +254,7 @@ export default function WhatIsAbaPage() {
         aria-labelledby="evidence-heading"
       >
         <h2 id="evidence-heading" className="display display-h2">
-          What the evidence actually supports
+          What the evidence for applied behavior analysis supports
         </h2>
         <div className="mt-5 space-y-4 text-lg text-spruce-soft">
           <p>

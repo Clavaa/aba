@@ -15,9 +15,9 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
  */
 
 export const metadata: Metadata = {
-  title: "Autism Levels 1, 2 and 3: What They Actually Mean",
+  title: "Autism Levels 1, 2 and 3 Explained",
   description:
-    "What level 1, level 2, and level 3 autism mean, why your child can be two levels at once, whether the level can change, and what it does and doesn't decide about services.",
+    "What level 1, 2 and 3 autism mean, why a child can be two levels at once, whether the level changes, and what it does not decide about services.",
   alternates: { canonical: "/resources/autism-levels/" },
 };
 
@@ -225,7 +225,7 @@ export default function AutismLevelsPage() {
       {/* ───────────────── THE THREE LEVELS ───────────────── */}
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="levels-heading">
         <h2 id="levels-heading" className="display display-h2">
-          The three levels
+          Autism levels 1, 2 and 3, side by side
         </h2>
         <div className="mt-8 space-y-4">
           {levels.map((l) => (
@@ -267,7 +267,7 @@ export default function AutismLevelsPage() {
       >
         <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
           <h2 id="not-heading" className="display display-h2">
-            What the level does not tell you
+            What your autism level does not tell you
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {[

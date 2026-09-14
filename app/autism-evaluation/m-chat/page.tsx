@@ -21,9 +21,9 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
  */
 
 export const metadata: Metadata = {
-  title: "The M-CHAT Explained: What the Score Actually Means",
+  title: "The M-CHAT Explained",
   description:
-    "What the M-CHAT-R/F is, which ages it's for, how the three scoring bands work, why the Follow-Up interview matters, and what a positive screen does and doesn't mean.",
+    "What the M-CHAT-R/F is, which ages it covers, how the three scoring bands work, and what a positive screen does and doesn't mean.",
   alternates: { canonical: "/autism-evaluation/m-chat/" },
 };
 

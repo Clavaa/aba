@@ -15,7 +15,7 @@ import Sprout from "@/components/Sprout";
  */
 
 export const metadata: Metadata = {
-  title: "Terapia ABA para Niños con Autismo | En los 50 Estados",
+  title: "Terapia ABA para Niños con Autismo",
   description:
     "Terapia ABA para niños con autismo — en casa, en un centro, en la escuela o en línea. Cubierta por Medicaid y la mayoría de los seguros en los 50 estados.",
   alternates: {

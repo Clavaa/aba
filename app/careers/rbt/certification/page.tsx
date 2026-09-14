@@ -15,9 +15,9 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
  */
 
 export const metadata: Metadata = {
-  title: "RBT Certification: Every Requirement, Step by Step",
+  title: "RBT Certification: Every Requirement",
   description:
-    "How to get RBT certified: the six requirements, the 40-hour training, the competency assessment, the exam, what it costs, how long it takes, and the annual renewal.",
+    "How to get RBT certified: the six requirements, the 40-hour training, the competency assessment, the exam, and the annual renewal.",
   alternates: { canonical: "/careers/rbt/certification/" },
 };
 
@@ -278,7 +278,7 @@ export default function RbtCertificationPage() {
         aria-labelledby="req-heading"
       >
         <h2 id="req-heading" className="display display-h2">
-          The six requirements
+          How to become an RBT: the six requirements
         </h2>
         <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {requirements.map((r, i) => {

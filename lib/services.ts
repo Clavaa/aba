@@ -119,7 +119,7 @@ export const services: ServiceRecord[] = [
     navLabel: "In school",
     title: "School-Based ABA Therapy & IEP Support",
     metaDescription:
-      "School-based ABA: how district IEP services differ from private ABA in the classroom, when insurance covers school hours, and how to get the two to work together.",
+      "School-based ABA: how district IEP services differ from private ABA in the classroom, and when insurance covers school hours.",
     h1: "The hardest six hours of the day shouldn't be the ones nobody's watching.",
     lede:
       "If the plan works at home and falls apart at school, the plan isn't finished. School-based support puts ABA where the trouble actually happens — and gets the adults in that building working from the same page.",
@@ -337,7 +337,7 @@ export const services: ServiceRecord[] = [
     navLabel: "Early intervention",
     title: "Early Intervention ABA for Toddlers",
     metaDescription:
-      "Early intervention ABA for toddlers and preschoolers: play-based teaching, heavy parent coaching, how Part C differs from insurance-funded ABA, and what to do while you wait.",
+      "Early intervention ABA for toddlers: play-based teaching, parent coaching, and how Part C differs from insurance-funded ABA.",
     h1: "The years when you're most worried are the years that count most.",
     lede:
       "Early ABA for toddlers looks like play, because for a two-year-old play is how learning happens. Underneath it is a plan, and almost all of it is aimed at one thing first: communication.",

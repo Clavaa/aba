@@ -160,7 +160,7 @@ export const payers: PayerRecord[] = [
     name: "Cigna",
     title: "Does Cigna Cover ABA Therapy?",
     metaDescription:
-      "How Cigna plans generally cover ABA therapy for autism, why behavioral health runs through Evernorth, what prior authorization requires, and the self-funded plan trap.",
+      "How Cigna covers ABA therapy for autism, why behavioral health runs through Evernorth, and the self-funded plan trap.",
     h1: "Does Cigna cover ABA therapy?",
     lede:
       "Generally yes with a documented diagnosis and authorization. As with most large carriers, behavioral health is administered separately — and as always, whether your employer self-funds changes which rules apply.",
@@ -213,9 +213,9 @@ export const payers: PayerRecord[] = [
   {
     slug: "blue-cross-blue-shield",
     name: "Blue Cross Blue Shield",
-    title: "Does Blue Cross Blue Shield Cover ABA Therapy?",
+    title: "Does Blue Cross Cover ABA Therapy?",
     metaDescription:
-      "Why 'does Blue Cross cover ABA' has no single answer: independent state licensees, BlueCard for out-of-state care, the federal employee program, and self-funded plans.",
+      "Why 'does Blue Cross cover ABA' has no single answer: independent state licensees, BlueCard, and self-funded employer plans.",
     h1: "Does Blue Cross Blue Shield cover ABA therapy?",
     lede:
       "This is the payer where the honest answer is genuinely “it depends,” and not as a dodge. Blue Cross Blue Shield is dozens of independent companies, each with its own policies in its own states.",
@@ -269,7 +269,7 @@ export const payers: PayerRecord[] = [
     name: "TRICARE",
     title: "Does TRICARE Cover ABA Therapy?",
     metaDescription:
-      "How TRICARE covers ABA through the Autism Care Demonstration: the referral and diagnosis requirements, required outcome measures, and how it differs from commercial insurance.",
+      "How TRICARE covers ABA through its autism program: referral and diagnosis requirements, required outcome measures, and what differs from commercial plans.",
     h1: "Does TRICARE cover ABA therapy?",
     lede:
       "Yes — and through a program that works unlike any commercial plan. Military families get ABA through a dedicated demonstration program with its own referral path, its own paperwork, and its own required assessments.",
@@ -373,7 +373,7 @@ export const payers: PayerRecord[] = [
     name: "Humana",
     title: "Does Humana Cover ABA Therapy?",
     metaDescription:
-      "How Humana plans generally handle ABA therapy for autism: published medical policy, prior authorization, differences between commercial, Medicaid and Medicare plans.",
+      "How Humana handles ABA therapy for autism: published medical policy, prior authorization, and how commercial and Medicaid plans differ.",
     h1: "Does Humana cover ABA therapy?",
     lede:
       "For plans that include the benefit, generally yes with a diagnosis and prior authorization. The bigger question with Humana is usually which kind of plan you actually have.",

@@ -117,7 +117,7 @@ export default function BcbaPage() {
         aria-labelledby="bcba-salary-heading"
       >
         <h2 id="bcba-salary-heading" className="display display-h2">
-          The honest BCBA salary guide
+          BCBA salary: the honest guide
         </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <div className="field-card bg-mint p-6 sm:p-8">

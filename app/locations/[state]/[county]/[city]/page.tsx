@@ -7,6 +7,7 @@ import {
   approxPop,
   formatPop,
   medicaidProgramName,
+  shortPlaceName,
   type CountyRecord,
 } from "@/lib/counties";
 import {
@@ -134,9 +135,7 @@ function countyContext(city: CityRecord): string {
 
 function metaDescription(city: CityRecord, state: StateRecord, reach: Reach): string {
   const program = medicaidProgramName(state);
-  const base = `ABA therapy for children in ${city.name}, ${city.stateAbbrev} (pop. ${formatPop(
-    city.pop
-  )})`;
+  const base = `ABA therapy near you in ${city.name}, ${city.stateAbbrev}`;
   switch (reach) {
     case "in-hub":
       return `${base} — at home, at school, in daycare or online. How ${program} and private plans cover it.`;
@@ -158,6 +157,10 @@ function cityFaqs(
 ): { q: string; a: string }[] {
   const program = medicaidProgramName(state);
   const out: { q: string; a: string }[] = [
+    {
+      q: `Is there ABA therapy near me in ${city.name}?`,
+      a: `Yes. We work with families in ${city.name} and across ${county.name}, and because sessions happen in your home, at your child's school or daycare, or over video, "near me" here means a clinician who travels to your address rather than a building you drive to. Tell us your ZIP code and we'll say what's open near you right now.`,
+    },
     {
       q: `Do you serve families in ${city.name}?`,
       a: `Yes — ${city.name} is in ${county.name}, and we work with families across ${state.name}. What varies is which settings can reach a specific address and how quickly. One conversation tells you what's actually open for you right now instead of a general promise.`,
@@ -210,7 +213,7 @@ export async function generateMetadata({
   if (!state || !city) return {};
 
   return {
-    title: `ABA Therapy in ${city.name}, ${city.stateAbbrev}`,
+    title: `ABA Therapy in ${shortPlaceName(city.name)}, ${city.stateAbbrev}`,
     description: metaDescription(city, state, reachFor(city)),
     alternates: {
       canonical: `/locations/${state.slug}/${city.county.slug}/${city.slug}/`,

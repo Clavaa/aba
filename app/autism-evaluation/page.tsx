@@ -8,9 +8,9 @@ import ImageSlot from "@/components/ImageSlot";
 import Sprout from "@/components/Sprout";
 
 export const metadata: Metadata = {
-  title: "Autism Evaluation: How to Get One, and What Happens",
+  title: "Autism Evaluation: How to Get One",
   description:
-    "How an autism evaluation actually works: who can diagnose, the two free referrals you can make yourself today, what to bring, how long the wait is, and what comes after.",
+    "How an autism evaluation works: who can diagnose, the two free referrals you can make yourself today, what to bring, and how long the wait is.",
   alternates: { canonical: "/autism-evaluation/" },
 };
 

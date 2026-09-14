@@ -5,9 +5,9 @@ import JsonLd from "@/components/JsonLd";
 import Accordion, { type AccordionItem } from "@/components/Accordion";
 
 export const metadata: Metadata = {
-  title: "Discrete Trial Training (DTT), Explained for Parents",
+  title: "DTT vs Natural Environment Teaching",
   description:
-    "What discrete trial training is, the four parts of a trial, how it differs from natural environment teaching, when each is the right tool, and the fair criticisms of DTT.",
+    "Discrete trial training vs natural environment teaching: the four parts of a trial, when each method is right, and the fair criticisms of DTT.",
   alternates: { canonical: "/resources/discrete-trial-training/" },
 };
 
@@ -192,7 +192,7 @@ export default function DttPage() {
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="net-heading">
         <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
           <h2 id="net-heading" className="display display-h2">
-            DTT and natural environment teaching
+            Natural environment teaching vs discrete trial training
           </h2>
           <p className="mt-3 max-w-3xl text-lg text-spruce-soft">
             The other main method teaches inside play and daily routines,

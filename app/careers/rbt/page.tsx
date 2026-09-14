@@ -120,7 +120,7 @@ export default function RbtPage() {
         aria-labelledby="cert-heading"
       >
         <h2 id="cert-heading" className="display display-h2">
-          RBT certification in four steps
+          Registered Behavior Technician certification in four steps
         </h2>
         <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {[
@@ -161,7 +161,7 @@ export default function RbtPage() {
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="salary-heading">
         <div className="field-card bg-butter p-6 sm:p-10">
           <h2 id="salary-heading" className="display display-h2">
-            How RBT pay works
+            RBT salary: how the pay actually works
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             <div className="rounded-3xl bg-white/80 p-6">

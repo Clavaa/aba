@@ -19,7 +19,7 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
 export const metadata: Metadata = {
   title: "BCBA Supervised Fieldwork Hours, Explained",
   description:
-    "How supervised fieldwork toward BCBA certification works: the hour totals, restricted vs unrestricted activities, supervision contacts, and what to ask an employer before you sign.",
+    "How BCBA supervised fieldwork works: hour totals, restricted vs unrestricted activities, supervision contacts, and what to ask an employer first.",
   alternates: { canonical: "/careers/bcba/supervision/" },
 };
 

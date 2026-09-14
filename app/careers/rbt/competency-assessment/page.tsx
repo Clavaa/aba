@@ -16,7 +16,7 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
 export const metadata: Metadata = {
   title: "The RBT Competency Assessment, Explained",
   description:
-    "What the RBT Initial Competency Assessment covers, who can administer it, how it's scored, what to expect on the day, and how the annual renewal assessment differs.",
+    "What the RBT Initial Competency Assessment covers, who can administer it, what to expect on the day, and how the annual renewal differs.",
   alternates: { canonical: "/careers/rbt/competency-assessment/" },
 };
 
@@ -193,7 +193,7 @@ export default function CompetencyAssessmentPage() {
         aria-labelledby="domains-heading"
       >
         <h2 id="domains-heading" className="display display-h2">
-          What you&rsquo;ll be asked to show
+          What the RBT competency assessment covers
         </h2>
         <p className="mt-3 max-w-2xl text-lg text-spruce-soft">
           The assessment follows the board&rsquo;s task list, so nothing on it

@@ -11,7 +11,7 @@ import ImageTextSection from "@/components/ImageTextSection";
 export const metadata: Metadata = {
   title: "Find Someone Who Can Diagnose Autism",
   description:
-    "Who can actually diagnose autism, how to find one near you, what to say when you call, how long the wait really is, and the two free evaluations you can request yourself.",
+    "Who can diagnose autism, how to find one near you, what to say when you call, and the two free evaluations you can request yourself today.",
   alternates: { canonical: "/find-a-diagnostician/" },
 };
 
