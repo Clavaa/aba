@@ -86,7 +86,7 @@ export default function OpeningsPage() {
             / Open roles
           </nav>
           <h1 className="display display-hero mt-3 max-w-4xl">
-            Behavior technician jobs, in all 50 states.
+            Behavior technician and ABA therapist jobs, in all 50 states.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-spruce-soft">
             We hire behavior technicians, RBTs, and BCBAs. If you&rsquo;re

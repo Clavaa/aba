@@ -164,7 +164,7 @@ export default async function CountyPage({
   const faqs: { q: string; a: string }[] = [
     {
       q: `Is there ABA therapy near me in ${county.name}?`,
-      a: `Yes. We work with families throughout ${county.name}, and sessions happen where your child already is — at home, at school, in daycare, or over video. So "near me" here means a clinician who comes to your address, not a centre you commute to. Give us your ZIP code and we'll tell you what's available near you.`,
+      a: `Yes. Whether you're searching for an ABA therapist near me, ABA services near me, or a BCBA near me, in ${county.name} it works the same way: sessions happen where your child already is — at home, at school, in daycare, or over video. So "near me" means a clinician who comes to your address, not a centre you commute to. Give us your ZIP code and we'll tell you what's available near you.`,
     },
     {
       q: `Does Medicaid cover ABA therapy in ${county.name}?`,

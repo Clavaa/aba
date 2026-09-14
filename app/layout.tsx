@@ -31,9 +31,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: siteConfig.brand.name,
     type: "website",
+    // Flat path on purpose — see app/og.png/route.tsx.
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.brand.tagline }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
+    images: ["/og.png"],
   },
   // Provisional host → keep it out of the index until the real domain is live.
   ...(isProvisionalHost

@@ -2,28 +2,28 @@ import { ImageResponse } from "next/og";
 import { siteConfig } from "@/site.config";
 
 /**
- * Default social card for every route.
+ * Social card for every page, served at /og.png.
  *
- * Until now no page on the site emitted og:image, so all 13,550 URLs shared
- * as a bare text card. A segment-level opengraph-image is inherited by every
- * nested route, so this one file covers the whole site; individual segments
- * can still override it.
+ * Deliberately NOT Next's app/opengraph-image convention: that generates
+ * /opengraph-image, and this project sets trailingSlash: true, so the URL in
+ * the meta tag 308-redirects to /opengraph-image/. Most social crawlers follow
+ * that, but a redirect is one more thing between a shared link and a preview.
+ * Paths carrying a file extension are exempt from the trailing-slash rewrite —
+ * the same reason /sitemap.xml serves directly — so this one is flat.
  *
- * Drawn rather than photographed: a photo of somebody's child is the wrong
- * thing to attach to an arbitrary shared link, and the brand mark travels
- * better at thumbnail size anyway.
+ * Drawn rather than photographed: attaching a photo of somebody's child to an
+ * arbitrary shared link is the wrong instinct, and a mark reads better at
+ * thumbnail size anyway.
  */
 
-export const alt = `${siteConfig.brand.name} — ABA therapy for children in all 50 states`;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const dynamic = "force-static";
 
 const CORAL = "#F04E23";
 const INK = "#16303A";
 const CREAM = "#FFF9F2";
 const TEAL = "#DFF0EE";
 
-export default function OgImage() {
+export function GET() {
   return new ImageResponse(
     (
       <div
@@ -37,7 +37,6 @@ export default function OgImage() {
           padding: 72,
         }}
       >
-        {/* soft field block, echoing the site's pastel sections */}
         <div
           style={{
             position: "absolute",
@@ -51,24 +50,8 @@ export default function OgImage() {
         />
 
         <div style={{ display: "flex", alignItems: "center", gap: 18, zIndex: 1 }}>
-          <div
-            style={{
-              width: 56,
-              height: 56,
-              borderRadius: 9999,
-              background: CORAL,
-              display: "flex",
-            }}
-          />
-          <div
-            style={{
-              display: "flex",
-              fontSize: 34,
-              fontWeight: 800,
-              color: INK,
-              letterSpacing: -0.5,
-            }}
-          >
+          <div style={{ width: 56, height: 56, borderRadius: 9999, background: CORAL, display: "flex" }} />
+          <div style={{ display: "flex", fontSize: 34, fontWeight: 800, color: INK, letterSpacing: -0.5 }}>
             <span>{siteConfig.brand.shortName}</span>
             <span style={{ color: CORAL, marginLeft: 8 }}>ABA</span>
           </div>
@@ -113,6 +96,6 @@ export default function OgImage() {
         </div>
       </div>
     ),
-    size
+    { width: 1200, height: 630 }
   );
 }

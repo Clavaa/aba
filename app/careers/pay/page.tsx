@@ -15,15 +15,86 @@ import Accordion, { type AccordionItem } from "@/components/Accordion";
  */
 
 export const metadata: Metadata = {
-  title: "RBT & BCBA Pay: How the Number Actually Works",
+  title: "RBT Salary & ABA Therapist Pay, Explained",
   description:
-    "Why the hourly rate in an ABA job ad isn't what you take home: billable vs paid hours, cancellations, drive time, and how to compare two offers properly.",
+    "How much do RBTs make? Why the hourly rate in an ABA job ad isn't what you take home — billable vs paid hours, cancellations, and comparing two offers.",
   alternates: { canonical: "/careers/pay/" },
 };
 
 const url = `${siteConfig.brand.domain}/careers/pay/`;
 
 const faq: AccordionItem[] = [
+  {
+    title: "How much do RBTs make?",
+    body: (
+      <>
+        <p>
+          We don&rsquo;t publish a national RBT salary figure, and you should
+          be sceptical of sites that do. Most of those numbers are scraped from
+          self-reported aggregator data, mixed across roles, settings and
+          years — which is why two sites can be $8 an hour apart about the same
+          job.
+        </p>
+        <p className="mt-3">
+          What we can tell you is which number actually decides your income,
+          and it isn&rsquo;t the hourly rate: it&rsquo;s{" "}
+          <strong className="text-ink">how many hours you get paid for</strong>.
+          Two jobs advertising the same rate can differ by thousands a year on
+          guaranteed hours, paid drive time, paid documentation, and whether
+          your schedule clears the benefits threshold. Ask us and we&rsquo;ll
+          give you a real range for your market on the spot.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "What is the RBT salary per hour?",
+    body: (
+      <p>
+        It varies by state and metro more than by anything else, then by
+        experience, setting and hours mix. Rather than quote a national average
+        that fits nobody, we&rsquo;ll quote your market directly — and the more
+        useful comparison is annual take-home after cancellations, unpaid gaps
+        and the benefits threshold, not the number in the advert.
+      </p>
+    ),
+  },
+  {
+    title: "Does RBT salary differ by state — Texas, California, Florida, Georgia?",
+    body: (
+      <p>
+        Yes, substantially, and cost of living only explains part of it. State
+        Medicaid reimbursement rates for ABA differ a great deal, and what a
+        payer reimburses sets the ceiling on what an employer can pay. Our{" "}
+        <Link
+          href="/cost-of-aba-therapy/"
+          className="font-semibold text-coral underline underline-offset-4"
+        >
+          cost-by-state pages
+        </Link>{" "}
+        publish each state&rsquo;s actual published reimbursement where it
+        exists — that is the number underneath local pay.
+      </p>
+    ),
+  },
+  {
+    title: "ABA therapist salary: what does an ABA therapist earn compared with a BCBA?",
+    body: (
+      <p>
+        A large step, which is the point. RBT is the entry credential; BCBA is
+        a master&rsquo;s-level one, and it is the biggest income change most
+        people in this field ever see. That is why an employer&rsquo;s{" "}
+        <Link
+          href="/careers/bcba/supervision/"
+          className="font-semibold text-coral underline underline-offset-4"
+        >
+          supervision structure
+        </Link>{" "}
+        is a compensation question rather than a perk — getting there a year
+        sooner dwarfs a dollar an hour today.
+      </p>
+    ),
+  },
   {
     title: "Why is ABA pay quoted hourly instead of as a salary?",
     body: (

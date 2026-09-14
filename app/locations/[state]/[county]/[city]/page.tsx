@@ -159,7 +159,7 @@ function cityFaqs(
   const out: { q: string; a: string }[] = [
     {
       q: `Is there ABA therapy near me in ${city.name}?`,
-      a: `Yes. We work with families in ${city.name} and across ${county.name}, and because sessions happen in your home, at your child's school or daycare, or over video, "near me" here means a clinician who travels to your address rather than a building you drive to. Tell us your ZIP code and we'll say what's open near you right now.`,
+      a: `Yes. If you're searching for an ABA therapist near me, ABA services near me, or a BCBA near me in ${city.name}, this is what that looks like here: sessions happen in your home, at your child's school or daycare, or over video, so "near me" means a clinician who travels to your address rather than a building you drive to. Tell us your ZIP code and we'll say what's open near you right now.`,
     },
     {
       q: `Do you serve families in ${city.name}?`,

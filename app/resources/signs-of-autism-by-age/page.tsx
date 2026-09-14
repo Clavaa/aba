@@ -34,7 +34,7 @@ const ages = [
     note: "At this age the picture is often subtle, and one item on its own means very little. What clinicians look for is a pattern across several.",
   },
   {
-    age: "Around 18 months",
+    age: "Signs of autism in an 18 month old",
     tint: "bg-butter",
     signs: [
       "No pointing to show you things — pointing to ask is different from pointing to share",

@@ -192,7 +192,7 @@ export default function DttPage() {
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="net-heading">
         <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
           <h2 id="net-heading" className="display display-h2">
-            Natural environment teaching vs discrete trial training
+            Natural environment teaching in ABA vs discrete trial training
           </h2>
           <p className="mt-3 max-w-3xl text-lg text-spruce-soft">
             The other main method teaches inside play and daily routines,
