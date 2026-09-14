@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/site.config";
 import { openings } from "@/lib/careers";
+import { getJobCities } from "@/lib/jobcities";
 import CallCta from "@/components/CallCta";
 import JsonLd from "@/components/JsonLd";
 
@@ -212,6 +213,25 @@ export default function OpeningsPage() {
             </div>
           </>
         )}
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-10" aria-labelledby="by-city">
+        <h2 id="by-city" className="display display-h3">
+          Behavior technician jobs by city
+        </h2>
+        <p className="mt-3 max-w-2xl text-ink-muted">
+          The markets we hire in most. Each page covers what the role looks
+          like locally and how that state licenses behavior analysts.
+        </p>
+        <ul className="mt-6 flex flex-wrap gap-2">
+          {getJobCities(40).map((c) => (
+            <li key={c.jobSlug}>
+              <Link href={`/careers/jobs/${c.jobSlug}/`} className="chip">
+                {c.name}, {c.stateAbbrev}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:pb-24">

@@ -3,6 +3,7 @@ import { siteConfig } from "@/site.config";
 import { getAllStates } from "@/lib/states";
 import { services } from "@/lib/services";
 import { payers } from "@/lib/payers";
+import { getJobCities } from "@/lib/jobcities";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.brand.domain;
@@ -147,11 +148,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const jobCityPages: MetadataRoute.Sitemap = getJobCities(150).map((c) => ({
+    url: `${base}/careers/jobs/${c.jobSlug}/`,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
     url: `${base}/services/${s.slug}/`,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  return [...staticPages, ...servicePages, ...payerPages, ...costPages];
+  return [
+    ...staticPages,
+    ...servicePages,
+    ...payerPages,
+    ...costPages,
+    ...jobCityPages,
+  ];
 }
