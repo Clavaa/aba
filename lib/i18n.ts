@@ -92,6 +92,7 @@ export const STRINGS: Record<Lang, Strings> = {
           { href: "/resources/what-is-aba/", label: "What is ABA?", note: "Including the criticism" },
           { href: "/resources/autism-levels/", label: "Autism levels 1, 2, 3", note: "What the report means" },
           { href: "/resources/signs-of-autism-by-age/", label: "Signs by age", note: "12 months to teens" },
+          { href: "/resources/aba-therapy-examples/", label: "ABA therapy examples", note: "What the techniques look like" },
           { href: "/autism-evaluation/", label: "Getting an evaluation", note: "Three doors, two of them free" },
           { href: "/autism-evaluation/screener/", label: "Parent checklist", note: "Two minutes, no signup" },
           { href: "/find-a-diagnostician/", label: "Find a diagnostician", note: "Who can actually diagnose" },

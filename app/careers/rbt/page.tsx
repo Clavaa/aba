@@ -13,6 +13,29 @@ export const metadata: Metadata = {
 
 const faq: AccordionItem[] = [
   {
+    title: "What is an RBT?",
+    body: (
+      <p>
+        A Registered Behavior Technician is the certified front-line role in
+        ABA. You work one-on-one with a child, running the teaching programs a
+        BCBA designed and collecting the data that steers them. It is the
+        entry point to the field: no degree required, certification in weeks.
+      </p>
+    ),
+  },
+  {
+    title: "RBT vs BCBA — what's the difference?",
+    body: (
+      <p>
+        An RBT delivers the therapy; a BCBA designs and owns it. The BCBA holds
+        a master&rsquo;s degree, assesses the child, writes the treatment plan
+        and supervises the RBTs running it. RBT is a certification you can earn
+        in weeks; BCBA takes graduate coursework plus supervised fieldwork —
+        and RBT hours can count toward it.
+      </p>
+    ),
+  },
+  {
     title: "Do I need a college degree to become an RBT?",
     body: (
       <p>

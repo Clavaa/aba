@@ -212,7 +212,7 @@ export default function DttPage() {
             </div>
             <div className="field-card bg-butter p-6 sm:p-8">
               <h3 className="display display-h3">
-                Natural environment teaching is better at
+                Natural environment teaching in ABA is better at
               </h3>
               <ul className="mt-3 space-y-2 text-spruce-soft">
                 <li>· Skills actually showing up in real life</li>

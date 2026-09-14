@@ -160,7 +160,7 @@ export default function MChatPage() {
         aria-labelledby="what-heading"
       >
         <h2 id="what-heading" className="display display-h2">
-          What it is
+          What the M-CHAT screening is
         </h2>
         <div className="mt-5 space-y-4 text-lg text-spruce-soft">
           <p>

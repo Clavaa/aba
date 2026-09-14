@@ -64,6 +64,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${base}/resources/aba-therapy-for-adhd/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/resources/aba-therapy-examples/`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${base}/resources/discrete-trial-training/`,
       changeFrequency: "monthly",
       priority: 0.7,

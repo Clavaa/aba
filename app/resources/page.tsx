@@ -32,6 +32,18 @@ const guides = [
     tint: "bg-peach",
   },
   {
+    href: "/resources/aba-therapy-examples/",
+    t: "ABA therapy examples",
+    d: "Eight techniques you'll hear named in a treatment plan — reinforcement, prompting, chaining, shaping — each shown in an ordinary family moment.",
+    tint: "bg-peach-100",
+  },
+  {
+    href: "/resources/aba-therapy-for-adhd/",
+    t: "ABA therapy for ADHD",
+    d: "The methods help; the funding usually doesn't follow. What the evidence supports, and what to ask for instead.",
+    tint: "bg-beige-80",
+  },
+  {
     href: "/resources/discrete-trial-training/",
     t: "Discrete trial training",
     d: "The four parts of a trial, how DTT differs from teaching in the natural environment, and six things to watch for as a parent.",

@@ -28,6 +28,30 @@ const url = `${siteConfig.brand.domain}/resources/what-is-aba/`;
 
 const faq: AccordionItem[] = [
   {
+    title: "What is applied behavior analysis?",
+    body: (
+      <p>
+        Applied behavior analysis is the study of how behaviour is learned, and
+        the use of that to teach skills. It starts from the idea that children
+        do things for a reason: find what a behaviour accomplishes, teach a
+        better way to accomplish the same thing, then measure whether it
+        worked. &ldquo;ABA therapy&rdquo; is that approach applied to autism
+        support, which is where insurance and public funding sit.
+      </p>
+    ),
+  },
+  {
+    title: "How long does ABA therapy last?",
+    body: (
+      <p>
+        Months for a focused program targeting a few specific skills, years for
+        a comprehensive early-childhood one. A good program is always working
+        toward needing less of itself, and should be able to tell you its
+        discharge criteria on day one.
+      </p>
+    ),
+  },
+  {
     title: "Is ABA only for autistic children?",
     body: (
       <p>

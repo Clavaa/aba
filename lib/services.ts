@@ -385,6 +385,10 @@ export const services: ServiceRecord[] = [
       "Two systems serve young children and it's worth knowing both. Every state runs an early intervention program for children under three under Part C of federal special-education law — usually free or income-based, and it generally does not require an autism diagnosis. Insurance-funded ABA is separate: it's a medical service that usually does require a diagnosis, and it continues past a child's third birthday when Part C ends. Many families use Part C while they wait for a diagnostic evaluation, then move into ABA.",
     faqs: [
       {
+        q: "What is early intervention?",
+        a: "Early intervention is the support a child receives in the years before they start school, when routines are still forming. It covers two separate systems: your state's free Part C program for children under three, and insurance-funded ABA, which usually requires a diagnosis and continues past a child's third birthday. Many families use both.",
+      },
+      {
         q: "Is my child too young for ABA?",
         a: "Programs commonly serve toddlers and preschoolers, and starting early is generally supported by the research. The practical gate is usually the diagnosis and the authorization, not the birthday.",
       },

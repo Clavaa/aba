@@ -37,7 +37,7 @@ const requirements = [
     d: "A standard criminal background check, dated within the last 180 days when you apply. Employers usually run their own on top of it.",
   },
   {
-    t: "Finish a 40-hour training",
+    t: "Finish the RBT 40-hour training",
     d: "Based on the board's RBT Task List and delivered by a qualified trainer. It has to be completed inside a set window — don't start it a year before you plan to apply.",
   },
   {
@@ -311,7 +311,7 @@ export default function RbtCertificationPage() {
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="stuck-heading">
         <div className="field-card bg-white p-6 shadow-lift ring-2 ring-spruce/10 sm:p-10">
           <h2 id="stuck-heading" className="display display-h2">
-            The three places people actually get stuck
+            RBT training: the three places people get stuck
           </h2>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <div className="field-card bg-peach p-6">

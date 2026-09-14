@@ -13,7 +13,18 @@ export const metadata: Metadata = {
 
 const faq: AccordionItem[] = [
   {
-    title: "What does it take to become a BCBA?",
+    title: "What is a BCBA?",
+    body: (
+      <p>
+        A Board Certified Behavior Analyst is the clinician who owns a
+        child&rsquo;s ABA program: they assess, write the treatment plan, train
+        and supervise the technicians delivering it, read the data and change
+        what isn&rsquo;t working. It is a master&rsquo;s-level credential.
+      </p>
+    ),
+  },
+  {
+    title: "How to become a BCBA",
     body: (
       <p>
         A qualifying graduate degree, behavior-analytic coursework that meets

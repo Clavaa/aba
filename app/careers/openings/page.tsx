@@ -15,9 +15,9 @@ import JsonLd from "@/components/JsonLd";
  */
 
 export const metadata: Metadata = {
-  title: "Open RBT & BCBA Roles",
+  title: "Behavior Technician, RBT & BCBA Jobs",
   description:
-    "Current openings for RBTs, behavior technicians, and BCBAs — and how to apply when the role you want isn't listed yet.",
+    "Behavior technician, RBT and BCBA jobs across all 50 states — what we hire for, and how to apply when the role you want isn't listed yet.",
   alternates: { canonical: "/careers/openings/" },
 };
 
@@ -85,7 +85,7 @@ export default function OpeningsPage() {
             / Open roles
           </nav>
           <h1 className="display display-hero mt-3 max-w-4xl">
-            Open roles, in all 50 states.
+            Behavior technician jobs, in all 50 states.
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-spruce-soft">
             We hire behavior technicians, RBTs, and BCBAs. If you&rsquo;re
