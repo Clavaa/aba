@@ -16,7 +16,23 @@ const nextConfig: NextConfig = {
    * the corrected ones. See cleanPlaceName() in lib/cities.ts.
    */
   async redirects() {
-    return cityRedirects;
+    return [
+      /**
+       * One hostname, not two. Both www and the apex were serving 200, and
+       * Search Console shows Google indexing URLs under both — the canonical
+       * tag pointed at the apex from either host, which limits the damage,
+       * but a 301 removes the ambiguity instead of relying on Google to
+       * resolve it. Kept here rather than in the Vercel dashboard so it is
+       * reviewable and travels with the code.
+       */
+      {
+        source: "/:path*",
+        has: [{ type: "host" as const, value: "www.sproutwellaba.com" }],
+        destination: "https://sproutwellaba.com/:path*",
+        permanent: true,
+      },
+      ...cityRedirects,
+    ];
   },
 };
 

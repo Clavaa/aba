@@ -135,7 +135,7 @@ def main():
       FROM {T} WHERE {window} AND {HUMAN}
       GROUP BY path ORDER BY views DESC LIMIT 25
     """):
-        print(f"  {n(r['views']):>4} visit {n(r['visitors']):>4} ppl  {dur(r['med']):>7}  {n(r['scr']):>3}% scroll  {r['path'][:44]}")
+        print(f"  {n(r['views']):>4} visit {n(r['visitors']):>4} ppl  {dur(r['med']):>7}  {n(r['scr']):>3}% scroll  {r['path'][:58]}")
 
     ent = bq(f"""
       SELECT path, COUNT(DISTINCT visitor) AS v
