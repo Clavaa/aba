@@ -152,6 +152,8 @@ def main():
         for r in ent:
             print(f"  {n(r['v']):>5}  {r['path'][:62]}")
 
+    lwindow = window.replace("ts >=", "l.ts >=", 1)
+    lhuman = HUMAN.replace("is_bot", "l.is_bot").replace("is_internal", "l.is_internal")
     lead_rows = bq(f"""
       SELECT l.ts AS ts, l.path AS path, IFNULL(l.form,'?') AS form,
              IFNULL(j.landed, l.path) AS landed,
@@ -164,7 +166,7 @@ def main():
                ARRAY_AGG(source_group ORDER BY ts LIMIT 1)[OFFSET(0)] AS src
         FROM {T} WHERE kind='view' GROUP BY session
       ) j ON j.session = l.session
-      WHERE l.kind='lead' AND {window.replace('ts','l.ts')} AND NOT l.is_bot AND NOT l.is_internal
+      WHERE l.kind='lead' AND {lwindow} AND {lhuman}
       ORDER BY l.ts DESC LIMIT 25
     """)
     if lead_rows:
