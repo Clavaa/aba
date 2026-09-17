@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import CallCta from "@/components/CallCta";
+import { trackLead } from "@/lib/track";
 
 /**
  * Parent developmental checklist — OUR OWN plain-language items.
@@ -326,6 +327,7 @@ export default function ScreenerQuiz({
           source: "autism-screener",
         }),
       });
+      if (res.ok) trackLead("screener");
       setStatus(res.ok ? "done" : "error");
     } catch {
       setStatus("error");

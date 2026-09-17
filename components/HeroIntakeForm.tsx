@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CallCta from "@/components/CallCta";
+import { trackLead } from "@/lib/track";
 
 /**
  * The white intake card that floats in the hero on the target's service
@@ -50,6 +51,7 @@ export default function HeroIntakeForm({
           source: "hero-intake",
         }),
       });
+      if (res.ok) trackLead("hero-intake");
       setStatus(res.ok ? "done" : "error");
     } catch {
       setStatus("error");

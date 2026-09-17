@@ -12,9 +12,9 @@ import {
 /**
  * Traffic beacon receiver.
  *
- * Two event kinds arrive here: a "view" when a page loads, and a "leave" when
- * the tab is hidden or unloaded, carrying how long the page was actually
- * visible. Dwell time is the one number a server log physically cannot give
+ * Three event kinds arrive here: a "view" when a page loads, a "leave" when
+ * the tab is hidden or unloaded carrying how long the page was actually
+ * visible, and a "lead" when one of the forms submits successfully. Dwell time is the one number a server log physically cannot give
  * you, which is why this is a beacon and not middleware.
  *
  * Rows go straight to BigQuery (sproutwell-aba-260907.traffic.events) via the
@@ -70,7 +70,8 @@ export async function POST(req: NextRequest) {
   const path = str(body.p, 300);
   if (!path || !path.startsWith("/")) return ok;
 
-  const kind = body.k === "leave" ? "leave" : "view";
+  const kind =
+    body.k === "leave" ? "leave" : body.k === "lead" ? "lead" : "view";
   const referrer = str(body.r, 500);
   const referrerHost = hostOf(referrer);
   const selfHost = hostOf(siteConfig.brand.domain) ?? "sproutwellaba.com";
@@ -111,6 +112,7 @@ export async function POST(req: NextRequest) {
     dwell_ms: kind === "leave" ? int(body.d, 6 * 60 * 60 * 1000) : null,
     scroll_pct: int(body.sc, 100),
     entry: body.e === true,
+    form: str(body.f, 60),
   };
 
   try {

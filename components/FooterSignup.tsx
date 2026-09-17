@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Sprout from "@/components/Sprout";
+import { trackLead } from "@/lib/track";
 
 /**
  * `footer-form` — the signup band above the footer proper. Name + email,
@@ -30,6 +31,7 @@ export default function FooterSignup() {
           source: "footer-signup",
         }),
       });
+      if (res.ok) trackLead("footer-signup");
       setStatus(res.ok ? "done" : "error");
     } catch {
       setStatus("error");

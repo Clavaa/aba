@@ -78,6 +78,7 @@ def main():
         COUNT(DISTINCT session) AS sessions,
         COUNTIF(kind='view')    AS views,
         COUNTIF(kind='leave')   AS leaves,
+        COUNTIF(kind='lead')    AS leads,
         APPROX_QUANTILES(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL), 2)[OFFSET(1)] AS med_dwell,
         AVG(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL)) AS avg_dwell,
         APPROX_QUANTILES(IF(kind='leave', scroll_pct, NULL), 2)[OFFSET(1)] AS med_scroll
@@ -101,6 +102,10 @@ def main():
         print(f"  \033[33m! {lv - pv} visit(s) recorded only on exit — the load beacon didn't arrive\033[0m")
     print(f"  Time on page      {dur(t.get('med_dwell')):>7}   median   ({dur(t.get('avg_dwell'))} mean)")
     print(f"  Scroll depth      {n(t.get('med_scroll')):>6}%   median")
+    leads = n(t.get("leads"))
+    if leads:
+        rate = leads / v * 100 if v else 0
+        print(f"  \033[32mLeads             {leads:>7,}   {rate:.1f}% of visitors\033[0m")
 
     rule("Where they came from")
     src = bq(f"""
@@ -146,6 +151,27 @@ def main():
         rule("Landing pages — where the visit started")
         for r in ent:
             print(f"  {n(r['v']):>5}  {r['path'][:62]}")
+
+    lead_rows = bq(f"""
+      SELECT l.ts AS ts, l.path AS path, IFNULL(l.form,'?') AS form,
+             IFNULL(j.landed, l.path) AS landed,
+             IFNULL(j.src, 'Unknown') AS src,
+             l.country AS c, l.device AS d
+      FROM {T} l
+      LEFT JOIN (
+        SELECT session,
+               ARRAY_AGG(path ORDER BY ts LIMIT 1)[OFFSET(0)] AS landed,
+               ARRAY_AGG(source_group ORDER BY ts LIMIT 1)[OFFSET(0)] AS src
+        FROM {T} WHERE kind='view' GROUP BY session
+      ) j ON j.session = l.session
+      WHERE l.kind='lead' AND {window.replace('ts','l.ts')} AND NOT l.is_bot AND NOT l.is_internal
+      ORDER BY l.ts DESC LIMIT 25
+    """)
+    if lead_rows:
+        rule("Leads — and what brought them")
+        for r in lead_rows:
+            print(f"  \033[32m{r['ts'][11:16]}\033[0m  {r['src']:<15} landed {str(r['landed'])[:40]:40s}")
+            print(f"         submitted the {r['form']} form on {str(r['path'])[:52]}")
 
     rule("Who and what")
     geo = bq(f"""

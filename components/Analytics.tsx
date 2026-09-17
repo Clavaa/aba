@@ -20,8 +20,7 @@ import { usePathname, useSearchParams } from "next/navigation";
    and every beacon would pay a redirect. The lead forms post to "/api/lead/"
    for the same reason. */
 const ENDPOINT = "/api/t/";
-const KEY_INTERNAL = "sw_internal";
-const KEY_SESSION = "sw_session";
+import { KEY_INTERNAL, KEY_SESSION } from "@/lib/track";
 
 function sessionId(): string {
   try {

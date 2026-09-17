@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CallCta from "@/components/CallCta";
+import { trackLead } from "@/lib/track";
 
 /**
  * Multi-step insurance-check quiz (Shared CRO spine: quiz funnels convert
@@ -150,6 +151,7 @@ export default function Quiz({
           source: lang === "es" ? "coverage-quiz-es" : "coverage-quiz",
         }),
       });
+      if (res.ok) trackLead("quiz");
       setStatus(res.ok ? "done" : "error");
     } catch {
       setStatus("error");
