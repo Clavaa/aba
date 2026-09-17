@@ -26,9 +26,18 @@ const nextConfig: NextConfig = {
        * reviewable and travels with the code.
        */
       {
-        source: "/:path*",
+        source: "/",
         has: [{ type: "host" as const, value: "www.sproutwellaba.com" }],
-        destination: "https://sproutwellaba.com/:path*",
+        destination: "https://sproutwellaba.com/",
+        permanent: true,
+      },
+      {
+        /* :path+ and an explicit trailing slash, because ":path*" drops the
+           slash and trailingSlash then adds a second hop — www/insurance/
+           was 308ing to /insurance and only then to /insurance/. */
+        source: "/:path+",
+        has: [{ type: "host" as const, value: "www.sproutwellaba.com" }],
+        destination: "https://sproutwellaba.com/:path+/",
         permanent: true,
       },
       ...cityRedirects,
