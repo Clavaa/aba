@@ -88,6 +88,7 @@ export default function Analytics() {
     sent.current = false;
 
     const base = {
+      nf: document.querySelector("[data-notfound]") !== null,
       p: pathname,
       s: session,
       i: internal,

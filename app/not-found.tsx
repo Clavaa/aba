@@ -10,6 +10,9 @@ import Sprout from "@/components/Sprout";
 export default function NotFound() {
   return (
     <>
+      {/* The beacon reads this to flag the hit as a 404, so broken links and
+          scanner probes don't read as pages someone chose to visit. */}
+      <div data-notfound="1" hidden />
       <section className="mx-auto max-w-6xl px-4 pt-6">
         <div className="field-card bg-butter p-6 text-center sm:p-10 lg:p-14">
           <Sprout className="mx-auto h-20 w-20 text-garden" />

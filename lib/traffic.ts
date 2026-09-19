@@ -44,6 +44,21 @@ export function classifyBot(ua: string): { isBot: boolean; name: string | null }
 }
 
 /** Where the visit came from, in the buckets a person actually asks about. */
+/**
+ * Paths that cannot exist on this site. Scanners send ordinary browser
+ * user-agents, so UA matching never catches them — but nothing here is
+ * written in PHP and there is no admin surface, so a request for
+ * /vdesk/urlfilter_blocked.php3 or /wp-login.php identifies itself by what it
+ * asked for. Four of these arrived from four countries in three minutes and
+ * were counted as human visitors until this existed.
+ */
+const PROBE_PATHS =
+  /\.(php\d?|asp|aspx|jsp|cgi|pl|sh|env|git|sql|bak|old|swp)$|^\/(vdesk|wp-|wordpress|admin|phpmyadmin|cgi-bin|\.env|\.git|\.well-known\/acme|remote|owa|autodiscover|actuator|solr|jenkins|boaform|hnap1|dana-na|cf_scripts)/i;
+
+export function isProbePath(path: string): boolean {
+  return PROBE_PATHS.test(path);
+}
+
 export function classifySource(
   referrerHost: string | null,
   utmMedium: string | null,

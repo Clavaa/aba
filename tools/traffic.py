@@ -137,7 +137,7 @@ def main():
              COUNT(DISTINCT visitor) AS visitors,
              APPROX_QUANTILES(IF(kind='leave' AND dwell_ms>0, dwell_ms, NULL), 2)[OFFSET(1)] AS med,
              APPROX_QUANTILES(IF(kind='leave', scroll_pct, NULL), 2)[OFFSET(1)] AS scr
-      FROM {T} WHERE {window} AND {HUMAN}
+      FROM {T} WHERE {window} AND {HUMAN} AND NOT IFNULL(not_found, FALSE)
       GROUP BY path ORDER BY views DESC LIMIT 25
     """):
         print(f"  {n(r['views']):>4} visit {n(r['visitors']):>4} ppl  {dur(r['med']):>7}  {n(r['scr']):>3}% scroll  {r['path'][:58]}")
@@ -174,6 +174,16 @@ def main():
         for r in lead_rows:
             print(f"  \033[32m{r['ts'][11:16]}\033[0m  {r['src']:<15} landed {str(r['landed'])[:40]:40s}")
             print(f"         submitted the {r['form']} form on {str(r['path'])[:52]}")
+
+    nf = bq(f"""
+      SELECT path, COUNT(DISTINCT session) hits FROM {T}
+      WHERE {window} AND {HUMAN} AND not_found
+      GROUP BY path ORDER BY hits DESC LIMIT 8
+    """)
+    if nf:
+        rule("Dead links someone actually hit")
+        for r in nf:
+            print(f"  {n(r['hits']):>4}  {r['path'][:62]}")
 
     rule("Who and what")
     geo = bq(f"""

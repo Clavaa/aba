@@ -3,6 +3,7 @@ import { GoogleAuth } from "google-auth-library";
 import { siteConfig } from "@/site.config";
 import {
   classifyBot,
+  isProbePath,
   classifySource,
   deviceOf,
   hostOf,
@@ -65,10 +66,13 @@ export async function POST(req: NextRequest) {
   }
 
   const ua = req.headers.get("user-agent") ?? "";
-  const bot = classifyBot(ua);
-
   const path = str(body.p, 300);
   if (!path || !path.startsWith("/")) return ok;
+
+  /* A scanner looks like a browser, so the path is the tell. */
+  const bot = isProbePath(path)
+    ? { isBot: true, name: "Vulnerability scanner" }
+    : classifyBot(ua);
 
   const kind =
     body.k === "leave" ? "leave" : body.k === "lead" ? "lead" : "view";
@@ -113,6 +117,7 @@ export async function POST(req: NextRequest) {
     scroll_pct: int(body.sc, 100),
     entry: body.e === true,
     form: str(body.f, 60),
+    not_found: body.nf === true,
   };
 
   try {
