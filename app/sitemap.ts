@@ -4,6 +4,29 @@ import { getAllStates } from "@/lib/states";
 import { services } from "@/lib/services";
 import { payers } from "@/lib/payers";
 import { getJobCities } from "@/lib/jobcities";
+import {
+  CAREERS_REVISED,
+  CORE_REVISED,
+  COVERAGE_REVISED,
+  GEO_TEMPLATE_REVISED,
+  GUIDES_REVISED,
+  rev,
+} from "@/lib/revisions";
+
+/**
+ * Which revision date a URL belongs to. Pattern-matched rather than hand-listed
+ * so a page added later inherits the right date instead of silently shipping
+ * without a lastmod.
+ */
+function revisionFor(url: string): Date {
+  if (url.includes("/locations/")) return rev(GEO_TEMPLATE_REVISED);
+  if (url.includes("/careers/")) return rev(CAREERS_REVISED);
+  if (url.includes("/resources/") || url.includes("/autism-evaluation"))
+    return rev(GUIDES_REVISED);
+  if (url.includes("/insurance/") || url.includes("/cost-of-aba-therapy"))
+    return rev(COVERAGE_REVISED);
+  return rev(CORE_REVISED);
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.brand.domain;
@@ -181,7 +204,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [
+  const all: MetadataRoute.Sitemap = [
     ...staticPages,
     ...servicePages,
     ...payerPages,
@@ -189,4 +212,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...jobCityPages,
     ...payStatePages,
   ];
+
+  return all.map((e) => ({ ...e, lastModified: revisionFor(String(e.url)) }));
 }

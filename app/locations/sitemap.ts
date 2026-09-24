@@ -3,6 +3,7 @@ import { siteConfig } from "@/site.config";
 import { getAllStates, getState } from "@/lib/states";
 import { getCountiesForState } from "@/lib/counties";
 import { getCitiesForCounty } from "@/lib/cities";
+import { GEO_TEMPLATE_REVISED, rev } from "@/lib/revisions";
 
 /**
  * Sharded location sitemaps — one per state (Next 16 `generateSitemaps`),
@@ -24,9 +25,15 @@ export default async function sitemap(props: {
   const state = getState(id);
   if (!state) return [];
 
+  /* lastmod is the one field in here Google actually uses to schedule a
+     recrawl. It is a fixed content-revision date, not build time — see
+     lib/revisions.ts for why that distinction matters. */
+  const lastModified = rev(GEO_TEMPLATE_REVISED);
+
   const entries: MetadataRoute.Sitemap = [
     {
       url: `${base}/locations/${state.slug}/`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -35,12 +42,14 @@ export default async function sitemap(props: {
   for (const county of getCountiesForState(state.slug)) {
     entries.push({
       url: `${base}/locations/${state.slug}/${county.slug}/`,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.6,
     });
     for (const city of getCitiesForCounty(state.slug, county.slug)) {
       entries.push({
         url: `${base}/locations/${state.slug}/${county.slug}/${city.slug}/`,
+        lastModified,
         changeFrequency: "monthly",
         priority: 0.7,
       });
