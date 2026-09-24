@@ -13,6 +13,7 @@ import { Suspense } from "react";
 import type { FooterGroup, FooterLink } from "@/components/FooterSitemap";
 import { getStateLinks } from "@/lib/states";
 import { payers } from "@/lib/payers";
+import { services } from "@/lib/services";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -61,6 +62,27 @@ const organizationJsonLd = {
   description:
     "Applied Behavior Analysis (ABA) therapy provider for children with autism, serving families in all 50 U.S. states and the District of Columbia.",
   areaServed: { "@type": "Country", name: "United States" },
+  /* The OG card doubles as the entity image — it is the only brand artwork we
+     have at a size Google will use, and it already renders the wordmark. */
+  logo: `${siteConfig.brand.domain}/og.png`,
+  image: `${siteConfig.brand.domain}/og.png`,
+  /* knowsAbout and availableService describe what this organisation actually
+     does, which is what Google uses to decide which queries it is a candidate
+     for. Deliberately no sameAs: that field wants real, verifiable profiles
+     and we have none yet — the footer's social marks are still placeholders. */
+  knowsAbout: [
+    "Applied Behavior Analysis",
+    "Autism spectrum disorder",
+    "Early intervention",
+    "Parent training",
+    "Verbal behavior",
+    "Functional behavior assessment",
+  ],
+  availableService: services.map((sv) => ({
+    "@type": "MedicalTherapy",
+    name: sv.title,
+    url: `${siteConfig.brand.domain}/services/${sv.slug}/`,
+  })),
 };
 
 /**
