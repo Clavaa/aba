@@ -19,6 +19,10 @@ import {
   reachFor,
   shareOfCounty,
   growthSince2020,
+  growthBand,
+  rankWord,
+  sizeAgainstState,
+  medianCityDensity,
   fmt,
   type CityRecord,
   type CitySize,
@@ -140,6 +144,93 @@ function countyContext(city: CityRecord): string {
  * to choose one result, so each band leads with the thing that is actually
  * true of that place.
  */
+/**
+ * "How {City} compares" — the block that exists to make these pages actually
+ * different from one another.
+ *
+ * Measured before writing it: city pages were 96.7% identical, 1,819 words
+ * apiece with 16% of vocabulary differing. That is the ceiling on how many of
+ * 10,255 pages Google will index — it samples a few, concludes the rest are
+ * near-duplicates, and stops spending crawl budget.
+ *
+ * So the sentences BRANCH on the data rather than interpolating into one
+ * template: a place that has grown 12% since 2020 gets a different paragraph
+ * from one that has shrunk, not the same paragraph with a different number.
+ * Every figure is from the Census dataset; nothing here is estimated.
+ */
+function comparisonCopy(city: CityRecord, state: StateRecord): string[] {
+  const out: string[] = [];
+  const size = sizeAgainstState(city);
+  const rank = rankWord(city.stateRank);
+  const medDensity = medianCityDensity(city.stateSlug);
+
+  switch (size.band) {
+    case "far larger":
+      out.push(
+        `${city.name} is one of ${state.name}'s genuinely big places — the ${rank} we publish, and about ${size.multiple.toFixed(0)} times the size of the typical ${state.name} community at ${fmt(size.median)} residents. Practically, that means the clinician bench here is deep enough that scheduling is a conversation about which hours suit you, not about whether anyone is available.`
+      );
+      break;
+    case "larger":
+      out.push(
+        `At ${fmt(city.pop)} residents, ${city.name} runs well above the typical ${state.name} community, which sits nearer ${fmt(size.median)}. It is the ${rank} place in the state on our list. That size usually shows up as choice: more than one technician who can cover your address, and more than one possible start time.`
+      );
+      break;
+    case "typical":
+      out.push(
+        `${city.name} is a fairly representative ${state.name} community — ${fmt(city.pop)} residents against a state median of ${fmt(size.median)}, ranking ${rank}. Places this size are the ordinary case for in-home ABA rather than the hard one, and coverage tends to follow the road network more than the town boundary.`
+      );
+      break;
+    case "smaller":
+      out.push(
+        `With ${fmt(city.pop)} residents, ${city.name} sits below the typical ${state.name} community of ${fmt(size.median)} and ranks ${rank} in the state. Smaller does not mean unserved — it means the schedule gets built around a route, so the day a clinician is already nearby matters more than it would in a city.`
+      );
+      break;
+    case "far smaller":
+      out.push(
+        `${city.name} is a small community by any measure — ${fmt(city.pop)} residents where the typical ${state.name} place we publish has ${fmt(size.median)}. This is exactly the situation in-home and telehealth ABA exist for: the alternative was a family driving an hour each way, several times a week, to reach a building.`
+      );
+      break;
+  }
+
+  const growth = growthSince2020(city);
+  switch (growthBand(city)) {
+    case "surging":
+      out.push(
+        `It is also growing fast. ${city.name} has added roughly ${growth!.pct}% more residents since the 2020 census, and fast-growing places tend to run ahead of their own services — new families arrive before new clinicians do. If you are hitting waitlists here, that is why, and it is worth asking specifically what is open rather than assuming.`
+      );
+      break;
+    case "growing":
+      out.push(
+        `The population has grown about ${growth!.pct}% since 2020, which is steady rather than dramatic. Demand for children's services usually tracks that curve with a lag, so availability here tends to be workable if you ask early.`
+      );
+      break;
+    case "slipping":
+      out.push(
+        `The population is down roughly ${growth!.pct}% since 2020. Shrinking communities often lose specialist services before they lose people, which is the honest argument for a model where the clinician travels: your access does not depend on whether a local clinic can stay open.`
+      );
+      break;
+    case "steady":
+      out.push(
+        `The population has held close to flat since 2020, which is the most common pattern in ${state.name}. Stable places are the easiest to plan around — the same technician can usually keep the same families for a long stretch, and continuity matters more to outcomes than almost anything else in scheduling.`
+      );
+      break;
+    case "unknown":
+      break;
+  }
+
+  if (medDensity > 0 && city.density >= medDensity * 2) {
+    out.push(
+      `At about ${fmt(city.density)} people per square mile, ${city.name} is roughly ${(city.density / medDensity).toFixed(1)} times as dense as the typical ${state.name} community. Dense places compress a clinician's travel time, which is why after-school slots — the ones every family wants — are easier to come by here than the raw population would suggest.`
+    );
+  } else if (medDensity > 0 && city.density <= medDensity * 0.5) {
+    out.push(
+      `${city.name} is spread thin at about ${fmt(city.density)} people per square mile, well under the ${fmt(medDensity)} typical of ${state.name} communities. Spread-out places cost a clinician more of the day in the car, so sessions here are usually blocked into fewer, longer visits rather than scattered across the week.`
+    );
+  }
+
+  return out;
+}
+
 function metaDescription(city: CityRecord, state: StateRecord, reach: Reach): string {
   const program = medicaidProgramName(state);
   const where = `${city.name}, ${city.stateAbbrev}`;
@@ -255,6 +346,7 @@ export default async function CityPage({
   const growth = growthSince2020(city);
   const stateCityCount = getCitiesForState(state.slug).length;
   const faqs = cityFaqs(city, county, state, reach, size);
+  const comparisons = comparisonCopy(city, state);
 
   const base = siteConfig.brand.domain;
   const countyUrl = `${base}/locations/${state.slug}/${county.slug}/`;
@@ -461,6 +553,22 @@ export default async function CityPage({
               What it costs in {state.name}
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ─────────────── HOW THIS PLACE COMPARES ─────────────── */}
+      <section
+        className="mx-auto max-w-[1400px] px-4 py-10 sm:py-14"
+        aria-labelledby="compare-heading"
+      >
+        <p className="eyebrow">{city.name} in context</p>
+        <h2 id="compare-heading" className="display display-h2 mt-4">
+          How {city.name} compares with the rest of {state.name}
+        </h2>
+        <div className="mt-6 max-w-3xl space-y-5 text-lg text-ink-muted">
+          {comparisons.map((para) => (
+            <p key={para.slice(0, 40)}>{para}</p>
+          ))}
         </div>
       </section>
 

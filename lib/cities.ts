@@ -363,3 +363,89 @@ export function growthSince2020(
 export function fmt(n: number): string {
   return n.toLocaleString("en-US");
 }
+
+/* ------------------------------------------------------------------ */
+/* Differentiation helpers                                             */
+/*                                                                     */
+/* City pages measured 96.7% identical to one another — 1,819 words    */
+/* apiece with only 16% of vocabulary differing. That is the ceiling   */
+/* on how many of 10,255 pages Google will bother indexing: it crawls  */
+/* a handful, decides the rest are near-duplicates, and stops.         */
+/*                                                                     */
+/* These derive facts that genuinely differ per place, and — more      */
+/* importantly — they band the facts so that different data produces   */
+/* structurally different sentences, not the same sentence with the    */
+/* numbers swapped. Every figure below comes from the Census dataset.  */
+/* ------------------------------------------------------------------ */
+
+/** Median population of the places we publish in a state. Cached per state. */
+const stateMedianPop = new Map<string, number>();
+export function medianCityPop(stateSlug: string): number {
+  const hit = stateMedianPop.get(stateSlug);
+  if (hit !== undefined) return hit;
+  const pops = getCitiesForState(stateSlug)
+    .map((c) => c.pop)
+    .sort((a, b) => a - b);
+  const mid = Math.floor(pops.length / 2);
+  const med =
+    pops.length === 0
+      ? 0
+      : pops.length % 2 === 0
+      ? Math.round((pops[mid - 1] + pops[mid]) / 2)
+      : pops[mid];
+  stateMedianPop.set(stateSlug, med);
+  return med;
+}
+
+/** Median density of the places we publish in a state. */
+const stateMedianDensity = new Map<string, number>();
+export function medianCityDensity(stateSlug: string): number {
+  const hit = stateMedianDensity.get(stateSlug);
+  if (hit !== undefined) return hit;
+  const d = getCitiesForState(stateSlug)
+    .map((c) => c.density)
+    .sort((a, b) => a - b);
+  const mid = Math.floor(d.length / 2);
+  const med = d.length === 0 ? 0 : d.length % 2 === 0 ? Math.round((d[mid - 1] + d[mid]) / 2) : d[mid];
+  stateMedianDensity.set(stateSlug, med);
+  return med;
+}
+
+export type GrowthBand = "surging" | "growing" | "steady" | "slipping" | "unknown";
+
+export function growthBand(city: CityRecord): GrowthBand {
+  const g = growthSince2020(city);
+  if (!g) return "unknown";
+  if (g.direction === "shrunk") return g.pct >= 3 ? "slipping" : "steady";
+  if (g.pct >= 10) return "surging";
+  if (g.pct >= 3) return "growing";
+  return "steady";
+}
+
+/** An ordinal that reads naturally in prose: 1 → "largest", 2 → "2nd largest". */
+export function rankWord(n: number): string {
+  if (n === 1) return "largest";
+  const s = ["th", "st", "nd", "rd"][n % 100 > 10 && n % 100 < 14 ? 0 : Math.min(n % 10, 4) % 4] ?? "th";
+  return `${n}${s} largest`;
+}
+
+/** How this place sits against the typical published place in its state. */
+export function sizeAgainstState(city: CityRecord): {
+  band: "far larger" | "larger" | "typical" | "smaller" | "far smaller";
+  median: number;
+  multiple: number;
+} {
+  const median = medianCityPop(city.stateSlug);
+  const multiple = median > 0 ? city.pop / median : 1;
+  const band =
+    multiple >= 10
+      ? "far larger"
+      : multiple >= 2
+      ? "larger"
+      : multiple >= 0.6
+      ? "typical"
+      : multiple >= 0.25
+      ? "smaller"
+      : "far smaller";
+  return { band, median, multiple };
+}
