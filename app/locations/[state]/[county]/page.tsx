@@ -128,7 +128,7 @@ export async function generateMetadata({
   const state = getState(stateSlug);
   const county = getCounty(stateSlug, countySlug);
   if (!state || !county) return {};
-  const title = `ABA Therapy in ${shortPlaceName(county.name)}, ${county.stateAbbrev}`;
+  const title = `In-Home ABA Therapy in ${shortPlaceName(county.name)} County, ${county.stateAbbrev}`;
   const description = descriptionFor(county, state, countySize(county.pop));
   const canonical = `/locations/${state.slug}/${county.slug}/`;
   return {

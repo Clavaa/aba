@@ -134,18 +134,24 @@ function countyContext(city: CityRecord): string {
   }`;
 }
 
+/**
+ * Kept deliberately different per reach band. Ten thousand identical
+ * descriptions read as boilerplate to a crawler and give a searcher no reason
+ * to choose one result, so each band leads with the thing that is actually
+ * true of that place.
+ */
 function metaDescription(city: CityRecord, state: StateRecord, reach: Reach): string {
   const program = medicaidProgramName(state);
-  const base = `ABA therapy near you in ${city.name}, ${city.stateAbbrev}`;
+  const where = `${city.name}, ${city.stateAbbrev}`;
   switch (reach) {
     case "in-hub":
-      return `${base} — at home, at school, in daycare or online. How ${program} and private plans cover it.`;
+      return `In-home ABA therapy in ${where}. Sessions at home, school or daycare — a clinician comes to you. See what ${program} covers and what's open near you.`;
     case "close":
-      return `${base}. In-home sessions and school support, and what ${program} covers for autism care.`;
+      return `In-home ABA therapy near you in ${where}. Home, school and daycare sessions, short waits, and exactly what ${program} covers for autism care.`;
     case "moderate":
-      return `${base}. In-home ABA and telehealth built for the distance, plus how ${program} covers it.`;
+      return `In-home ABA therapy in ${where}, built around the drive — longer visits, telehealth parent coaching between them. What ${program} covers.`;
     case "far":
-      return `${base} — your clinician travels to you. How ${program} covers autism therapy this far from a city.`;
+      return `In-home ABA therapy in ${where} — your clinician travels to you, so nobody relocates for autism care. How ${program} covers it out here.`;
   }
 }
 
@@ -214,7 +220,11 @@ export async function generateMetadata({
   if (!state || !city) return {};
 
   return {
-    title: `ABA Therapy in ${shortPlaceName(city.name)}, ${city.stateAbbrev}`,
+    /* "In-Home" leads because it is the modifier we already rank best for
+       (position 5.6 on "in-home aba therapy services near me" vs 18 on the
+       bare head term) and it still contains "ABA Therapy in {City}, {ST}"
+       verbatim, so nothing is traded away to gain it. */
+    title: `In-Home ABA Therapy in ${shortPlaceName(city.name)}, ${city.stateAbbrev}`,
     description: metaDescription(city, state, reachFor(city)),
     alternates: {
       canonical: `/locations/${state.slug}/${city.county.slug}/${city.slug}/`,
